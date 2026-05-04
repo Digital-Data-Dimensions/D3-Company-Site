@@ -102,7 +102,7 @@ const SOLUTION_DETAILS: Record<string, {
   features: { title: string; desc: string }[];
   highlights: string[];
   industries: string[];
-  caseStudySlug: string;
+  caseStudySlug?: string;
   heroImage?: { src: string; alt: string };
   brochurePath?: string;
   youtubeUrl?: string;
@@ -153,7 +153,6 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Audit & Visitor Reports', desc: 'Comprehensive visitor logs, scheduled visit reports and audit trails for security and compliance teams.' },
     ],
     industries: ['government', 'banking', 'healthcare'],
-    caseStudySlug: 'ministry-of-interior-attendance',
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'time-attendance-enterprise': {
@@ -171,7 +170,6 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Email Notifications', desc: 'Auto alerts for absences, late entry, early exit to employee and department heads with scheduled summary reports.' },
     ],
     industries: ['government', 'healthcare', 'banking', 'logistics'],
-    caseStudySlug: 'ministry-of-interior-attendance',
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
     additionalSections: [
       {
@@ -230,7 +228,6 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Training Module', desc: 'Training master, requisition and approval, employee assignment, auto alerts and comprehensive training management reports.' },
     ],
     industries: ['government', 'banking', 'retail', 'healthcare'],
-    caseStudySlug: 'bank-of-bahrain-kuwait-hrms',
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
     additionalSections: [
       {
@@ -320,10 +317,9 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Mobile App (iOS/Android)', desc: 'Geo-fenced mobile attendance, selfie punch, QR code clock-in, leave/overtime requests and real-time notifications.' },
       { title: 'Visitor Management', desc: 'Reception kiosk with appointment forms, access card issuance, door assignment and comprehensive visitor reports.' },
       { title: 'Appraisal & Recruitment', desc: 'KPI-based performance evaluation, manpower planning, job profiles and recruitment workflow management.' },
-      { title: 'Multi-Company & ERP Integration', desc: 'Manage multiple legal entities, cost centres and departments, with native connectors for SAP, Oracle and custom APIs.' },
+      { title: 'Multi-Company & ERP Integration', desc: 'Manage multiple legal entities, cost centres and departments across unlimited sites, with custom API and third-party system integration.' },
     ],
     industries: ['government', 'healthcare', 'banking', 'retail', 'logistics'],
-    caseStudySlug: 'ministry-of-interior-attendance',
   },
   'time-attendance-system': {
     seoKeyword: 'time attendance system Bahrain GCC biometric',
@@ -340,7 +336,6 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Daily Attendance Reports', desc: 'Daily, weekly and monthly reports: time cards, overtime, deductions and graphical analysis.' },
     ],
     industries: ['government', 'healthcare', 'banking'],
-    caseStudySlug: 'ministry-of-interior-attendance',
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'queue-management-system': {
@@ -358,26 +353,24 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Supervisor Remote Reporting', desc: 'Full reporting application accessible from KIOSK or remotely from supervisor PC.' },
     ],
     industries: ['government', 'banking', 'healthcare'],
-    caseStudySlug: 'gulf-air-queue-management',
     brochurePath: '/brochure/QMS_24.pdf',
     youtubeUrl: 'https://www.youtube.com/embed/RnzjXYywChE',
   },
   'rfid-asset-tracking': {
     seoKeyword: 'RFID asset tracking Bahrain warehouse management document tracking',
-    tagline: 'Full lifecycle tracking of physical assets including IT equipment, furniture, vehicles, medical devices and industrial tools, using RFID tags, handheld scanners and a centralised asset register.',
-    highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Audit management', 'Document Tracking', 'Warehouse WMS'],
+    tagline: 'Track assets, documents, warehouse inventory and gold ornaments across multiple buildings, departments and warehouses, using RFID tags, handheld scanners and barcode technology.',
+    highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Document Tracking', 'Warehouse WMS', 'Gold & Valuables Tracking'],
     features: [
-      { title: 'RFID & Barcode', desc: 'Support for UHF RFID, HF RFID, QR codes and standard barcodes.' },
-      { title: 'Handheld Scanners', desc: 'Rugged mobile scanners for fast bulk scanning and cycle counts.' },
-      { title: 'Asset Lifecycle', desc: 'Track assets from procurement through maintenance to disposal.' },
-      { title: 'Location Tracking', desc: 'Room-level location awareness with fixed RFID readers.' },
-      { title: 'Audit Management', desc: 'Schedule and conduct physical asset audits with discrepancy reporting.' },
+      { title: 'RFID Fixed Asset Tracking', desc: 'Track asset flow across the organisation efficiently. Hierarchy: Company, Department, Building, Room. Assets do not need to be visible to the RFID system.' },
       { title: 'RFID Document Tracking', desc: 'Each document is assigned a unique RFID label. Passive RFID tags track document flow within organisations, reducing employee time for document management.' },
+      { title: 'Active & Passive RFID', desc: 'Passive RFID: tags with no internal power for access control and document tracking. Active RFID: battery-powered tags for longer-range tracking across larger areas.' },
       { title: 'Warehouse Management (WMS)', desc: 'Goods receiving, tagging, picking, dispatch and cycle count, all RFID/barcode driven with real-time back-office sync.' },
-      { title: 'Multi-Site Support', desc: 'Manage assets across unlimited buildings, floors and departments.' },
+      { title: 'Barcode Scanners', desc: 'Rugged handheld barcode scanners for fast bulk scanning, stock takes and item verification.' },
+      { title: 'Mobile Computers', desc: 'Handheld mobile terminals for warehouse operations, picking and real-time stock updates on the move.' },
+      { title: 'Barcode Printers', desc: 'Label printers for producing barcode and RFID tags for items, shelves and assets.' },
+      { title: 'Multi-Site Support', desc: 'Manage assets and inventory across unlimited buildings, floors, departments and warehouse locations.' },
     ],
     industries: ['government', 'healthcare', 'logistics'],
-    caseStudySlug: 'alba-rfid-assets',
     brochurePath: '/brochure/RFID_24.pdf',
     youtubeUrl: 'https://www.youtube.com/embed/VCvD62vv1mQ',
     additionalSections: [
@@ -415,11 +408,8 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Biometric Access Control', desc: 'Biometric access control uses unique physical features as keys. No forgotten passwords, no lost keys.' },
       { title: 'Controller Types', desc: 'Proximity Card or NFC, Fingerprint, Face Recognition, Stand-Alone and Centralised controller options available.' },
       { title: 'Scalable Deployment', desc: 'Scale from a single door to enterprise-wide centralised access management across multiple buildings and sites.' },
-      { title: 'Central Management Platform', desc: 'Single software platform managing access control and CCTV cameras across all sites from one interface.' },
-      { title: 'Audit Trails', desc: 'Complete access logs with timestamps, photos and video evidence for security compliance.' },
     ],
     industries: ['government', 'banking', 'logistics'],
-    caseStudySlug: 'bahrain-airport-cctv',
     additionalSections: [
       {
         title: 'IP CCTV Surveillance',
@@ -459,13 +449,9 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Vertical Signage Displays', desc: 'Available from 42" in multiple sizes. Full HD and 4K. Vertical or horizontal orientation. Built-in Windows or Android OS. Touch screen optional. 24/7 rated.' },
       { title: 'Virtual Interactive eBook', desc: 'Developed by D3. Convex projection screen with authentic book form factor. Rear projection for no hand shadow. Supports text, images, SWF and video.' },
       { title: 'IP Power Controller', desc: 'Fully customised controller board. Remote power management via web-based GUI. Manages AC or DC voltage. High or low ampere configurations.' },
-      { title: 'Content CMS', desc: 'Web-based content management with drag-and-drop templates, scheduling and live data feed integration.' },
-      { title: 'Multi-Zone Layouts', desc: 'Divide screens into zones for different content types simultaneously: news, promotions, queue numbers.' },
-      { title: 'Queue Integration', desc: 'Display real-time queue numbers and wait times on signage screens for waiting areas.' },
-      { title: 'Live Data Feeds', desc: 'Integrate live news, weather, prayer times and social media feeds.' },
+      { title: 'Content Management Software', desc: 'Centralised Windows-based content management software. Customised to client requirements. Schedule and publish content across all connected screens.' },
     ],
     industries: ['retail', 'government', 'banking'],
-    caseStudySlug: 'gulf-air-queue-management',
     additionalSections: [
       {
         title: 'LED Display Systems',
@@ -525,7 +511,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'erp-retail-management': {
     seoKeyword: 'ERP software Bahrain retail management inventory electronic shelf labels',
-    tagline: 'Inventory, purchasing, sales, finance and HR integrated into one unified system, with electronic shelf labels, ID card printing and loyalty programme management.',
+    tagline: 'Inventory, purchasing, sales, finance and HR integrated into one unified system, with electronic shelf labels and restaurant management. Multi-company, multi-currency, multi-branch.',
     highlights: ['Multi-Company & Multi-Branch', 'Real-time Inventory', 'Electronic Shelf Labels', 'Financial Accounting', 'Restaurant Management', 'Van Sales & RFID'],
     features: [
       { title: 'Procurement & Import', desc: 'Issue Purchase Orders, manage Goods Receipt, pending order status, creditors management and item return with document attachment.' },
@@ -538,7 +524,6 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Van Sales & RFID', desc: 'Van sales management with mobile handheld terminals, RFID integration and real-time stock updates.' },
     ],
     industries: ['retail', 'logistics', 'government'],
-    caseStudySlug: 'jawad-business-erp',
     additionalSections: [
       {
         title: 'ERP Multi-Tier Structure',

@@ -12,6 +12,94 @@ function ArrowIcon() {
   );
 }
 
+/* ── FLOATING PARTICLES (canvas) ── */
+function FloatingParticles() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animId: number;
+    const PARTICLE_COUNT = 38;
+
+    type P = { x: number; y: number; r: number; vx: number; vy: number; alpha: number; };
+    let particles: P[] = [];
+
+    function resize() {
+      if (!canvas) return;
+      canvas.width  = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+
+    function spawn(): P {
+      if (!canvas) return { x: 0, y: 0, r: 1, vx: 0, vy: 0, alpha: 0 };
+      return {
+        x: Math.random() * canvas.width,
+        y: canvas.height + 10,
+        r: 1 + Math.random() * 2,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: -(0.25 + Math.random() * 0.45),
+        alpha: 0.08 + Math.random() * 0.18,
+      };
+    }
+
+    function init() {
+      if (!canvas) return;
+      particles = Array.from({ length: PARTICLE_COUNT }, () => {
+        const p = spawn();
+        p.y = Math.random() * canvas.height; // scatter initial Y
+        return p;
+      });
+    }
+
+    function draw() {
+      if (!canvas || !ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const p of particles) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 53, 128, ${p.alpha})`;
+        ctx.fill();
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.y + p.r < 0) {
+          Object.assign(p, spawn());
+        }
+      }
+      animId = requestAnimationFrame(draw);
+    }
+
+    const ro = new ResizeObserver(() => { resize(); init(); });
+    ro.observe(canvas);
+    resize();
+    init();
+    draw();
+
+    return () => {
+      cancelAnimationFrame(animId);
+      ro.disconnect();
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      style={{
+        position: 'absolute', inset: 0,
+        width: '100%', height: '100%',
+        pointerEvents: 'none',
+        zIndex: 0,
+      }}
+    />
+  );
+}
+
 /* ── COUNTER with IntersectionObserver ── */
 function useCounter(target: number, duration = 2000) {
   const [count, setCount] = useState(0);
@@ -107,8 +195,10 @@ export function HeroSection() {
       <div className="hero-mesh" aria-hidden="true" />
       <div className="hs-orb hs-orb--a" aria-hidden="true" />
       <div className="hs-orb hs-orb--b" aria-hidden="true" />
+      {/* Floating particles */}
+      <FloatingParticles />
 
-      <div className="container hs-inner">
+      <div className="container hs-inner" style={{ position: 'relative', zIndex: 1 }}>
 
         {/* Tag pill */}
         <div className={`hs-tag${fading ? ' hs-fade-out' : ' hs-fade-in'}`} key={`tag-${current}`}>
