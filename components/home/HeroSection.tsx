@@ -50,25 +50,25 @@ const SLIDES = [
   {
     tag: 'Enterprise IT for the GCC',
     headline: 'Complete Technology Solutions for GCC Enterprises',
-    sub: 'D3 — Digital Data Dimensions delivers workforce management, queue systems, RFID tracking, digital signage and ERP — trusted by 500+ organisations across Bahrain and the Gulf.',
+    sub: 'D3 (Digital Data Dimensions) delivers workforce management, queue systems, RFID tracking, digital signage and ERP, trusted by 500+ organisations across Bahrain and the Gulf.',
     link: { label: 'Explore Solutions', href: '/solutions/timetech-application' },
   },
   {
     tag: 'Workforce Management',
-    headline: 'Biometric Attendance, HR & Payroll — All in One Application',
+    headline: 'Biometric Attendance, HR & Payroll: All in One Application',
     sub: 'TimeTech handles time attendance, HRMS, payroll, visitor management and mobile self-service for enterprises with full LMRA and WPS compliance.',
     link: { label: 'View TimeTech', href: '/solutions/timetech-application' },
   },
   {
     tag: 'Queue Management',
     headline: 'Eliminate Queues and Deliver Better Customer Experience',
-    sub: 'Kiosk dispensers, WhatsApp virtual queuing, LED counter displays and live analytics — deployed across ministries, banks and hospitals in the GCC.',
+    sub: 'Kiosk dispensers, WhatsApp virtual queuing, LED counter displays and live analytics, deployed across ministries, banks and hospitals in the GCC.',
     link: { label: 'Queue Solutions', href: '/solutions/queue-management-system' },
   },
   {
     tag: 'RFID & Digital Signage',
     headline: 'Full Asset Visibility and Smart Display Networks',
-    sub: 'Active and passive RFID tracking, indoor and outdoor LED displays, centralized CMS and ERP integration — end-to-end from a single trusted partner.',
+    sub: 'Active and passive RFID tracking, indoor and outdoor LED displays, centralized CMS and ERP integration, end-to-end from a single trusted partner.',
     link: { label: 'Learn More', href: '/solutions/rfid-asset-tracking' },
   },
 ];

@@ -142,13 +142,13 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'visitor-management': {
     seoKeyword: 'visitor management system Bahrain GCC reception kiosk access card',
-    tagline: 'Professional and advanced online visitor management system — reception kiosk, pre-registration, access cards and full audit trail.',
+    tagline: 'Professional and advanced online visitor management system: reception kiosk, pre-registration, access cards and full audit trail.',
     highlights: ['Visitor Pre-Registration', 'Access Card Issuance', 'Door Assignment', 'Audit Reports', 'Automatic Access Removal', 'Appointment Tracking'],
     features: [
-      { title: 'Visitor Appointment Form', desc: 'Pre-register visitors online with appointment details — name, host, purpose and expected visit time — before arrival.' },
+      { title: 'Visitor Appointment Form', desc: 'Pre-register visitors online with appointment details: name, host, purpose and expected visit time, before arrival.' },
       { title: 'Access Card Issuance', desc: 'Issue physical or virtual access cards to visitors upon arrival, granting controlled access to specific areas.' },
-      { title: 'Controlled Door Access', desc: 'Send visitor access permissions directly to specific controlled doors — limiting access to authorised areas only.' },
-      { title: 'Automatic Access Removal', desc: 'Visitor access is automatically revoked upon departure — no manual intervention required.' },
+      { title: 'Controlled Door Access', desc: 'Send visitor access permissions directly to specific controlled doors, limiting access to authorised areas only.' },
+      { title: 'Automatic Access Removal', desc: 'Visitor access is automatically revoked upon departure, with no manual intervention required.' },
       { title: 'Visit Closure on Departure', desc: 'Close visitor appointments on departure with time-stamped records for compliance and audit purposes.' },
       { title: 'Audit & Visitor Reports', desc: 'Comprehensive visitor logs, scheduled visit reports and audit trails for security and compliance teams.' },
     ],
@@ -158,7 +158,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'time-attendance-enterprise': {
     seoKeyword: 'time attendance enterprise Bahrain GCC multi-site biometric mobile app',
-    tagline: 'No.1 TimeTech — Recognised and appreciated by GCC Labour. Multi-site, multi-company enterprise attendance for unlimited locations.',
+    tagline: 'No.1 TimeTech. Recognised and appreciated by GCC Labour. Multi-site, multi-company enterprise attendance for unlimited locations.',
     highlights: ['Multi-Site & Multi-Company', 'Geo-Fenced Mobile App', 'ProjectWise Manhours', 'Employee Self-Service', 'Overtime Workflow', 'iOS & Android'],
     features: [
       { title: 'Multi-Modal Biometric', desc: 'Fingerprint, facial recognition, smart card and PIN on all terminal types.' },
@@ -217,7 +217,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'hr-payroll-software': {
     seoKeyword: 'HR software Bahrain WPS payroll HRMS GCC GOSI',
-    tagline: 'TimeTech professional HRMS & Payroll for Gulf Region — multi-company, multi-currency, bi-lingual, flexible and cost effective.',
+    tagline: 'TimeTech professional HRMS and Payroll for the Gulf Region. Multi-company, multi-currency, bi-lingual, flexible and cost effective.',
     highlights: ['WPS-ready Payroll', 'GOSI Integration', 'Multi-Company', 'Employee Self-Service', 'Document Control', 'Mobile App'],
     features: [
       { title: 'Personnel Module', desc: 'Comprehensive Employee Master with document expiry reminders for Residence Permit, CPR, Passport and insurance. Manage dependents, qualifications and HR memos.' },
@@ -310,34 +310,34 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'timetech-application': {
     seoKeyword: 'TimeTech time attendance HRMS Bahrain GCC',
-    tagline: 'A complete cloud workforce platform — attendance, HR, payroll, visitor management and mobile self-service, purpose-built for GCC enterprises.',
+    tagline: 'A complete cloud workforce platform: attendance, HR, payroll, visitor management and mobile self-service, purpose-built for GCC enterprises.',
     highlights: ['LMRA & WPS Compliant', 'Multi-company & multi-site', 'iOS & Android mobile app', 'Arabic & English interface', 'Auto shift picking', 'Geo-fenced mobile attendance'],
     features: [
-      { title: 'Biometric Time Attendance', desc: 'Fingerprint, face recognition and card-based terminals with real-time processing — no manual intervention needed.' },
+      { title: 'Biometric Time Attendance', desc: 'Fingerprint, face recognition and card-based terminals with real-time processing. No manual intervention needed.' },
       { title: 'Auto Shift & Work Rules', desc: 'N-number of shifts with auto picking, flexi rules, Ramadan shift support, grace periods and OT segregation.' },
       { title: 'HRMS & Payroll', desc: 'Multi-company, multi-currency WPS payroll with GOSI, LMRA integration, leave management and bank transfer formats.' },
       { title: 'Employee Self-Service Portal', desc: 'Web and mobile portal for leave requests, payslip access, overtime requests and notice board.' },
       { title: 'Mobile App (iOS/Android)', desc: 'Geo-fenced mobile attendance, selfie punch, QR code clock-in, leave/overtime requests and real-time notifications.' },
       { title: 'Visitor Management', desc: 'Reception kiosk with appointment forms, access card issuance, door assignment and comprehensive visitor reports.' },
       { title: 'Appraisal & Recruitment', desc: 'KPI-based performance evaluation, manpower planning, job profiles and recruitment workflow management.' },
-      { title: 'Multi-Company & ERP Integration', desc: 'Manage multiple legal entities, cost centres and departments — native connectors for SAP, Oracle and custom APIs.' },
+      { title: 'Multi-Company & ERP Integration', desc: 'Manage multiple legal entities, cost centres and departments, with native connectors for SAP, Oracle and custom APIs.' },
     ],
     industries: ['government', 'healthcare', 'banking', 'retail', 'logistics'],
     caseStudySlug: 'ministry-of-interior-attendance',
   },
   'time-attendance-system': {
     seoKeyword: 'time attendance system Bahrain GCC biometric',
-    tagline: 'Cloud-based biometric attendance across unlimited locations — with real-time dashboards, auto-shift picking, overtime management and LMRA-compliant payroll export.',
+    tagline: 'Cloud-based biometric attendance across unlimited locations, with real-time dashboards, auto-shift picking, overtime management and LMRA-compliant payroll export.',
     highlights: ['Fingerprint & face recognition', 'LMRA compliant reports', 'Real-time dashboard', 'Auto shift picking', 'Email alerts for absences', 'Overtime approval workflow'],
     features: [
-      { title: 'Multi-Modal Biometric', desc: 'Fingerprint, facial recognition, smart card and PIN — all supported on one integrated terminal.' },
-      { title: 'Auto Shift Picking', desc: 'System automatically picks the correct shift per employee — no manual rostering required.' },
+      { title: 'Multi-Modal Biometric', desc: 'Fingerprint, facial recognition, smart card and PIN, all supported on one integrated terminal.' },
+      { title: 'Auto Shift Picking', desc: 'System automatically picks the correct shift per employee. No manual rostering required.' },
       { title: 'Real-Time Dashboard', desc: 'Live ON/OFF duty, late entry and early exit status across all locations at any moment.' },
       { title: 'Flexi & Special Shifts', desc: 'Ramadan shift, mother feeding shift, over-day shift and custom rule configurations.' },
       { title: 'Overtime Management', desc: 'OT segregation by time and day, grace periods, minimum OT thresholds and approval workflows.' },
       { title: 'LMRA Compliance', desc: 'Built-in reports for Bahrain Labour Market Regulatory Authority with direct integration.' },
       { title: 'Email Notifications', desc: 'Auto alerts for absent, late entry, early exit and missing swipe to employee and department heads.' },
-      { title: 'Daily Attendance Reports', desc: 'Daily, weekly and monthly reports — time cards, overtime, deductions and graphical analysis.' },
+      { title: 'Daily Attendance Reports', desc: 'Daily, weekly and monthly reports: time cards, overtime, deductions and graphical analysis.' },
     ],
     industries: ['government', 'healthcare', 'banking'],
     caseStudySlug: 'ministry-of-interior-attendance',
@@ -345,12 +345,12 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'queue-management-system': {
     seoKeyword: 'queue management system Bahrain GCC kiosk WhatsApp',
-    tagline: 'Wired, wireless and cloud-based queuing for ministries, banks, hospitals and enterprises — with WhatsApp virtual queuing, audio announcements and live analytics.',
+    tagline: 'Wired, wireless and cloud-based queuing for ministries, banks, hospitals and enterprises, with WhatsApp virtual queuing, audio announcements and live analytics.',
     highlights: ['15" all-in-one KIOSK', 'WhatsApp virtual queue', 'Wired or wireless', 'Audio announcements', 'Multi-lingual support', 'Real-time analytics'],
     features: [
-      { title: '15" Touchscreen Kiosk', desc: 'All-in-one KIOSK with built-in server, 80mm thermal printer and audio system — less single-point failure.' },
-      { title: 'WhatsApp Virtual Queue', desc: 'Customers join and monitor queues via WhatsApp — eliminating physical waiting completely.' },
-      { title: 'Wired & Wireless Options', desc: 'Ethernet cabling or fully wireless — both options available based on site requirements.' },
+      { title: '15" Touchscreen Kiosk', desc: 'All-in-one kiosk with built-in server, 80mm thermal printer and audio system, reducing single-point failure.' },
+      { title: 'WhatsApp Virtual Queue', desc: 'Customers join and monitor queues via WhatsApp, eliminating physical waiting completely.' },
+      { title: 'Wired & Wireless Options', desc: 'Ethernet cabling or fully wireless, both options available based on site requirements.' },
       { title: 'Multi-Service Categories', desc: 'Handles up to 10+ service categories with VIP and priority routing built in.' },
       { title: 'Counter LED Displays', desc: '8-digit bright LED counter displays, 35.4cm wide, showing ticket and counter numbers.' },
       { title: 'Audio Announcements', desc: 'Multi-lingual voice announcements through waiting area TV speakers or ceiling speakers.' },
@@ -364,7 +364,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'rfid-asset-tracking': {
     seoKeyword: 'RFID asset tracking Bahrain warehouse management document tracking',
-    tagline: 'Full lifecycle tracking of physical assets — IT equipment, furniture, vehicles, medical devices and industrial tools — using RFID tags, handheld scanners and a centralised asset register.',
+    tagline: 'Full lifecycle tracking of physical assets including IT equipment, furniture, vehicles, medical devices and industrial tools, using RFID tags, handheld scanners and a centralised asset register.',
     highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Audit management', 'Document Tracking', 'Warehouse WMS'],
     features: [
       { title: 'RFID & Barcode', desc: 'Support for UHF RFID, HF RFID, QR codes and standard barcodes.' },
@@ -372,8 +372,8 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Asset Lifecycle', desc: 'Track assets from procurement through maintenance to disposal.' },
       { title: 'Location Tracking', desc: 'Room-level location awareness with fixed RFID readers.' },
       { title: 'Audit Management', desc: 'Schedule and conduct physical asset audits with discrepancy reporting.' },
-      { title: 'RFID Document Tracking', desc: 'Each document assigned a unique RFID label. Passive RFID tags track document flow within organisations — reducing employee time for document management.' },
-      { title: 'Warehouse Management (WMS)', desc: 'Goods receiving, tagging, picking, dispatch and cycle count — all RFID/barcode driven with real-time back-office sync.' },
+      { title: 'RFID Document Tracking', desc: 'Each document is assigned a unique RFID label. Passive RFID tags track document flow within organisations, reducing employee time for document management.' },
+      { title: 'Warehouse Management (WMS)', desc: 'Goods receiving, tagging, picking, dispatch and cycle count, all RFID/barcode driven with real-time back-office sync.' },
       { title: 'Multi-Site Support', desc: 'Manage assets across unlimited buildings, floors and departments.' },
     ],
     industries: ['government', 'healthcare', 'logistics'],
@@ -383,7 +383,7 @@ const SOLUTION_DETAILS: Record<string, {
     additionalSections: [
       {
         title: 'RFID Document Tracking System',
-        intro: 'A user-friendly system to track document flow within organisations — reducing employee time for document management and tracking.',
+        intro: 'A user-friendly system to track document flow within organisations, reducing employee time for document management and tracking.',
         bullets: [
           'Each document assigned a unique RFID label for tracking',
           'Passive RFID tracking: tags with no internal power, use electromagnetic signals from reader',
@@ -396,7 +396,7 @@ const SOLUTION_DETAILS: Record<string, {
         bullets: [
           'Goods Receiving: based on Purchase Order / Goods Receiving Note',
           'Tagging Items: every inventory item RFID-tagged, then binned/put-away',
-          'Picking: based on Sales Order / Pick List — rack labels and items scanned via RFID, updated to back office in real time',
+          'Picking: based on Sales Order / Pick List; rack labels and items scanned via RFID, updated to back office in real time',
           'Dispatch/Shipping: vehicle loading, delivery confirmation',
           'Stock Take / Cycle Count: periodical inventory count matched against physical stock and system stock',
           'Hardware supported: Barcode Scanners, Mobile Computers (handheld terminals), Barcode Printers',
@@ -406,13 +406,13 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'access-control-system': {
     seoKeyword: 'access control system IP CCTV Bahrain biometric cameras surveillance',
-    tagline: 'Enterprise-grade IP surveillance and biometric access control — D3 is a system integrator delivering complete security solutions for indoor, outdoor, business and home environments.',
+    tagline: 'Enterprise-grade IP surveillance and biometric access control. D3 is a system integrator delivering complete security solutions for indoor, outdoor, business and home environments.',
     highlights: ['IP CCTV (Indoor & Outdoor)', 'Fingerprint & Face Recognition', 'Proximity Card / NFC', 'Centralised Management', 'No Lost Keys or Passwords', 'Scalable to Enterprise'],
     features: [
-      { title: 'IP CCTV — Local & Remote Monitoring', desc: 'D3 is a system integrator, not just a CCTV seller. Local or remote monitoring via networked surveillance — suitable for indoor and outdoor, business and home environments.' },
+      { title: 'IP CCTV: Local & Remote Monitoring', desc: 'D3 is a system integrator, not just a CCTV seller. Local or remote monitoring via networked surveillance, suitable for indoor and outdoor, business and home environments.' },
       { title: 'Camera Types', desc: 'Indoor/outdoor, Dome/box/PTZ, Wide angle, 360-degree fixed, Weather proof (IP68), Day and night with IR, Varifocal and optical lenses.' },
       { title: 'NVR & Server Software', desc: 'Network video recorders, web-based and server software for centralised management, recording and remote playback.' },
-      { title: 'Biometric Access Control', desc: 'Biometric access control uses unique physical features as keys — no forgotten passwords, no lost keys.' },
+      { title: 'Biometric Access Control', desc: 'Biometric access control uses unique physical features as keys. No forgotten passwords, no lost keys.' },
       { title: 'Controller Types', desc: 'Proximity Card or NFC, Fingerprint, Face Recognition, Stand-Alone and Centralised controller options available.' },
       { title: 'Scalable Deployment', desc: 'Scale from a single door to enterprise-wide centralised access management across multiple buildings and sites.' },
       { title: 'Central Management Platform', desc: 'Single software platform managing access control and CCTV cameras across all sites from one interface.' },
@@ -423,7 +423,7 @@ const SOLUTION_DETAILS: Record<string, {
     additionalSections: [
       {
         title: 'IP CCTV Surveillance',
-        intro: 'D3 is a system integrator delivering complete IP-based surveillance solutions — not just hardware supply.',
+        intro: 'D3 is a system integrator delivering complete IP-based surveillance solutions, not just hardware supply.',
         bullets: [
           'Local or remote monitoring via networked surveillance',
           'Suitable for indoor and outdoor, business and home environments',
@@ -437,7 +437,7 @@ const SOLUTION_DETAILS: Record<string, {
       },
       {
         title: 'Access Control Systems',
-        intro: 'Biometric access control uses unique physical features as keys — eliminating forgotten passwords and lost cards.',
+        intro: 'Biometric access control uses unique physical features as keys, eliminating forgotten passwords and lost cards.',
         bullets: [
           'Proximity Card or NFC reader controllers',
           'Fingerprint biometric controllers',
@@ -452,15 +452,15 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'digital-signage': {
     seoKeyword: 'digital signage LED displays Bahrain GCC vertical signage eBook CMS',
-    tagline: 'Indoor and outdoor LED displays, vertical portrait screens, e-book readers and IP power controllers — all managed from a central CMS with scheduling and real-time content updates.',
+    tagline: 'Indoor and outdoor LED displays, vertical portrait screens, e-book readers and IP power controllers, all managed from a central CMS with scheduling and real-time content updates.',
     highlights: ['LED from 4mm to 20mm pitch', 'Vertical Displays from 42"', 'Virtual Interactive eBook', 'IP Power Controller', 'Web-based CMS', '24/7 Operation'],
     features: [
       { title: 'LED Displays', desc: 'Pitch sizes from 4mm to 20mm. Indoor and outdoor (fully weatherproof). First Selection LEDs with HDV pixel technology for colour uniformity and image quality.' },
       { title: 'Vertical Signage Displays', desc: 'Available from 42" in multiple sizes. Full HD and 4K. Vertical or horizontal orientation. Built-in Windows or Android OS. Touch screen optional. 24/7 rated.' },
-      { title: 'Virtual Interactive eBook', desc: 'Developed by D3 — convex projection screen with authentic book form factor. Rear projection for no hand shadow. Supports text, images, SWF and video.' },
+      { title: 'Virtual Interactive eBook', desc: 'Developed by D3. Convex projection screen with authentic book form factor. Rear projection for no hand shadow. Supports text, images, SWF and video.' },
       { title: 'IP Power Controller', desc: 'Fully customised controller board. Remote power management via web-based GUI. Manages AC or DC voltage. High or low ampere configurations.' },
       { title: 'Content CMS', desc: 'Web-based content management with drag-and-drop templates, scheduling and live data feed integration.' },
-      { title: 'Multi-Zone Layouts', desc: 'Divide screens into zones for different content types simultaneously — news, promotions, queue numbers.' },
+      { title: 'Multi-Zone Layouts', desc: 'Divide screens into zones for different content types simultaneously: news, promotions, queue numbers.' },
       { title: 'Queue Integration', desc: 'Display real-time queue numbers and wait times on signage screens for waiting areas.' },
       { title: 'Live Data Feeds', desc: 'Integrate live news, weather, prayer times and social media feeds.' },
     ],
@@ -500,18 +500,18 @@ const SOLUTION_DETAILS: Record<string, {
       },
       {
         title: 'Virtual Interactive eBook',
-        intro: 'Developed by D3 — a unique convex projection screen system with an authentic book form factor design.',
+        intro: 'Developed by D3. A unique convex projection screen system with an authentic book form factor design.',
         bullets: [
           'Convex projection screen with desk representation system',
           'Authentic book form factor design with transparent acrylic body',
-          'Rear projection — no hand shadow, higher picture quality than front projection',
+          'Rear projection: no hand shadow, higher picture quality than front projection',
           'Supports all content formats: text, images, SWF, video',
           'Use cases: Museum, Exhibition, Events, Showrooms, Education',
         ],
       },
       {
         title: 'IP Power Controller',
-        intro: 'Remotely manage power to any device via a web-based GUI — no physical site access required.',
+        intro: 'Remotely manage power to any device via a web-based GUI, with no physical site access required.',
         bullets: [
           'Fully customised controller board design and fabrication',
           'Remote power management via web-based GUI (no physical site access required)',
@@ -525,7 +525,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'erp-retail-management': {
     seoKeyword: 'ERP software Bahrain retail management inventory electronic shelf labels',
-    tagline: 'Inventory, purchasing, sales, finance and HR integrated into one unified system — with electronic shelf labels, ID card printing and loyalty programme management.',
+    tagline: 'Inventory, purchasing, sales, finance and HR integrated into one unified system, with electronic shelf labels, ID card printing and loyalty programme management.',
     highlights: ['Multi-Company & Multi-Branch', 'Real-time Inventory', 'Electronic Shelf Labels', 'Financial Accounting', 'Restaurant Management', 'Van Sales & RFID'],
     features: [
       { title: 'Procurement & Import', desc: 'Issue Purchase Orders, manage Goods Receipt, pending order status, creditors management and item return with document attachment.' },
@@ -533,8 +533,8 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Sales Management', desc: 'Item issue to projects, margin setting by percentage, FIFO costing, detailed and location-wise sales reports, sales returns with document attachment.' },
       { title: 'Financial Accounting', desc: 'Full GL, AP, AR and bank reconciliation with local chart of accounts and multi-currency support.' },
       { title: 'Electronic Shelf Labels', desc: 'Bidirectional graphic and segment label options. Instant price updates. Cross-platform management software. Supports promotions and omni-channel retail.' },
-      { title: 'Restaurant Management', desc: 'Full restaurant module integrated with the ERP — table management, orders, kitchen display and POS.' },
-      { title: 'Payroll & HR Integration', desc: 'Native integration with TimeTech HRMS and Payroll — no double entry across HR and finance.' },
+      { title: 'Restaurant Management', desc: 'Full restaurant module integrated with the ERP: table management, orders, kitchen display and POS.' },
+      { title: 'Payroll & HR Integration', desc: 'Native integration with TimeTech HRMS and Payroll, with no double entry across HR and finance.' },
       { title: 'Van Sales & RFID', desc: 'Van sales management with mobile handheld terminals, RFID integration and real-time stock updates.' },
     ],
     industries: ['retail', 'logistics', 'government'],
@@ -602,7 +602,7 @@ export async function generateMetadata({ params }: Props) {
   const detail = SOLUTION_DETAILS[slug];
   if (!sol) return { title: 'Solution Not Found' };
   return {
-    title: `${sol.title} | D3 — Digital Data Dimensions`,
+    title: `${sol.title} | D3: Digital Data Dimensions`,
     description: sol.desc,
     keywords: detail?.seoKeyword,
   };

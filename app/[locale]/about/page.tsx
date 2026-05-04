@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'About D3 | Digital Data Dimensions',
     description:
-      'Learn about D3 — Digital Data Dimensions, Bahrain-based enterprise IT solutions provider serving the GCC since 2010.',
+      'Learn about D3 (Digital Data Dimensions), Bahrain-based enterprise IT solutions provider serving the GCC since 2010.',
   };
 }
 
@@ -175,7 +175,7 @@ export default function AboutPage() {
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16, color: 'var(--body)', fontSize: 15, lineHeight: 1.75 }}>
                   <p>
-                    D3 — Digital Data Dimensions — was founded in 2010 to provide enterprise IT solutions to small, medium and large businesses across the Middle East and Europe.
+                    D3 (Digital Data Dimensions) was founded in 2010 to provide enterprise IT solutions to small, medium and large businesses across the Middle East and Europe.
                   </p>
                   <p>
                     Our mission has always been to build long-term professional partnerships, not just sell software. Our team brings decades of combined expertise in enterprise IT and business operations.

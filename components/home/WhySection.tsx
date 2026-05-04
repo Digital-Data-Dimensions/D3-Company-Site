@@ -6,25 +6,25 @@ const WHY_ITEMS = [
   {
     num: '01',
     title: 'GCC-first Design',
-    text: 'Built for the Gulf — Arabic support, local labour law compliance and GCC regulatory standards built in from day one.',
+    text: 'Built for the Gulf, with Arabic support, local labour law compliance and GCC regulatory standards built in from day one.',
     icon: <Globe size={22} />,
   },
   {
     num: '02',
     title: '100% Customisable',
-    text: 'Fully configurable platforms that integrate with any third-party ERP or existing system — no vendor lock-in, ever.',
+    text: 'Fully configurable platforms that integrate with any third-party ERP or existing system. No vendor lock-in, ever.',
     icon: <Settings2 size={22} />,
   },
   {
     num: '03',
     title: 'Cloud & On-Premise',
-    text: 'Cloud (AWS), on-server or hybrid — D3 solutions flex to your infrastructure and security requirements without compromise.',
+    text: 'Cloud (AWS), on-server or hybrid. D3 solutions flex to your infrastructure and security requirements without compromise.',
     icon: <Cloud size={22} />,
   },
   {
     num: '04',
     title: 'Full-Lifecycle Support',
-    text: 'From consultancy and implementation to ongoing support — one relationship, one contact, complete peace of mind.',
+    text: 'From consultancy and implementation to ongoing support: one relationship, one contact, complete peace of mind.',
     icon: <Headphones size={22} />,
   },
 ];
@@ -42,7 +42,7 @@ export function WhySection() {
               The D3 <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>difference</em>
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 300, lineHeight: 1.75, maxWidth: 500, margin: '0 auto' }}>
-              We don&apos;t just deliver technology — we deliver outcomes. Here&apos;s what separates us from every other IT vendor in the region.
+              We don&apos;t just deliver technology. We deliver outcomes. Here&apos;s what separates us from every other IT vendor in the region.
             </p>
           </div>
         </RevealOnScroll>

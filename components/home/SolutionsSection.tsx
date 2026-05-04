@@ -39,7 +39,7 @@ export function SolutionsSection() {
               Enterprise solutions for<br />every operational need
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, maxWidth: 520, margin: '0 auto' }}>
-              From workforce management and queue systems to RFID tracking, digital signage and ERP — D3 delivers end-to-end technology for GCC enterprises.
+              From workforce management and queue systems to RFID tracking, digital signage and ERP. D3 delivers end-to-end technology for GCC enterprises.
             </p>
           </div>
         </RevealOnScroll>

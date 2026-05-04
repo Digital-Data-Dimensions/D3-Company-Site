@@ -6,7 +6,7 @@ import { CTASection } from '@/components/home/CTASection';
 export async function generateMetadata() {
   return {
     title: 'Our Clients | D3',
-    description: '500+ clients across the GCC trust D3 — from government ministries and leading banks to retail chains, hospitals and industrial organisations.',
+    description: '500+ clients across the GCC trust D3, from government ministries and leading banks to retail chains, hospitals and industrial organisations.',
   };
 }
 

@@ -160,7 +160,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom">
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.28)' }}>
-            © {new Date().getFullYear()} <strong style={{ color: 'rgba(255,255,255,0.45)', fontWeight: 500 }}>D3 — Digital Data Dimensions.</strong> All rights reserved.
+            © {new Date().getFullYear()} <strong style={{ color: 'rgba(255,255,255,0.45)', fontWeight: 500 }}>D3: Digital Data Dimensions.</strong> All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
             {SOCIALS.map((soc) => (

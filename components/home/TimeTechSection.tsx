@@ -68,7 +68,7 @@ export function TimeTechSection() {
               Complete workforce management<br />powered by <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>TimeTech</em>
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 400, lineHeight: 1.75 }}>
-              Time attendance, HR & payroll, visitor management, mobile self-service and real-time analytics — all in one unified application built for the GCC.
+              Time attendance, HR & payroll, visitor management, mobile self-service and real-time analytics. All in one unified application built for the GCC.
             </p>
           </div>
         </RevealOnScroll>

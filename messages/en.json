@@ -13,7 +13,7 @@
     "eyebrow": "Bahrain · Middle-East · Europe",
     "headline": "Your IT partner for {highlight} intelligence.",
     "highlight": "real-time",
-    "sub": "D3 delivers enterprise time attendance, HRMS, queue management and digital signage — built for the GCC region since 2010.",
+    "sub": "D3 delivers enterprise time attendance, HRMS, queue management and digital signage, built for the GCC region since 2010.",
     "exploreSolutions": "Explore Solutions",
     "ourStory": "Our Story",
     "yearsActive": "Years Active",
@@ -31,7 +31,7 @@
     "items": {
       "timetech": {
         "title": "TimeTech Application",
-        "desc": "D3's flagship product — a complete cloud-based workforce management suite with time attendance, HR, payroll, visitor management and self-service portal."
+        "desc": "D3's flagship product: a complete cloud-based workforce management suite with time attendance, HR, payroll, visitor management and self-service portal."
       },
       "timeAttendance": {
         "title": "Time Attendance & HRMS",
@@ -80,7 +80,7 @@
   },
   "timetech": {
     "eyebrow": "Flagship Product",
-    "title": "Meet {highlight} — D3's Workforce Intelligence Platform",
+    "title": "Meet {highlight}: D3's Workforce Intelligence Platform",
     "highlight": "TimeTech",
     "sub": "One platform. Full lifecycle workforce management. Trusted by 500+ organisations across the GCC.",
     "modules": {
@@ -98,7 +98,7 @@
     "eyebrow": "Industries",
     "title": "Built for your {highlight}",
     "highlight": "industry",
-    "sub": "D3 solutions are deployed across government, banking, healthcare, retail and logistics — with local compliance built in.",
+    "sub": "D3 solutions are deployed across government, banking, healthcare, retail and logistics, with local compliance built in.",
     "items": {
       "government": { "title": "Government", "desc": "Labour law compliance, LMRA integration, Ministry-grade security." },
       "healthcare": { "title": "Healthcare", "desc": "Shift management, credential tracking, patient queue systems." },
@@ -111,12 +111,12 @@
     "eyebrow": "Why D3",
     "title": "The D3 {highlight}",
     "highlight": "difference",
-    "sub": "We don't just deliver technology — we deliver outcomes. Here's what separates us from every other IT vendor in the region.",
+    "sub": "We don't just deliver technology. We deliver outcomes. Here's what separates us from every other IT vendor in the region.",
     "items": {
-      "gcc": { "num": "01", "title": "GCC-first Design", "text": "Built for the Gulf — Arabic support, local labour law compliance and GCC regulatory standards built in from day one." },
-      "custom": { "num": "02", "title": "100% Customisable", "text": "Fully configurable platforms that integrate with any third-party ERP or existing system — no vendor lock-in, ever." },
-      "cloud": { "num": "03", "title": "Cloud & On-Premise", "text": "Cloud (AWS), on-server or hybrid — D3 solutions flex to your infrastructure and security requirements without compromise." },
-      "support": { "num": "04", "title": "Full-Lifecycle Support", "text": "From consultancy and implementation to ongoing support — one relationship, one contact, complete peace of mind." }
+      "gcc": { "num": "01", "title": "GCC-first Design", "text": "Built for the Gulf, with Arabic support, local labour law compliance and GCC regulatory standards built in from day one." },
+      "custom": { "num": "02", "title": "100% Customisable", "text": "Fully configurable platforms that integrate with any third-party ERP or existing system. No vendor lock-in, ever." },
+      "cloud": { "num": "03", "title": "Cloud & On-Premise", "text": "Cloud (AWS), on-server or hybrid. D3 solutions flex to your infrastructure and security requirements without compromise." },
+      "support": { "num": "04", "title": "Full-Lifecycle Support", "text": "From consultancy and implementation to ongoing support: one relationship, one contact, complete peace of mind." }
     }
   },
   "caseStudies": {
@@ -175,11 +175,11 @@
     "phone1": "+973 1700 0000"
   },
   "footer": {
-    "tagline": "Real-time information sharing. Enterprise IT solutions for the Middle-East and Europe — built in Bahrain since 2010.",
+    "tagline": "Real-time information sharing. Enterprise IT solutions for the Middle-East and Europe, built in Bahrain since 2010.",
     "solutions": "Solutions",
     "company": "Company",
     "contact": "Contact",
-    "copyright": "D3 — Digital Data Dimensions. All rights reserved.",
+    "copyright": "D3: Digital Data Dimensions. All rights reserved.",
     "about": "About D3",
     "ourClients": "Our Clients",
     "partners": "Partners",
@@ -198,7 +198,7 @@
     "eyebrow": "Who we are",
     "title": "Built in Bahrain. Trusted {highlight}.",
     "highlight": "globally",
-    "p1": "D3 — Digital Data Dimensions — was established in 2010 to deliver information technology solutions for small, medium and large enterprises across the Middle-East and Europe.",
+    "p1": "D3 (Digital Data Dimensions) was established in 2010 to deliver information technology solutions for small, medium and large enterprises across the Middle-East and Europe.",
     "p2": "Our mission has always been to build long-term professional partnerships, not just sell software. Our team brings decades of experience across IT and real-world business operations.",
     "learnMore": "Learn more about D3"
   },

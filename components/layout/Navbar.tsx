@@ -149,7 +149,7 @@ export function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="/" className="d3-nav-logo" aria-label="D3 Digital Data Dimensions — Home">
+        <Link href="/" className="d3-nav-logo" aria-label="D3 Digital Data Dimensions Home">
           <img src="/d3logo.png" alt="D3 Digital Data Dimensions" className="d3-logo-img" />
         </Link>
 
@@ -293,7 +293,7 @@ export function Navbar() {
       >
         {/* Header */}
         <div className="d3-mob-header">
-          <Link href="/" className="d3-nav-logo" onClick={() => setMobileOpen(false)} aria-label="D3 — Home">
+          <Link href="/" className="d3-nav-logo" onClick={() => setMobileOpen(false)} aria-label="D3 Home">
             <img src="/d3logo.png" alt="D3" className="d3-logo-img d3-logo-img--sm" />
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
