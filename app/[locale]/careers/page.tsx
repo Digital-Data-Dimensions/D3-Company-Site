@@ -25,7 +25,7 @@ export default function CareersPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <SectionEyebrow>Careers</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Join <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>D3</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 560 }}>
@@ -38,7 +38,7 @@ export default function CareersPage() {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>Open Positions</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 36 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 36 }}>
               Current opportunities
             </h2>
           </RevealOnScroll>
@@ -51,14 +51,14 @@ export default function CareersPage() {
                   borderRadius: 16, padding: '20px 28px', flexWrap: 'wrap', gap: 12,
                 }}>
                   <div>
-                    <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 4 }}>{role.title}</div>
+                    <div style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 4 }}>{role.title}</div>
                     <div style={{ fontSize: 13, color: 'var(--muted)' }}>{role.type} · {role.location}</div>
                   </div>
                   <a href="mailto:info@dthree.co?subject=Career Application" style={{
                     display: 'inline-flex', alignItems: 'center', gap: 6,
                     padding: '9px 18px', borderRadius: 100,
                     background: 'var(--cta)', color: '#fff',
-                    fontSize: 13, fontWeight: 700, textDecoration: 'none',
+                    fontSize: 13, fontWeight: 400, textDecoration: 'none',
                   }}>
                     Apply Now
                   </a>

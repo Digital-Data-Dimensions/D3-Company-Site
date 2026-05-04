@@ -622,7 +622,7 @@ export default async function SolutionPage({ params }: Props) {
             {/* Left */}
             <div>
               <SectionEyebrow>Solution</SectionEyebrow>
-              <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 20 }}>
+              <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 20 }}>
                 {sol.title}
               </h1>
               <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.8, fontWeight: 400, marginBottom: 36 }}>
@@ -682,10 +682,10 @@ export default async function SolutionPage({ params }: Props) {
                 </div>
                 {/* Key capabilities below image */}
                 <div style={{
-                  background: 'var(--bg-surface)', border: '1px solid var(--border)',
+                  background: 'var(--card)', border: '1px solid var(--border)',
                   borderRadius: 16, padding: '20px 24px', marginTop: 16,
                 }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Key capabilities</div>
+                  <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Key capabilities</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                     {detail.highlights.map((h) => {
                       const c = chipColor(h);
@@ -705,10 +705,10 @@ export default async function SolutionPage({ params }: Props) {
               </div>
             ) : (
               <div style={{
-                background: 'var(--bg-surface)', border: '1px solid var(--border)',
+                background: 'var(--card)', border: '1px solid var(--border)',
                 borderRadius: 20, padding: '32px', alignSelf: 'start',
               }}>
-                <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Key capabilities</div>
+                <div style={{ fontSize: 12, fontWeight: 400, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Key capabilities</div>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {detail.highlights.map((h) => {
                     const c = chipColor(h);
@@ -749,7 +749,7 @@ export default async function SolutionPage({ params }: Props) {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>What&apos;s included</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 400, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
               All the features you need
             </h2>
           </RevealOnScroll>
@@ -794,7 +794,7 @@ export default async function SolutionPage({ params }: Props) {
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
             <RevealOnScroll>
               <SectionEyebrow>See it in action</SectionEyebrow>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
                 Watch {sol.title} in action
               </h2>
             </RevealOnScroll>
@@ -817,7 +817,7 @@ export default async function SolutionPage({ params }: Props) {
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
             <RevealOnScroll>
               <SectionEyebrow>Detailed modules</SectionEyebrow>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 48 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 48 }}>
                 Full module breakdown
               </h2>
             </RevealOnScroll>
@@ -825,7 +825,7 @@ export default async function SolutionPage({ params }: Props) {
               {detail.additionalSections.map((sec, i) => (
                 <RevealOnScroll key={sec.title} delay={i * 40}>
                   <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 16, padding: '28px 24px', height: '100%' }}>
-                    <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{sec.title}</h3>
+                    <h3 style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', marginBottom: 10 }}>{sec.title}</h3>
                     {sec.intro && <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 14 }}>{sec.intro}</p>}
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {sec.bullets.map((bullet) => (
@@ -850,7 +850,7 @@ export default async function SolutionPage({ params }: Props) {
         <section style={{ padding: '72px 0', background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
             <SectionEyebrow>Industries</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 32 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 400, letterSpacing: -0.8, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 32 }}>
               Built for these sectors
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
@@ -868,55 +868,13 @@ export default async function SolutionPage({ params }: Props) {
         </section>
       )}
 
-      {/* ── CASE STUDY ── */}
-      {relatedCaseStudy && (
-        <section style={{ padding: '72px 0', background: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}>
-          <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
-            <SectionEyebrow>Case Study</SectionEyebrow>
-            <div className="case-study-grid">
-              <div>
-                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 12 }}>
-                  {relatedCaseStudy.clientName}
-                </h2>
-                <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 24, background: 'var(--bg)', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: 100 }}>
-                  {relatedCaseStudy.clientType}
-                </span>
-                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginBottom: 24 }}>
-                  {relatedCaseStudy.problem}
-                </p>
-                <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginBottom: 28 }}>
-                  <strong style={{ color: 'var(--heading)' }}>Result: </strong>{relatedCaseStudy.result}
-                </p>
-                <Link href={`/case-studies/${relatedCaseStudy.slug}` as Parameters<typeof Link>[0]['href']} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 700, color: 'var(--heading)', textDecoration: 'none', borderBottom: '1px solid var(--border)', paddingBottom: 2 }}>
-                  Read full case study <ArrowIcon size={13} />
-                </Link>
-              </div>
-              <div style={{ background: '#1A1A2E', borderRadius: 20, padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 20 }}>
-                {[
-                  { label: 'Challenge', text: relatedCaseStudy.problem.slice(0, 90) + '…' },
-                  { label: 'Solution', text: relatedCaseStudy.solution.slice(0, 90) + '…' },
-                  { label: 'Outcome', text: relatedCaseStudy.result.slice(0, 90) + '…' },
-                ].map((item) => (
-                  <div key={item.label}>
-                    <div style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', marginBottom: 6 }}>{item.label}</div>
-                    <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item.text}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <style>{`
-            .case-study-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: start; margin-top: 32px; }
-            @media (max-width: 800px) { .case-study-grid { grid-template-columns: 1fr; gap: 24px; } }
-          `}</style>
-        </section>
-      )}
+      {/* Case study panel removed — see /case-studies for real client projects */}
 
       {/* ── RELATED SOLUTIONS ── */}
       <section style={{ padding: '72px 0', background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
           <SectionEyebrow>Also from D3</SectionEyebrow>
-          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
+          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
             Explore more solutions
           </h2>
           <div className="related-grid">
@@ -925,7 +883,7 @@ export default async function SolutionPage({ params }: Props) {
                 display: 'block', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 16, padding: '24px',
                 textDecoration: 'none', transition: 'border-color 0.2s',
               }}>
-                <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', marginBottom: 8 }}>{rs.title}</div>
+                <div style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', marginBottom: 8 }}>{rs.title}</div>
                 <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.6, marginBottom: 16 }}>{rs.desc.slice(0, 100)}…</div>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 13, fontWeight: 600, color: 'var(--muted)' }}>
                   Learn more <ArrowIcon size={12} />

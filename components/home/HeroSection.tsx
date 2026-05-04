@@ -12,7 +12,7 @@ function ArrowIcon() {
   );
 }
 
-/* ── FLOATING PARTICLES (canvas) ── */
+/* ── FLOATING PARTICLES (canvas) — very light ── */
 function FloatingParticles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -23,7 +23,7 @@ function FloatingParticles() {
     if (!ctx) return;
 
     let animId: number;
-    const PARTICLE_COUNT = 38;
+    const PARTICLE_COUNT = 16;
 
     type P = { x: number; y: number; r: number; vx: number; vy: number; alpha: number; };
     let particles: P[] = [];
@@ -39,10 +39,10 @@ function FloatingParticles() {
       return {
         x: Math.random() * canvas.width,
         y: canvas.height + 10,
-        r: 1 + Math.random() * 2,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: -(0.25 + Math.random() * 0.45),
-        alpha: 0.08 + Math.random() * 0.18,
+        r: 0.8 + Math.random() * 1.4,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: -(0.15 + Math.random() * 0.25),
+        alpha: 0.03 + Math.random() * 0.07,
       };
     }
 
@@ -50,7 +50,7 @@ function FloatingParticles() {
       if (!canvas) return;
       particles = Array.from({ length: PARTICLE_COUNT }, () => {
         const p = spawn();
-        p.y = Math.random() * canvas.height; // scatter initial Y
+        p.y = Math.random() * canvas.height;
         return p;
       });
     }
@@ -61,15 +61,11 @@ function FloatingParticles() {
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 53, 128, ${p.alpha})`;
+        ctx.fillStyle = `rgba(0, 33, 71, ${p.alpha})`;
         ctx.fill();
-
         p.x += p.vx;
         p.y += p.vy;
-
-        if (p.y + p.r < 0) {
-          Object.assign(p, spawn());
-        }
+        if (p.y + p.r < 0) Object.assign(p, spawn());
       }
       animId = requestAnimationFrame(draw);
     }
@@ -93,15 +89,30 @@ function FloatingParticles() {
       style={{
         position: 'absolute', inset: 0,
         width: '100%', height: '100%',
-        pointerEvents: 'none',
-        zIndex: 0,
+        pointerEvents: 'none', zIndex: 0,
       }}
     />
   );
 }
 
+/* ── HERO GRID (subtle fading grid lines) ── */
+function HeroGrid() {
+  return (
+    <div aria-hidden="true" style={{
+      position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none',
+      backgroundImage: `
+        linear-gradient(to right, rgba(0,33,71,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,33,71,0.04) 1px, transparent 1px)
+      `,
+      backgroundSize: '72px 72px',
+      maskImage: 'radial-gradient(ellipse 80% 100% at 50% 50%, black 30%, transparent 100%)',
+      WebkitMaskImage: 'radial-gradient(ellipse 80% 100% at 50% 50%, black 30%, transparent 100%)',
+    }} />
+  );
+}
+
 /* ── COUNTER with IntersectionObserver ── */
-function useCounter(target: number, duration = 2000) {
+function useCounter(target: number, duration = 1800) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -109,22 +120,31 @@ function useCounter(target: number, duration = 2000) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    function animate() {
+      if (started.current) return;
+      started.current = true;
+      let startTime: number | null = null;
+      const step = (ts: number) => {
+        if (!startTime) startTime = ts;
+        const p = Math.min((ts - startTime) / duration, 1);
+        setCount(Math.floor((1 - Math.pow(1 - p, 3)) * target));
+        if (p < 1) requestAnimationFrame(step);
+        else setCount(target);
+      };
+      requestAnimationFrame(step);
+    }
+
+    // Fire immediately if already visible (hero is above fold)
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      const delay = setTimeout(animate, 400);
+      return () => clearTimeout(delay);
+    }
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          let startTime: number;
-          const step = (ts: number) => {
-            if (!startTime) startTime = ts;
-            const p = Math.min((ts - startTime) / duration, 1);
-            setCount(Math.floor((1 - Math.pow(1 - p, 3)) * target));
-            if (p < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
+      ([entry]) => { if (entry.isIntersecting) { animate(); observer.disconnect(); } },
+      { threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -133,30 +153,30 @@ function useCounter(target: number, duration = 2000) {
   return { count, ref };
 }
 
-/* ── SLIDES — only text changes ── */
+/* ── SLIDES ── */
 const SLIDES = [
   {
     tag: 'Enterprise IT for the GCC',
     headline: 'Complete Technology Solutions for GCC Enterprises',
     sub: 'D3 (Digital Data Dimensions) delivers workforce management, queue systems, RFID tracking, digital signage and ERP, trusted by 500+ organisations across Bahrain and the Gulf.',
-    link: { label: 'Explore Solutions', href: '/solutions/timetech-application' },
+    link: { label: 'Explore Solutions', href: '/solutions/time-attendance-system' },
   },
   {
     tag: 'Workforce Management',
-    headline: 'Biometric Attendance, HR & Payroll: All in One Application',
+    headline: 'Biometric Attendance, HR & Payroll: All in One',
     sub: 'TimeTech handles time attendance, HRMS, payroll, visitor management and mobile self-service for enterprises with full LMRA and WPS compliance.',
-    link: { label: 'View TimeTech', href: '/solutions/timetech-application' },
+    link: { label: 'View Attendance', href: '/solutions/time-attendance-system' },
   },
   {
     tag: 'Queue Management',
-    headline: 'Eliminate Queues and Deliver Better Customer Experience',
-    sub: 'Kiosk dispensers, WhatsApp virtual queuing, LED counter displays and live analytics, deployed across ministries, banks and hospitals in the GCC.',
+    headline: 'Wired and Wireless Queue Systems for Every Enterprise',
+    sub: 'Touchscreen kiosk dispensers, LED counter displays, audio announcements and live analytics, deployed across ministries, banks and hospitals in the GCC.',
     link: { label: 'Queue Solutions', href: '/solutions/queue-management-system' },
   },
   {
     tag: 'RFID & Digital Signage',
     headline: 'Full Asset Visibility and Smart Display Networks',
-    sub: 'Active and passive RFID tracking, indoor and outdoor LED displays, centralized CMS and ERP integration, end-to-end from a single trusted partner.',
+    sub: 'Active and passive RFID tracking for assets, documents and warehouse inventory. Indoor and outdoor LED displays with centralised CMS, end-to-end from a single trusted partner.',
     link: { label: 'Learn More', href: '/solutions/rfid-asset-tracking' },
   },
 ];
@@ -191,11 +211,11 @@ export function HeroSection() {
 
   return (
     <section className="hs-wrap" aria-label="Hero">
-      {/* Subtle mesh / orb background */}
+      {/* Background layers */}
       <div className="hero-mesh" aria-hidden="true" />
+      <HeroGrid />
       <div className="hs-orb hs-orb--a" aria-hidden="true" />
       <div className="hs-orb hs-orb--b" aria-hidden="true" />
-      {/* Floating particles */}
       <FloatingParticles />
 
       <div className="container hs-inner" style={{ position: 'relative', zIndex: 1 }}>
@@ -327,7 +347,7 @@ export function HeroSection() {
         /* headline */
         .hs-h1 {
           font-family: var(--font);
-          font-weight: 700;
+          font-weight: 400;
           font-size: clamp(34px, 5vw, 72px);
           line-height: 1.05;
           letter-spacing: -2.5px;

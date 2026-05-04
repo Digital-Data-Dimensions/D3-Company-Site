@@ -7,25 +7,25 @@ const WHY_ITEMS = [
     num: '01',
     title: 'GCC-first Design',
     text: 'Built for the Gulf, with Arabic support, local labour law compliance and GCC regulatory standards built in from day one.',
-    icon: <Globe size={22} />,
+    icon: <Globe size={28} />,
   },
   {
     num: '02',
     title: '100% Customisable',
     text: 'Fully configurable platforms that integrate with any third-party ERP or existing system. No vendor lock-in, ever.',
-    icon: <Settings2 size={22} />,
+    icon: <Settings2 size={28} />,
   },
   {
     num: '03',
     title: 'Cloud & On-Premise',
     text: 'Cloud (AWS), on-server or hybrid. D3 solutions flex to your infrastructure and security requirements without compromise.',
-    icon: <Cloud size={22} />,
+    icon: <Cloud size={28} />,
   },
   {
     num: '04',
     title: 'Full-Lifecycle Support',
     text: 'From consultancy and implementation to ongoing support: one relationship, one contact, complete peace of mind.',
-    icon: <Headphones size={22} />,
+    icon: <Headphones size={28} />,
   },
 ];
 

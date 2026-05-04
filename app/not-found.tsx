@@ -77,7 +77,7 @@ export default function NotFound() {
 
         <h1 style={{
           fontSize: 'clamp(22px, 3vw, 32px)',
-          fontWeight: 700,
+          fontWeight: 400,
           color: 'var(--heading)',
           letterSpacing: -0.5,
           marginBottom: 14,
@@ -96,7 +96,7 @@ export default function NotFound() {
               display: 'inline-flex', alignItems: 'center', gap: 8,
               background: 'var(--cta)', color: '#fff',
               padding: '12px 24px', borderRadius: 8,
-              fontSize: 14, fontWeight: 700, textDecoration: 'none',
+              fontSize: 14, fontWeight: 400, textDecoration: 'none',
               boxShadow: '0 4px 20px var(--cta-glow)',
               transition: 'background 0.2s, transform 0.15s',
             }}
@@ -128,7 +128,7 @@ export default function NotFound() {
           borderRadius: 16,
           padding: '24px 28px',
         }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 16 }}>
+          <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 16 }}>
             Popular pages
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>

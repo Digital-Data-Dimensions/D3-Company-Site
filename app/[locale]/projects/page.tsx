@@ -29,7 +29,7 @@ export default function ProjectsPage() {
                 style={{
                   fontFamily: 'var(--font)',
                   fontSize: 'clamp(32px, 4vw, 56px)',
-                  fontWeight: 700,
+                  fontWeight: 400,
                   letterSpacing: -1.5,
                   lineHeight: 1.08,
                   color: 'var(--heading)',

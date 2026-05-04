@@ -72,7 +72,7 @@ export function TrustLogosSection() {
         .tl-label {
           text-align: center;
           font-size: 11px;
-          font-weight: 700;
+          font-weight: 400;
           letter-spacing: 0.13em;
           text-transform: uppercase;
           color: var(--muted);
@@ -119,7 +119,7 @@ export function TrustLogosSection() {
           align-items: center;
           justify-content: center;
           font-size: 9px;
-          font-weight: 700;
+          font-weight: 400;
           letter-spacing: 0.03em;
           text-align: center;
           flex-shrink: 0;

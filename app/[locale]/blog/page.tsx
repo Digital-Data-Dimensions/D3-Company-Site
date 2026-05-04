@@ -19,7 +19,7 @@ export default function BlogListPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Resources</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Insights & <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>guides</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600 }}>
@@ -47,7 +47,7 @@ export default function BlogListPage() {
                       <span key={tag} style={{ fontSize: 11, fontWeight: 600, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
                     ))}
                   </div>
-                  <h2 style={{ fontFamily: 'var(--font)', fontSize: 20, fontWeight: 700, color: 'var(--heading)', letterSpacing: -0.3, lineHeight: 1.3, marginBottom: 14 }}>{post.title}</h2>
+                  <h2 style={{ fontFamily: 'var(--font)', fontSize: 20, fontWeight: 400, color: 'var(--heading)', letterSpacing: -0.3, lineHeight: 1.3, marginBottom: 14 }}>{post.title}</h2>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, marginBottom: 24 }}>{post.excerpt}</p>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 500 }}>

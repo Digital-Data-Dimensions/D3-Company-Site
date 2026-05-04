@@ -58,7 +58,7 @@ export function FloatingActions() {
             color: '#fff',
             padding: '12px 20px',
             borderRadius: 100,
-            fontSize: 13, fontWeight: 700,
+            fontSize: 13, fontWeight: 400,
             textDecoration: 'none',
             transition: 'transform 0.2s',
             whiteSpace: 'nowrap',

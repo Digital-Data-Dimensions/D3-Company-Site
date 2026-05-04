@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
               <span key={tag} style={{ fontSize: 11, fontWeight: 600, padding: '4px 10px', borderRadius: 100, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
             ))}
           </div>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 20, maxWidth: 800 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 20, maxWidth: 800 }}>
             {post.title}
           </h1>
           <div style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 500 }}>
@@ -105,7 +105,7 @@ export default async function BlogPostPage({ params }: Props) {
 
               {relatedSolutions.length > 0 && (
                 <div style={{ marginTop: 48, padding: '28px', background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 16 }}>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--heading)', marginBottom: 16 }}>Related Solutions</div>
+                  <div style={{ fontSize: 13, fontWeight: 400, color: 'var(--heading)', marginBottom: 16 }}>Related Solutions</div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                     {relatedSolutions.map((sol) => (
                       <Link key={sol.slug} href={`/solutions/${sol.slug}` as Parameters<typeof Link>[0]['href']} style={{
@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Sidebar */}
             <aside>
               <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 16, padding: '24px', marginBottom: 20 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--heading)', marginBottom: 16 }}>More Articles</div>
+                <div style={{ fontSize: 13, fontWeight: 400, color: 'var(--heading)', marginBottom: 16 }}>More Articles</div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {otherPosts.map((p) => (
                     <Link key={p.slug} href={`/blog/${p.slug}` as Parameters<typeof Link>[0]['href']} style={{ textDecoration: 'none' }}>
@@ -138,12 +138,12 @@ export default async function BlogPostPage({ params }: Props) {
 
               <div style={{ background: '#1A1A2E', borderRadius: 16, padding: '24px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: -30, right: -30, width: 120, height: 120, borderRadius: '50%', background: 'radial-gradient(circle, rgba(0,53,128,0.15) 0%, transparent 70%)' }} />
-                <div style={{ fontSize: 15, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Ready to see it in action?</div>
+                <div style={{ fontSize: 15, fontWeight: 400, color: '#fff', marginBottom: 8 }}>Ready to see it in action?</div>
                 <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 20 }}>Request a live demo with our team.</div>
                 <Link href="/contact" style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
                   background: 'var(--cta)', color: '#fff', padding: '10px 18px',
-                  borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none',
+                  borderRadius: 8, fontSize: 13, fontWeight: 400, textDecoration: 'none',
                 }}>
                   Request Demo <ArrowIcon size={12} />
                 </Link>

@@ -57,7 +57,7 @@ export default async function IndustryPage({ params }: Props) {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Industry</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Enterprise IT Solutions for <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>{ind.title}</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600, marginBottom: 40 }}>
@@ -71,7 +71,7 @@ export default async function IndustryPage({ params }: Props) {
       <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Industry Challenges</SectionEyebrow>
-          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 400, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
             What keeps {ind.title.toLowerCase()} leaders up at night
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }} className="challenges-grid">
@@ -82,8 +82,8 @@ export default async function IndustryPage({ params }: Props) {
                   borderRadius: 16, padding: '28px 24px',
                   borderTop: '3px solid var(--border)',
                 }}>
-                  <div style={{ fontSize: 30, fontWeight: 700, color: 'var(--muted)', marginBottom: 16, fontVariantNumeric: 'tabular-nums' }}>0{i + 1}</div>
-                  <div style={{ fontSize: 17, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{c.title}</div>
+                  <div style={{ fontSize: 30, fontWeight: 400, color: 'var(--muted)', marginBottom: 16, fontVariantNumeric: 'tabular-nums' }}>0{i + 1}</div>
+                  <div style={{ fontSize: 17, fontWeight: 400, color: 'var(--heading)', marginBottom: 10 }}>{c.title}</div>
                   <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{c.desc}</div>
                 </div>
               </RevealOnScroll>
@@ -101,7 +101,7 @@ export default async function IndustryPage({ params }: Props) {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Recommended Solutions</SectionEyebrow>
-          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 400, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
             How D3 solves your challenges
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }} className="ind-sol-grid">
@@ -115,7 +115,7 @@ export default async function IndustryPage({ params }: Props) {
                 }}
                   className="ind-sol-card"
                 >
-                  <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{sol.title}</div>
+                  <div style={{ fontSize: 18, fontWeight: 400, color: 'var(--heading)', marginBottom: 10 }}>{sol.title}</div>
                   <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16 }}>{sol.desc}</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 16 }}>
                     {sol.tags.slice(0, 3).map((tag) => (
@@ -142,7 +142,7 @@ export default async function IndustryPage({ params }: Props) {
         <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
             <SectionEyebrow>Case Studies</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 400, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
               Proven results in {ind.title.toLowerCase()}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: relatedCaseStudies.length === 1 ? '1fr' : '1fr 1fr', gap: 20, maxWidth: relatedCaseStudies.length === 1 ? 600 : '100%' }}>
@@ -152,11 +152,11 @@ export default async function IndustryPage({ params }: Props) {
                   background: 'var(--card)', border: '1px solid var(--border)',
                   borderRadius: 16, padding: '28px 24px', textDecoration: 'none',
                 }}>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>{cs.clientType}</div>
-                  <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--heading)', marginBottom: 12 }}>{cs.clientName}</div>
-                  <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16 }}>{cs.result}</div>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600, color: 'var(--muted)' }}>
-                    Read case study <ArrowIcon size={13} />
+                  <div style={{ fontSize: 12, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>{cs.clientType}</div>
+                  <div style={{ fontSize: 18, fontWeight: 400, color: 'var(--heading)', marginBottom: 12 }}>{cs.clientName}</div>
+                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16, fontWeight: 300 }}>{cs.solution}</div>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--muted)' }}>
+                    View project <ArrowIcon size={13} />
                   </div>
                 </Link>
               ))}
@@ -168,7 +168,7 @@ export default async function IndustryPage({ params }: Props) {
       {/* Other Industries */}
       <section style={{ padding: '60px 0', background: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Other industries we serve</div>
+          <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Other industries we serve</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
             {otherIndustries.map((oi) => (
               <Link key={oi.slug} href={`/industries/${oi.slug}` as Parameters<typeof Link>[0]['href']} style={{

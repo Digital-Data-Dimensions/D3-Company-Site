@@ -68,7 +68,7 @@ export default function NewsPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <SectionEyebrow>News & Credentials</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Accreditations &amp; <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>Recognition</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 560 }}>
@@ -82,7 +82,7 @@ export default function NewsPage() {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>Certificates</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
               Accreditation Certificates
             </h2>
           </RevealOnScroll>
@@ -103,7 +103,7 @@ export default function NewsPage() {
                     <CertificateIcon />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 8, lineHeight: 1.4 }}>{cert.title}</h3>
+                    <h3 style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 8, lineHeight: 1.4 }}>{cert.title}</h3>
                     <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{cert.desc}</p>
                   </div>
                   <a
@@ -113,7 +113,7 @@ export default function NewsPage() {
                       display: 'inline-flex', alignItems: 'center', gap: 8,
                       padding: '10px 18px', borderRadius: 100,
                       background: 'var(--cta)', color: '#fff',
-                      fontSize: 13, fontWeight: 700, textDecoration: 'none',
+                      fontSize: 13, fontWeight: 400, textDecoration: 'none',
                       letterSpacing: '0.02em', transition: 'background 0.2s',
                       alignSelf: 'flex-start',
                     }}
@@ -132,7 +132,7 @@ export default function NewsPage() {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>Letters</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
               Appreciation Letters
             </h2>
           </RevealOnScroll>
@@ -153,7 +153,7 @@ export default function NewsPage() {
                     <LetterIcon />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 8, lineHeight: 1.4 }}>{letter.title}</h3>
+                    <h3 style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 8, lineHeight: 1.4 }}>{letter.title}</h3>
                     <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{letter.desc}</p>
                   </div>
                   <a
@@ -163,7 +163,7 @@ export default function NewsPage() {
                       display: 'inline-flex', alignItems: 'center', gap: 8,
                       padding: '10px 18px', borderRadius: 100,
                       border: '1px solid var(--border)', background: 'var(--bg-surface)',
-                      fontSize: 13, fontWeight: 700, textDecoration: 'none',
+                      fontSize: 13, fontWeight: 400, textDecoration: 'none',
                       color: 'var(--heading)', letterSpacing: '0.02em',
                       transition: 'border-color 0.2s', alignSelf: 'flex-start',
                     }}

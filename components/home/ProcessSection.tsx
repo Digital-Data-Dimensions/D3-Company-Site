@@ -3,10 +3,10 @@ import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 
 const PROCESS_STEPS = [
-  { num: '01', title: 'Discovery', desc: 'We analyse your requirements, existing systems and compliance needs in a structured scoping session.', icon: <Search size={22} /> },
-  { num: '02', title: 'Solution Design', desc: 'Custom configuration planning, ERP integration mapping and project timeline sign-off.', icon: <LayoutTemplate size={22} /> },
-  { num: '03', title: 'Implementation', desc: 'Rapid deployment with full testing, staff training, data migration and go-live support.', icon: <Rocket size={22} /> },
-  { num: '04', title: 'Ongoing Support', desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.', icon: <Shield size={22} /> },
+  { num: '01', title: 'Discovery', desc: 'We analyse your requirements, existing systems and compliance needs in a structured scoping session.', icon: <Search size={28} /> },
+  { num: '02', title: 'Solution Design', desc: 'Custom configuration planning, ERP integration mapping and project timeline sign-off.', icon: <LayoutTemplate size={28} /> },
+  { num: '03', title: 'Implementation', desc: 'Rapid deployment with full testing, staff training, data migration and go-live support.', icon: <Rocket size={28} /> },
+  { num: '04', title: 'Ongoing Support', desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.', icon: <Shield size={28} /> },
 ];
 
 export function ProcessSection() {

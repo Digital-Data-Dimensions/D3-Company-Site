@@ -93,14 +93,14 @@ export default function AboutPage() {
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 background: 'var(--bg-surface)', border: '1px solid var(--border)',
-                color: 'var(--muted)', fontSize: 11, fontWeight: 700,
+                color: 'var(--muted)', fontSize: 11, fontWeight: 400,
                 letterSpacing: '0.12em', textTransform: 'uppercase',
                 paddingBlock: 6, paddingInline: 14, borderRadius: 100, marginBottom: 28,
               }}>
                 About D3
               </div>
               <h1 style={{
-                fontFamily: 'var(--font)', fontWeight: 700,
+                fontFamily: 'var(--font)', fontWeight: 400,
                 fontSize: 'clamp(36px, 5vw, 68px)', lineHeight: 1.06,
                 letterSpacing: -2, color: 'var(--heading)', marginBottom: 24,
               }}>
@@ -130,14 +130,13 @@ export default function AboutPage() {
               { val: '15+', label: 'Years of experience' },
               { val: '500+', label: 'Enterprise clients' },
               { val: '10+', label: 'Countries served' },
-              { val: '8', label: 'Product solutions' },
             ].map((stat) => (
               <RevealOnScroll key={stat.label}>
                 <div style={{ textAlign: 'center' }}>
                   <div
                     style={{
                       fontSize: 'clamp(32px, 4vw, 48px)',
-                      fontWeight: 700,
+                      fontWeight: 400,
                       color: 'var(--heading)',
                       letterSpacing: -1,
                       marginBottom: 6,
@@ -146,7 +145,7 @@ export default function AboutPage() {
                   >
                     <span style={{ color: 'var(--heading)' }}>{stat.val}</span>
                   </div>
-                  <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{stat.label}</div>
+                  <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{stat.label}</div>
                 </div>
               </RevealOnScroll>
             ))}
@@ -164,7 +163,7 @@ export default function AboutPage() {
                   style={{
                     fontFamily: 'var(--font)',
                     fontSize: 'clamp(26px, 3vw, 42px)',
-                    fontWeight: 700,
+                    fontWeight: 400,
                     letterSpacing: -1,
                     color: 'var(--heading)',
                     marginBottom: 20,
@@ -182,29 +181,6 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  {['24/7 dedicated support', 'Full ERP integration capability', 'GCC labour law compliance built-in'].map((item) => (
-                    <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, fontWeight: 500, color: 'var(--body)' }}>
-                      <span
-                        style={{
-                          width: 24,
-                          height: 24,
-                          borderRadius: '50%',
-                          background: 'rgba(22,163,74,0.12)',
-                          border: '1px solid rgba(22,163,74,0.2)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: '#16a34a',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <CheckIcon />
-                      </span>
-                      {item}
-                    </div>
-                  ))}
-                </div>
               </div>
             </RevealOnScroll>
 
@@ -233,7 +209,7 @@ export default function AboutPage() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginBottom: 56 }}>
               <div className="eyebrow eyebrow-center">Mission · Vision · Values</div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
                 What drives us every day
               </h2>
             </div>
@@ -252,7 +228,7 @@ export default function AboutPage() {
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
-                  <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{val.title}</h3>
+                  <h3 style={{ fontSize: 18, fontWeight: 400, color: 'var(--heading)', marginBottom: 10 }}>{val.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7 }}>{val.desc}</p>
                 </div>
               </RevealOnScroll>
@@ -266,7 +242,7 @@ export default function AboutPage() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginBottom: 48 }}>
               <div className="eyebrow eyebrow-center">Our Journey</div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
                 15+ years of excellence
               </h2>
             </div>
@@ -281,7 +257,7 @@ export default function AboutPage() {
                   { year: '10+', label: 'Countries served' },
                 ].map((item) => (
                   <div key={item.year} style={{ textAlign: 'center', minWidth: 120 }}>
-                    <div style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, color: 'var(--cta)', letterSpacing: -1, lineHeight: 1 }}>{item.year}</div>
+                    <div style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, color: 'var(--cta)', letterSpacing: -1, lineHeight: 1 }}>{item.year}</div>
                     <div style={{ fontSize: 13, color: 'var(--body)', marginTop: 6, fontWeight: 500, lineHeight: 1.4 }}>{item.label}</div>
                   </div>
                 ))}
@@ -299,7 +275,7 @@ export default function AboutPage() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginBottom: 48 }}>
               <div className="eyebrow eyebrow-center">Our Expertise</div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
                 Why work with D3
               </h2>
             </div>
@@ -345,7 +321,7 @@ export default function AboutPage() {
                 }}
               />
               <div style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 12, letterSpacing: -0.5 }}>Ready to get started?</div>
+                <div style={{ fontSize: 28, fontWeight: 400, color: '#fff', marginBottom: 12, letterSpacing: -0.5 }}>Ready to get started?</div>
                 <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 28, maxWidth: 420, margin: '0 auto 28px' }}>
                   Talk to our team and discover how D3 can transform your enterprise operations.
                 </p>

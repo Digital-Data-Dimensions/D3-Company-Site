@@ -2,7 +2,6 @@ import { HeroSection } from '@/components/home/HeroSection';
 import { MarqueeSection } from '@/components/home/MarqueeSection';
 import { TrustLogosSection } from '@/components/home/TrustLogosSection';
 import { SolutionsSection } from '@/components/home/SolutionsSection';
-import { TimeTechSection } from '@/components/home/TimeTechSection';
 import { WhySection } from '@/components/home/WhySection';
 import { ProcessSection } from '@/components/home/ProcessSection';
 import { CTASection } from '@/components/home/CTASection';
@@ -32,7 +31,6 @@ export default function HomePage() {
       <MarqueeSection />
       <TrustLogosSection />
       <SolutionsSection />
-      <TimeTechSection />
       <WhySection />
       <ProcessSection />
       <CTASection />

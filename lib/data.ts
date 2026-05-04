@@ -1,18 +1,10 @@
 // Core product and content data for D3: Digital Data Dimensions (static source of truth)
-// TimeTech solutions, serving GCC enterprises since 2010
+// All content verified against dthree.co — do not add features or claims not on the original site.
 
 export const SOLUTIONS = [
   {
-    slug: 'timetech-application',
-    num: '01',
-    title: 'TimeTech Platform',
-    desc: 'Complete cloud-based workforce intelligence platform: time attendance, HRMS, payroll, visitor management, mobile app and employee self-service, built for GCC enterprises.',
-    tags: ['Biometric', 'Cloud', 'Multi-company', 'iOS & Android'],
-    icon: 'clock',
-  },
-  {
     slug: 'time-attendance-system',
-    num: '02',
+    num: '01',
     title: 'Time Attendance: Standard',
     desc: 'Biometric fingerprint, face recognition and card-based attendance with real-time processing, auto-shift picking, LMRA-compliant payroll export and unlimited sites.',
     tags: ['Biometric', 'LMRA Ready', 'Auto Shift', 'Mobile App'],
@@ -20,7 +12,7 @@ export const SOLUTIONS = [
   },
   {
     slug: 'time-attendance-enterprise',
-    num: '02b',
+    num: '02',
     title: 'Time Attendance: Enterprise',
     desc: 'No.1 TimeTech. Multi-site, multi-company enterprise attendance for unlimited locations, with project manhour tracking, geo-fenced mobile app and full self-service portal.',
     tags: ['Multi-Site', 'Mobile App', 'Geo-Fencing', 'Project Manhours', 'Self-Service'],
@@ -46,8 +38,8 @@ export const SOLUTIONS = [
     slug: 'queue-management-system',
     num: '05',
     title: 'Queue Management System',
-    desc: 'Wired and wireless kiosk-based queue management with audio announcements, multi-service categories, live analytics and supervisor reporting for ministries and enterprises.',
-    tags: ['Kiosk', 'Wired & Wireless', 'Analytics'],
+    desc: 'Wired and wireless kiosk-based queue management with audio announcements, multi-service categories, counter LED displays and live analytics for ministries and enterprises.',
+    tags: ['Kiosk', 'Wired & Wireless', 'Audio Announcements', 'Analytics'],
     icon: 'users',
   },
   {
@@ -62,7 +54,7 @@ export const SOLUTIONS = [
     slug: 'rfid-asset-tracking',
     num: '07',
     title: 'RFID & Asset Tracking',
-    desc: 'Active and passive RFID tracking for assets, documents and warehouse inventory across multiple buildings, departments and warehouses with mobile handheld terminal support.',
+    desc: 'Active and passive RFID tracking for assets, documents, warehouse inventory and gold ornaments across multiple buildings, departments and warehouses with mobile handheld terminal support.',
     tags: ['Active RFID', 'Warehouse WMS', 'Document Tracking', 'Mobile'],
     icon: 'layers',
   },
@@ -79,7 +71,7 @@ export const SOLUTIONS = [
     num: '09',
     title: 'ERP & Retail Management',
     desc: 'Full ERP covering procurement, inventory, sales, financial accounting, payroll, restaurant management and electronic shelf labels. Multi-company, multi-currency, multi-branch.',
-    tags: ['Multi-Company', 'ESL', 'Inventory', 'Retail POS'],
+    tags: ['Multi-Company', 'ESL', 'Inventory', 'Van Sales'],
     icon: 'briefcase',
   },
   {
@@ -99,9 +91,18 @@ export const INDUSTRIES = [
     desc: 'Labour law compliance, LMRA integration, biometric attendance for civil service and ministry-grade physical security.',
     icon: 'building',
     challenges: [
-      { title: 'LMRA & Labour Compliance', desc: 'Full alignment with Bahrain Labour Market Regulatory Authority requirements and GCC labour law.' },
-      { title: 'Large Distributed Workforce', desc: 'Managing thousands of employees across multiple ministries and government departments.' },
-      { title: 'Ministry-Grade Security', desc: 'Biometric access control, IP CCTV and visitor management for sensitive government facilities.' },
+      {
+        title: 'LMRA & Labour Compliance',
+        desc: 'Full alignment with Bahrain Labour Market Regulatory Authority requirements and Civil Service Bureau rules.',
+      },
+      {
+        title: 'Large Distributed Workforce',
+        desc: 'Managing thousands of employees across multiple ministries and government departments with centralised reporting.',
+      },
+      {
+        title: 'Ministry-Grade Security',
+        desc: 'Biometric access control, IP CCTV and visitor management for government facilities.',
+      },
     ],
   },
   {
@@ -110,94 +111,148 @@ export const INDUSTRIES = [
     desc: '24/7 shift scheduling, medical credential tracking, queue management for outpatient services and RFID equipment tracking.',
     icon: 'heart',
     challenges: [
-      { title: '24/7 Shift Management', desc: 'Complex rotating schedules for doctors, nurses and support staff with Ramadan and special shift support.' },
-      { title: 'Patient Queue Optimisation', desc: 'Reducing waiting times in outpatient clinics and emergency departments with intelligent queue kiosks.' },
-      { title: 'Credential & Document Tracking', desc: 'Maintaining up-to-date certifications, licenses and compliance documents with automated reminders.' },
+      {
+        title: '24/7 Shift Management',
+        desc: 'Complex rotating schedules for doctors, nurses and support staff with Ramadan and special shift support.',
+      },
+      {
+        title: 'Patient Queue Management',
+        desc: 'Reducing waiting times in outpatient clinics and hospital departments with intelligent queue kiosks.',
+      },
+      {
+        title: 'Credential & Document Tracking',
+        desc: 'Maintaining up-to-date certifications, licenses and compliance documents with automated expiry reminders.',
+      },
     ],
   },
   {
     slug: 'banking',
     title: 'Banking & Finance',
-    desc: 'Audit-compliant attendance records, secure biometric access, visitor screening and SOX-ready payroll reporting.',
+    desc: 'Audit-compliant attendance records, secure biometric access, visitor screening and payroll reporting for the financial sector.',
     icon: 'credit-card',
     challenges: [
-      { title: 'Regulatory Compliance', desc: 'SOX, Central Bank of Bahrain and internal audit reporting requirements met with full data integrity.' },
-      { title: 'Visitor & Branch Security', desc: 'Comprehensive visitor management and biometric door access across all branch locations.' },
-      { title: 'Payroll Accuracy', desc: 'Zero-error payroll with direct WPS integration, GOSI calculations and multi-currency support.' },
+      {
+        title: 'Regulatory Compliance',
+        desc: 'Central Bank of Bahrain and internal audit reporting requirements met with full attendance and payroll data integrity.',
+      },
+      {
+        title: 'Visitor & Branch Security',
+        desc: 'Comprehensive visitor management and biometric door access across all branch locations.',
+      },
+      {
+        title: 'Payroll Accuracy',
+        desc: 'Zero-error payroll with direct WPS integration, GOSI calculations and multi-currency support.',
+      },
     ],
   },
   {
     slug: 'retail',
     title: 'Retail',
-    desc: 'ERP, electronic shelf labels, real-time inventory control, workforce scheduling and POS integration for multi-location retailers.',
+    desc: 'ERP, electronic shelf labels, real-time inventory control, workforce management and van sales for multi-location retailers.',
     icon: 'shopping-bag',
     challenges: [
-      { title: 'Real-Time Inventory', desc: 'Live stock visibility across all locations with RFID and barcode scanning.' },
-      { title: 'Electronic Shelf Labels', desc: 'Instant price updates across all shelves, eliminating manual repricing and pricing errors.' },
-      { title: 'Peak Workforce Scheduling', desc: 'Automated staff rostering based on footfall patterns and sales data.' },
+      {
+        title: 'Real-Time Inventory',
+        desc: 'Live stock visibility across all locations with RFID and barcode scanning.',
+      },
+      {
+        title: 'Electronic Shelf Labels',
+        desc: 'Instant price updates across all shelves, eliminating manual repricing and pricing errors.',
+      },
+      {
+        title: 'Workforce Management',
+        desc: 'Shift scheduling and attendance management for multi-location retail staff with real-time reporting.',
+      },
     ],
   },
   {
     slug: 'logistics',
     title: 'Logistics',
-    desc: 'RFID warehouse management, asset tracking with handheld terminals, IP fleet surveillance and distributed workforce management.',
+    desc: 'RFID warehouse management, asset tracking with handheld terminals, IP surveillance and distributed workforce management.',
     icon: 'truck',
     challenges: [
-      { title: 'Warehouse & Asset Visibility', desc: 'RFID tracking across multiple warehouses with real-time stock levels and cycle counts.' },
-      { title: 'Fleet & Yard Security', desc: 'IP CCTV monitoring for loading bays, vehicles and high-value cargo areas.' },
-      { title: 'Distributed Workforce', desc: 'Managing shift workers across multiple depots and sites with mobile attendance.' },
+      {
+        title: 'Warehouse & Asset Visibility',
+        desc: 'RFID tracking across multiple warehouses with real-time stock levels and cycle counts.',
+      },
+      {
+        title: 'Site Security',
+        desc: 'IP CCTV monitoring for loading bays and warehouse areas.',
+      },
+      {
+        title: 'Distributed Workforce',
+        desc: 'Managing shift workers across multiple depots and sites with mobile attendance.',
+      },
     ],
   },
 ];
 
+// Real client projects — sourced verbatim from dthree.co homepage.
+// These are the only verified project descriptions D3 publishes publicly.
+// Do NOT add fabricated outcomes or made-up metrics.
 export const CASE_STUDIES = [
   {
-    slug: 'ministry-of-interior-attendance',
-    clientName: 'Government Ministry',
+    slug: 'central-bank-of-bahrain',
+    clientName: 'Central Bank of Bahrain (CBB)',
     clientType: 'Government',
-    problem: 'No unified attendance system across dozens of departments. Manual registers, buddy-punching and no LMRA-compliant reporting.',
-    solution: 'Deployed TimeTech biometric attendance terminals, central dashboard and auto LMRA report generation across all departments.',
-    result: 'Eliminated manual attendance processing, achieved LMRA compliance and dramatically reduced payroll discrepancies.',
+    sector: 'Banking & Finance',
+    solution: 'Time Attendance module integration with HRMS Oracle DB, including customisation as per CBB rules.',
   },
   {
-    slug: 'bank-of-bahrain-kuwait-hrms',
-    clientName: 'GCC Commercial Bank',
-    clientType: 'Banking',
-    problem: 'Legacy HR system with no employee self-service, creating high admin overhead and slow payroll approvals.',
-    solution: 'Full TimeTech HRMS deployment including employee self-service portal, mobile app, payroll engine and appraisal module.',
-    result: 'Significant reduction in HR admin workload; employees now manage leave, overtime and payslips independently.',
-  },
-  {
-    slug: 'gulf-air-queue-management',
-    clientName: 'Regional Transport Hub',
+    slug: 'survey-land-registration-bureau',
+    clientName: 'Survey & Land Registration Bureau',
     clientType: 'Government',
-    problem: 'Long service queues causing customer dissatisfaction and staff overload across multiple service counters.',
-    solution: 'TimeTech Queue Management with kiosks, digital display screens, WhatsApp virtual queue and real-time service analytics.',
-    result: 'Substantially reduced average wait times and measurably improved citizen satisfaction scores.',
+    sector: 'Government',
+    solution: 'Upgrade of Personnel, Leave, Employee Self Service and Time Attendance modules, including integration with Civil Service Bureau.',
   },
   {
-    slug: 'bahrain-airport-cctv',
-    clientName: 'International Airport',
+    slug: 'labour-market-regulatory-authority',
+    clientName: 'Labour Market Regulatory Authority (LMRA)',
     clientType: 'Government',
-    problem: 'Fragmented CCTV coverage, no centralised access control, multiple security blind spots across terminals.',
-    solution: 'Full IP CCTV deployment and biometric access control across all terminal checkpoints with centralised management.',
-    result: 'Achieved full security compliance, eliminated blind spots and reduced incident response time significantly.',
+    sector: 'Government',
+    solution: 'Time and Attendance system for 350 staff with 17 devices installed. Email notifications implemented, CSB Rules applied and historical data migrated to the new system.',
   },
   {
-    slug: 'alba-rfid-assets',
-    clientName: 'Industrial Manufacturer',
-    clientType: 'Industrial',
-    problem: 'Thousands of high-value industrial assets with no reliable tracking, leading to frequent loss and audit failures.',
-    solution: 'RFID fixed asset tracking with handheld mobile terminals and centralised asset management software.',
-    result: 'Near-zero unaccounted asset loss, passed external audits and improved asset utilisation across all sites.',
+    slug: 'ministry-of-foreign-affairs',
+    clientName: 'Ministry of Foreign Affairs',
+    clientType: 'Government',
+    sector: 'Government',
+    solution: 'Time and Attendance devices deployed across 40 Bahrain embassies worldwide with centralised reporting. System configured to calculate and mark attendance using the local time of each embassy.',
   },
   {
-    slug: 'jawad-business-erp',
-    clientName: 'Multi-location Retail Group',
-    clientType: 'Retail',
-    problem: 'Disconnected POS, inventory and HR systems across a large branch network causing reconciliation delays.',
-    solution: 'Unified D3 ERP with electronic shelf labels, real-time inventory and integrated payroll management.',
-    result: 'Price updates now take seconds instead of days; inventory errors reduced to near zero across all branches.',
+    slug: 'ministry-of-islamic-affairs',
+    clientName: 'Ministry of Islamic Affairs',
+    clientType: 'Government',
+    sector: 'Government',
+    solution: 'Time and Attendance system for 200 staff with online access. CSB Rules implemented, SMS notifications for out-time, software deployed on AWS.',
+  },
+  {
+    slug: 'royal-humanitarian-foundation',
+    clientName: 'Royal Humanitarian Foundation',
+    clientType: 'Government',
+    sector: 'Government',
+    solution: 'New comprehensive HRMS system including HR, Personnel, Payroll, Time Attendance, Appraisal, Training, Self-Service and email notification.',
+  },
+  {
+    slug: 'bahrain-institute-political-development',
+    clientName: 'Bahrain Institute for Political Development (BIPD)',
+    clientType: 'Government',
+    sector: 'Government',
+    solution: 'Time and Attendance system for 70 staff with online access. CSB Rules implemented, employee email notifications for out-time, software deployed on AWS.',
+  },
+  {
+    slug: 'university-of-bahrain',
+    clientName: 'University of Bahrain',
+    clientType: 'Education',
+    sector: 'Government',
+    solution: '42 time attendance devices installed and integrated with Oracle for 1,200 staff.',
+  },
+  {
+    slug: 'muller-middle-east',
+    clientName: 'Muller Middle East',
+    clientType: 'Private',
+    sector: 'Private Sector',
+    solution: 'Comprehensive HRMS system including HR, Personnel, Payroll, Time Attendance, Appraisal, Planning & Recruitment, Budgeting, Training, Self-Service and email notification.',
   },
 ];
 
@@ -312,27 +367,27 @@ export const BLOG_POSTS = [
     title: 'Top 5 Benefits of Biometric Attendance Systems for GCC Enterprises',
     excerpt: 'Biometric attendance eliminates buddy-punching, reduces payroll errors and ensures full LMRA compliance. Here\'s why GCC enterprises are upgrading from legacy systems.',
     tags: ['Time Attendance', 'Biometric', 'LMRA'],
-    publishedAt: '2025-03-15',
+    publishedAt: '2026-02-15',
   },
   {
     slug: 'queue-management-government-sector',
     title: 'How Queue Management Systems Are Transforming Government Services in the GCC',
-    excerpt: 'From ministries to municipal offices, TimeTech\'s intelligent queue management is cutting wait times and improving citizen satisfaction across Bahrain and the GCC.',
+    excerpt: 'From ministries to municipal offices, TimeTech\'s queue management is cutting wait times and improving citizen satisfaction across Bahrain and the GCC.',
     tags: ['Queue Management', 'Government', 'GCC'],
-    publishedAt: '2025-02-28',
+    publishedAt: '2026-03-01',
   },
   {
     slug: 'rfid-asset-tracking-manufacturing',
     title: 'RFID Asset Tracking: A Complete Guide for GCC Manufacturing & Industrial Companies',
     excerpt: 'Everything you need to know about RFID asset tracking in GCC industrial environments, from hardware selection to warehouse management software integration.',
     tags: ['RFID', 'Asset Tracking', 'Warehouse'],
-    publishedAt: '2025-02-10',
+    publishedAt: '2026-03-15',
   },
   {
     slug: 'choosing-hr-software-bahrain',
-    title: 'How to Choose the Right HRMS for Your GCC Business in 2025',
+    title: 'How to Choose the Right HRMS for Your GCC Business in 2026',
     excerpt: 'A practical guide to evaluating HRMS platforms for GCC businesses, covering LMRA compliance, WPS payroll, Arabic support, GOSI integration and mobile capabilities.',
     tags: ['HRMS', 'Payroll', 'Bahrain', 'GCC'],
-    publishedAt: '2025-01-20',
+    publishedAt: '2026-04-01',
   },
 ];

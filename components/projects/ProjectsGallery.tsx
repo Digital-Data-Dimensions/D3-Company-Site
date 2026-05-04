@@ -159,7 +159,7 @@ export function ProjectsGallery() {
         .pg-filter-row{ display:flex; align-items:flex-start; gap: 12px; flex-wrap: wrap; }
         .pg-filter-label{
           font-size: 11px;
-          font-weight: 700;
+          font-weight: 400;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--muted);
@@ -173,7 +173,7 @@ export function ProjectsGallery() {
           background: var(--bg-surface);
           color: var(--muted);
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 400;
           letter-spacing: 0.02em;
           border-radius: 999px;
           padding: 8px 12px;
@@ -217,7 +217,7 @@ export function ProjectsGallery() {
           background: var(--bg-surface);
           color: var(--heading);
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 400;
           padding: 8px 12px;
           border-radius: 999px;
           cursor:pointer;
@@ -232,7 +232,7 @@ export function ProjectsGallery() {
           margin-top: 10px;
           font-size: 12px;
           color: var(--muted);
-          font-weight: 700;
+          font-weight: 400;
         }
 
         .pg-grid{
@@ -270,7 +270,7 @@ export function ProjectsGallery() {
           display:flex; align-items:center; justify-content:center;
           color: var(--muted);
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 400;
           padding: 14px;
           text-align:center;
         }

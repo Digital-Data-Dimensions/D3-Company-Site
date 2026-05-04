@@ -59,7 +59,7 @@ export default function ContactPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Contact Us</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Let&apos;s talk about your <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>project</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 500 }}>
@@ -74,7 +74,7 @@ export default function ContactPage() {
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 80, alignItems: 'start' }} className="contact-grid">
             {/* Form */}
             <div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 700, letterSpacing: -0.5, color: 'var(--heading)', marginBottom: 32 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 400, letterSpacing: -0.5, color: 'var(--heading)', marginBottom: 32 }}>
                 Request a Demo or Consultation
               </h2>
               <LeadForm />
@@ -83,7 +83,7 @@ export default function ContactPage() {
             {/* Contact info */}
             <div>
               <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 20, padding: '32px 28px', marginBottom: 16 }}>
-                <h3 style={{ fontFamily: 'var(--font)', fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 20 }}>Bahrain Office</h3>
+                <h3 style={{ fontFamily: 'var(--font)', fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 20 }}>Bahrain Office</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {bahrain.map((c) => (
                     <div key={c.label + c.value} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                         color: 'var(--heading)', flexShrink: 0,
                       }}>{c.icon}</span>
                       <div>
-                        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
+                        <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
                         {c.href ? (
                           <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500, textDecoration: 'none' }}>{c.value}</a>
                         ) : (
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 20, padding: '32px 28px', marginBottom: 20 }}>
-                <h3 style={{ fontFamily: 'var(--font)', fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 20 }}>Europe Office</h3>
+                <h3 style={{ fontFamily: 'var(--font)', fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 20 }}>Europe Office</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {europe.map((c) => (
                     <div key={c.label + c.value} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                         color: 'var(--heading)', flexShrink: 0,
                       }}>{c.icon}</span>
                       <div>
-                        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
+                        <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
                         {c.href ? (
                           <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500, textDecoration: 'none' }}>{c.value}</a>
                         ) : (

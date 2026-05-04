@@ -24,7 +24,7 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
     borderRadius: 8, border: `1px solid ${dark ? 'rgba(255,255,255,0.12)' : 'var(--border)'}`,
     background: dark ? 'rgba(255,255,255,0.06)' : 'var(--bg)',
     color: dark ? '#fff' : 'var(--heading)',
-    fontSize: 14, fontFamily: 'var(--font)',
+    fontSize: 16, fontFamily: 'var(--font)', /* 16px prevents iOS zoom */
     outline: 'none',
     transition: 'border-color 0.2s',
   };
@@ -57,7 +57,7 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
     return (
       <div style={{ textAlign: 'center', padding: '40px 20px' }}>
         <div style={{ fontSize: 40, marginBottom: 16 }}>✓</div>
-        <div style={{ fontSize: 18, fontWeight: 700, color: dark ? '#fff' : 'var(--heading)', marginBottom: 8 }}>Thank you!</div>
+        <div style={{ fontSize: 18, fontWeight: 400, color: dark ? '#fff' : 'var(--heading)', marginBottom: 8 }}>Thank you!</div>
         <div style={{ fontSize: 14, color: dark ? 'rgba(255,255,255,0.6)' : 'var(--body)' }}>We&apos;ll be in touch within 24 hours.</div>
       </div>
     );
@@ -105,7 +105,7 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
         style={{
           background: 'var(--cta)', color: '#fff',
           padding: '14px 28px', borderRadius: 8,
-          fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer',
+          fontSize: 14, fontWeight: 400, border: 'none', cursor: 'pointer',
           letterSpacing: '0.02em',
           boxShadow: '0 4px 20px var(--cta-glow)',
           opacity: status === 'loading' ? 0.7 : 1,

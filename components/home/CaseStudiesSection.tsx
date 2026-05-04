@@ -22,7 +22,7 @@ export function CaseStudiesSection() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 56, flexWrap: 'wrap', gap: 20 }}>
             <div>
               <SectionEyebrow>Case Studies</SectionEyebrow>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700 , letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 0 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 400 , letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 0 }}>
                 Real results for real <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>clients</em>
               </h2>
             </div>
@@ -48,21 +48,17 @@ export function CaseStudiesSection() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
                   <span style={{
-                    fontSize: 11, fontWeight: 700, padding: '4px 10px', borderRadius: 6,
+                    fontSize: 11, fontWeight: 400, padding: '4px 10px', borderRadius: 6,
                     background: `${TYPE_COLORS[cs.clientType] || '#003580'}22`,
                     color: TYPE_COLORS[cs.clientType] || '#003580',
                     letterSpacing: '0.04em', textTransform: 'uppercase',
                   }}>{cs.clientType}</span>
                 </div>
-                <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--heading)', marginBottom: 12 }}>{cs.clientName}</div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>Challenge</div>
-                <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 20 }}>{cs.problem}</div>
-                <div style={{ padding: '12px 16px', background: 'var(--bg-surface)', borderRadius: 10, border: '1px solid var(--border)', marginBottom: 20 }}>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>Outcome</div>
-                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.5 }}>{cs.result}</div>
-                </div>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600, color: 'var(--heading)' }}>
-                  Read case study <ArrowIcon size={13} />
+                <div style={{ fontSize: 18, fontWeight: 500, color: 'var(--heading)', marginBottom: 12 }}>{cs.clientName}</div>
+                <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>What we delivered</div>
+                <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 20, fontWeight: 300 }}>{cs.solution}</div>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--heading)' }}>
+                  View project <ArrowIcon size={13} />
                 </div>
               </a>
             </RevealOnScroll>

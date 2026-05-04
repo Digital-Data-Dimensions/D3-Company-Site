@@ -32,14 +32,14 @@ export default function PartnersPage() {
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 background: 'var(--bg-surface)', border: '1px solid var(--border)',
-                color: 'var(--muted)', fontSize: 11, fontWeight: 700,
+                color: 'var(--muted)', fontSize: 11, fontWeight: 400,
                 letterSpacing: '0.12em', textTransform: 'uppercase',
                 paddingBlock: 6, paddingInline: 14, borderRadius: 100, marginBottom: 28,
               }}>
                 Partners
               </div>
               <h1 style={{
-                fontFamily: 'var(--font)', fontWeight: 700,
+                fontFamily: 'var(--font)', fontWeight: 400,
                 fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: 1.06,
                 letterSpacing: -2, color: 'var(--heading)', marginBottom: 24,
               }}>
@@ -59,7 +59,7 @@ export default function PartnersPage() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginBottom: 56 }}>
               <div className="eyebrow eyebrow-center">Technology Partners</div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
                 Our partners
               </h2>
             </div>
@@ -83,7 +83,7 @@ export default function PartnersPage() {
                       style={{ maxHeight: 60, width: 'auto', objectFit: 'contain' }}
                     />
                   </div>
-                  <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', textAlign: 'center', margin: 0 }}>{partner.name}</h3>
+                  <h3 style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', textAlign: 'center', margin: 0 }}>{partner.name}</h3>
                 </div>
               </RevealOnScroll>
             ))}

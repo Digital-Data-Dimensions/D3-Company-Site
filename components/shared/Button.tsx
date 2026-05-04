@@ -14,7 +14,7 @@ const styles: Record<string, React.CSSProperties> = {
   primary: {
     display: 'inline-flex', alignItems: 'center', gap: 8,
     background: 'var(--cta)', color: '#fff', padding: '13px 28px',
-    borderRadius: 100, fontSize: 14, fontWeight: 700,
+    borderRadius: 100, fontSize: 14, fontWeight: 400,
     textDecoration: 'none', letterSpacing: '0.02em',
     border: 'none', cursor: 'pointer',
     transition: 'all 0.22s cubic-bezier(0.4,0,0.2,1)',
@@ -22,7 +22,7 @@ const styles: Record<string, React.CSSProperties> = {
   ghost: {
     display: 'inline-flex', alignItems: 'center', gap: 8,
     color: '#fff', padding: '13px 28px',
-    borderRadius: 100, fontSize: 14, fontWeight: 700,
+    borderRadius: 100, fontSize: 14, fontWeight: 400,
     textDecoration: 'none', border: 'none',
     background: 'var(--heading)', cursor: 'pointer',
     transition: 'all 0.22s cubic-bezier(0.4,0,0.2,1)', letterSpacing: '0.02em',
@@ -30,7 +30,7 @@ const styles: Record<string, React.CSSProperties> = {
   orange: {
     display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
     background: 'var(--cta)', color: '#fff', padding: '14px 32px',
-    borderRadius: 100, fontSize: 14, fontWeight: 700,
+    borderRadius: 100, fontSize: 14, fontWeight: 400,
     textDecoration: 'none', letterSpacing: '0.03em',
     border: 'none', cursor: 'pointer',
     transition: 'all 0.22s cubic-bezier(0.4,0,0.2,1)', whiteSpace: 'nowrap',

@@ -135,7 +135,7 @@ function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
         }
         .sol-num {
           font-size: 10px;
-          font-weight: 700;
+          font-weight: 400;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--muted);
@@ -144,7 +144,7 @@ function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
         .sol-title {
           font-family: var(--font);
           font-size: 17px;
-          font-weight: 700;
+          font-weight: 400;
           color: var(--heading);
           letter-spacing: -0.3px;
           margin-bottom: 10px;

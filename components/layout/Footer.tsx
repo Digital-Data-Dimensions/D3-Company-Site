@@ -148,7 +148,7 @@ export function Footer() {
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               background: 'var(--cta)', color: '#fff',
               padding: '11px 22px', borderRadius: 100,
-              fontSize: 13, fontWeight: 700, textDecoration: 'none',
+              fontSize: 13, fontWeight: 400, textDecoration: 'none',
               letterSpacing: '0.02em', transition: 'background 0.2s, transform 0.2s',
               whiteSpace: 'nowrap',
             }}>
@@ -195,7 +195,7 @@ export function Footer() {
         }
         .footer-heading-label {
           font-size: 11px;
-          font-weight: 700;
+          font-weight: 400;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: #002147;
