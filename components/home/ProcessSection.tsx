@@ -12,27 +12,50 @@ const PROCESS_STEPS = [
   { num: '04', title: 'Ongoing Support',  desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.',                                        icon: <Shield size={28} /> },
 ];
 
+const STEP_DURATION = 2200; // ms each step is "active" before advancing
+const RESET_PAUSE   = 900;  // ms pause after last step before loop restart
+
 export function ProcessSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(-1);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
+
+    function runCycle(startIndex = 0) {
+      let i = startIndex;
+      function next() {
+        setActive(i);
+        if (i < PROCESS_STEPS.length - 1) {
+          i++;
+          timerRef.current = setTimeout(next, STEP_DURATION);
+        } else {
+          // all done — pause then restart
+          timerRef.current = setTimeout(() => {
+            setActive(-1);
+            timerRef.current = setTimeout(() => runCycle(0), 400);
+          }, RESET_PAUSE + STEP_DURATION);
+        }
+      }
+      next();
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Stagger each step activation
-          PROCESS_STEPS.forEach((_, i) => {
-            setTimeout(() => setActive(i), i * 320);
-          });
+          runCycle(0);
           observer.disconnect();
         }
       },
       { threshold: 0.25 }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   }, []);
 
   return (
@@ -134,7 +157,7 @@ export function ProcessSection() {
           position: absolute; top: 0; left: 0; bottom: 0;
           background: var(--heading);
           border-radius: 2px;
-          transition: width 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: width 1.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .process-steps-row {
@@ -161,7 +184,7 @@ export function ProcessSection() {
           display: flex; align-items: center; justify-content: center;
           margin-bottom: 28px;
           color: var(--muted);
-          transition: background 0.45s, border-color 0.45s, color 0.45s, box-shadow 0.45s, transform 0.45s;
+          transition: background 0.7s, border-color 0.7s, color 0.7s, box-shadow 0.7s, transform 0.7s;
         }
         .process-node--active {
           background: var(--heading);
@@ -173,13 +196,13 @@ export function ProcessSection() {
 
         /* Text content */
         .process-content {
-          opacity: 0;
-          transform: translateY(14px);
-          transition: opacity 0.5s, transform 0.5s;
+          opacity: 0.25;
+          transform: translateY(0);
+          transition: opacity 0.8s, transform 0.8s;
         }
         .process-content--active {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(0) !important;
         }
 
         .process-num {
@@ -214,17 +237,17 @@ export function ProcessSection() {
           background: var(--card); border: 2px solid var(--border);
           display: flex; align-items: center; justify-content: center;
           color: var(--muted); flex-shrink: 0;
-          transition: background 0.45s, border-color 0.45s, color 0.45s, box-shadow 0.45s;
+          transition: background 0.7s, border-color 0.7s, color 0.7s, box-shadow 0.7s;
         }
         .process-mob-line {
           width: 2px; flex: 1; min-height: 24px;
           margin-top: 8px; border-radius: 2px;
-          transition: background 0.45s;
+          transition: background 0.7s;
         }
         .process-mob-body {
           padding-top: 10px;
-          opacity: 0; transform: translateX(12px);
-          transition: opacity 0.5s, transform 0.5s;
+          opacity: 0.25; transform: translateX(0);
+          transition: opacity 0.8s;
         }
         .process-mob-body.process-content--active {
           opacity: 1; transform: translateX(0);
