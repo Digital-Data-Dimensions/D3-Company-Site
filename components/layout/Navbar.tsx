@@ -2,7 +2,25 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
+import { useLocale } from 'next-intl';
 import { ThemeToggle } from './ThemeToggle';
+
+function LanguageSwitcher() {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const isAr = locale === 'ar';
+
+  return (
+    <Link
+      href={pathname}
+      locale={isAr ? 'en' : 'ar'}
+      className="lang-sw"
+      aria-label={isAr ? 'Switch to English' : 'التبديل إلى العربية'}
+    >
+      {isAr ? 'EN' : 'ع'}
+    </Link>
+  );
+}
 
 /* ── ICONS ── */
 const ClockSVG = () => <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>;
@@ -250,6 +268,7 @@ export function Navbar() {
 
         {/* Right actions */}
         <div className="d3-nav-actions">
+          <LanguageSwitcher />
           <ThemeToggle />
           <Link href="/contact" className="d3-cta-btn">Request Demo</Link>
           <button
@@ -278,6 +297,7 @@ export function Navbar() {
             <img src="/d3logo.png" alt="D3" className="d3-logo-img d3-logo-img--sm" />
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               className="d3-mob-close"
@@ -475,6 +495,18 @@ export function Navbar() {
         .d3-cta-btn:hover {
           background: var(--cta-hover);
           transform: translateY(-1px);
+        }
+        .lang-sw {
+          display: flex; align-items: center; justify-content: center;
+          width: 36px; height: 36px; border-radius: 8px;
+          background: var(--bg-surface); border: 1px solid var(--border);
+          font-size: 13px; font-weight: 700; color: var(--heading);
+          text-decoration: none; transition: background 0.2s, border-color 0.2s;
+          flex-shrink: 0;
+        }
+        .lang-sw:hover {
+          background: var(--bg-highlight);
+          border-color: var(--muted);
         }
         .d3-hamburger {
           display: none;

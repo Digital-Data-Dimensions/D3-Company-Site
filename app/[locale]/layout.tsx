@@ -10,7 +10,7 @@ import { GTMScript } from '@/components/layout/GTMScript';
 import { LocaleHtmlAttributes } from '@/components/layout/LocaleHtmlAttributes';
 import type { Metadata } from 'next';
 
-type Locale = 'en';
+type Locale = 'en' | 'ar';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://d3.com.bh';
 
@@ -55,6 +55,7 @@ export async function generateMetadata({
       canonical: `${BASE_URL}/${locale}`,
       languages: {
         'en-BH': `${BASE_URL}/en`,
+        'ar-BH': `${BASE_URL}/ar`,
         'x-default': `${BASE_URL}/en`,
       },
     },

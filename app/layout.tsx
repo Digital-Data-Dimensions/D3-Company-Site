@@ -1,11 +1,18 @@
 import type { Metadata, Viewport } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Cairo } from 'next/font/google';
 import './globals.css';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font',
   weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+});
+
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  variable: '--font-cairo',
+  weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
@@ -106,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={montserrat.variable} suppressHydrationWarning>
+      <body className={`${montserrat.variable} ${cairo.variable}`} suppressHydrationWarning>
         {children}
       </body>
     </html>

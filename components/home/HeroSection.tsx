@@ -178,37 +178,25 @@ export function HeroSection() {
           justify-content: center;
           position: relative;
           overflow: hidden;
-          background-color: #0a1628;
-          background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80');
-          background-size: cover;
-          background-position: center;
+          background: var(--bg);
           padding-block: clamp(72px, 10vh, 120px);
         }
-        .hs-wrap::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: rgba(0,0,0,0.58);
-          z-index: 0;
-        }
 
-        /* blurred orbs (kept subtle on top of overlay) */
         .hs-orb {
           position: absolute;
           border-radius: 50%;
           pointer-events: none;
           filter: blur(80px);
-          z-index: 0;
         }
         .hs-orb--a {
           width: 560px; height: 560px;
           top: -120px; right: -80px;
-          background: radial-gradient(circle, rgba(0,80,200,0.18) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(0,53,128,0.07) 0%, transparent 70%);
         }
         .hs-orb--b {
           width: 400px; height: 400px;
           bottom: -60px; left: -60px;
-          background: radial-gradient(circle, rgba(0,53,128,0.14) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(0,33,71,0.06) 0%, transparent 70%);
         }
 
         .hs-inner {
@@ -227,9 +215,9 @@ export function HeroSection() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: rgba(255,255,255,0.12);
-          border: 1px solid rgba(255,255,255,0.22);
-          color: rgba(255,255,255,0.85);
+          background: var(--bg-surface);
+          border: 1px solid var(--border);
+          color: var(--muted);
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.12em;
@@ -253,7 +241,7 @@ export function HeroSection() {
           font-size: clamp(34px, 5vw, 72px);
           line-height: 1.05;
           letter-spacing: -2.5px;
-          color: #ffffff;
+          color: var(--heading);
           margin-bottom: 24px;
           max-width: 780px;
         }
@@ -261,7 +249,7 @@ export function HeroSection() {
         /* paragraph */
         .hs-para {
           font-size: clamp(15px, 1.8vw, 18px);
-          color: rgba(255,255,255,0.8);
+          color: var(--body);
           line-height: 1.8;
           font-weight: 400;
           max-width: 620px;
@@ -284,7 +272,7 @@ export function HeroSection() {
           align-items: center;
           gap: 36px;
           padding-top: 36px;
-          border-top: 1px solid rgba(255,255,255,0.18);
+          border-top: 1px solid var(--border);
           margin-bottom: 36px;
           flex-wrap: wrap;
           justify-content: center;
@@ -298,7 +286,7 @@ export function HeroSection() {
         .hs-stat-n {
           font-size: clamp(28px, 3vw, 40px);
           font-weight: 800;
-          color: #ffffff;
+          color: var(--heading);
           letter-spacing: -1.5px;
           line-height: 1;
           font-variant-numeric: tabular-nums;
@@ -306,14 +294,14 @@ export function HeroSection() {
         .hs-stat-l {
           font-size: 10px;
           font-weight: 700;
-          color: rgba(255,255,255,0.6);
+          color: var(--muted);
           text-transform: uppercase;
           letter-spacing: 0.12em;
         }
         .hs-stat-sep {
           width: 1px;
           height: 36px;
-          background: rgba(255,255,255,0.2);
+          background: var(--border);
         }
 
         /* dots */
@@ -325,7 +313,7 @@ export function HeroSection() {
         .hs-dot {
           width: 8px; height: 8px;
           border-radius: 50%;
-          background: rgba(255,255,255,0.3);
+          background: var(--border);
           border: none;
           cursor: pointer;
           padding: 0;
@@ -334,7 +322,7 @@ export function HeroSection() {
         .hs-dot--on {
           width: 28px;
           border-radius: 4px;
-          background: #ffffff;
+          background: var(--heading);
         }
 
         /* fade animation */

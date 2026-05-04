@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
+/* ── ARABIC / RTL ── */
+[dir="rtl"] {
+  font-family: var(--font-cairo), 'Cairo', sans-serif;
+}
+[dir="rtl"] body {
+  font-family: var(--font-cairo), 'Cairo', sans-serif;
+}
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-cairo), 'Cairo', sans-serif;
+  letter-spacing: 0;
+}
+/* Flip flex rows */
+[dir="rtl"] .container,
+[dir="rtl"] .hs-inner { direction: rtl; }
+[dir="rtl"] .hs-btns,
+[dir="rtl"] .hs-stats { flex-direction: row; }
+[dir="rtl"] nav ul { flex-direction: row-reverse; }
+/* Mega menu right-aligned in RTL */
+[dir="rtl"] .mega { right: 0; left: auto; }
+/* Text alignment in RTL hero */
+[dir="rtl"] .hs-inner { text-align: right; }
+[dir="rtl"] .hs-btns { justify-content: flex-end; }
+/* Cards & grids: RTL naturally reverses with dir=rtl */
+[dir="rtl"] .sol-grid,
+[dir="rtl"] .why-grid,
+[dir="rtl"] .process-grid { direction: rtl; }
+/* Footer */
+[dir="rtl"] .footer-cols { direction: rtl; }
+/* Scrolling ticker reversal */
+[dir="rtl"] .marquee-track { animation-direction: reverse; }
+/* Form inputs */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+  direction: rtl;
+}
+/* WhatsApp button stays bottom-right regardless of locale */
+[dir="rtl"] .floating-wa { left: auto; right: 24px; }
+/* Sol hero grid */
+[dir="rtl"] .sol-hero-grid { direction: rtl; }
+/* Process steps */
+[dir="rtl"] .process-line { transform: scaleX(-1); }
+
+
 /* ── D3 LIGHT THEME ── */
 :root {
   --bg: #ffffff;

@@ -85,30 +85,15 @@ const EXPERTISE = [
 export default function AboutPage() {
   return (
     <>
-      {/* Full-width hero banner with About_US_1.jpg */}
-      <section style={{
-        position: 'relative',
-        overflow: 'hidden',
-        minHeight: 'clamp(320px, 40vw, 520px)',
-        display: 'flex',
-        alignItems: 'center',
-      }}>
-        <Image
-          src="/images/about/about-hero.jpg"
-          alt="D3 Digital Data Dimensions team"
-          fill
-          priority
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-        />
-        {/* Dark overlay */}
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.62)', zIndex: 1 }} />
-        <div className="container" style={{ position: 'relative', zIndex: 2, paddingBlock: 'clamp(72px, 10vw, 120px)' }}>
+      <section style={{ paddingBlock: 'clamp(80px, 10vh, 130px)', paddingInline: 0, background: 'var(--bg)', position: 'relative', overflow: 'hidden' }}>
+        <div className="hero-mesh" aria-hidden="true" />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <RevealOnScroll>
             <div style={{ maxWidth: 700 }}>
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.25)',
-                color: 'rgba(255,255,255,0.85)', fontSize: 11, fontWeight: 700,
+                background: 'var(--bg-surface)', border: '1px solid var(--border)',
+                color: 'var(--muted)', fontSize: 11, fontWeight: 700,
                 letterSpacing: '0.12em', textTransform: 'uppercase',
                 paddingBlock: 6, paddingInline: 14, borderRadius: 100, marginBottom: 28,
               }}>
@@ -117,19 +102,19 @@ export default function AboutPage() {
               <h1 style={{
                 fontFamily: 'var(--font)', fontWeight: 800,
                 fontSize: 'clamp(36px, 5vw, 68px)', lineHeight: 1.06,
-                letterSpacing: -2, color: '#ffffff', marginBottom: 24,
+                letterSpacing: -2, color: 'var(--heading)', marginBottom: 24,
               }}>
                 Built in Bahrain.<br />
-                <span style={{ color: '#ffffff' }}>Trusted globally.</span>
+                <span style={{ color: 'var(--heading)' }}>Trusted globally.</span>
               </h1>
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: 560, marginBottom: 40 }}>
+              <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, maxWidth: 560, marginBottom: 40 }}>
                 D3 was founded in 2010 with one purpose: to give enterprises in the Middle East access to world-class IT solutions that solve real operational problems.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <Link href="/contact" className="btn btn-primary" style={{ gap: 8 }}>
                   Request a Demo <ArrowIcon />
                 </Link>
-                <Link href="/contact" className="btn btn-ghost" style={{ borderColor: 'rgba(255,255,255,0.35)', color: '#fff' }}>
+                <Link href="/contact" className="btn btn-ghost">
                   Get in touch
                 </Link>
               </div>
@@ -224,13 +209,18 @@ export default function AboutPage() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={100}>
-              <div style={{ borderRadius: 24, overflow: 'hidden', aspectRatio: '4/3', background: 'var(--bg-surface)', border: '1px solid var(--border)' }}>
+              <div style={{
+                borderRadius: 24, background: 'var(--bg-surface)', border: '1px solid var(--border)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                padding: 'clamp(48px, 8vw, 96px)',
+                aspectRatio: '4/3',
+              }}>
                 <Image
-                  src="/images/about/about-hero.jpg"
-                  alt="D3 Digital Data Dimensions team"
-                  width={600}
-                  height={450}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  src="/d3logo.png"
+                  alt="D3 Digital Data Dimensions"
+                  width={320}
+                  height={200}
+                  style={{ width: '80%', maxWidth: 320, height: 'auto', objectFit: 'contain' }}
                 />
               </div>
             </RevealOnScroll>
