@@ -311,6 +311,8 @@ export function Navbar() {
         {/* Right actions */}
         <div className="d3-nav-actions">
           <Link href="/contact" className="d3-cta-btn">Request Demo</Link>
+          {/* Mobile-only demo button shown before hamburger */}
+          <Link href="/contact" className="d3-cta-btn d3-cta-mobile">Request Demo</Link>
           <button
             className="d3-hamburger"
             onClick={() => setMobileOpen(true)}
@@ -558,9 +560,11 @@ export function Navbar() {
         }
 
         /* ── RESPONSIVE: HIDE DESKTOP, SHOW HAMBURGER ── */
+        .d3-cta-mobile { display: none !important; }
         @media (max-width: 1024px) {
           .d3-nav-links { display: none !important; }
           .d3-cta-btn { display: none !important; }
+          .d3-cta-mobile { display: flex !important; font-size: 12px; padding: 7px 14px; }
           .d3-hamburger { display: flex !important; }
           .d3-logo-sub { display: none; }
         }

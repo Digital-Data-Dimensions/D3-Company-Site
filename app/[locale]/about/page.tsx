@@ -218,18 +218,18 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }} className="values-grid">
             {MVV.map((val, i) => (
               <RevealOnScroll key={val.title} delay={i * 80}>
-                <div className="card card-lift card-accent" style={{ padding: '36px 28px' }}>
-                  <div style={{ marginBottom: 20, display: 'flex', justifyContent: 'center' }}>
+                <div className="card card-lift card-accent" style={{ padding: '40px 32px', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                  <div style={{ marginBottom: 24, display: 'flex', justifyContent: 'center' }}>
                     <Image
                       src={val.imgSrc}
                       alt={val.title}
-                      width={72}
-                      height={72}
+                      width={108}
+                      height={108}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
-                  <h3 style={{ fontSize: 18, fontWeight: 400, color: 'var(--heading)', marginBottom: 10 }}>{val.title}</h3>
-                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7 }}>{val.desc}</p>
+                  <h3 style={{ fontSize: 20, fontWeight: 500, color: 'var(--heading)', marginBottom: 12 }}>{val.title}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300 }}>{val.desc}</p>
                 </div>
               </RevealOnScroll>
             ))}
@@ -341,7 +341,8 @@ export default function AboutPage() {
 
       <style>{`
         .about-story-grid { grid-template-columns: 1fr 1fr; }
-        .values-grid { grid-template-columns: repeat(3, 1fr); }
+        .values-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+        .values-grid > * { height: 100%; }
 
         @media (max-width: 1024px) {
           .about-story-grid { grid-template-columns: 1fr !important; }

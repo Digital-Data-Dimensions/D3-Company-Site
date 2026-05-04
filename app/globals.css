@@ -687,10 +687,12 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
-/* Smooth scroll for anchor links */
+/* Smooth scroll for anchor links + offset for fixed nav */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
+
 
 /* ── FORM INPUTS — prevent iOS zoom ── */
 input, textarea, select {

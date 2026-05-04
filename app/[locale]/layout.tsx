@@ -86,7 +86,7 @@ export default async function LocaleLayout({
         <div suppressHydrationWarning>
           <Navbar />
         </div>
-        <main id="main-content" style={{ paddingTop: 80 }}>
+        <main id="main-content" style={{ paddingTop: 84 }}>
           {children}
         </main>
         <Footer />
