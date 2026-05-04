@@ -209,7 +209,7 @@ export function ProjectsGallery() {
           font-size: 12px;
           color: var(--muted);
           margin-top: 4px;
-          font-weight: 600;
+          font-weight: 300;
         }
         .pg-group-toggle{
           appearance:none;

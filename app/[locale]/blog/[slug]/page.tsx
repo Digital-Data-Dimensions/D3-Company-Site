@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: Props) {
           <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, marginBottom: 24 }}>← Back to Blog</Link>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
             {post.tags.map((tag) => (
-              <span key={tag} style={{ fontSize: 11, fontWeight: 600, padding: '4px 10px', borderRadius: 100, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
+              <span key={tag} style={{ fontSize: 11, fontWeight: 300, padding: '4px 10px', borderRadius: 100, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
             ))}
           </div>
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 20, maxWidth: 800 }}>
@@ -113,7 +113,7 @@ export default async function BlogPostPage({ params }: Props) {
                         padding: '12px 16px', background: 'var(--card)', border: '1px solid var(--border)',
                         borderRadius: 10, textDecoration: 'none', transition: 'all 0.2s',
                       }}>
-                        <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--heading)' }}>{sol.title}</span>
+                        <span style={{ fontSize: 14, fontWeight: 300, color: 'var(--heading)' }}>{sol.title}</span>
                         <ArrowIcon size={13} />
                       </Link>
                     ))}
@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {otherPosts.map((p) => (
                     <Link key={p.slug} href={`/blog/${p.slug}` as Parameters<typeof Link>[0]['href']} style={{ textDecoration: 'none' }}>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--heading)', lineHeight: 1.4, marginBottom: 4 }}>{p.title}</div>
+                      <div style={{ fontSize: 13, fontWeight: 300, color: 'var(--heading)', lineHeight: 1.4, marginBottom: 4 }}>{p.title}</div>
                       <div style={{ fontSize: 12, color: 'var(--muted)' }}>{new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</div>
                     </Link>
                   ))}

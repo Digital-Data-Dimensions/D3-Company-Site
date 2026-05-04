@@ -372,7 +372,7 @@ export function Navbar() {
               </div>
             ))}
             <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
-            <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Infrastructure</div>
+            <div style={{ fontSize: 10, fontWeight: 300, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Infrastructure</div>
             {OPERATIONS.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
@@ -381,7 +381,7 @@ export function Navbar() {
               </Link>
             ))}
             <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
-            <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Business</div>
+            <div style={{ fontSize: 10, fontWeight: 300, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Business</div>
             {BUSINESS.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
@@ -525,12 +525,12 @@ export function Navbar() {
           font-weight: 400; margin-top: 1px;
         }
         .d3-mega-col-head {
-          font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+          font-size: 10px; font-weight: 300; letter-spacing: 0.1em;
           text-transform: uppercase; color: var(--muted);
           padding: 0 10px 8px; margin-bottom: 2px;
         }
         .d3-mega-group-label {
-          font-size: 10px; font-weight: 600; color: var(--muted);
+          font-size: 10px; font-weight: 300; color: var(--muted);
           padding: 8px 10px 2px; letter-spacing: 0.06em; text-transform: uppercase;
         }
 
@@ -540,7 +540,7 @@ export function Navbar() {
           background: transparent; color: var(--cta);
           padding: 9px 20px; border-radius: 100px;
           border: 1.5px solid var(--cta);
-          font-size: 13px; font-weight: 600; text-decoration: none;
+          font-size: 13px; font-weight: 300; text-decoration: none;
           letter-spacing: 0.02em; white-space: nowrap;
           transition: background 0.2s, color 0.2s, transform 0.2s;
           min-height: 40px;
@@ -614,7 +614,7 @@ export function Navbar() {
         .d3-mob-plain-link {
           display: flex; align-items: center;
           padding: 14px 14px; border-radius: 10px;
-          font-size: 15px; font-weight: 600; color: var(--body);
+          font-size: 15px; font-weight: 300; color: var(--body);
           text-decoration: none;
           border-top: 1px solid var(--border); margin-top: 4px;
         }
@@ -624,7 +624,7 @@ export function Navbar() {
         .d3-mob-acc-btn {
           width: 100%; display: flex; align-items: center; justify-content: space-between;
           padding: 14px 14px; background: none; border: none; cursor: pointer;
-          font-family: var(--font); font-size: 15px; font-weight: 600;
+          font-family: var(--font); font-size: 15px; font-weight: 300;
           color: var(--heading); border-radius: 10px; min-height: 52px;
           -webkit-tap-highlight-color: transparent;
         }

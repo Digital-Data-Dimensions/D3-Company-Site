@@ -395,7 +395,7 @@ export function HeroSection() {
         }
         .hs-stat-n {
           font-size: clamp(28px, 3vw, 40px);
-          font-weight: 600;
+          font-weight: 300;
           color: var(--heading);
           letter-spacing: -1.5px;
           line-height: 1;

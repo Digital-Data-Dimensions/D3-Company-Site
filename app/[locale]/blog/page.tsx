@@ -44,7 +44,7 @@ export default function BlogListPage() {
                 >
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
                     {post.tags.map((tag) => (
-                      <span key={tag} style={{ fontSize: 11, fontWeight: 600, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
+                      <span key={tag} style={{ fontSize: 11, fontWeight: 300, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
                     ))}
                   </div>
                   <h2 style={{ fontFamily: 'var(--font)', fontSize: 20, fontWeight: 400, color: 'var(--heading)', letterSpacing: -0.3, lineHeight: 1.3, marginBottom: 14 }}>{post.title}</h2>
@@ -53,7 +53,7 @@ export default function BlogListPage() {
                     <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 500 }}>
                       {new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </span>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600, color: 'var(--muted)' }}>
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 300, color: 'var(--muted)' }}>
                       Read more <ArrowIcon size={13} />
                     </div>
                   </div>

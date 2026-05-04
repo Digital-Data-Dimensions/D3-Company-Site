@@ -127,7 +127,7 @@ export function TrustLogosSection() {
         }
         .tl-name {
           font-size: 12px;
-          font-weight: 600;
+          font-weight: 300;
           color: var(--heading);
           line-height: 1.3;
           white-space: nowrap;

@@ -61,7 +61,7 @@ export default function ClientsPage() {
               <div style={{ fontSize: 36, fontWeight: 400, color: 'var(--heading)', letterSpacing: -1, lineHeight: 1, marginBottom: 4 }}>
                 <span style={{ color: 'var(--cta)' }}>{s.num}</span>
               </div>
-              <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.label}</div>
+              <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.label}</div>
             </div>
           ))}
         </div>
@@ -96,7 +96,7 @@ export default function ClientsPage() {
                     borderRadius: 100,
                     padding: '12px 24px',
                     fontSize: 14,
-                    fontWeight: 600,
+                    fontWeight: 300,
                     color: 'var(--body)',
                     transition: 'all 0.2s',
                     cursor: 'default',

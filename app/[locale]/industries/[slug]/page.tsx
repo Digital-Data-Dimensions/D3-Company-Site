@@ -119,10 +119,10 @@ export default async function IndustryPage({ params }: Props) {
                   <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16 }}>{sol.desc}</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 16 }}>
                     {sol.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} style={{ fontSize: 11, fontWeight: 600, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)' }}>{tag}</span>
+                      <span key={tag} style={{ fontSize: 11, fontWeight: 300, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)' }}>{tag}</span>
                     ))}
                   </div>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600, color: 'var(--muted)' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 300, color: 'var(--muted)' }}>
                     Learn more <ArrowIcon size={13} />
                   </div>
                 </Link>
@@ -173,7 +173,7 @@ export default async function IndustryPage({ params }: Props) {
             {otherIndustries.map((oi) => (
               <Link key={oi.slug} href={`/industries/${oi.slug}` as Parameters<typeof Link>[0]['href']} style={{
                 padding: '10px 20px', background: 'var(--card)', border: '1px solid var(--border)',
-                borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'var(--body)',
+                borderRadius: 100, fontSize: 13, fontWeight: 300, color: 'var(--body)',
                 textDecoration: 'none', transition: 'all 0.2s',
               }}>
                 {oi.title}

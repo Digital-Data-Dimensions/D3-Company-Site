@@ -68,7 +68,7 @@ export default function CareersPage() {
           </div>
           <RevealOnScroll delay={200}>
             <p style={{ fontSize: 14, color: 'var(--muted)', marginTop: 32, lineHeight: 1.7 }}>
-              Don&apos;t see a suitable role? Send your CV to <a href="mailto:info@dthree.co" style={{ color: 'var(--heading)', fontWeight: 600 }}>info@dthree.co</a> and we&apos;ll keep it on file.
+              Don&apos;t see a suitable role? Send your CV to <a href="mailto:info@dthree.co" style={{ color: 'var(--heading)', fontWeight: 300 }}>info@dthree.co</a> and we&apos;ll keep it on file.
             </p>
           </RevealOnScroll>
         </div>

@@ -44,7 +44,7 @@ export default async function CaseStudyPage({ params }: Props) {
             color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 20,
           }}>{cs.clientType}</span>
           <h1 style={{
-            fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 600,
+            fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 300,
             letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 0, maxWidth: 700,
           }}>
             {cs.clientName}

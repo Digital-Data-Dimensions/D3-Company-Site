@@ -131,13 +131,13 @@ export default function ContactPage() {
 
               <div style={{ background: '#1A1A2E', borderRadius: 20, padding: '28px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: -40, right: -40, width: 160, height: 160, borderRadius: '50%', background: 'radial-gradient(circle, rgba(0,53,128,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.5)', marginBottom: 14 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,0.5)', marginBottom: 14 }}>
                   <ClockIcon />Office hours
                 </div>
-                <div style={{ fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 6 }}>Sunday — Thursday</div>
+                <div style={{ fontSize: 15, fontWeight: 300, color: '#fff', marginBottom: 6 }}>Sunday — Thursday</div>
                 <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)' }}>8:00 AM — 5:00 PM (AST)</div>
                 <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 600 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 300 }}>
                     <ZapIcon /> Typical response: &lt;4 hours
                   </div>
                 </div>

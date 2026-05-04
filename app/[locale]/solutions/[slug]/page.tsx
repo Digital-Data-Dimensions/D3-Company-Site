@@ -640,7 +640,7 @@ export default async function SolutionPage({ params }: Props) {
                       padding: '10px 20px', borderRadius: 100,
                       border: '1px solid var(--border)',
                       background: 'var(--bg-surface)',
-                      fontSize: 13, fontWeight: 600, color: 'var(--body)',
+                      fontSize: 13, fontWeight: 300, color: 'var(--body)',
                       textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s',
                     }}
                   >
@@ -692,7 +692,7 @@ export default async function SolutionPage({ params }: Props) {
                       return (
                       <span key={h} style={{
                         display: 'inline-flex', alignItems: 'center', gap: 5,
-                        fontSize: 12, fontWeight: 600, color: c.text,
+                        fontSize: 12, fontWeight: 300, color: c.text,
                         background: c.bg, border: `1px solid ${c.border}`,
                         borderRadius: 100, padding: '4px 12px',
                       }}>
@@ -716,7 +716,7 @@ export default async function SolutionPage({ params }: Props) {
                     <li key={h} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                       <span style={{
                         display: 'inline-flex', alignItems: 'center', gap: 5,
-                        fontSize: 13, fontWeight: 600, color: c.text,
+                        fontSize: 13, fontWeight: 300, color: c.text,
                         background: c.bg, border: `1px solid ${c.border}`,
                         borderRadius: 100, padding: '5px 14px', flexShrink: 0,
                       }}>
@@ -731,7 +731,7 @@ export default async function SolutionPage({ params }: Props) {
                     const c = chipColor(tag);
                     return (
                     <span key={tag} style={{
-                      fontSize: 11, fontWeight: 600, padding: '4px 12px', borderRadius: 100,
+                      fontSize: 11, fontWeight: 300, padding: '4px 12px', borderRadius: 100,
                       background: c.bg, border: `1px solid ${c.border}`,
                       color: c.text, letterSpacing: '0.02em',
                     }}>{tag}</span>
@@ -766,7 +766,7 @@ export default async function SolutionPage({ params }: Props) {
                   <div style={{ color, marginBottom: 12, display: 'flex' }}>
                     {icon}
                   </div>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--heading)', marginBottom: 6 }}>{f.title}</div>
+                  <div style={{ fontSize: 14, fontWeight: 300, color: 'var(--heading)', marginBottom: 6 }}>{f.title}</div>
                   <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, fontWeight: 400 }}>{f.desc}</div>
                 </div>
               </RevealOnScroll>
@@ -858,7 +858,7 @@ export default async function SolutionPage({ params }: Props) {
                 <Link key={ind.slug} href={`/industries/${ind.slug}` as Parameters<typeof Link>[0]['href']} style={{
                   padding: '12px 20px', background: 'var(--card)', border: '1px solid var(--border)',
                   borderRadius: 100, textDecoration: 'none', transition: 'border-color 0.2s',
-                  fontSize: 14, fontWeight: 600, color: 'var(--heading)',
+                  fontSize: 14, fontWeight: 300, color: 'var(--heading)',
                 }}>
                   {ind.title}
                 </Link>
@@ -885,7 +885,7 @@ export default async function SolutionPage({ params }: Props) {
               }}>
                 <div style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', marginBottom: 8 }}>{rs.title}</div>
                 <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.6, marginBottom: 16 }}>{rs.desc.slice(0, 100)}…</div>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 13, fontWeight: 600, color: 'var(--muted)' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 13, fontWeight: 300, color: 'var(--muted)' }}>
                   Learn more <ArrowIcon size={12} />
                 </span>
               </Link>
