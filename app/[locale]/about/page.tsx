@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
-import { PlaceholderImage } from '@/components/shared/PlaceholderImage';
 import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
 
@@ -55,17 +55,17 @@ function HeartIcon() {
 
 const MVV = [
   {
-    icon: <TargetIcon />,
+    imgSrc: '/images/about/mission.png',
     title: 'Mission',
     desc: 'To help customers achieve their business objectives by providing innovative and best-in-class IT solutions and services. To be the No.1 solution provider with the best after-sales support.',
   },
   {
-    icon: <EyeIcon />,
+    imgSrc: '/images/about/vision.png',
     title: 'Vision',
     desc: 'To be recognised as a top company for providing IT solutions.',
   },
   {
-    icon: <HeartIcon />,
+    imgSrc: '/images/about/values.png',
     title: 'Values',
     desc: 'Leading change, integrity, respect for the individual, excellence, learning and sharing.',
   },
@@ -85,55 +85,52 @@ const EXPERTISE = [
 export default function AboutPage() {
   return (
     <>
-      <section style={{ paddingBlock: 'clamp(80px, 10vh, 130px)', paddingInline: 0, background: 'var(--bg)', position: 'relative', overflow: 'hidden' }}>
-        <div className="hero-mesh" aria-hidden="true" />
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      {/* Full-width hero banner with About_US_1.jpg */}
+      <section style={{
+        position: 'relative',
+        overflow: 'hidden',
+        minHeight: 'clamp(320px, 40vw, 520px)',
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+        <Image
+          src="/images/about/about-hero.jpg"
+          alt="D3 Digital Data Dimensions team"
+          fill
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+        {/* Dark overlay */}
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.62)', zIndex: 1 }} />
+        <div className="container" style={{ position: 'relative', zIndex: 2, paddingBlock: 'clamp(72px, 10vw, 120px)' }}>
           <RevealOnScroll>
             <div style={{ maxWidth: 700 }}>
-              <div
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 8,
-                  background: 'var(--bg-surface)',
-                  border: '1px solid var(--border)',
-                  color: 'var(--muted)',
-                  fontSize: 11,
-                  fontWeight: 700,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  paddingBlock: 6,
-                  paddingInline: 14,
-                  borderRadius: 100,
-                  marginBottom: 28,
-                }}
-              >
+              <div style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.25)',
+                color: 'rgba(255,255,255,0.85)', fontSize: 11, fontWeight: 700,
+                letterSpacing: '0.12em', textTransform: 'uppercase',
+                paddingBlock: 6, paddingInline: 14, borderRadius: 100, marginBottom: 28,
+              }}>
                 About D3
               </div>
-              <h1
-                style={{
-                  fontFamily: 'var(--font)',
-                  fontWeight: 800,
-                  fontSize: 'clamp(36px, 5vw, 68px)',
-                  lineHeight: 1.06,
-                  letterSpacing: -2,
-                  color: 'var(--heading)',
-                  marginBottom: 24,
-                }}
-              >
-                Built in Bahrain.
-                <br />
-                <span style={{ color: 'var(--heading)' }}>Trusted globally.</span>
+              <h1 style={{
+                fontFamily: 'var(--font)', fontWeight: 800,
+                fontSize: 'clamp(36px, 5vw, 68px)', lineHeight: 1.06,
+                letterSpacing: -2, color: '#ffffff', marginBottom: 24,
+              }}>
+                Built in Bahrain.<br />
+                <span style={{ color: '#ffffff' }}>Trusted globally.</span>
               </h1>
-              <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, maxWidth: 560, marginBottom: 40 }}>
+              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: 560, marginBottom: 40 }}>
                 D3 was founded in 2010 with one purpose: to give enterprises in the Middle East access to world-class IT solutions that solve real operational problems.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <Link href="/contact" className="btn btn-primary" style={{ gap: 8 }}>
                   Request a Demo <ArrowIcon />
                 </Link>
-                <Link href="/case-studies" className="btn btn-ghost">
-                  View Case Studies
+                <Link href="/contact" className="btn btn-ghost" style={{ borderColor: 'rgba(255,255,255,0.35)', color: '#fff' }}>
+                  Get in touch
                 </Link>
               </div>
             </div>
@@ -227,8 +224,14 @@ export default function AboutPage() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={100}>
-              <div style={{ borderRadius: 24, overflow: 'hidden', aspectRatio: '4/3' }}>
-                <PlaceholderImage alt="D3 team at work" width={600} height={450} label="Team / Office photo" style={{ borderRadius: 24 }} />
+              <div style={{ borderRadius: 24, overflow: 'hidden', aspectRatio: '4/3', background: 'var(--bg-surface)', border: '1px solid var(--border)' }}>
+                <Image
+                  src="/images/about/about-hero.jpg"
+                  alt="D3 Digital Data Dimensions team"
+                  width={600}
+                  height={450}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
               </div>
             </RevealOnScroll>
           </div>
@@ -250,8 +253,14 @@ export default function AboutPage() {
             {MVV.map((val, i) => (
               <RevealOnScroll key={val.title} delay={i * 80}>
                 <div className="card card-lift card-accent" style={{ padding: '36px 28px' }}>
-                  <div className="icon-wrap icon-wrap-md" style={{ marginBottom: 20 }}>
-                    {val.icon}
+                  <div style={{ marginBottom: 20, display: 'flex', justifyContent: 'center' }}>
+                    <Image
+                      src={val.imgSrc}
+                      alt={val.title}
+                      width={72}
+                      height={72}
+                      style={{ objectFit: 'contain' }}
+                    />
                   </div>
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{val.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7 }}>{val.desc}</p>

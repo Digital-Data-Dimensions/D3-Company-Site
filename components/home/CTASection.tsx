@@ -7,7 +7,9 @@ export function CTASection() {
       <div className="container">
         <RevealOnScroll>
           <div style={{
-            background: '#1A1A2E',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             borderRadius: 28,
             padding: 'clamp(32px, 6vw, 72px) clamp(24px, 6vw, 80px)',
             display: 'flex',
@@ -19,6 +21,8 @@ export function CTASection() {
           }}
             className="cta-inner"
           >
+            {/* Dark overlay over bg image */}
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.72)', borderRadius: 28, zIndex: 0 }} />
             {/* Glow effects */}
             <div style={{ position: 'absolute', top: 0, right: 0, width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(0,33,71,0.5) 0%, transparent 70%)', pointerEvents: 'none' }} />
             <div style={{ position: 'absolute', bottom: -100, left: '30%', width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,107,43,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />

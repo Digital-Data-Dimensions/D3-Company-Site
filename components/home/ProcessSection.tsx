@@ -1,11 +1,12 @@
+import { Search, LayoutTemplate, Rocket, Shield } from 'lucide-react';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 
 const PROCESS_STEPS = [
-  { num: '01', title: 'Discovery', desc: 'We analyse your requirements, existing systems and compliance needs in a structured scoping session.' },
-  { num: '02', title: 'Solution Design', desc: 'Custom configuration planning, ERP integration mapping and project timeline sign-off.' },
-  { num: '03', title: 'Implementation', desc: 'Rapid deployment with full testing, staff training, data migration and go-live support.' },
-  { num: '04', title: 'Ongoing Support', desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.' },
+  { num: '01', title: 'Discovery', desc: 'We analyse your requirements, existing systems and compliance needs in a structured scoping session.', icon: <Search size={22} /> },
+  { num: '02', title: 'Solution Design', desc: 'Custom configuration planning, ERP integration mapping and project timeline sign-off.', icon: <LayoutTemplate size={22} /> },
+  { num: '03', title: 'Implementation', desc: 'Rapid deployment with full testing, staff training, data migration and go-live support.', icon: <Rocket size={22} /> },
+  { num: '04', title: 'Ongoing Support', desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.', icon: <Shield size={22} /> },
 ];
 
 export function ProcessSection() {
@@ -37,13 +38,13 @@ export function ProcessSection() {
                   border: `2px solid ${i === 0 ? 'var(--heading)' : 'var(--border)'}`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 28px',
-                  fontSize: 18, fontWeight: 800,
                   color: i === 0 ? '#fff' : 'var(--heading)',
                   boxShadow: i === 0 ? '0 4px 20px rgba(0,33,71,0.15)' : 'none',
                   transition: 'all 0.3s',
                 }}>
-                  {step.num}
+                  {step.icon}
                 </div>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: 8 }}>{step.num}</div>
                 <div style={{ fontSize: 17, fontWeight: 700, color: 'var(--heading)', marginBottom: 12 }}>{step.title}</div>
                 <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{step.desc}</div>
               </div>

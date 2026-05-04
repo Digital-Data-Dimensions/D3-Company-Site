@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { CTASection } from '@/components/home/CTASection';
 import type { Metadata } from 'next';
@@ -9,40 +10,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
 const PARTNERS = [
-  {
-    name: 'ACT Qatar',
-    logoSrc: 'https://dthree.co/assets/img/Partners/actQatar.jpg',
-  },
-  {
-    name: 'TimeTech',
-    logoSrc: 'https://dthree.co/assets/img/Partners/timetech2.jpg',
-  },
-  {
-    name: 'Synel',
-    logoSrc: 'https://dthree.co/assets/img/Partners/synel2.jpg',
-  },
-  {
-    name: 'iM (iMachines)',
-    logoSrc: 'https://dthree.co/assets/img/Partners/im2.JPG',
-  },
-  {
-    name: 'Nord',
-    logoSrc: 'https://dthree.co/assets/img/Partners/nord2.JPG',
-  },
-  {
-    name: 'DataLogic',
-    logoSrc: 'https://dthree.co/assets/img/Partners/dataLogic2.jpg',
-  },
-  {
-    name: 'Etisalcom',
-    logoSrc: 'https://dthree.co/assets/img/Partners/etisalcom2.jpg',
-  },
-  {
-    name: 'Remedi',
-    logoSrc: 'https://dthree.co/assets/img/Partners/remedi.png',
-  },
+  { name: 'ACT Qatar',    logoSrc: '/images/partners/act-qatar.jpg' },
+  { name: 'TimeTech',     logoSrc: '/images/partners/timetech.jpg' },
+  { name: 'Synel',        logoSrc: '/images/partners/synel.jpg' },
+  { name: 'iM',           logoSrc: '/images/partners/im.jpg' },
+  { name: 'Nord',         logoSrc: '/images/partners/nord.jpg' },
+  { name: 'DataLogic',    logoSrc: '/images/partners/datalogic.jpg' },
+  { name: 'Etisalcom',    logoSrc: '/images/partners/etisalcom.jpg' },
+  { name: 'Remedi',       logoSrc: '/images/partners/remedi.png' },
 ];
 
 export default function PartnersPage() {
@@ -99,12 +75,12 @@ export default function PartnersPage() {
                     background: 'var(--bg)', borderRadius: 8, border: '1px solid var(--border)',
                     overflow: 'hidden',
                   }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                      <Image
                       src={partner.logoSrc}
                       alt={`${partner.name} logo`}
-                      style={{ maxHeight: 60, maxWidth: '100%', objectFit: 'contain' }}
-                      loading="lazy"
+                      width={180}
+                      height={60}
+                      style={{ maxHeight: 60, width: 'auto', objectFit: 'contain' }}
                     />
                   </div>
                   <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', textAlign: 'center', margin: 0 }}>{partner.name}</h3>

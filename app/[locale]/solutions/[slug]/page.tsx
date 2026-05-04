@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { SOLUTIONS, CASE_STUDIES, INDUSTRIES } from '@/lib/data';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
@@ -25,6 +26,7 @@ const SOLUTION_DETAILS: Record<string, {
   highlights: string[];
   industries: string[];
   caseStudySlug: string;
+  heroImage?: { src: string; alt: string };
   brochurePath?: string;
   youtubeUrl?: string;
   additionalSections?: { title: string; intro?: string; bullets: string[] }[];
@@ -529,6 +531,20 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
+const HERO_IMAGES: Record<string, { src: string; alt: string }> = {
+  'consultancy':              { src: '/images/solutions/consultancy-hero.png', alt: 'D3 IT consultancy services' },
+  'visitor-management':       { src: '/images/solutions/visitor-hero.png',     alt: 'TimeTech visitor management system' },
+  'time-attendance-enterprise': { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech Enterprise time attendance' },
+  'time-attendance-system':   { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech time attendance system' },
+  'hr-payroll-software':      { src: '/images/solutions/hrms-hero.png',         alt: 'TimeTech HRMS payroll software' },
+  'queue-management-system':  { src: '/images/solutions/qms-hero.png',          alt: 'TimeTech queue management system kiosk' },
+  'digital-signage':          { src: '/images/solutions/signage-hero.jpg',       alt: 'D3 digital signage installation' },
+  'rfid-asset-tracking':      { src: '/images/solutions/rfid-hero.png',          alt: 'RFID asset tracking system' },
+  'access-control-system':    { src: '/images/solutions/access-hero.jpeg',       alt: 'Biometric access control system' },
+  'erp-retail-management':    { src: '/images/solutions/erp-hero.png',           alt: 'D3 ERP system' },
+  'timetech-application':     { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech Platform dashboard' },
+};
+
 export default async function SolutionPage({ params }: Props) {
   const { slug } = await params;
   const sol = SOLUTIONS.find((s) => s.slug === slug);
@@ -536,6 +552,7 @@ export default async function SolutionPage({ params }: Props) {
 
   if (!sol || !detail) notFound();
 
+  const heroImg = HERO_IMAGES[slug];
   const relatedCaseStudy = CASE_STUDIES.find((cs) => cs.slug === detail.caseStudySlug);
   const relatedIndustries = INDUSTRIES.filter((ind) => detail.industries.includes(ind.slug));
   const relatedSolutions = SOLUTIONS.filter((s) => s.slug !== slug).slice(0, 3);
@@ -578,42 +595,87 @@ export default async function SolutionPage({ params }: Props) {
                   </a>
                 )}
               </div>
+
+              {/* Hero image shown below CTA on mobile, hidden on desktop when sidebar shows it */}
+              {heroImg && (
+                <div className="sol-hero-img-mobile" style={{ marginTop: 36, borderRadius: 16, overflow: 'hidden', boxShadow: '0 16px 48px rgba(0,33,71,0.12)' }}>
+                  <Image
+                    src={heroImg.src}
+                    alt={heroImg.alt}
+                    width={700}
+                    height={420}
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                    priority
+                  />
+                </div>
+              )}
             </div>
 
-            {/* Right — highlights */}
-            <div style={{
-              background: 'var(--bg-surface)',
-              border: '1px solid var(--border)',
-              borderRadius: 20,
-              padding: '32px',
-              alignSelf: 'start',
-            }}>
-              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Key capabilities</div>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {detail.highlights.map((h) => (
-                  <li key={h} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, fontWeight: 500, color: 'var(--body)' }}>
-                    <span style={{
-                      width: 22, height: 22, borderRadius: '50%',
-                      background: 'var(--bg-highlight)', border: '1px solid var(--border)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      color: 'var(--heading)', flexShrink: 0,
-                    }}>
-                      <CheckIcon />
-                    </span>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 24, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
-                {sol.tags.map((tag) => (
-                  <span key={tag} style={{
-                    fontSize: 11, fontWeight: 600, padding: '4px 12px', borderRadius: 100,
-                    background: 'var(--bg)', border: '1px solid var(--border)',
-                    color: 'var(--muted)', letterSpacing: '0.02em',
-                  }}>{tag}</span>
-                ))}
+            {/* Right — hero image if available, otherwise highlights panel */}
+            {heroImg ? (
+              <div style={{ alignSelf: 'center' }} className="sol-hero-img-desktop">
+                <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,33,71,0.14)' }}>
+                  <Image
+                    src={heroImg.src}
+                    alt={heroImg.alt}
+                    width={700}
+                    height={480}
+                    style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+                    priority
+                  />
+                </div>
+                {/* Key capabilities below image */}
+                <div style={{
+                  background: 'var(--bg-surface)', border: '1px solid var(--border)',
+                  borderRadius: 16, padding: '20px 24px', marginTop: 16,
+                }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Key capabilities</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                    {detail.highlights.map((h) => (
+                      <span key={h} style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 6,
+                        fontSize: 12, fontWeight: 500, color: 'var(--body)',
+                        background: 'var(--bg)', border: '1px solid var(--border)',
+                        borderRadius: 100, padding: '4px 12px',
+                      }}>
+                        <CheckIcon /> {h}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div style={{
+                background: 'var(--bg-surface)', border: '1px solid var(--border)',
+                borderRadius: 20, padding: '32px', alignSelf: 'start',
+              }}>
+                <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Key capabilities</div>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
+                  {detail.highlights.map((h) => (
+                    <li key={h} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, fontWeight: 500, color: 'var(--body)' }}>
+                      <span style={{
+                        width: 22, height: 22, borderRadius: '50%',
+                        background: 'var(--bg-highlight)', border: '1px solid var(--border)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        color: 'var(--heading)', flexShrink: 0,
+                      }}>
+                        <CheckIcon />
+                      </span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 24, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
+                  {sol.tags.map((tag) => (
+                    <span key={tag} style={{
+                      fontSize: 11, fontWeight: 600, padding: '4px 12px', borderRadius: 100,
+                      background: 'var(--bg)', border: '1px solid var(--border)',
+                      color: 'var(--muted)', letterSpacing: '0.02em',
+                    }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -651,8 +713,13 @@ export default async function SolutionPage({ params }: Props) {
           </div>
         </div>
         <style>{`
-          .sol-hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: start; }
-          @media (max-width: 900px) { .sol-hero-grid { grid-template-columns: 1fr; gap: 32px; } }
+          .sol-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+          .sol-hero-img-mobile { display: none; }
+          @media (max-width: 900px) {
+            .sol-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+            .sol-hero-img-desktop { display: none; }
+            .sol-hero-img-mobile { display: block; }
+          }
           .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
           @media (max-width: 1100px) { .features-grid { grid-template-columns: 1fr 1fr !important; } }
           @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr !important; } }

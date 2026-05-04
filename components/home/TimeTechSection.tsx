@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -92,15 +93,31 @@ export function TimeTechSection() {
           ))}
         </div>
 
+        {/* Split layout: CTA left + product screenshot right */}
         <RevealOnScroll>
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Button href="/solutions/timetech-application" variant="primary">
-              <ArrowIcon />
-              Request TimeTech Demo
-            </Button>
-            <Button href="/solutions/timetech-application" variant="ghost">
-              View all features
-            </Button>
+          <div className="timetech-split">
+            <div className="timetech-cta-col">
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+                <Button href="/solutions/timetech-application" variant="primary">
+                  <ArrowIcon />
+                  Request TimeTech Demo
+                </Button>
+                <Button href="/solutions/timetech-application" variant="ghost">
+                  View all features
+                </Button>
+              </div>
+            </div>
+            <div className="timetech-img-col">
+              <div className="timetech-screen">
+                <Image
+                  src="/images/solutions/timetech-dashboard.png"
+                  alt="TimeTech workforce management dashboard"
+                  width={700}
+                  height={440}
+                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 12 }}
+                />
+              </div>
+            </div>
           </div>
         </RevealOnScroll>
       </div>
@@ -110,6 +127,22 @@ export function TimeTechSection() {
         .timetech-card:hover { transform: translateY(-4px); border-color: var(--heading) !important; }
         @media (max-width: 900px) { .timetech-grid { grid-template-columns: 1fr 1fr !important; } }
         @media (max-width: 640px) { .timetech-grid { grid-template-columns: 1fr !important; } }
+        .timetech-split {
+          display: grid;
+          grid-template-columns: 1fr 1.4fr;
+          gap: 48px;
+          align-items: center;
+          margin-top: 48px;
+        }
+        .timetech-screen {
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 24px 64px rgba(0,33,71,0.18);
+        }
+        @media (max-width: 860px) {
+          .timetech-split { grid-template-columns: 1fr; }
+          .timetech-img-col { order: -1; }
+        }
       `}</style>
     </section>
   );

@@ -1,3 +1,4 @@
+import { Globe, Settings2, Cloud, Headphones } from 'lucide-react';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 
@@ -6,25 +7,25 @@ const WHY_ITEMS = [
     num: '01',
     title: 'GCC-first Design',
     text: 'Built for the Gulf — Arabic support, local labour law compliance and GCC regulatory standards built in from day one.',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
+    icon: <Globe size={22} />,
   },
   {
     num: '02',
     title: '100% Customisable',
     text: 'Fully configurable platforms that integrate with any third-party ERP or existing system — no vendor lock-in, ever.',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>,
+    icon: <Settings2 size={22} />,
   },
   {
     num: '03',
     title: 'Cloud & On-Premise',
     text: 'Cloud (AWS), on-server or hybrid — D3 solutions flex to your infrastructure and security requirements without compromise.',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
+    icon: <Cloud size={22} />,
   },
   {
     num: '04',
     title: 'Full-Lifecycle Support',
     text: 'From consultancy and implementation to ongoing support — one relationship, one contact, complete peace of mind.',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>,
+    icon: <Headphones size={22} />,
   },
 ];
 
