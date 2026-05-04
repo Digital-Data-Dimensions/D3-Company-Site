@@ -229,7 +229,7 @@ export default function AboutPage() {
                     />
                   </div>
                   <h3 style={{ fontSize: 20, fontWeight: 500, color: 'var(--heading)', marginBottom: 12 }}>{val.title}</h3>
-                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300 }}>{val.desc}</p>
+                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400 }}>{val.desc}</p>
                 </div>
               </RevealOnScroll>
             ))}

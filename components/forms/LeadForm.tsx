@@ -13,7 +13,7 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const labelStyle: React.CSSProperties = {
-    fontSize: 12, fontWeight: 300, letterSpacing: '0.04em',
+    fontSize: 12, fontWeight: 400, letterSpacing: '0.04em',
     color: dark ? 'rgba(255,255,255,0.6)' : 'var(--body)',
     display: 'block', marginBottom: 6,
     textTransform: 'uppercase',

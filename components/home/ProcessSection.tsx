@@ -45,7 +45,7 @@ export function ProcessSection() {
                   {step.icon}
                 </div>
                 <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: 8 }}>{step.num}</div>
-                <div style={{ fontSize: 17, fontWeight: 300, color: 'var(--heading)', marginBottom: 12 }}>{step.title}</div>
+                <div style={{ fontSize: 17, fontWeight: 400, color: 'var(--heading)', marginBottom: 12 }}>{step.title}</div>
                 <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{step.desc}</div>
               </div>
             </RevealOnScroll>

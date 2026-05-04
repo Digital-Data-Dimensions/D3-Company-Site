@@ -82,7 +82,7 @@ export function PlaceholderImage({
         <span
           style={{
             fontSize: 11,
-            fontWeight: 300,
+            fontWeight: 400,
             color: 'var(--muted)',
             textTransform: 'uppercase',
             letterSpacing: '0.08em',

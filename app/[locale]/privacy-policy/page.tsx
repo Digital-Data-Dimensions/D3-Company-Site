@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
             </div>
             <div>
               <h2 style={{ fontSize: 20, fontWeight: 400, color: 'var(--heading)', marginBottom: 12 }}>5. Contact Us</h2>
-              <p>For questions about this Privacy Policy, please contact us at <a href="mailto:info@dthree.co" style={{ color: 'var(--heading)', fontWeight: 300 }}>info@dthree.co</a> or write to us at: 22, Bldg 1033, Road 3925, Umm Al Hassam 339, Bahrain.</p>
+              <p>For questions about this Privacy Policy, please contact us at <a href="mailto:info@dthree.co" style={{ color: 'var(--heading)', fontWeight: 400 }}>info@dthree.co</a> or write to us at: 22, Bldg 1033, Road 3925, Umm Al Hassam 339, Bahrain.</p>
             </div>
           </div>
         </div>

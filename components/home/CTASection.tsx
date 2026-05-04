@@ -28,7 +28,7 @@ export function CTASection() {
               <div style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 300, letterSpacing: -1, lineHeight: 1.12, color: '#fff', marginBottom: 14 }}>
                 Ready to <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>transform</em><br />your operations?
               </div>
-              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', fontWeight: 300, maxWidth: 400, lineHeight: 1.7 }}>
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', fontWeight: 400, maxWidth: 400, lineHeight: 1.7 }}>
                 Schedule a live demo and see how D3 can streamline your workforce, queues and infrastructure from day one.
               </p>
             </div>

@@ -66,7 +66,7 @@ export default async function CaseStudyPage({ params }: Props) {
                 background: 'var(--card)', border: '1px solid var(--border)',
                 borderRadius: 16, padding: '32px 28px',
               }}>
-                <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.85, fontWeight: 300, margin: 0 }}>
+                <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.85, fontWeight: 400, margin: 0 }}>
                   {cs.solution}
                 </p>
               </div>

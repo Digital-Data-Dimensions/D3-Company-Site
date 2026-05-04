@@ -56,7 +56,7 @@ export function CaseStudiesSection() {
                 </div>
                 <div style={{ fontSize: 18, fontWeight: 500, color: 'var(--heading)', marginBottom: 12 }}>{cs.clientName}</div>
                 <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>What we delivered</div>
-                <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 20, fontWeight: 300 }}>{cs.solution}</div>
+                <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 20, fontWeight: 400 }}>{cs.solution}</div>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--heading)' }}>
                   View project <ArrowIcon size={13} />
                 </div>

@@ -23,7 +23,7 @@ export function IndustriesSection() {
             <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 300, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 18 }}>
               Built for your <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>industry</em>
             </h2>
-            <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 300, lineHeight: 1.75, maxWidth: 500, margin: '0 auto' }}>
+            <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 400, lineHeight: 1.75, maxWidth: 500, margin: '0 auto' }}>
               D3 solutions are deployed across government, banking, healthcare, retail and logistics — with local compliance built in.
             </p>
           </div>

@@ -32,51 +32,51 @@ function getFeatureIcon(title: string): { icon: React.ReactNode; color: string }
   const t = title.toLowerCase();
   const pick = (icon: React.ReactNode, color: string) => ({ icon, color });
 
-  if (t.includes('biometric') || t.includes('fingerprint'))   return pick(<Fingerprint size={18}/>, '#6D28D9');
-  if (t.includes('shift') || t.includes('schedule'))          return pick(<Clock size={18}/>, '#0F766E');
-  if (t.includes('payroll') || t.includes('salary') || t.includes('wps')) return pick(<DollarSign size={18}/>, '#166534');
-  if (t.includes('mobile') || t.includes('ios') || t.includes('android')) return pick(<Smartphone size={18}/>, '#1D4ED8');
-  if (t.includes('cloud') || t.includes('aws') || t.includes('server'))   return pick(<Cloud size={18}/>, '#0369A1');
-  if (t.includes('dashboard') || t.includes('report') || t.includes('analytic')) return pick(<BarChart2 size={18}/>, '#92400E');
-  if (t.includes('leave') || t.includes('absence'))           return pick(<CalendarOff size={18}/>, '#B91C1C');
-  if (t.includes('hr') || t.includes('human resource'))       return pick(<Users size={18}/>, '#7C3AED');
-  if (t.includes('self-service') || t.includes('portal') || t.includes('employee')) return pick(<User size={18}/>, '#0F766E');
-  if (t.includes('training'))                                 return pick(<GraduationCap size={18}/>, '#5B21B6');
-  if (t.includes('recruit') || t.includes('planning'))        return pick(<UserPlus size={18}/>, '#0369A1');
-  if (t.includes('visitor') || t.includes('appointment'))     return pick(<UserCheck size={18}/>, '#166534');
-  if (t.includes('queue') || t.includes('kiosk') || t.includes('token')) return pick(<List size={18}/>, '#92400E');
-  if (t.includes('whatsapp') || t.includes('virtual'))        return pick(<MessageCircle size={18}/>, '#166534');
-  if (t.includes('display') || t.includes('signage') || t.includes('lcd')) return pick(<Monitor size={18}/>, '#0369A1');
-  if (t.includes('led'))                                      return pick(<Zap size={18}/>, '#92400E');
-  if (t.includes('rfid'))                                     return pick(<Radio size={18}/>, '#7C3AED');
-  if (t.includes('barcode') || t.includes('scan') || t.includes('qr'))   return pick(<QrCode size={18}/>, '#0F766E');
-  if (t.includes('document'))                                 return pick(<FileText size={18}/>, '#B91C1C');
-  if (t.includes('warehouse') || t.includes('inventory'))     return pick(<Package size={18}/>, '#92400E');
-  if (t.includes('access') || t.includes('door') || t.includes('card'))  return pick(<Lock size={18}/>, '#0369A1');
-  if (t.includes('camera') || t.includes('cctv') || t.includes('surveillance')) return pick(<Camera size={18}/>, '#374151');
-  if (t.includes('face') || t.includes('recognition'))        return pick(<Eye size={18}/>, '#7C3AED');
-  if (t.includes('multi-company') || t.includes('multi company') || t.includes('erp')) return pick(<Building2 size={18}/>, '#0369A1');
-  if (t.includes('integration') || t.includes('api') || t.includes('connect')) return pick(<Link2 size={18}/>, '#0F766E');
-  if (t.includes('notification') || t.includes('email') || t.includes('alert')) return pick(<Bell size={18}/>, '#92400E');
-  if (t.includes('lmra') || t.includes('gosi') || t.includes('compliance')) return pick(<Shield size={18}/>, '#166534');
-  if (t.includes('geofenc') || t.includes('location') || t.includes('gps')) return pick(<MapPin size={18}/>, '#B91C1C');
-  if (t.includes('overtime'))                                 return pick(<Clock size={18}/>, '#92400E');
-  if (t.includes('appraisal') || t.includes('performance'))   return pick(<Star size={18}/>, '#B45309');
-  if (t.includes('print') || t.includes('printer'))           return pick(<Printer size={18}/>, '#374151');
-  if (t.includes('procurement') || t.includes('purchase'))    return pick(<ShoppingCart size={18}/>, '#0369A1');
-  if (t.includes('sales'))                                    return pick(<TrendingUp size={18}/>, '#166534');
-  if (t.includes('support') || t.includes('helpdesk'))        return pick(<Headphones size={18}/>, '#0F766E');
-  if (t.includes('database') || t.includes('system'))         return pick(<Database size={18}/>, '#5B21B6');
-  if (t.includes('manhour') || t.includes('project'))         return pick(<ClipboardList size={18}/>, '#7C3AED');
-  if (t.includes('wireless') || t.includes('network'))        return pick(<Wifi size={18}/>, '#1D4ED8');
-  if (t.includes('categor') || t.includes('multi'))           return pick(<LayoutGrid size={18}/>, '#0369A1');
-  if (t.includes('audio') || t.includes('announc'))           return pick(<Bell size={18}/>, '#92400E');
-  if (t.includes('supervisor'))                               return pick(<Eye size={18}/>, '#7C3AED');
-  if (t.includes('customis') || t.includes('config'))         return pick(<Settings2 size={18}/>, '#0F766E');
-  if (t.includes('active') || t.includes('passive'))          return pick(<Radio size={18}/>, '#7C3AED');
-  if (t.includes('fixed asset'))                              return pick(<Tag size={18}/>, '#92400E');
-  if (t.includes('power') || t.includes('ip control'))        return pick(<Zap size={18}/>, '#B91C1C');
-  return pick(<CheckCircle2 size={18}/>, '#166534');
+  if (t.includes('biometric') || t.includes('fingerprint'))   return pick(<Fingerprint size={24}/>, '#6D28D9');
+  if (t.includes('shift') || t.includes('schedule'))          return pick(<Clock size={24}/>, '#0F766E');
+  if (t.includes('payroll') || t.includes('salary') || t.includes('wps')) return pick(<DollarSign size={24}/>, '#166534');
+  if (t.includes('mobile') || t.includes('ios') || t.includes('android')) return pick(<Smartphone size={24}/>, '#1D4ED8');
+  if (t.includes('cloud') || t.includes('aws') || t.includes('server'))   return pick(<Cloud size={24}/>, '#0369A1');
+  if (t.includes('dashboard') || t.includes('report') || t.includes('analytic')) return pick(<BarChart2 size={24}/>, '#92400E');
+  if (t.includes('leave') || t.includes('absence'))           return pick(<CalendarOff size={24}/>, '#B91C1C');
+  if (t.includes('hr') || t.includes('human resource'))       return pick(<Users size={24}/>, '#7C3AED');
+  if (t.includes('self-service') || t.includes('portal') || t.includes('employee')) return pick(<User size={24}/>, '#0F766E');
+  if (t.includes('training'))                                 return pick(<GraduationCap size={24}/>, '#5B21B6');
+  if (t.includes('recruit') || t.includes('planning'))        return pick(<UserPlus size={24}/>, '#0369A1');
+  if (t.includes('visitor') || t.includes('appointment'))     return pick(<UserCheck size={24}/>, '#166534');
+  if (t.includes('queue') || t.includes('kiosk') || t.includes('token')) return pick(<List size={24}/>, '#92400E');
+  if (t.includes('whatsapp') || t.includes('virtual'))        return pick(<MessageCircle size={24}/>, '#166534');
+  if (t.includes('display') || t.includes('signage') || t.includes('lcd')) return pick(<Monitor size={24}/>, '#0369A1');
+  if (t.includes('led'))                                      return pick(<Zap size={24}/>, '#92400E');
+  if (t.includes('rfid'))                                     return pick(<Radio size={24}/>, '#7C3AED');
+  if (t.includes('barcode') || t.includes('scan') || t.includes('qr'))   return pick(<QrCode size={24}/>, '#0F766E');
+  if (t.includes('document'))                                 return pick(<FileText size={24}/>, '#B91C1C');
+  if (t.includes('warehouse') || t.includes('inventory'))     return pick(<Package size={24}/>, '#92400E');
+  if (t.includes('access') || t.includes('door') || t.includes('card'))  return pick(<Lock size={24}/>, '#0369A1');
+  if (t.includes('camera') || t.includes('cctv') || t.includes('surveillance')) return pick(<Camera size={24}/>, '#374151');
+  if (t.includes('face') || t.includes('recognition'))        return pick(<Eye size={24}/>, '#7C3AED');
+  if (t.includes('multi-company') || t.includes('multi company') || t.includes('erp')) return pick(<Building2 size={24}/>, '#0369A1');
+  if (t.includes('integration') || t.includes('api') || t.includes('connect')) return pick(<Link2 size={24}/>, '#0F766E');
+  if (t.includes('notification') || t.includes('email') || t.includes('alert')) return pick(<Bell size={24}/>, '#92400E');
+  if (t.includes('lmra') || t.includes('gosi') || t.includes('compliance')) return pick(<Shield size={24}/>, '#166534');
+  if (t.includes('geofenc') || t.includes('location') || t.includes('gps')) return pick(<MapPin size={24}/>, '#B91C1C');
+  if (t.includes('overtime'))                                 return pick(<Clock size={24}/>, '#92400E');
+  if (t.includes('appraisal') || t.includes('performance'))   return pick(<Star size={24}/>, '#B45309');
+  if (t.includes('print') || t.includes('printer'))           return pick(<Printer size={24}/>, '#374151');
+  if (t.includes('procurement') || t.includes('purchase'))    return pick(<ShoppingCart size={24}/>, '#0369A1');
+  if (t.includes('sales'))                                    return pick(<TrendingUp size={24}/>, '#166534');
+  if (t.includes('support') || t.includes('helpdesk'))        return pick(<Headphones size={24}/>, '#0F766E');
+  if (t.includes('database') || t.includes('system'))         return pick(<Database size={24}/>, '#5B21B6');
+  if (t.includes('manhour') || t.includes('project'))         return pick(<ClipboardList size={24}/>, '#7C3AED');
+  if (t.includes('wireless') || t.includes('network'))        return pick(<Wifi size={24}/>, '#1D4ED8');
+  if (t.includes('categor') || t.includes('multi'))           return pick(<LayoutGrid size={24}/>, '#0369A1');
+  if (t.includes('audio') || t.includes('announc'))           return pick(<Bell size={24}/>, '#92400E');
+  if (t.includes('supervisor'))                               return pick(<Eye size={24}/>, '#7C3AED');
+  if (t.includes('customis') || t.includes('config'))         return pick(<Settings2 size={24}/>, '#0F766E');
+  if (t.includes('active') || t.includes('passive'))          return pick(<Radio size={24}/>, '#7C3AED');
+  if (t.includes('fixed asset'))                              return pick(<Tag size={24}/>, '#92400E');
+  if (t.includes('power') || t.includes('ip control'))        return pick(<Zap size={24}/>, '#B91C1C');
+  return pick(<CheckCircle2 size={24}/>, '#166534');
 }
 
 /* Professional 3-tone chip palette — cycles within brand blue family */
@@ -640,7 +640,7 @@ export default async function SolutionPage({ params }: Props) {
                       padding: '10px 20px', borderRadius: 100,
                       border: '1px solid var(--border)',
                       background: 'var(--bg-surface)',
-                      fontSize: 13, fontWeight: 300, color: 'var(--body)',
+                      fontSize: 13, fontWeight: 400, color: 'var(--body)',
                       textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s',
                     }}
                   >
@@ -692,7 +692,7 @@ export default async function SolutionPage({ params }: Props) {
                       return (
                       <span key={h} style={{
                         display: 'inline-flex', alignItems: 'center', gap: 5,
-                        fontSize: 12, fontWeight: 300, color: c.text,
+                        fontSize: 12, fontWeight: 400, color: c.text,
                         background: c.bg, border: `1px solid ${c.border}`,
                         borderRadius: 100, padding: '4px 12px',
                       }}>
@@ -716,7 +716,7 @@ export default async function SolutionPage({ params }: Props) {
                     <li key={h} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                       <span style={{
                         display: 'inline-flex', alignItems: 'center', gap: 5,
-                        fontSize: 13, fontWeight: 300, color: c.text,
+                        fontSize: 13, fontWeight: 400, color: c.text,
                         background: c.bg, border: `1px solid ${c.border}`,
                         borderRadius: 100, padding: '5px 14px', flexShrink: 0,
                       }}>
@@ -731,7 +731,7 @@ export default async function SolutionPage({ params }: Props) {
                     const c = chipColor(tag);
                     return (
                     <span key={tag} style={{
-                      fontSize: 11, fontWeight: 300, padding: '4px 12px', borderRadius: 100,
+                      fontSize: 11, fontWeight: 400, padding: '4px 12px', borderRadius: 100,
                       background: c.bg, border: `1px solid ${c.border}`,
                       color: c.text, letterSpacing: '0.02em',
                     }}>{tag}</span>
@@ -766,7 +766,7 @@ export default async function SolutionPage({ params }: Props) {
                   <div style={{ color, marginBottom: 12, display: 'flex' }}>
                     {icon}
                   </div>
-                  <div style={{ fontSize: 14, fontWeight: 300, color: 'var(--heading)', marginBottom: 6 }}>{f.title}</div>
+                  <div style={{ fontSize: 14, fontWeight: 400, color: 'var(--heading)', marginBottom: 6 }}>{f.title}</div>
                   <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, fontWeight: 400 }}>{f.desc}</div>
                 </div>
               </RevealOnScroll>
@@ -858,7 +858,7 @@ export default async function SolutionPage({ params }: Props) {
                 <Link key={ind.slug} href={`/industries/${ind.slug}` as Parameters<typeof Link>[0]['href']} style={{
                   padding: '12px 20px', background: 'var(--card)', border: '1px solid var(--border)',
                   borderRadius: 100, textDecoration: 'none', transition: 'border-color 0.2s',
-                  fontSize: 14, fontWeight: 300, color: 'var(--heading)',
+                  fontSize: 14, fontWeight: 400, color: 'var(--heading)',
                 }}>
                   {ind.title}
                 </Link>
@@ -885,7 +885,7 @@ export default async function SolutionPage({ params }: Props) {
               }}>
                 <div style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', marginBottom: 8 }}>{rs.title}</div>
                 <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.6, marginBottom: 16 }}>{rs.desc.slice(0, 100)}…</div>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 13, fontWeight: 300, color: 'var(--muted)' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 13, fontWeight: 400, color: 'var(--muted)' }}>
                   Learn more <ArrowIcon size={12} />
                 </span>
               </Link>

@@ -38,7 +38,7 @@ export default function ProjectsPage() {
               >
                 Projects
               </h1>
-              <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 680 }}>
+              <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 680 }}>
                 A portfolio of D3 installations across Bahrain and the GCC — including queue management, time attendance, and enterprise IT deployments.
               </p>
             </div>

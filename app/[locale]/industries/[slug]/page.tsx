@@ -60,7 +60,7 @@ export default async function IndustryPage({ params }: Props) {
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Enterprise IT Solutions for <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>{ind.title}</em>
           </h1>
-          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600, marginBottom: 40 }}>
+          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 600, marginBottom: 40 }}>
             {ind.desc} — D3 has been delivering purpose-built solutions for the {ind.title.toLowerCase()} sector across the GCC since 2010.
           </p>
           <Button href="/contact" variant="primary"><ArrowIcon />Request a Demo</Button>
@@ -119,10 +119,10 @@ export default async function IndustryPage({ params }: Props) {
                   <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16 }}>{sol.desc}</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 16 }}>
                     {sol.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} style={{ fontSize: 11, fontWeight: 300, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)' }}>{tag}</span>
+                      <span key={tag} style={{ fontSize: 11, fontWeight: 400, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)' }}>{tag}</span>
                     ))}
                   </div>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 300, color: 'var(--muted)' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--muted)' }}>
                     Learn more <ArrowIcon size={13} />
                   </div>
                 </Link>
@@ -154,7 +154,7 @@ export default async function IndustryPage({ params }: Props) {
                 }}>
                   <div style={{ fontSize: 12, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>{cs.clientType}</div>
                   <div style={{ fontSize: 18, fontWeight: 400, color: 'var(--heading)', marginBottom: 12 }}>{cs.clientName}</div>
-                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16, fontWeight: 300 }}>{cs.solution}</div>
+                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 16, fontWeight: 400 }}>{cs.solution}</div>
                   <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--muted)' }}>
                     View project <ArrowIcon size={13} />
                   </div>
@@ -173,7 +173,7 @@ export default async function IndustryPage({ params }: Props) {
             {otherIndustries.map((oi) => (
               <Link key={oi.slug} href={`/industries/${oi.slug}` as Parameters<typeof Link>[0]['href']} style={{
                 padding: '10px 20px', background: 'var(--card)', border: '1px solid var(--border)',
-                borderRadius: 100, fontSize: 13, fontWeight: 300, color: 'var(--body)',
+                borderRadius: 100, fontSize: 13, fontWeight: 400, color: 'var(--body)',
                 textDecoration: 'none', transition: 'all 0.2s',
               }}>
                 {oi.title}

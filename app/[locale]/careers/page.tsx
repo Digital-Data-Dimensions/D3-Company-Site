@@ -28,7 +28,7 @@ export default function CareersPage() {
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Join <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>D3</em>
           </h1>
-          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 560 }}>
+          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 560 }}>
             We are always looking for talented IT professionals to join our team. D3 has been serving GCC enterprises since 2010 — come build with us.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function CareersPage() {
           </div>
           <RevealOnScroll delay={200}>
             <p style={{ fontSize: 14, color: 'var(--muted)', marginTop: 32, lineHeight: 1.7 }}>
-              Don&apos;t see a suitable role? Send your CV to <a href="mailto:info@dthree.co" style={{ color: 'var(--heading)', fontWeight: 300 }}>info@dthree.co</a> and we&apos;ll keep it on file.
+              Don&apos;t see a suitable role? Send your CV to <a href="mailto:info@dthree.co" style={{ color: 'var(--heading)', fontWeight: 400 }}>info@dthree.co</a> and we&apos;ll keep it on file.
             </p>
           </RevealOnScroll>
         </div>

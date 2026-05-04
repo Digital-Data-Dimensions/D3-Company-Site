@@ -7,25 +7,25 @@ const WHY_ITEMS = [
     num: '01',
     title: 'GCC-first Design',
     text: 'Built for the Gulf, with Arabic support, local labour law compliance and GCC regulatory standards built in from day one.',
-    icon: <Globe size={28} />,
+    icon: <Globe size={44} />,
   },
   {
     num: '02',
     title: '100% Customisable',
     text: 'Fully configurable platforms that integrate with any third-party ERP or existing system. No vendor lock-in, ever.',
-    icon: <Settings2 size={28} />,
+    icon: <Settings2 size={44} />,
   },
   {
     num: '03',
     title: 'Cloud & On-Premise',
     text: 'Cloud (AWS), on-server or hybrid. D3 solutions flex to your infrastructure and security requirements without compromise.',
-    icon: <Cloud size={28} />,
+    icon: <Cloud size={44} />,
   },
   {
     num: '04',
     title: 'Full-Lifecycle Support',
     text: 'From consultancy and implementation to ongoing support: one relationship, one contact, complete peace of mind.',
-    icon: <Headphones size={28} />,
+    icon: <Headphones size={44} />,
   },
 ];
 
@@ -41,7 +41,7 @@ export function WhySection() {
             <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 300, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 18 }}>
               The D3 <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>difference</em>
             </h2>
-            <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 300, lineHeight: 1.75, maxWidth: 500, margin: '0 auto' }}>
+            <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 400, lineHeight: 1.75, maxWidth: 500, margin: '0 auto' }}>
               We don&apos;t just deliver technology. We deliver outcomes. Here&apos;s what separates us from every other IT vendor in the region.
             </p>
           </div>
@@ -62,7 +62,7 @@ export function WhySection() {
                   {item.icon}
                 </div>
                 <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: 8 }}>{item.num}</div>
-                <div style={{ fontSize: 17, fontWeight: 300, color: 'var(--heading)', letterSpacing: -0.3, marginBottom: 10 }}>{item.title}</div>
+                <div style={{ fontSize: 17, fontWeight: 400, color: 'var(--heading)', letterSpacing: -0.3, marginBottom: 10 }}>{item.title}</div>
                 <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{item.text}</p>
               </div>
             </RevealOnScroll>

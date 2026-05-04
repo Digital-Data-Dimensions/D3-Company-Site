@@ -111,7 +111,7 @@ export default function NotFound() {
               display: 'inline-flex', alignItems: 'center', gap: 8,
               background: 'var(--bg-surface)', color: 'var(--body)',
               padding: '12px 24px', borderRadius: 8,
-              fontSize: 14, fontWeight: 300, textDecoration: 'none',
+              fontSize: 14, fontWeight: 400, textDecoration: 'none',
               border: '1px solid var(--border)',
               transition: 'all 0.2s',
             }}

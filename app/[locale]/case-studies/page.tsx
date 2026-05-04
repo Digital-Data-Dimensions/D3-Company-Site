@@ -19,7 +19,7 @@ export default function CaseStudiesListPage() {
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 300, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Client Projects
           </h1>
-          <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600 }}>
+          <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 600 }}>
             A selection of real deployments delivered by D3 across government, banking, education and the private sector in Bahrain and the GCC.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function CaseStudiesListPage() {
                   </div>
                   <div style={{ fontSize: 17, fontWeight: 500, color: 'var(--heading)', marginBottom: 14, lineHeight: 1.35 }}>{cs.clientName}</div>
                   <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>What we delivered</div>
-                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.7, fontWeight: 300 }}>{cs.solution}</div>
+                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.7, fontWeight: 400 }}>{cs.solution}</div>
                 </div>
               </RevealOnScroll>
             ))}

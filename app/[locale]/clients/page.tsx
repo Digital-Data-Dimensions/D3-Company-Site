@@ -42,7 +42,7 @@ export default function ClientsPage() {
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             500+ organisations trust <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>D3</em>
           </h1>
-          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600 }}>
+          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 600 }}>
             From government ministries to leading banks, retailers and hospitals across the GCC and beyond. Building long-term partnerships since 2010.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function ClientsPage() {
               <div style={{ fontSize: 36, fontWeight: 400, color: 'var(--heading)', letterSpacing: -1, lineHeight: 1, marginBottom: 4 }}>
                 <span style={{ color: 'var(--cta)' }}>{s.num}</span>
               </div>
-              <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.label}</div>
+              <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.label}</div>
             </div>
           ))}
         </div>
@@ -82,7 +82,7 @@ export default function ClientsPage() {
                   <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.5vw, 32px)', fontWeight: 400, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 8 }}>
                     {cat.label}
                   </h2>
-                  <p style={{ fontSize: 15, color: 'var(--body)', fontWeight: 300, maxWidth: 500, lineHeight: 1.7 }}>{cat.desc}</p>
+                  <p style={{ fontSize: 15, color: 'var(--body)', fontWeight: 400, maxWidth: 500, lineHeight: 1.7 }}>{cat.desc}</p>
                 </div>
               </div>
             </RevealOnScroll>
@@ -96,7 +96,7 @@ export default function ClientsPage() {
                     borderRadius: 100,
                     padding: '12px 24px',
                     fontSize: 14,
-                    fontWeight: 300,
+                    fontWeight: 400,
                     color: 'var(--body)',
                     transition: 'all 0.2s',
                     cursor: 'default',

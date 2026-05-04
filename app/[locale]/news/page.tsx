@@ -71,7 +71,7 @@ export default function NewsPage() {
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Accreditations &amp; <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>Recognition</em>
           </h1>
-          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 560 }}>
+          <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 560 }}>
             Official accreditation certificates and appreciation letters from government and enterprise clients — recognition of D3&apos;s commitment to quality and excellence since 2010.
           </p>
         </div>
