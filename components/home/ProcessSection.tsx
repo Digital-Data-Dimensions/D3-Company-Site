@@ -73,7 +73,7 @@ export function ProcessSection() {
         </RevealOnScroll>
 
         {/* Desktop horizontal timeline */}
-        <div ref={sectionRef} className="process-desktop">
+        <div className="process-desktop">
           {/* Track */}
           <div className="process-track">
             <div className="process-track-base" />
@@ -111,27 +111,30 @@ export function ProcessSection() {
         </div>
 
         {/* Mobile vertical timeline */}
-        <div className="process-mobile">
-          {PROCESS_STEPS.map((step, i) => (
-            <div key={step.num} className="process-mob-step">
-              <div className="process-mob-left">
-                <div className={`process-mob-node${i <= active ? ' process-node--active' : ''}`}>
-                  {step.icon}
+        <div className="process-mobile" ref={sectionRef}>
+          {PROCESS_STEPS.map((step, i) => {
+            const isActive = i <= active;
+            return (
+              <div key={step.num} className="process-mob-step">
+                <div className="process-mob-left">
+                  <div className={`process-mob-node${isActive ? ' process-node--active' : ''}`}>
+                    {step.icon}
+                  </div>
+                  {i < PROCESS_STEPS.length - 1 && (
+                    <div
+                      className="process-mob-line"
+                      style={{ background: i < active ? 'var(--heading)' : 'var(--border)' }}
+                    />
+                  )}
                 </div>
-                {i < PROCESS_STEPS.length - 1 && (
-                  <div
-                    className="process-mob-line"
-                    style={{ background: i < active ? 'var(--heading)' : 'var(--border)' }}
-                  />
-                )}
+                <div className={`process-mob-body${isActive ? ' process-mob-body--active' : ''}`}>
+                  <div className="process-num">{step.num}</div>
+                  <div className="process-title">{step.title}</div>
+                  <p className="process-desc">{step.desc}</p>
+                </div>
               </div>
-              <div className={`process-mob-body${i <= active ? ' process-content--active' : ''}`}>
-                <div className="process-num">{step.num}</div>
-                <div className="process-title">{step.title}</div>
-                <p className="process-desc">{step.desc}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -240,17 +243,18 @@ export function ProcessSection() {
           transition: background 0.7s, border-color 0.7s, color 0.7s, box-shadow 0.7s;
         }
         .process-mob-line {
-          width: 2px; flex: 1; min-height: 24px;
+          width: 2px; flex: 1; min-height: 32px;
           margin-top: 8px; border-radius: 2px;
           transition: background 0.7s;
         }
         .process-mob-body {
-          padding-top: 10px;
-          opacity: 0.25; transform: translateX(0);
+          padding-top: 8px;
+          padding-bottom: 8px;
+          opacity: 0.45;
           transition: opacity 0.8s;
         }
-        .process-mob-body.process-content--active {
-          opacity: 1; transform: translateX(0);
+        .process-mob-body--active {
+          opacity: 1;
         }
 
         @media (prefers-reduced-motion: reduce) {
