@@ -77,7 +77,7 @@ export default function NotFound() {
 
         <h1 style={{
           fontSize: 'clamp(22px, 3vw, 32px)',
-          fontWeight: 800,
+          fontWeight: 700,
           color: 'var(--heading)',
           letterSpacing: -0.5,
           marginBottom: 14,

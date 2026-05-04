@@ -39,7 +39,7 @@ export default function PartnersPage() {
                 Partners
               </div>
               <h1 style={{
-                fontFamily: 'var(--font)', fontWeight: 800,
+                fontFamily: 'var(--font)', fontWeight: 700,
                 fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: 1.06,
                 letterSpacing: -2, color: 'var(--heading)', marginBottom: 24,
               }}>
@@ -59,7 +59,7 @@ export default function PartnersPage() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginBottom: 56 }}>
               <div className="eyebrow eyebrow-center">Technology Partners</div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
                 Our partners
               </h2>
             </div>

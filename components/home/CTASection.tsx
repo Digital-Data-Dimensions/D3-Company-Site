@@ -25,7 +25,7 @@ export function CTASection() {
 
             <div style={{ position: 'relative', zIndex: 1 }}>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Get started today</div>
-              <div style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, letterSpacing: -1, lineHeight: 1.12, color: '#fff', marginBottom: 14 }}>
+              <div style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.12, color: '#fff', marginBottom: 14 }}>
                 Ready to <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>transform</em><br />your operations?
               </div>
               <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', fontWeight: 300, maxWidth: 400, lineHeight: 1.7 }}>

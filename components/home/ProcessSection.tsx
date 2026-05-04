@@ -18,7 +18,7 @@ export function ProcessSection() {
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
               <SectionEyebrow center>How we work</SectionEyebrow>
             </div>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 800, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 0 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 0 }}>
               From consultation to <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>go-live</em>
             </h2>
           </div>

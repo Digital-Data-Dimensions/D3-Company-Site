@@ -60,7 +60,7 @@ export default async function CaseStudyPage({ params }: Props) {
             <span style={{ fontSize: 13, color: 'var(--body)', fontWeight: 500 }}>{cs.clientName}</span>
           </div>
           <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 100, background: 'var(--bg-surface)', border: '1px solid var(--border)', color: 'var(--muted)', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: 20 }}>{cs.clientType}</span>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 0, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 0, maxWidth: 700 }}>
             {cs.clientName}
           </h1>
         </div>
@@ -85,14 +85,14 @@ export default async function CaseStudyPage({ params }: Props) {
               {/* Challenge */}
               <div style={{ marginBottom: 48 }}>
                 <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>The Challenge</div>
-                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 30px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 20 }}>What {cs.clientName} needed to solve</h2>
+                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 30px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 20 }}>What {cs.clientName} needed to solve</h2>
                 <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, fontWeight: 300 }}>{cs.problem}</p>
               </div>
 
               {/* Solution */}
               <div style={{ marginBottom: 48 }}>
                 <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>The D3 Solution</div>
-                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 30px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 20 }}>How we solved it</h2>
+                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 30px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 20 }}>How we solved it</h2>
                 <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, fontWeight: 300 }}>{solutionDetail}</p>
               </div>
 

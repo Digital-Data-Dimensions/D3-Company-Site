@@ -68,7 +68,7 @@ export default function NewsPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <SectionEyebrow>News & Credentials</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Accreditations &amp; <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>Recognition</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 560 }}>
@@ -82,7 +82,7 @@ export default function NewsPage() {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>Certificates</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
               Accreditation Certificates
             </h2>
           </RevealOnScroll>
@@ -132,7 +132,7 @@ export default function NewsPage() {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>Letters</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 40 }}>
               Appreciation Letters
             </h2>
           </RevealOnScroll>

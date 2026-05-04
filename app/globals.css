@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* ── ARABIC / RTL ── */
 [dir="rtl"] {
@@ -121,6 +121,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading);
   line-height: 1.1;
   letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+body {
+  font-weight: 400;
 }
 
 /* ── LAYOUT UTILITIES ── */
@@ -447,22 +452,18 @@ h1, h2, h3, h4, h5, h6 {
   order: 1;
 }
 
-/* ── ICON WRAPPERS ── */
+/* ── ICON WRAPPERS ── (no background — just display container) */
 .icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border-radius: 12px;
-  background: var(--bg-highlight);
-  border: 1px solid var(--border);
   color: var(--nav);
 }
 
-
-.icon-wrap-sm { width: 36px; height: 36px; border-radius: 8px; }
-.icon-wrap-md { width: 48px; height: 48px; border-radius: 12px; }
-.icon-wrap-lg { width: 60px; height: 60px; border-radius: 16px; }
+.icon-wrap-sm { width: 36px; height: 36px; }
+.icon-wrap-md { width: 48px; height: 48px; }
+.icon-wrap-lg { width: 60px; height: 60px; }
 
 /* ── PLACEHOLDER IMAGE ── */
 .img-placeholder {

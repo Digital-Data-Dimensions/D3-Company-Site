@@ -119,7 +119,7 @@ export function TrustLogosSection() {
           align-items: center;
           justify-content: center;
           font-size: 9px;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: 0.03em;
           text-align: center;
           flex-shrink: 0;

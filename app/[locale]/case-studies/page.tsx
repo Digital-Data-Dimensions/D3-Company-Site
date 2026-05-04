@@ -20,7 +20,7 @@ export default function CaseStudiesListPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Case Studies</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Real results for real <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>clients</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600 }}>
@@ -49,7 +49,7 @@ export default function CaseStudiesListPage() {
                       letterSpacing: '0.04em', textTransform: 'uppercase',
                     }}>{cs.clientType}</span>
                   </div>
-                  <div style={{ fontSize: 20, fontWeight: 800, color: 'var(--heading)', marginBottom: 16 }}>{cs.clientName}</div>
+                  <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--heading)', marginBottom: 16 }}>{cs.clientName}</div>
                   <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Challenge</div>
                   <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65, marginBottom: 20 }}>{cs.problem}</div>
                   <div style={{ padding: '14px 16px', background: 'var(--bg-surface)', borderRadius: 10, border: '1px solid var(--border)', marginBottom: 24 }}>

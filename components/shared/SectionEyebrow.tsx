@@ -2,7 +2,7 @@ export function SectionEyebrow({ children, center = false }: { children: React.R
   return (
     <div style={{
       display: 'inline-flex', alignItems: 'center', gap: 8,
-      fontSize: 11, fontWeight: 700, letterSpacing: '0.14em',
+      fontSize: 11, fontWeight: 500, letterSpacing: '0.14em',
       textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 16,
       ...(center ? { justifyContent: 'center' } : {}),
     }}>

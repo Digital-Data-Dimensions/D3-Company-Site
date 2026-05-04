@@ -64,7 +64,7 @@ export function TimeTechSection() {
         <RevealOnScroll>
           <div style={{ maxWidth: 700, marginBottom: 60 }}>
             <SectionEyebrow>TimeTech Application</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 800, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 18 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 18 }}>
               Complete workforce management<br />powered by <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>TimeTech</em>
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 400, lineHeight: 1.75 }}>

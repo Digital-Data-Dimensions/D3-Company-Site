@@ -309,7 +309,7 @@ export function HeroSection() {
           border: 1px solid var(--border);
           color: var(--muted);
           font-size: 11px;
-          font-weight: 700;
+          font-weight: 500;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           padding: 6px 16px;
@@ -327,7 +327,7 @@ export function HeroSection() {
         /* headline */
         .hs-h1 {
           font-family: var(--font);
-          font-weight: 800;
+          font-weight: 700;
           font-size: clamp(34px, 5vw, 72px);
           line-height: 1.05;
           letter-spacing: -2.5px;
@@ -375,7 +375,7 @@ export function HeroSection() {
         }
         .hs-stat-n {
           font-size: clamp(28px, 3vw, 40px);
-          font-weight: 800;
+          font-weight: 600;
           color: var(--heading);
           letter-spacing: -1.5px;
           line-height: 1;
@@ -383,7 +383,7 @@ export function HeroSection() {
         }
         .hs-stat-l {
           font-size: 10px;
-          font-weight: 700;
+          font-weight: 500;
           color: var(--muted);
           text-transform: uppercase;
           letter-spacing: 0.12em;

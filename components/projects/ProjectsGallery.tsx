@@ -159,7 +159,7 @@ export function ProjectsGallery() {
         .pg-filter-row{ display:flex; align-items:flex-start; gap: 12px; flex-wrap: wrap; }
         .pg-filter-label{
           font-size: 11px;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--muted);
@@ -217,7 +217,7 @@ export function ProjectsGallery() {
           background: var(--bg-surface);
           color: var(--heading);
           font-size: 12px;
-          font-weight: 800;
+          font-weight: 700;
           padding: 8px 12px;
           border-radius: 999px;
           cursor:pointer;

@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
               <span key={tag} style={{ fontSize: 11, fontWeight: 600, padding: '4px 10px', borderRadius: 100, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
             ))}
           </div>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 20, maxWidth: 800 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 20, maxWidth: 800 }}>
             {post.title}
           </h1>
           <div style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 500 }}>

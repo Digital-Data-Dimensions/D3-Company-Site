@@ -50,14 +50,16 @@ const TIMETECH_ITEMS = [
   },
 ];
 
-const SOLUTIONS = [
-  { slug: 'timetech-application', label: 'TimeTech Platform', desc: 'Complete workforce intelligence suite' },
+const OPERATIONS = [
   { slug: 'queue-management-system', label: 'Queue Management', desc: 'WhatsApp virtual queuing & kiosk' },
   { slug: 'rfid-asset-tracking', label: 'RFID & Asset Tracking', desc: 'Real-time asset visibility' },
-  { slug: 'access-control-system', label: 'Access Control & CCTV', desc: 'IP surveillance & biometric doors' },
+  { slug: 'access-control-system', label: 'Access Control & CCTV', desc: 'IP cameras & biometric doors' },
   { slug: 'digital-signage', label: 'Digital Signage', desc: 'LED & managed display networks' },
-  { slug: 'erp-retail-management', label: 'ERP & Retail', desc: 'Inventory, POS & ESL management' },
-  { slug: 'consultancy', label: 'IT Consultancy', desc: 'IT staffing and ICT planning' },
+];
+
+const BUSINESS = [
+  { slug: 'erp-retail-management', label: 'ERP & Retail', desc: 'Inventory, POS & shelf labels' },
+  { slug: 'consultancy', label: 'IT Consultancy', desc: 'Staffing & ICT planning' },
 ];
 
 const INDUSTRIES = [
@@ -164,50 +166,108 @@ export function Navbar() {
                 role="menu"
               >
                 {key === 'solutions' && (
-                  <div style={{ display: 'flex', gap: 0, width: 680 }}>
-                    {/* Left: TimeTech grouped */}
-                    <div style={{ width: 300, borderRight: '1px solid var(--border)', padding: '14px 8px' }}>
-                      <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', padding: '4px 10px', marginBottom: 6 }}>
-                        TimeTech Platform
-                      </div>
-                      {TIMETECH_ITEMS.map(group => (
-                        <div key={group.group} style={{ marginBottom: 8 }}>
-                          <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted)', padding: '4px 10px 2px', letterSpacing: '0.06em' }}>
-                            {group.group}
+                  <div style={{ width: 860 }}>
+                    {/* 3-column grid */}
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+
+                      {/* Col 1 — TimeTech Suite */}
+                      <div style={{ padding: '20px 8px 16px', borderRight: '1px solid var(--border)' }}>
+                        <div className="d3-mega-col-head">TimeTech Suite</div>
+                        {/* Featured: TimeTech Platform */}
+                        <Link
+                          href="/solutions/timetech-application"
+                          role="menuitem"
+                          onClick={() => setActiveMenu(null)}
+                          className="d3-dd-item d3-dd-featured"
+                        >
+                          <span className="d3-dd-icon-bare"><ClockSVG /></span>
+                          <span>
+                            <span className="d3-dd-label">TimeTech Platform</span>
+                            <span className="d3-dd-desc">Complete workforce management suite</span>
+                          </span>
+                        </Link>
+                        {/* Grouped sub-items */}
+                        {TIMETECH_ITEMS.map(group => (
+                          <div key={group.group}>
+                            <div className="d3-mega-group-label">{group.group}</div>
+                            {group.items.map(item => (
+                              <Link
+                                key={`${group.group}-${item.label}`}
+                                href={`/solutions/${item.slug}` as Parameters<typeof Link>[0]['href']}
+                                role="menuitem"
+                                onClick={() => setActiveMenu(null)}
+                                className="d3-dd-item"
+                              >
+                                <span className="d3-dd-icon-bare" style={{ color: 'var(--muted)' }}><ChevronRightSVG /></span>
+                                <span>
+                                  <span className="d3-dd-label">{item.label}</span>
+                                  <span className="d3-dd-desc">{item.desc}</span>
+                                </span>
+                              </Link>
+                            ))}
                           </div>
-                          {group.items.map(item => (
-                            <Link
-                              key={`${group.group}-${item.label}`}
-                              href={`/solutions/${item.slug}` as Parameters<typeof Link>[0]['href']}
-                              role="menuitem"
-                              onClick={() => setActiveMenu(null)}
-                              className="d3-dd-item"
+                        ))}
+                      </div>
+
+                      {/* Col 2 — Operations */}
+                      <div style={{ padding: '20px 8px 16px', borderRight: '1px solid var(--border)' }}>
+                        <div className="d3-mega-col-head">Infrastructure</div>
+                        {OPERATIONS.map(s => (
+                          <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
+                            role="menuitem" onClick={() => setActiveMenu(null)} className="d3-dd-item"
+                          >
+                            <span className="d3-dd-icon-bare" style={{ color: 'var(--muted)' }}>
+                              {s.slug === 'queue-management-system' && <LayersSVG />}
+                              {s.slug === 'rfid-asset-tracking' && <ShieldSVG />}
+                              {s.slug === 'access-control-system' && <MonitorSVG />}
+                              {s.slug === 'digital-signage' && <MonitorSVG />}
+                            </span>
+                            <span>
+                              <span className="d3-dd-label">{s.label}</span>
+                              <span className="d3-dd-desc">{s.desc}</span>
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Col 3 — Business + Industries teaser */}
+                      <div style={{ padding: '20px 8px 16px' }}>
+                        <div className="d3-mega-col-head">Business Systems</div>
+                        {BUSINESS.map(s => (
+                          <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
+                            role="menuitem" onClick={() => setActiveMenu(null)} className="d3-dd-item"
+                          >
+                            <span className="d3-dd-icon-bare" style={{ color: 'var(--muted)' }}>
+                              {s.slug === 'erp-retail-management' && <BriefcaseSVG />}
+                              {s.slug === 'consultancy' && <InfoSVG />}
+                            </span>
+                            <span>
+                              <span className="d3-dd-label">{s.label}</span>
+                              <span className="d3-dd-desc">{s.desc}</span>
+                            </span>
+                          </Link>
+                        ))}
+                        <div style={{ borderTop: '1px solid var(--border)', marginTop: 12, paddingTop: 12 }}>
+                          <div className="d3-mega-col-head">Industries</div>
+                          {INDUSTRIES.map(ind => (
+                            <Link key={ind.slug} href={`/industries/${ind.slug}` as Parameters<typeof Link>[0]['href']}
+                              role="menuitem" onClick={() => setActiveMenu(null)} className="d3-dd-item d3-dd-item--row"
                             >
-                              <span>
-                                <span className="d3-dd-label">{item.label}</span>
-                                <span className="d3-dd-desc">{item.desc}</span>
-                              </span>
+                              <span className="d3-dd-icon-bare" style={{ color: 'var(--muted)' }}>{ind.icon}</span>
+                              <span className="d3-dd-label">{ind.label}</span>
                             </Link>
                           ))}
                         </div>
-                      ))}
-                    </div>
-                    {/* Right: Other solutions */}
-                    <div style={{ flex: 1, padding: '14px 8px' }}>
-                      <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', padding: '4px 10px', marginBottom: 6 }}>
-                        Other Solutions
                       </div>
-                      {SOLUTIONS.map(s => (
-                        <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']} role="menuitem"
-                          onClick={() => setActiveMenu(null)}
-                          className="d3-dd-item"
-                        >
-                          <span>
-                            <span className="d3-dd-label">{s.label}</span>
-                            <span className="d3-dd-desc">{s.desc}</span>
-                          </span>
-                        </Link>
-                      ))}
+                    </div>
+
+                    {/* Footer bar */}
+                    <div style={{ borderTop: '1px solid var(--border)', padding: '10px 16px', display: 'flex', justifyContent: 'flex-end' }}>
+                      <Link href="/solutions/timetech-application" onClick={() => setActiveMenu(null)}
+                        style={{ fontSize: 12, fontWeight: 500, color: 'var(--cta)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}
+                      >
+                        View all solutions <ArrowSVG />
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -231,6 +291,7 @@ export function Navbar() {
                         onClick={() => setActiveMenu(null)}
                         className="d3-dd-item"
                       >
+                        <span className="d3-dd-icon-bare" style={{ color: 'var(--muted)' }}>{c.icon}</span>
                         <span>
                           <span className="d3-dd-label">{c.label}</span>
                           <span className="d3-dd-desc">{c.desc}</span>
@@ -309,8 +370,17 @@ export function Navbar() {
               </div>
             ))}
             <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
-            <div style={{ fontSize: 10, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Other Solutions</div>
-            {SOLUTIONS.map(s => (
+            <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Infrastructure</div>
+            {OPERATIONS.map(s => (
+              <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
+                onClick={() => setMobileOpen(false)} className="d3-mob-link"
+              >
+                {s.label}
+              </Link>
+            ))}
+            <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
+            <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Business</div>
+            {BUSINESS.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
               >
@@ -432,29 +502,35 @@ export function Navbar() {
         }
         .d3-dd-item {
           display: flex; align-items: flex-start; gap: 10px;
-          padding: 10px 12px; border-radius: 10px;
+          padding: 8px 10px; border-radius: 8px;
           text-decoration: none; transition: background 0.12s;
         }
         .d3-dd-item:hover { background: var(--bg-surface); }
-        .d3-dd-item--featured { background: var(--bg-highlight); }
-        .d3-dd-item--row { align-items: center; }
-        .d3-dd-icon {
-          width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
-          background: var(--bg-surface); border: 1px solid var(--border);
-          display: flex; align-items: center; justify-content: center;
-          color: var(--muted);
+        .d3-dd-featured { margin-bottom: 4px; }
+        .d3-dd-featured .d3-dd-label { color: var(--cta); }
+        .d3-dd-item--row { align-items: center; padding: 6px 10px; }
+        .d3-dd-icon-bare {
+          flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+          width: 18px; margin-top: 1px;
         }
-        .d3-dd-item--featured .d3-dd-icon { background: var(--cta-light); border-color: rgba(255,107,43,0.2); color: var(--cta); }
         .d3-dd-label {
           display: flex; align-items: center; gap: 6px;
-          font-size: 13px; font-weight: 600; color: var(--heading);
+          font-size: 13px; font-weight: 500; color: var(--heading);
           line-height: 1.3;
         }
         .d3-dd-desc {
           display: block; font-size: 11px; color: var(--muted);
-          font-weight: 400; margin-top: 2px;
+          font-weight: 400; margin-top: 1px;
         }
-        /* flagship badge removed */
+        .d3-mega-col-head {
+          font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+          text-transform: uppercase; color: var(--muted);
+          padding: 0 10px 8px; margin-bottom: 2px;
+        }
+        .d3-mega-group-label {
+          font-size: 10px; font-weight: 600; color: var(--muted);
+          padding: 8px 10px 2px; letter-spacing: 0.06em; text-transform: uppercase;
+        }
 
         /* ── RIGHT ACTIONS ── */
         .d3-nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
@@ -462,7 +538,7 @@ export function Navbar() {
           background: transparent; color: var(--cta);
           padding: 9px 20px; border-radius: 100px;
           border: 1.5px solid var(--cta);
-          font-size: 13px; font-weight: 700; text-decoration: none;
+          font-size: 13px; font-weight: 600; text-decoration: none;
           letter-spacing: 0.02em; white-space: nowrap;
           transition: background 0.2s, color 0.2s, transform 0.2s;
           min-height: 40px;
@@ -567,8 +643,7 @@ export function Navbar() {
         }
         .d3-mob-link:active { background: var(--bg-surface); }
         .d3-mob-link-icon {
-          width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0;
-          background: var(--bg-surface); border: 1px solid var(--border);
+          width: 18px; flex-shrink: 0;
           display: flex; align-items: center; justify-content: center;
           color: var(--muted);
         }

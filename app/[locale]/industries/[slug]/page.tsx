@@ -57,7 +57,7 @@ export default async function IndustryPage({ params }: Props) {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Industry</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Enterprise IT Solutions for <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>{ind.title}</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 600, marginBottom: 40 }}>
@@ -71,7 +71,7 @@ export default async function IndustryPage({ params }: Props) {
       <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Industry Challenges</SectionEyebrow>
-          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
             What keeps {ind.title.toLowerCase()} leaders up at night
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }} className="challenges-grid">
@@ -82,7 +82,7 @@ export default async function IndustryPage({ params }: Props) {
                   borderRadius: 16, padding: '28px 24px',
                   borderTop: '3px solid var(--border)',
                 }}>
-                  <div style={{ fontSize: 30, fontWeight: 800, color: 'var(--muted)', marginBottom: 16, fontVariantNumeric: 'tabular-nums' }}>0{i + 1}</div>
+                  <div style={{ fontSize: 30, fontWeight: 700, color: 'var(--muted)', marginBottom: 16, fontVariantNumeric: 'tabular-nums' }}>0{i + 1}</div>
                   <div style={{ fontSize: 17, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{c.title}</div>
                   <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{c.desc}</div>
                 </div>
@@ -101,7 +101,7 @@ export default async function IndustryPage({ params }: Props) {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Recommended Solutions</SectionEyebrow>
-          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
             How D3 solves your challenges
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }} className="ind-sol-grid">
@@ -142,7 +142,7 @@ export default async function IndustryPage({ params }: Props) {
         <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
             <SectionEyebrow>Case Studies</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
               Proven results in {ind.title.toLowerCase()}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: relatedCaseStudies.length === 1 ? '1fr' : '1fr 1fr', gap: 20, maxWidth: relatedCaseStudies.length === 1 ? 600 : '100%' }}>

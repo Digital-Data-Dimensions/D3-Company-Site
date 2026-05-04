@@ -27,68 +27,63 @@ const CheckIcon = () => (
   </svg>
 );
 
-/* Map feature title keywords → Lucide icon + accent colour */
-function getFeatureIcon(title: string): { icon: React.ReactNode; color: string; bg: string } {
+/* Map feature title keywords → Lucide icon + accent colour (no background) */
+function getFeatureIcon(title: string): { icon: React.ReactNode; color: string } {
   const t = title.toLowerCase();
-  const pick = (icon: React.ReactNode, color: string, bg: string) => ({ icon, color, bg });
+  const pick = (icon: React.ReactNode, color: string) => ({ icon, color });
 
-  if (t.includes('biometric') || t.includes('fingerprint'))   return pick(<Fingerprint size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('shift') || t.includes('schedule'))          return pick(<Clock size={16}/>, '#0F766E', '#F0FDFA');
-  if (t.includes('payroll') || t.includes('salary') || t.includes('wps')) return pick(<DollarSign size={16}/>, '#16A34A', '#F0FDF4');
-  if (t.includes('mobile') || t.includes('ios') || t.includes('android')) return pick(<Smartphone size={16}/>, '#2563EB', '#EFF6FF');
-  if (t.includes('cloud') || t.includes('aws') || t.includes('server'))   return pick(<Cloud size={16}/>, '#0284C7', '#F0F9FF');
-  if (t.includes('dashboard') || t.includes('report') || t.includes('analytic')) return pick(<BarChart2 size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('leave') || t.includes('absence'))           return pick(<CalendarOff size={16}/>, '#DC2626', '#FEF2F2');
-  if (t.includes('hr') || t.includes('human resource'))       return pick(<Users size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('self-service') || t.includes('portal') || t.includes('employee')) return pick(<User size={16}/>, '#0F766E', '#F0FDFA');
-  if (t.includes('training'))                                 return pick(<GraduationCap size={16}/>, '#6D28D9', '#EDE9FE');
-  if (t.includes('recruit') || t.includes('planning'))        return pick(<UserPlus size={16}/>, '#0369A1', '#F0F9FF');
-  if (t.includes('visitor') || t.includes('appointment'))     return pick(<UserCheck size={16}/>, '#16A34A', '#F0FDF4');
-  if (t.includes('queue') || t.includes('kiosk') || t.includes('token')) return pick(<List size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('whatsapp') || t.includes('virtual'))        return pick(<MessageCircle size={16}/>, '#16A34A', '#F0FDF4');
-  if (t.includes('display') || t.includes('signage') || t.includes('lcd')) return pick(<Monitor size={16}/>, '#0369A1', '#F0F9FF');
-  if (t.includes('led'))                                      return pick(<Zap size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('rfid'))                                     return pick(<Radio size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('barcode') || t.includes('scan') || t.includes('qr'))   return pick(<QrCode size={16}/>, '#0F766E', '#F0FDFA');
-  if (t.includes('document'))                                 return pick(<FileText size={16}/>, '#DC2626', '#FEF2F2');
-  if (t.includes('warehouse') || t.includes('inventory'))     return pick(<Package size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('access') || t.includes('door') || t.includes('card'))  return pick(<Lock size={16}/>, '#0284C7', '#F0F9FF');
-  if (t.includes('camera') || t.includes('cctv') || t.includes('surveillance')) return pick(<Camera size={16}/>, '#374151', '#F9FAFB');
-  if (t.includes('face') || t.includes('recognition'))        return pick(<Eye size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('multi-company') || t.includes('multi company') || t.includes('erp')) return pick(<Building2 size={16}/>, '#0369A1', '#F0F9FF');
-  if (t.includes('integration') || t.includes('api') || t.includes('connect')) return pick(<Link2 size={16}/>, '#0F766E', '#F0FDFA');
-  if (t.includes('notification') || t.includes('email') || t.includes('alert')) return pick(<Bell size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('lmra') || t.includes('gosi') || t.includes('compliance')) return pick(<Shield size={16}/>, '#16A34A', '#F0FDF4');
-  if (t.includes('geofenc') || t.includes('location') || t.includes('gps')) return pick(<MapPin size={16}/>, '#DC2626', '#FEF2F2');
-  if (t.includes('overtime'))                                 return pick(<Clock size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('appraisal') || t.includes('performance'))   return pick(<Star size={16}/>, '#D97706', '#FFFBEB');
-  if (t.includes('print') || t.includes('printer'))           return pick(<Printer size={16}/>, '#6B7280', '#F9FAFB');
-  if (t.includes('procurement') || t.includes('purchase'))    return pick(<ShoppingCart size={16}/>, '#0369A1', '#F0F9FF');
-  if (t.includes('sales'))                                    return pick(<TrendingUp size={16}/>, '#16A34A', '#F0FDF4');
-  if (t.includes('support') || t.includes('helpdesk'))        return pick(<Headphones size={16}/>, '#0F766E', '#F0FDFA');
-  if (t.includes('database') || t.includes('system'))         return pick(<Database size={16}/>, '#6D28D9', '#EDE9FE');
-  if (t.includes('manhour') || t.includes('project'))         return pick(<ClipboardList size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('wireless') || t.includes('network'))        return pick(<Wifi size={16}/>, '#2563EB', '#EFF6FF');
-  if (t.includes('categor') || t.includes('multi'))           return pick(<LayoutGrid size={16}/>, '#0369A1', '#F0F9FF');
-  if (t.includes('audio') || t.includes('announc'))           return pick(<Bell size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('supervisor'))                               return pick(<Eye size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('customis') || t.includes('config'))         return pick(<Settings2 size={16}/>, '#0F766E', '#F0FDFA');
-  if (t.includes('active') || t.includes('passive'))          return pick(<Radio size={16}/>, '#7C3AED', '#F5F3FF');
-  if (t.includes('fixed asset'))                              return pick(<Tag size={16}/>, '#B45309', '#FFFBEB');
-  if (t.includes('power') || t.includes('ip control'))        return pick(<Zap size={16}/>, '#DC2626', '#FEF2F2');
-  return pick(<CheckCircle2 size={16}/>, '#16A34A', '#F0FDF4');
+  if (t.includes('biometric') || t.includes('fingerprint'))   return pick(<Fingerprint size={18}/>, '#6D28D9');
+  if (t.includes('shift') || t.includes('schedule'))          return pick(<Clock size={18}/>, '#0F766E');
+  if (t.includes('payroll') || t.includes('salary') || t.includes('wps')) return pick(<DollarSign size={18}/>, '#166534');
+  if (t.includes('mobile') || t.includes('ios') || t.includes('android')) return pick(<Smartphone size={18}/>, '#1D4ED8');
+  if (t.includes('cloud') || t.includes('aws') || t.includes('server'))   return pick(<Cloud size={18}/>, '#0369A1');
+  if (t.includes('dashboard') || t.includes('report') || t.includes('analytic')) return pick(<BarChart2 size={18}/>, '#92400E');
+  if (t.includes('leave') || t.includes('absence'))           return pick(<CalendarOff size={18}/>, '#B91C1C');
+  if (t.includes('hr') || t.includes('human resource'))       return pick(<Users size={18}/>, '#7C3AED');
+  if (t.includes('self-service') || t.includes('portal') || t.includes('employee')) return pick(<User size={18}/>, '#0F766E');
+  if (t.includes('training'))                                 return pick(<GraduationCap size={18}/>, '#5B21B6');
+  if (t.includes('recruit') || t.includes('planning'))        return pick(<UserPlus size={18}/>, '#0369A1');
+  if (t.includes('visitor') || t.includes('appointment'))     return pick(<UserCheck size={18}/>, '#166534');
+  if (t.includes('queue') || t.includes('kiosk') || t.includes('token')) return pick(<List size={18}/>, '#92400E');
+  if (t.includes('whatsapp') || t.includes('virtual'))        return pick(<MessageCircle size={18}/>, '#166534');
+  if (t.includes('display') || t.includes('signage') || t.includes('lcd')) return pick(<Monitor size={18}/>, '#0369A1');
+  if (t.includes('led'))                                      return pick(<Zap size={18}/>, '#92400E');
+  if (t.includes('rfid'))                                     return pick(<Radio size={18}/>, '#7C3AED');
+  if (t.includes('barcode') || t.includes('scan') || t.includes('qr'))   return pick(<QrCode size={18}/>, '#0F766E');
+  if (t.includes('document'))                                 return pick(<FileText size={18}/>, '#B91C1C');
+  if (t.includes('warehouse') || t.includes('inventory'))     return pick(<Package size={18}/>, '#92400E');
+  if (t.includes('access') || t.includes('door') || t.includes('card'))  return pick(<Lock size={18}/>, '#0369A1');
+  if (t.includes('camera') || t.includes('cctv') || t.includes('surveillance')) return pick(<Camera size={18}/>, '#374151');
+  if (t.includes('face') || t.includes('recognition'))        return pick(<Eye size={18}/>, '#7C3AED');
+  if (t.includes('multi-company') || t.includes('multi company') || t.includes('erp')) return pick(<Building2 size={18}/>, '#0369A1');
+  if (t.includes('integration') || t.includes('api') || t.includes('connect')) return pick(<Link2 size={18}/>, '#0F766E');
+  if (t.includes('notification') || t.includes('email') || t.includes('alert')) return pick(<Bell size={18}/>, '#92400E');
+  if (t.includes('lmra') || t.includes('gosi') || t.includes('compliance')) return pick(<Shield size={18}/>, '#166534');
+  if (t.includes('geofenc') || t.includes('location') || t.includes('gps')) return pick(<MapPin size={18}/>, '#B91C1C');
+  if (t.includes('overtime'))                                 return pick(<Clock size={18}/>, '#92400E');
+  if (t.includes('appraisal') || t.includes('performance'))   return pick(<Star size={18}/>, '#B45309');
+  if (t.includes('print') || t.includes('printer'))           return pick(<Printer size={18}/>, '#374151');
+  if (t.includes('procurement') || t.includes('purchase'))    return pick(<ShoppingCart size={18}/>, '#0369A1');
+  if (t.includes('sales'))                                    return pick(<TrendingUp size={18}/>, '#166534');
+  if (t.includes('support') || t.includes('helpdesk'))        return pick(<Headphones size={18}/>, '#0F766E');
+  if (t.includes('database') || t.includes('system'))         return pick(<Database size={18}/>, '#5B21B6');
+  if (t.includes('manhour') || t.includes('project'))         return pick(<ClipboardList size={18}/>, '#7C3AED');
+  if (t.includes('wireless') || t.includes('network'))        return pick(<Wifi size={18}/>, '#1D4ED8');
+  if (t.includes('categor') || t.includes('multi'))           return pick(<LayoutGrid size={18}/>, '#0369A1');
+  if (t.includes('audio') || t.includes('announc'))           return pick(<Bell size={18}/>, '#92400E');
+  if (t.includes('supervisor'))                               return pick(<Eye size={18}/>, '#7C3AED');
+  if (t.includes('customis') || t.includes('config'))         return pick(<Settings2 size={18}/>, '#0F766E');
+  if (t.includes('active') || t.includes('passive'))          return pick(<Radio size={18}/>, '#7C3AED');
+  if (t.includes('fixed asset'))                              return pick(<Tag size={18}/>, '#92400E');
+  if (t.includes('power') || t.includes('ip control'))        return pick(<Zap size={18}/>, '#B91C1C');
+  return pick(<CheckCircle2 size={18}/>, '#166534');
 }
 
-/* Subtle colour palette for capability chips — cycles through 8 combos */
+/* Professional 3-tone chip palette — cycles within brand blue family */
 const CHIP_COLORS = [
-  { bg: '#EFF6FF', border: '#BFDBFE', text: '#1D4ED8' }, // blue
-  { bg: '#F0FDF4', border: '#BBF7D0', text: '#15803D' }, // green
-  { bg: '#FFF7ED', border: '#FED7AA', text: '#C2410C' }, // orange
-  { bg: '#F5F3FF', border: '#DDD6FE', text: '#6D28D9' }, // purple
-  { bg: '#F0FDFA', border: '#99F6E4', text: '#0F766E' }, // teal
-  { bg: '#FEF2F2', border: '#FECACA', text: '#B91C1C' }, // red
-  { bg: '#FFFBEB', border: '#FDE68A', text: '#B45309' }, // amber
-  { bg: '#F0F9FF', border: '#BAE6FD', text: '#0369A1' }, // sky
+  { bg: '#EEF2FF', border: '#C5D0F0', text: '#2B4CAF' }, // brand blue
+  { bg: '#E8EDF6', border: '#B5C4DC', text: '#002147' }, // brand navy
+  { bg: '#E5F4F8', border: '#A5CDD9', text: '#0A5570' }, // slate teal
 ];
 function chipColor(text: string) {
   let hash = 0;
@@ -628,7 +623,7 @@ export default async function SolutionPage({ params }: Props) {
             {/* Left */}
             <div>
               <SectionEyebrow>Solution</SectionEyebrow>
-              <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 20 }}>
+              <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 20 }}>
                 {sol.title}
               </h1>
               <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.8, fontWeight: 400, marginBottom: 36 }}>
@@ -755,13 +750,13 @@ export default async function SolutionPage({ params }: Props) {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
           <RevealOnScroll>
             <SectionEyebrow>What&apos;s included</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 800, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 48 }}>
               All the features you need
             </h2>
           </RevealOnScroll>
           <div className="features-grid">
             {detail.features.map((f, i) => {
-              const { icon, color, bg } = getFeatureIcon(f.title);
+              const { icon, color } = getFeatureIcon(f.title);
               return (
               <RevealOnScroll key={f.title} delay={i * 40}>
                 <div style={{
@@ -769,16 +764,11 @@ export default async function SolutionPage({ params }: Props) {
                   borderRadius: 16, padding: '24px 20px',
                   height: '100%',
                 }}>
-                  <div style={{
-                    width: 36, height: 36, borderRadius: 10,
-                    background: bg, border: `1px solid ${color}22`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    marginBottom: 14, color,
-                  }}>
+                  <div style={{ color, marginBottom: 12, display: 'flex' }}>
                     {icon}
                   </div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', marginBottom: 8 }}>{f.title}</div>
-                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65 }}>{f.desc}</div>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--heading)', marginBottom: 6 }}>{f.title}</div>
+                  <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, fontWeight: 400 }}>{f.desc}</div>
                 </div>
               </RevealOnScroll>
               );
@@ -805,7 +795,7 @@ export default async function SolutionPage({ params }: Props) {
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
             <RevealOnScroll>
               <SectionEyebrow>See it in action</SectionEyebrow>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
                 Watch {sol.title} in action
               </h2>
             </RevealOnScroll>
@@ -828,7 +818,7 @@ export default async function SolutionPage({ params }: Props) {
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
             <RevealOnScroll>
               <SectionEyebrow>Detailed modules</SectionEyebrow>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 48 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 48 }}>
                 Full module breakdown
               </h2>
             </RevealOnScroll>
@@ -836,7 +826,7 @@ export default async function SolutionPage({ params }: Props) {
               {detail.additionalSections.map((sec, i) => (
                 <RevealOnScroll key={sec.title} delay={i * 40}>
                   <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 16, padding: '28px 24px', height: '100%' }}>
-                    <h3 style={{ fontSize: 15, fontWeight: 800, color: 'var(--heading)', marginBottom: 10 }}>{sec.title}</h3>
+                    <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', marginBottom: 10 }}>{sec.title}</h3>
                     {sec.intro && <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 14 }}>{sec.intro}</p>}
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {sec.bullets.map((bullet) => (
@@ -861,7 +851,7 @@ export default async function SolutionPage({ params }: Props) {
         <section style={{ padding: '72px 0', background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
           <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
             <SectionEyebrow>Industries</SectionEyebrow>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 32 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.15, color: 'var(--heading)', marginBottom: 32 }}>
               Built for these sectors
             </h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
@@ -886,7 +876,7 @@ export default async function SolutionPage({ params }: Props) {
             <SectionEyebrow>Case Study</SectionEyebrow>
             <div className="case-study-grid">
               <div>
-                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 12 }}>
+                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 12 }}>
                   {relatedCaseStudy.clientName}
                 </h2>
                 <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 24, background: 'var(--bg)', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: 100 }}>
@@ -927,7 +917,7 @@ export default async function SolutionPage({ params }: Props) {
       <section style={{ padding: '72px 0', background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
           <SectionEyebrow>Also from D3</SectionEyebrow>
-          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
+          <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 700, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
             Explore more solutions
           </h2>
           <div className="related-grid">

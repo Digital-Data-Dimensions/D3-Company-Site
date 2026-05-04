@@ -59,7 +59,7 @@ export default function ContactPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Contact Us</SectionEyebrow>
-          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
+          <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
             Let&apos;s talk about your <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>project</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 300, maxWidth: 500 }}>
@@ -74,7 +74,7 @@ export default function ContactPage() {
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 80, alignItems: 'start' }} className="contact-grid">
             {/* Form */}
             <div>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 800, letterSpacing: -0.5, color: 'var(--heading)', marginBottom: 32 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 700, letterSpacing: -0.5, color: 'var(--heading)', marginBottom: 32 }}>
                 Request a Demo or Consultation
               </h2>
               <LeadForm />
