@@ -616,7 +616,7 @@ export default async function SolutionPage({ params }: Props) {
   return (
     <>
       {/* ── HERO — 2-column ── */}
-      <section style={{ padding: '80px 0 60px', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
+      <section className="page-hero" style={{ padding: '80px 0 60px', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
           <div className="sol-hero-grid">
             {/* Left */}

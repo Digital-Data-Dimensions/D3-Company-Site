@@ -85,7 +85,7 @@ const EXPERTISE = [
 export default function AboutPage() {
   return (
     <>
-      <section style={{ paddingBlock: 'clamp(80px, 10vh, 130px)', paddingInline: 0, background: 'var(--bg)', position: 'relative', overflow: 'hidden' }}>
+      <section className="page-hero" style={{ paddingBlock: 'clamp(80px, 10vh, 130px)', paddingInline: 0, background: 'var(--bg)' }}>
         <div className="hero-mesh" aria-hidden="true" />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <RevealOnScroll>

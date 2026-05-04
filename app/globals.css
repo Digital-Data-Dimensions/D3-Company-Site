@@ -131,6 +131,29 @@ body {
   font-weight: 400;
 }
 
+/* ── PAGE HERO GRID (subtle fading grid overlay for all page heroes) ── */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(0,33,71,0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,33,71,0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 120% at 50% 0%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 120% at 50% 0%, black 20%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.page-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* ── LAYOUT UTILITIES ── */
 .container {
   max-width: 1440px;

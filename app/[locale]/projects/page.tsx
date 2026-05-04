@@ -15,6 +15,7 @@ export default function ProjectsPage() {
   return (
     <>
       <section
+        className="page-hero"
         style={{
           paddingBlock: 'clamp(80px, 10vh, 130px)',
           background: 'var(--bg-surface)',
