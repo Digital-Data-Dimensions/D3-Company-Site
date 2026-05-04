@@ -237,17 +237,18 @@ export function ProjectsGallery() {
 
         .pg-grid{
           display:grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 18px;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 12px;
         }
-        @media (max-width: 860px)  { .pg-grid{ grid-template-columns: repeat(2, 1fr) !important; } }
-        @media (max-width: 520px)  { .pg-grid{ grid-template-columns: 1fr !important; } }
+        @media (max-width: 1100px) { .pg-grid{ grid-template-columns: repeat(3, 1fr) !important; } }
+        @media (max-width: 720px)  { .pg-grid{ grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 420px)  { .pg-grid{ grid-template-columns: 1fr !important; } }
 
         .pg-card{
           text-align:left;
           background: var(--card);
           border: 1px solid var(--border);
-          border-radius: 18px;
+          border-radius: 12px;
           overflow:hidden;
           padding:0;
           cursor: default;
@@ -260,7 +261,7 @@ export function ProjectsGallery() {
         }
         .pg-media{
           position:relative;
-          aspect-ratio: 4 / 5;
+          aspect-ratio: 4 / 3;
           width:100%;
           background: var(--bg-highlight);
         }
