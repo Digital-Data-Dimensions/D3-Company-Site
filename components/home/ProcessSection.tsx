@@ -1,15 +1,40 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import { Search, LayoutTemplate, Rocket, Shield } from 'lucide-react';
-import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
+import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 
 const PROCESS_STEPS = [
-  { num: '01', title: 'Discovery', desc: 'We analyse your requirements, existing systems and compliance needs in a structured scoping session.', icon: <Search size={28} /> },
-  { num: '02', title: 'Solution Design', desc: 'Custom configuration planning, ERP integration mapping and project timeline sign-off.', icon: <LayoutTemplate size={28} /> },
-  { num: '03', title: 'Implementation', desc: 'Rapid deployment with full testing, staff training, data migration and go-live support.', icon: <Rocket size={28} /> },
-  { num: '04', title: 'Ongoing Support', desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.', icon: <Shield size={28} /> },
+  { num: '01', title: 'Discovery',        desc: 'We analyse your requirements, existing systems and compliance needs in a structured scoping session.',                   icon: <Search size={28} /> },
+  { num: '02', title: 'Solution Design',  desc: 'Custom configuration planning, ERP integration mapping and project timeline sign-off.',                                  icon: <LayoutTemplate size={28} /> },
+  { num: '03', title: 'Implementation',   desc: 'Rapid deployment with full testing, staff training, data migration and go-live support.',                                icon: <Rocket size={28} /> },
+  { num: '04', title: 'Ongoing Support',  desc: 'Dedicated account manager, SLA-backed helpdesk and continuous platform updates.',                                        icon: <Shield size={28} /> },
 ];
 
 export function ProcessSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(-1);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Stagger each step activation
+          PROCESS_STEPS.forEach((_, i) => {
+            setTimeout(() => setActive(i), i * 320);
+          });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="section-pad" style={{ background: 'var(--bg)' }}>
       <div className="container">
@@ -24,42 +49,192 @@ export function ProcessSection() {
           </div>
         </RevealOnScroll>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, position: 'relative' }} className="process-grid">
-          {/* Connector line */}
-          <div style={{ position: 'absolute', top: 36, left: '12.5%', right: '12.5%', height: 2, background: 'var(--border)', zIndex: 0 }} className="process-line" />
+        {/* Desktop horizontal timeline */}
+        <div ref={sectionRef} className="process-desktop">
+          {/* Track */}
+          <div className="process-track">
+            <div className="process-track-base" />
+            <div
+              className="process-track-fill"
+              style={{
+                width: active >= PROCESS_STEPS.length - 1 ? '100%' : `${(active / (PROCESS_STEPS.length - 1)) * 100}%`,
+              }}
+            />
+          </div>
 
+          {/* Steps */}
+          <div className="process-steps-row">
+            {PROCESS_STEPS.map((step, i) => {
+              const isActive = i <= active;
+              return (
+                <div key={step.num} className="process-step" style={{ transitionDelay: `${i * 80}ms` }}>
+                  {/* Circle node */}
+                  <div
+                    className={`process-node${isActive ? ' process-node--active' : ''}`}
+                  >
+                    {step.icon}
+                  </div>
+
+                  {/* Content */}
+                  <div className={`process-content${isActive ? ' process-content--active' : ''}`}>
+                    <div className="process-num">{step.num}</div>
+                    <div className="process-title">{step.title}</div>
+                    <p className="process-desc">{step.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Mobile vertical timeline */}
+        <div className="process-mobile">
           {PROCESS_STEPS.map((step, i) => (
-            <RevealOnScroll key={step.num} delay={i * 100}>
-              <div style={{ padding: '0 24px', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-                <div style={{
-                  width: 72, height: 72,
-                  borderRadius: '50%',
-                  background: i === 0 ? 'var(--heading)' : 'var(--card)',
-                  border: `2px solid ${i === 0 ? 'var(--heading)' : 'var(--border)'}`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  margin: '0 auto 28px',
-                  color: i === 0 ? '#fff' : 'var(--heading)',
-                  boxShadow: i === 0 ? '0 4px 20px rgba(0,33,71,0.15)' : 'none',
-                  transition: 'all 0.3s',
-                }}>
+            <div key={step.num} className="process-mob-step">
+              <div className="process-mob-left">
+                <div className={`process-mob-node${i <= active ? ' process-node--active' : ''}`}>
                   {step.icon}
                 </div>
-                <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: 8 }}>{step.num}</div>
-                <div style={{ fontSize: 17, fontWeight: 400, color: 'var(--heading)', marginBottom: 12 }}>{step.title}</div>
-                <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{step.desc}</div>
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div
+                    className="process-mob-line"
+                    style={{ background: i < active ? 'var(--heading)' : 'var(--border)' }}
+                  />
+                )}
               </div>
-            </RevealOnScroll>
+              <div className={`process-mob-body${i <= active ? ' process-content--active' : ''}`}>
+                <div className="process-num">{step.num}</div>
+                <div className="process-title">{step.title}</div>
+                <p className="process-desc">{step.desc}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
       <style>{`
-        .process-grid { grid-template-columns: repeat(4, 1fr); }
-        @media (max-width: 900px) {
-          .process-grid { grid-template-columns: 1fr 1fr !important; }
-          .process-line { display: none !important; }
+        /* ── DESKTOP ── */
+        .process-desktop { display: block; position: relative; }
+        .process-mobile  { display: none; }
+
+        .process-track {
+          position: relative;
+          height: 2px;
+          margin: 0 calc(100% / 8);
+          margin-bottom: 0;
+          top: 36px;
+          z-index: 0;
         }
-        @media (max-width: 600px) { .process-grid { grid-template-columns: 1fr !important; } }
+        .process-track-base {
+          position: absolute; inset: 0;
+          background: var(--border);
+          border-radius: 2px;
+        }
+        .process-track-fill {
+          position: absolute; top: 0; left: 0; bottom: 0;
+          background: var(--heading);
+          border-radius: 2px;
+          transition: width 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .process-steps-row {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0;
+          position: relative;
+          z-index: 1;
+        }
+
+        .process-step {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 0 20px;
+        }
+
+        /* Node circle */
+        .process-node {
+          width: 72px; height: 72px; border-radius: 50%;
+          background: var(--card);
+          border: 2px solid var(--border);
+          display: flex; align-items: center; justify-content: center;
+          margin-bottom: 28px;
+          color: var(--muted);
+          transition: background 0.45s, border-color 0.45s, color 0.45s, box-shadow 0.45s, transform 0.45s;
+        }
+        .process-node--active {
+          background: var(--heading);
+          border-color: var(--heading);
+          color: #fff;
+          box-shadow: 0 6px 24px rgba(0,33,71,0.18);
+          transform: scale(1.08);
+        }
+
+        /* Text content */
+        .process-content {
+          opacity: 0;
+          transform: translateY(14px);
+          transition: opacity 0.5s, transform 0.5s;
+        }
+        .process-content--active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .process-num {
+          font-size: 11px; font-weight: 400;
+          letter-spacing: 0.1em; color: var(--muted);
+          text-transform: uppercase; margin-bottom: 8px;
+        }
+        .process-title {
+          font-size: 17px; font-weight: 400;
+          color: var(--heading); margin-bottom: 12px;
+        }
+        .process-desc {
+          font-size: 14px; color: var(--body); line-height: 1.65;
+        }
+
+        /* ── MOBILE VERTICAL ── */
+        @media (max-width: 900px) {
+          .process-desktop { display: none; }
+          .process-mobile  { display: flex; flex-direction: column; gap: 0; }
+        }
+
+        .process-mob-step {
+          display: flex; gap: 20px;
+          padding-bottom: 40px;
+        }
+        .process-mob-left {
+          display: flex; flex-direction: column; align-items: center;
+          flex-shrink: 0;
+        }
+        .process-mob-node {
+          width: 56px; height: 56px; border-radius: 50%;
+          background: var(--card); border: 2px solid var(--border);
+          display: flex; align-items: center; justify-content: center;
+          color: var(--muted); flex-shrink: 0;
+          transition: background 0.45s, border-color 0.45s, color 0.45s, box-shadow 0.45s;
+        }
+        .process-mob-line {
+          width: 2px; flex: 1; min-height: 24px;
+          margin-top: 8px; border-radius: 2px;
+          transition: background 0.45s;
+        }
+        .process-mob-body {
+          padding-top: 10px;
+          opacity: 0; transform: translateX(12px);
+          transition: opacity 0.5s, transform 0.5s;
+        }
+        .process-mob-body.process-content--active {
+          opacity: 1; transform: translateX(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .process-track-fill { transition: none; }
+          .process-node, .process-content { transition: none; }
+          .process-content { opacity: 1; transform: none; }
+        }
       `}</style>
     </section>
   );
