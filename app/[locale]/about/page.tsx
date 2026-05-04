@@ -53,62 +53,33 @@ function HeartIcon() {
   );
 }
 
-const VALUES = [
+const MVV = [
   {
     icon: <TargetIcon />,
-    title: 'Client-First Always',
-    desc: "Our clients' outcomes define our success. Every product decision starts with the question: does this solve a real problem?",
+    title: 'Mission',
+    desc: 'To help customers achieve their business objectives by providing innovative and best-in-class IT solutions and services. To be the No.1 solution provider with the best after-sales support.',
   },
   {
     icon: <EyeIcon />,
-    title: 'Transparency',
-    desc: 'No hidden fees, no vendor lock-in. We believe honest relationships build better partnerships.',
+    title: 'Vision',
+    desc: 'To be recognised as a top company for providing IT solutions.',
   },
   {
     icon: <HeartIcon />,
-    title: 'Regional Pride',
-    desc: 'Built in Bahrain, designed for the Gulf. We are proud to serve the region that shaped us.',
+    title: 'Values',
+    desc: 'Leading change, integrity, respect for the individual, excellence, learning and sharing.',
   },
 ];
 
-const TIMELINE = [
-  {
-    year: '2010',
-    title: 'D3 Founded',
-    desc: 'D3 was established in Manama, Bahrain, with a focus on time attendance and HR solutions for local enterprises.',
-  },
-  {
-    year: '2013',
-    title: 'Queue Management Launch',
-    desc: 'Launched our first government-grade queue management system, deployed at Bahrain ministries.',
-  },
-  {
-    year: '2015',
-    title: 'RFID & Digital Signage',
-    desc: 'Expanded our portfolio to include RFID asset tracking and LED digital signage solutions.',
-  },
-  {
-    year: '2018',
-    title: 'TimeTech Platform',
-    desc: 'Released TimeTech — our flagship, fully cloud-based workforce intelligence platform.',
-  },
-  {
-    year: '2021',
-    title: 'GCC Expansion',
-    desc: 'Grew operations to serve clients across Saudi Arabia, UAE, Kuwait, Oman and Qatar.',
-  },
-  {
-    year: '2024',
-    title: '500+ Clients',
-    desc: 'Reached a milestone of 500+ active enterprise clients across 10+ countries.',
-  },
-];
-
-const TEAM = [
-  { name: 'Faris Al-Hassan', role: 'Chief Executive Officer', initials: 'FA' },
-  { name: 'Sara Mahmood', role: 'Head of Product & Technology', initials: 'SM' },
-  { name: 'Khalid Al-Rashidi', role: 'Head of Sales — GCC', initials: 'KR' },
-  { name: 'Nadia Yousef', role: 'Head of Customer Success', initials: 'NY' },
+const EXPERTISE = [
+  'Time Attendance & HRMS solutions for GCC enterprises',
+  'Queue Management Systems for government and banks',
+  'RFID asset and document tracking',
+  'Digital Signage and LED display systems',
+  'IP CCTV surveillance and Access Control',
+  'ERP and Retail Management systems',
+  'IT Consultancy and outsourced staffing',
+  'Operations across Middle East and Europe',
 ];
 
 export default function AboutPage() {
@@ -268,7 +239,7 @@ export default function AboutPage() {
         <div className="container">
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginBottom: 56 }}>
-              <div className="eyebrow eyebrow-center">Our Values</div>
+              <div className="eyebrow eyebrow-center">Mission · Vision · Values</div>
               <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
                 What drives us every day
               </h2>
@@ -276,7 +247,7 @@ export default function AboutPage() {
           </RevealOnScroll>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }} className="values-grid">
-            {VALUES.map((val, i) => (
+            {MVV.map((val, i) => (
               <RevealOnScroll key={val.title} delay={i * 80}>
                 <div className="card card-lift card-accent" style={{ padding: '36px 28px' }}>
                   <div className="icon-wrap icon-wrap-md" style={{ marginBottom: 20 }}>
@@ -294,93 +265,68 @@ export default function AboutPage() {
       <section className="section-pad" style={{ background: 'var(--bg)' }}>
         <div className="container">
           <RevealOnScroll>
-            <div style={{ textAlign: 'center', marginBottom: 64 }}>
+            <div style={{ textAlign: 'center', marginBottom: 48 }}>
               <div className="eyebrow eyebrow-center">Our Journey</div>
               <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
-                15 years of excellence
+                15+ years of excellence
               </h2>
             </div>
           </RevealOnScroll>
-
-          <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
-            <div style={{ position: 'absolute', insetInlineStart: 30, top: 0, bottom: 0, width: 2, background: 'var(--border)', zIndex: 0 }} />
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-              {TIMELINE.map((item, i) => (
-                <RevealOnScroll key={item.year} delay={i * 60}>
-                  <div style={{ display: 'flex', gap: 28, position: 'relative', zIndex: 1 }}>
-                    <div
-                      style={{
-                        width: 60,
-                        height: 60,
-                        flexShrink: 0,
-                        borderRadius: '50%',
-                        background: i === 0 || i === TIMELINE.length - 1 ? 'var(--heading)' : 'var(--card)',
-                        border: `2px solid ${i === 0 || i === TIMELINE.length - 1 ? 'var(--heading)' : 'var(--border)'}`,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: 12,
-                        fontWeight: 800,
-                        color: i === 0 || i === TIMELINE.length - 1 ? '#fff' : 'var(--heading)',
-                        boxShadow: i === 0 || i === TIMELINE.length - 1 ? '0 4px 20px var(--cta-glow)' : 'none',
-                        letterSpacing: -0.5,
-                      }}
-                    >
-                      {item.year}
-                    </div>
-                    <div style={{ paddingTop: 14 }}>
-                      <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 6 }}>{item.title}</div>
-                      <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{item.desc}</div>
-                    </div>
+          <RevealOnScroll delay={80}>
+            <div style={{ maxWidth: 700, margin: '0 auto', background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 24, padding: 'clamp(32px, 5vw, 56px)', textAlign: 'center' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, justifyContent: 'center' }}>
+                {[
+                  { year: '2010', label: 'Founded in Manama, Bahrain' },
+                  { year: '15+', label: 'Years serving the GCC' },
+                  { year: '500+', label: 'Enterprise clients' },
+                  { year: '10+', label: 'Countries served' },
+                ].map((item) => (
+                  <div key={item.year} style={{ textAlign: 'center', minWidth: 120 }}>
+                    <div style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: 'var(--cta)', letterSpacing: -1, lineHeight: 1 }}>{item.year}</div>
+                    <div style={{ fontSize: 13, color: 'var(--body)', marginTop: 6, fontWeight: 500, lineHeight: 1.4 }}>{item.label}</div>
                   </div>
-                </RevealOnScroll>
-              ))}
+                ))}
+              </div>
+              <p style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.75, marginTop: 32, maxWidth: 500, margin: '32px auto 0' }}>
+                Founded 2010 in Bahrain · 15+ years serving the GCC · 500+ enterprise clients · Operations in Middle East and Europe.
+              </p>
             </div>
-          </div>
+          </RevealOnScroll>
         </div>
       </section>
 
       <section className="section-pad-sm" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}>
         <div className="container">
           <RevealOnScroll>
-            <div style={{ textAlign: 'center', marginBottom: 52 }}>
-              <div className="eyebrow eyebrow-center">Our Team</div>
+            <div style={{ textAlign: 'center', marginBottom: 48 }}>
+              <div className="eyebrow eyebrow-center">Our Expertise</div>
               <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, letterSpacing: -1, color: 'var(--heading)', marginTop: 8 }}>
-                The people behind D3
+                Why work with D3
               </h2>
             </div>
           </RevealOnScroll>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }} className="team-grid">
-            {TEAM.map((member, i) => (
-              <RevealOnScroll key={member.name} delay={i * 60}>
-                <div className="card card-lift" style={{ padding: '28px 20px', textAlign: 'center' }}>
-                  <div
-                    style={{
-                      width: 72,
-                      height: 72,
-                      borderRadius: '50%',
-                      background: 'var(--bg-highlight)',
-                      border: '3px solid var(--border)',
-                      margin: '0 auto 16px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: 20,
-                      fontWeight: 700,
-                      color: 'var(--muted)',
-                      letterSpacing: -0.5,
-                    }}
-                  >
-                    {member.initials}
-                  </div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', marginBottom: 4 }}>{member.name}</div>
-                  <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 500 }}>{member.role}</div>
+          <RevealOnScroll delay={60}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 14, maxWidth: 960, margin: '0 auto' }}>
+              {EXPERTISE.map((item) => (
+                <div key={item} style={{
+                  display: 'flex', alignItems: 'center', gap: 12,
+                  background: 'var(--card)', border: '1px solid var(--border)',
+                  borderRadius: 12, padding: '14px 18px',
+                  fontSize: 14, fontWeight: 500, color: 'var(--body)',
+                }}>
+                  <span style={{
+                    width: 22, height: 22, borderRadius: '50%', flexShrink: 0,
+                    background: 'rgba(22,163,74,0.12)', border: '1px solid rgba(22,163,74,0.2)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: '#16a34a',
+                  }}>
+                    <CheckIcon />
+                  </span>
+                  {item}
                 </div>
-              </RevealOnScroll>
-            ))}
-          </div>
+              ))}
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -421,18 +367,15 @@ export default function AboutPage() {
       <style>{`
         .about-story-grid { grid-template-columns: 1fr 1fr; }
         .values-grid { grid-template-columns: repeat(3, 1fr); }
-        .team-grid { grid-template-columns: repeat(4, 1fr); }
 
         @media (max-width: 1024px) {
           .about-story-grid { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 900px) {
           .values-grid { grid-template-columns: 1fr 1fr !important; }
-          .team-grid { grid-template-columns: 1fr 1fr !important; }
         }
         @media (max-width: 600px) {
           .values-grid { grid-template-columns: 1fr !important; }
-          .team-grid { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>
     </>

@@ -46,7 +46,7 @@ const TIMETECH_ITEMS = [
   {
     group: 'Visitor Management',
     items: [
-      { slug: 'timetech-application', label: 'Visitor Management', desc: 'Reception kiosk, appointments & access cards' },
+      { slug: 'visitor-management', label: 'Visitor Management', desc: 'Reception kiosk, appointments & access cards' },
     ],
   },
 ];
@@ -58,6 +58,7 @@ const SOLUTIONS = [
   { slug: 'access-control-system', label: 'Access Control & CCTV', desc: 'IP surveillance & biometric doors' },
   { slug: 'digital-signage', label: 'Digital Signage', desc: 'LED & managed display networks' },
   { slug: 'erp-retail-management', label: 'ERP & Retail', desc: 'Inventory, POS & ESL management' },
+  { slug: 'consultancy', label: 'IT Consultancy', desc: 'IT staffing and ICT planning' },
 ];
 
 const INDUSTRIES = [
@@ -74,6 +75,7 @@ const COMPANY = [
   { href: '/clients', label: 'Clients', desc: '500+ organisations', icon: <UsersSVG /> },
   { href: '/case-studies', label: 'Case Studies', desc: 'Real-world results', icon: <FileTextSVG /> },
   { href: '/partners', label: 'Partners', desc: 'Technology alliances', icon: <HandshakeSVG /> },
+  { href: '/news', label: 'News & Credentials', desc: 'Certificates and appreciation letters', icon: <FileTextSVG /> },
   { href: '/blog', label: 'Blog', desc: 'Industry insights', icon: <FileTextSVG /> },
 ];
 

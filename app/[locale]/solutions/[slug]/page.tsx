@@ -25,7 +25,210 @@ const SOLUTION_DETAILS: Record<string, {
   highlights: string[];
   industries: string[];
   caseStudySlug: string;
+  brochurePath?: string;
+  youtubeUrl?: string;
+  additionalSections?: { title: string; intro?: string; bullets: string[] }[];
 }> = {
+  'consultancy': {
+    seoKeyword: 'IT consultancy Bahrain GCC outsourced engineers ICT planning',
+    tagline: 'D3 has highly experienced business and information systems consultants who work with your business strategies and plan your ICT systems to maximise return on investment.',
+    highlights: ['System Administrators', 'Network Engineers (CISCO)', 'Database Administrators', 'Software Engineers', 'Hardware Technicians', 'Help Desk Support'],
+    features: [
+      { title: 'Outsourced System Administration', desc: 'Experienced System Administrators available for short-term projects, system implementations or ongoing managed service engagements.' },
+      { title: 'Database Administration', desc: 'Qualified DBAs to manage, optimise and secure your enterprise databases across SQL, Oracle and other platforms.' },
+      { title: 'Software Engineering', desc: 'Skilled software engineers available for custom development, integrations and enterprise application support.' },
+      { title: 'Network Infrastructure (CISCO)', desc: 'CISCO-certified Network Infrastructure Engineers for LAN/WAN, wireless and security deployments.' },
+      { title: 'Hardware Technicians', desc: 'On-site and remote hardware support for servers, workstations, peripherals and enterprise IT equipment.' },
+      { title: 'Help Desk Support', desc: 'Dedicated help desk staffing for first-line and second-line IT support across your organisation.' },
+      { title: 'ICT Strategic Planning', desc: 'Business and ICT consultants align your technology strategy with business objectives to maximise ROI.' },
+      { title: 'System Analysis', desc: 'System Analysts to evaluate, document and improve your enterprise business processes and systems.' },
+    ],
+    industries: ['government', 'banking', 'healthcare', 'retail', 'logistics'],
+    caseStudySlug: 'ministry-of-interior-attendance',
+    additionalSections: [
+      {
+        title: 'Outsourced IT Roles Available',
+        intro: 'D3 provides qualified, vetted IT professionals for both short-term project work and long-term managed service engagements across Bahrain and the GCC.',
+        bullets: [
+          'System Administrator',
+          'Database Administrator',
+          'System Analyst',
+          'Software Engineers',
+          'Network Infrastructure Engineers (CISCO certified)',
+          'Hardware Technicians',
+          'Help Desk',
+        ],
+      },
+    ],
+  },
+  'visitor-management': {
+    seoKeyword: 'visitor management system Bahrain GCC reception kiosk access card',
+    tagline: 'Professional and advanced online visitor management system — reception kiosk, pre-registration, access cards and full audit trail.',
+    highlights: ['Visitor Pre-Registration', 'Access Card Issuance', 'Door Assignment', 'Audit Reports', 'Automatic Access Removal', 'Appointment Tracking'],
+    features: [
+      { title: 'Visitor Appointment Form', desc: 'Pre-register visitors online with appointment details — name, host, purpose and expected visit time — before arrival.' },
+      { title: 'Access Card Issuance', desc: 'Issue physical or virtual access cards to visitors upon arrival, granting controlled access to specific areas.' },
+      { title: 'Controlled Door Access', desc: 'Send visitor access permissions directly to specific controlled doors — limiting access to authorised areas only.' },
+      { title: 'Automatic Access Removal', desc: 'Visitor access is automatically revoked upon departure — no manual intervention required.' },
+      { title: 'Visit Closure on Departure', desc: 'Close visitor appointments on departure with time-stamped records for compliance and audit purposes.' },
+      { title: 'Audit & Visitor Reports', desc: 'Comprehensive visitor logs, scheduled visit reports and audit trails for security and compliance teams.' },
+    ],
+    industries: ['government', 'banking', 'healthcare'],
+    caseStudySlug: 'ministry-of-interior-attendance',
+    brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
+  },
+  'time-attendance-enterprise': {
+    seoKeyword: 'time attendance enterprise Bahrain GCC multi-site biometric mobile app',
+    tagline: 'No.1 TimeTech — Recognised and appreciated by GCC Labour. Multi-site, multi-company enterprise attendance for unlimited locations.',
+    highlights: ['Multi-Site & Multi-Company', 'Geo-Fenced Mobile App', 'ProjectWise Manhours', 'Employee Self-Service', 'Overtime Workflow', 'iOS & Android'],
+    features: [
+      { title: 'Multi-Modal Biometric', desc: 'Fingerprint, facial recognition, smart card and PIN on all terminal types.' },
+      { title: 'Auto Shift Picking', desc: 'N-number of shifts with auto picking, Ramadan shift, mother feeding shift and over-day shift support.' },
+      { title: 'ProjectWise Manhour Tracking', desc: 'Assign projects per employee, mark project start/end times and generate project-wise manhour summary reports.' },
+      { title: 'Employee Self-Service Portal', desc: 'Employees view attendance, exception records, leave balance, upcoming holidays and notice board via web portal.' },
+      { title: 'Mobile App (iOS & Android)', desc: 'Geo-fenced locations, selfie clock-in, QR code attendance, leave requests, overtime requests and excuse submissions from mobile.' },
+      { title: 'Overtime Approval Workflow', desc: 'Multi-step overtime approval and rejection workflow with automated amount calculation.' },
+      { title: 'LMRA Compliance', desc: 'Built-in reports for Bahrain Labour Market Regulatory Authority with direct integration.' },
+      { title: 'Email Notifications', desc: 'Auto alerts for absences, late entry, early exit to employee and department heads with scheduled summary reports.' },
+    ],
+    industries: ['government', 'healthcare', 'banking', 'logistics'],
+    caseStudySlug: 'ministry-of-interior-attendance',
+    brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
+    additionalSections: [
+      {
+        title: 'ProjectWise Manhour Tracking',
+        bullets: [
+          'Project Master creation',
+          'Assigning projects to employees',
+          'Marking project start time and end time per project',
+          'Assigning break hours to succeeding project',
+          'Project wise manhour summary sheet',
+          'Employee wise project summary',
+          'Employee wise project details',
+        ],
+      },
+      {
+        title: 'Employee Self-Service (Enterprise)',
+        bullets: [
+          'Employee can login with employee ID and view attendance reports',
+          'Choose own password',
+          'View exception records',
+          'Submit leave requests and view status',
+          'View upcoming holidays',
+          'Notice board access',
+        ],
+      },
+      {
+        title: 'TimeTech Mobile App (iOS/Android)',
+        bullets: [
+          'Geo-fencing locations',
+          'Allocating geo-fenced locations per employee',
+          'Clock In/Clock Out via selfie photo from mobile',
+          'Clock In/Clock Out via QR code scanning with photo capture',
+          'View attendance logs',
+          'Leave request, balance and details',
+          'Overtime request and details',
+          'Excuse request (late entry, early exit, break hours) and details',
+          'Missing swipe entry request',
+          'Future excuse request and details',
+          'Time in Lieu request',
+        ],
+      },
+    ],
+  },
+  'hr-payroll-software': {
+    seoKeyword: 'HR software Bahrain WPS payroll HRMS GCC GOSI',
+    tagline: 'TimeTech professional HRMS & Payroll for Gulf Region — multi-company, multi-currency, bi-lingual, flexible and cost effective.',
+    highlights: ['WPS-ready Payroll', 'GOSI Integration', 'Multi-Company', 'Employee Self-Service', 'Document Control', 'Mobile App'],
+    features: [
+      { title: 'Personnel Module', desc: 'Comprehensive Employee Master with document expiry reminders for Residence Permit, CPR, Passport and insurance. Manage dependents, qualifications and HR memos.' },
+      { title: 'Leave Management', desc: 'Define leave templates per employee using formulas. Calendar or working day calculation, leave carry forward, online requests with escalation and leave settlement.' },
+      { title: 'Payroll Module', desc: 'Monthly and multiple payrolls per month. Define salary structures using formulas. WPS bank transfer formats, GOSI calculations, payroll comparison and approval workflow.' },
+      { title: 'Employee Self-Service', desc: 'Employees login with their ID to apply for leave, view payslips, request overtime, submit excuse requests and view leave balances online.' },
+      { title: 'Email Notifications', desc: 'Absent, late entry, early exit and missing swipe alerts to employee email. Summary notifications to department heads and HR. Payslip emailed on approval.' },
+      { title: 'Appraisal Module', desc: 'KPI-based performance evaluation with self-evaluation, supervisor evaluation, grade reports and approval workflows.' },
+      { title: 'Recruitment Module', desc: 'Manpower planning, job profile creation, hiring manager assignment, interview board setup and integrated job vacancy web application.' },
+      { title: 'Training Module', desc: 'Training master, requisition and approval, employee assignment, auto alerts and comprehensive training management reports.' },
+    ],
+    industries: ['government', 'banking', 'retail', 'healthcare'],
+    caseStudySlug: 'bank-of-bahrain-kuwait-hrms',
+    brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
+    additionalSections: [
+      {
+        title: 'Personnel Module',
+        bullets: [
+          'Comprehensive Employee Master',
+          'Management of Employee Dependents records',
+          'Employee contact details',
+          'Document expiry reminders and control: Residence Permit, CPR, Passport, contract, insurance',
+          'Control for issues as per Bahrain Labor law',
+          'Attachments related to employees',
+          'Reminder reports for expiring documents',
+          'Absences and leaves control',
+          'Management of items issued to employees',
+          'Management of memos',
+          'Employee qualification details',
+          'Reports including Bahrainisation, nationality-wise, service period, Male/Female ratio',
+        ],
+      },
+      {
+        title: 'Leave Management Module',
+        bullets: [
+          'Define leave templates and leave structure using formulas per employee',
+          'Assign eligible leave types per employee',
+          'Option: calendar days or working days, leave carry forward',
+          'Employee leave requests via self-service portal with escalation to reporting manager',
+          'Leave settlement by HR',
+          'View available leave balance at any time',
+          'Leave ledger and leave history',
+          'Leave settlement and final settlement',
+          'Option to include salary with settlements',
+          'Option to en-cash leave',
+          'Email notifications at each stage',
+        ],
+      },
+      {
+        title: 'Payroll Module',
+        bullets: [
+          'Monthly payroll generation',
+          'Multiple payrolls in a month',
+          'Define salary structure using formulas and fixed amounts per employee',
+          'Allowances and Deductions master creation',
+          'Salary transfer formats to Bank (WPS)',
+          'GOSI calculations',
+          'Easy payroll generation or modification',
+          'Import allowances/deductions from Excel template',
+          'Direct integration with Time Attendance',
+          'Summary and department-wise payslip',
+          'Payroll comparison',
+          'Individual or group payslip printing',
+          'Recurring deductions and loan ledger',
+          'Payroll approval workflow',
+          'Advance deduction booking',
+          'Employee costing and journal voucher creation',
+        ],
+      },
+      {
+        title: 'Employee Self-Service (Enterprise)',
+        bullets: [
+          'Login with employee ID, choose own password',
+          'Apply for leave online with full approval cycle',
+          'View available leave balance and taken leave',
+          'Leave ledger',
+          'Overtime request',
+          'Excuse request (late entry, early exit, break hours)',
+          'Missing swipe entry request',
+          'Future excuse request',
+          'Time in Lieu request',
+          'Circulars and certificates (English)',
+          'General requests with HR approval',
+          'Informative dashboard',
+          'HR template uploads to individual employees',
+          'Own payslip access',
+        ],
+      },
+    ],
+  },
   'timetech-application': {
     seoKeyword: 'TimeTech time attendance HRMS Bahrain GCC',
     tagline: 'A complete cloud workforce platform — attendance, HR, payroll, visitor management and mobile self-service, purpose-built for GCC enterprises.',
@@ -59,23 +262,7 @@ const SOLUTION_DETAILS: Record<string, {
     ],
     industries: ['government', 'healthcare', 'banking'],
     caseStudySlug: 'ministry-of-interior-attendance',
-  },
-  'hr-payroll-software': {
-    seoKeyword: 'HR software Bahrain WPS payroll HRMS GCC',
-    tagline: 'A fully localised GCC HRMS covering the complete employee lifecycle — onboarding, leave, payroll, appraisals, self-service and offboarding.',
-    highlights: ['WPS-ready payroll', 'GOSI integration', 'Arabic interface & RTL', 'Employee self-service', 'Document management', 'Performance appraisal'],
-    features: [
-      { title: 'End-to-End Payroll', desc: 'Automated gross-to-net payroll with WPS compliance and bank file generation.' },
-      { title: 'Leave Management', desc: 'Annual, sick, maternity and custom leave types with approval workflows.' },
-      { title: 'Performance Appraisal', desc: 'Goal setting, 360-degree reviews and automated increment processing.' },
-      { title: 'Employee Onboarding', desc: 'Digital onboarding workflows, document collection and induction tracking.' },
-      { title: 'Document Management', desc: 'Secure digital storage for contracts, visas, passports and certificates.' },
-      { title: 'Organisational Chart', desc: 'Dynamic org chart with role hierarchy and reporting lines.' },
-      { title: 'Benefits & GOSI', desc: 'Track GOSI, end-of-service benefits and custom allowances automatically.' },
-      { title: 'Arabic Interface', desc: 'Full Arabic-language interface and RTL support for all modules.' },
-    ],
-    industries: ['government', 'banking', 'retail'],
-    caseStudySlug: 'bank-of-bahrain-kuwait-hrms',
+    brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'queue-management-system': {
     seoKeyword: 'queue management system Bahrain GCC kiosk WhatsApp',
@@ -93,74 +280,240 @@ const SOLUTION_DETAILS: Record<string, {
     ],
     industries: ['government', 'banking', 'healthcare'],
     caseStudySlug: 'gulf-air-queue-management',
+    brochurePath: '/brochure/QMS_24.pdf',
+    youtubeUrl: 'https://www.youtube.com/embed/RnzjXYywChE',
   },
   'rfid-asset-tracking': {
-    seoKeyword: 'RFID asset tracking Bahrain warehouse management',
+    seoKeyword: 'RFID asset tracking Bahrain warehouse management document tracking',
     tagline: 'Full lifecycle tracking of physical assets — IT equipment, furniture, vehicles, medical devices and industrial tools — using RFID tags, handheld scanners and a centralised asset register.',
-    highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Audit management', 'Depreciation tracking', 'Warehouse WMS'],
+    highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Audit management', 'Document Tracking', 'Warehouse WMS'],
     features: [
       { title: 'RFID & Barcode', desc: 'Support for UHF RFID, HF RFID, QR codes and standard barcodes.' },
       { title: 'Handheld Scanners', desc: 'Rugged mobile scanners for fast bulk scanning and cycle counts.' },
       { title: 'Asset Lifecycle', desc: 'Track assets from procurement through maintenance to disposal.' },
       { title: 'Location Tracking', desc: 'Room-level location awareness with fixed RFID readers.' },
       { title: 'Audit Management', desc: 'Schedule and conduct physical asset audits with discrepancy reporting.' },
-      { title: 'Depreciation Tracking', desc: 'Automated depreciation calculations integrated with ERP.' },
-      { title: 'Maintenance Scheduling', desc: 'Preventive maintenance schedules with automated alerts.' },
+      { title: 'RFID Document Tracking', desc: 'Each document assigned a unique RFID label. Passive RFID tags track document flow within organisations — reducing employee time for document management.' },
+      { title: 'Warehouse Management (WMS)', desc: 'Goods receiving, tagging, picking, dispatch and cycle count — all RFID/barcode driven with real-time back-office sync.' },
       { title: 'Multi-Site Support', desc: 'Manage assets across unlimited buildings, floors and departments.' },
     ],
     industries: ['government', 'healthcare', 'logistics'],
     caseStudySlug: 'alba-rfid-assets',
+    brochurePath: '/brochure/RFID_24.pdf',
+    youtubeUrl: 'https://www.youtube.com/embed/VCvD62vv1mQ',
+    additionalSections: [
+      {
+        title: 'RFID Document Tracking System',
+        intro: 'A user-friendly system to track document flow within organisations — reducing employee time for document management and tracking.',
+        bullets: [
+          'Each document assigned a unique RFID label for tracking',
+          'Passive RFID tracking: tags with no internal power, use electromagnetic signals from reader',
+          'Applicable for: access control, document tracking, file management',
+          'Reduces employee time spent on document management and tracking',
+        ],
+      },
+      {
+        title: 'RFID/Barcode Warehouse Management System (WMS)',
+        bullets: [
+          'Goods Receiving: based on Purchase Order / Goods Receiving Note',
+          'Tagging Items: every inventory item RFID-tagged, then binned/put-away',
+          'Picking: based on Sales Order / Pick List — rack labels and items scanned via RFID, updated to back office in real time',
+          'Dispatch/Shipping: vehicle loading, delivery confirmation',
+          'Stock Take / Cycle Count: periodical inventory count matched against physical stock and system stock',
+          'Hardware supported: Barcode Scanners, Mobile Computers (handheld terminals), Barcode Printers',
+        ],
+      },
+    ],
   },
   'access-control-system': {
-    seoKeyword: 'access control system CCTV Bahrain biometric IP cameras',
-    tagline: 'Enterprise-grade IP-based access control and CCTV surveillance — combining biometric authentication, smart card readers, video analytics and 24/7 monitoring.',
-    highlights: ['Fingerprint & face recognition', '2MP to 4K IP cameras', 'Video analytics & AI', 'Central management', 'Emergency lockdown', 'Full audit trails'],
+    seoKeyword: 'access control system IP CCTV Bahrain biometric cameras surveillance',
+    tagline: 'Enterprise-grade IP surveillance and biometric access control — D3 is a system integrator delivering complete security solutions for indoor, outdoor, business and home environments.',
+    highlights: ['IP CCTV (Indoor & Outdoor)', 'Fingerprint & Face Recognition', 'Proximity Card / NFC', 'Centralised Management', 'No Lost Keys or Passwords', 'Scalable to Enterprise'],
     features: [
-      { title: 'Biometric Access', desc: 'Fingerprint and facial recognition door controllers with anti-passback.' },
-      { title: 'Smart Card / PIN', desc: 'MIFARE, HID and custom smart card readers for any door type.' },
-      { title: 'IP CCTV', desc: '2MP to 4K IP cameras with AI analytics, motion detection and NVR storage.' },
-      { title: 'Video Analytics', desc: 'Face detection, crowd counting, perimeter breach and loitering alerts.' },
-      { title: 'Central Management', desc: 'Single software platform managing access and cameras across all sites.' },
-      { title: 'Audit Trails', desc: 'Complete access logs with timestamps, photos and video evidence.' },
-      { title: 'Visitor Integration', desc: 'Pre-register visitors and grant temporary access via the visitor system.' },
-      { title: 'Emergency Lockdown', desc: 'One-click facility lockdown for emergency security situations.' },
+      { title: 'IP CCTV — Local & Remote Monitoring', desc: 'D3 is a system integrator, not just a CCTV seller. Local or remote monitoring via networked surveillance — suitable for indoor and outdoor, business and home environments.' },
+      { title: 'Camera Types', desc: 'Indoor/outdoor, Dome/box/PTZ, Wide angle, 360-degree fixed, Weather proof (IP68), Day and night with IR, Varifocal and optical lenses.' },
+      { title: 'NVR & Server Software', desc: 'Network video recorders, web-based and server software for centralised management, recording and remote playback.' },
+      { title: 'Biometric Access Control', desc: 'Biometric access control uses unique physical features as keys — no forgotten passwords, no lost keys.' },
+      { title: 'Controller Types', desc: 'Proximity Card or NFC, Fingerprint, Face Recognition, Stand-Alone and Centralised controller options available.' },
+      { title: 'Scalable Deployment', desc: 'Scale from a single door to enterprise-wide centralised access management across multiple buildings and sites.' },
+      { title: 'Central Management Platform', desc: 'Single software platform managing access control and CCTV cameras across all sites from one interface.' },
+      { title: 'Audit Trails', desc: 'Complete access logs with timestamps, photos and video evidence for security compliance.' },
     ],
     industries: ['government', 'banking', 'logistics'],
     caseStudySlug: 'bahrain-airport-cctv',
+    additionalSections: [
+      {
+        title: 'IP CCTV Surveillance',
+        intro: 'D3 is a system integrator delivering complete IP-based surveillance solutions — not just hardware supply.',
+        bullets: [
+          'Local or remote monitoring via networked surveillance',
+          'Suitable for indoor and outdoor, business and home environments',
+          'Indoor/outdoor cameras, Dome/box/PTZ configurations',
+          'Wide angle and 360-degree fixed cameras',
+          'Weather proof units (IP68 rated)',
+          'Network video recorder and web-based server software',
+          'Day and night cameras with IR illumination',
+          'Varifocal and optical lens options',
+        ],
+      },
+      {
+        title: 'Access Control Systems',
+        intro: 'Biometric access control uses unique physical features as keys — eliminating forgotten passwords and lost cards.',
+        bullets: [
+          'Proximity Card or NFC reader controllers',
+          'Fingerprint biometric controllers',
+          'Face Recognition controllers',
+          'Stand-Alone door controllers',
+          'Centralised enterprise access management',
+          'Scalable from single door to enterprise-wide deployment',
+          'No forgotten passwords or lost keys',
+        ],
+      },
+    ],
   },
   'digital-signage': {
-    seoKeyword: 'digital signage LED displays Bahrain GCC CMS',
+    seoKeyword: 'digital signage LED displays Bahrain GCC vertical signage eBook CMS',
     tagline: 'Indoor and outdoor LED displays, vertical portrait screens, e-book readers and IP power controllers — all managed from a central CMS with scheduling and real-time content updates.',
-    highlights: ['LED & LCD displays', 'Web-based CMS', 'Multi-zone layouts', 'Queue integration', 'Live data feeds', '24/7 operation'],
+    highlights: ['LED from 4mm to 20mm pitch', 'Vertical Displays from 42"', 'Virtual Interactive eBook', 'IP Power Controller', 'Web-based CMS', '24/7 Operation'],
     features: [
-      { title: 'LED Displays', desc: 'Indoor and outdoor LED panels in any size, from reception screens to large-format outdoor boards.' },
-      { title: 'Content CMS', desc: 'Web-based content management with drag-and-drop templates and scheduling.' },
-      { title: 'Multi-Zone Layouts', desc: 'Divide screens into zones for different content types simultaneously.' },
-      { title: 'Vertical Signage', desc: 'Portrait-orientation screens for wayfinding, menus and promotional content.' },
-      { title: 'eBook Readers', desc: 'Interactive e-book displays for catalogues, menus and information boards.' },
-      { title: 'IP Power Control', desc: 'Remote power on/off scheduling to reduce energy consumption.' },
-      { title: 'Queue Integration', desc: 'Display real-time queue numbers and wait times on signage screens.' },
+      { title: 'LED Displays', desc: 'Pitch sizes from 4mm to 20mm. Indoor and outdoor (fully weatherproof). First Selection LEDs with HDV pixel technology for colour uniformity and image quality.' },
+      { title: 'Vertical Signage Displays', desc: 'Available from 42" in multiple sizes. Full HD and 4K. Vertical or horizontal orientation. Built-in Windows or Android OS. Touch screen optional. 24/7 rated.' },
+      { title: 'Virtual Interactive eBook', desc: 'Developed by D3 — convex projection screen with authentic book form factor. Rear projection for no hand shadow. Supports text, images, SWF and video.' },
+      { title: 'IP Power Controller', desc: 'Fully customised controller board. Remote power management via web-based GUI. Manages AC or DC voltage. High or low ampere configurations.' },
+      { title: 'Content CMS', desc: 'Web-based content management with drag-and-drop templates, scheduling and live data feed integration.' },
+      { title: 'Multi-Zone Layouts', desc: 'Divide screens into zones for different content types simultaneously — news, promotions, queue numbers.' },
+      { title: 'Queue Integration', desc: 'Display real-time queue numbers and wait times on signage screens for waiting areas.' },
       { title: 'Live Data Feeds', desc: 'Integrate live news, weather, prayer times and social media feeds.' },
     ],
     industries: ['retail', 'government', 'banking'],
     caseStudySlug: 'gulf-air-queue-management',
+    additionalSections: [
+      {
+        title: 'LED Display Systems',
+        intro: 'D3 supplies and integrates indoor and outdoor LED display solutions using First Selection LEDs for superior colour uniformity.',
+        bullets: [
+          'Pitch sizes from 4mm to 20mm',
+          'Suitable for indoor and outdoor environments',
+          'Fully weatherproof outdoor units',
+          'Uses First Selection LEDs (top 10%) with 5 nanometre wavelength tolerance for colour uniformity',
+          'HDV pixel technology for increased image quality',
+          'Customised software developed to client requirements',
+          'Display types: Ticker Single-Line Series, Multi-Line Series',
+        ],
+      },
+      {
+        title: 'Vertical Display Signage',
+        bullets: [
+          'Available from 42" in multiple sizes',
+          'Vertical stand with vertical or horizontal display orientation',
+          'Full HD and 4K options',
+          'Aspect ratio 16:9 or 4:3',
+          'Long life high brightness LED screen',
+          'Metal frame + toughened glass',
+          'Black, silver or customised colour',
+          'Designed for 24/7 operation',
+          'Built-in Windows or Android OS',
+          'Built-in Wi-Fi, Ethernet module and speakers',
+          'Remote control included',
+          'Touch screen optional',
+          'Stand-alone or centralised management application optional',
+        ],
+      },
+      {
+        title: 'Virtual Interactive eBook',
+        intro: 'Developed by D3 — a unique convex projection screen system with an authentic book form factor design.',
+        bullets: [
+          'Convex projection screen with desk representation system',
+          'Authentic book form factor design with transparent acrylic body',
+          'Rear projection — no hand shadow, higher picture quality than front projection',
+          'Supports all content formats: text, images, SWF, video',
+          'Use cases: Museum, Exhibition, Events, Showrooms, Education',
+        ],
+      },
+      {
+        title: 'IP Power Controller',
+        intro: 'Remotely manage power to any device via a web-based GUI — no physical site access required.',
+        bullets: [
+          'Fully customised controller board design and fabrication',
+          'Remote power management via web-based GUI (no physical site access required)',
+          'Manages AC or DC voltage',
+          'High or low ampere configurations',
+          'Power controller types: Web Power Switch, Ethernet Power Controller, Web-based DIN Relay, Industrial Power Switch',
+          'Applicable fields: Industrial machines, Remote sites, Data Centres, Building power management',
+        ],
+      },
+    ],
   },
   'erp-retail-management': {
-    seoKeyword: 'ERP software Bahrain retail management inventory',
+    seoKeyword: 'ERP software Bahrain retail management inventory electronic shelf labels',
     tagline: 'Inventory, purchasing, sales, finance and HR integrated into one unified system — with electronic shelf labels, ID card printing and loyalty programme management.',
-    highlights: ['Real-time inventory', 'Electronic shelf labels', 'Multi-company & multi-currency', 'Loyalty management', 'Restaurant management', 'ID card solutions'],
+    highlights: ['Multi-Company & Multi-Branch', 'Real-time Inventory', 'Electronic Shelf Labels', 'Financial Accounting', 'Restaurant Management', 'Van Sales & RFID'],
     features: [
-      { title: 'Inventory Management', desc: 'Real-time stock levels, reorder points, expiry tracking and multi-warehouse.' },
-      { title: 'POS Integration', desc: 'Seamless integration with major POS systems and custom hardware.' },
-      { title: 'Electronic Shelf Labels', desc: 'ESL displays with instant price updates from the central ERP system.' },
-      { title: 'Purchasing & Procurement', desc: 'Purchase orders, supplier management, GRN and 3-way matching.' },
-      { title: 'Financial Accounting', desc: 'Full GL, AP, AR and bank reconciliation with local chart of accounts.' },
-      { title: 'Loyalty Management', desc: 'Points-based loyalty programmes with card and mobile app integration.' },
-      { title: 'Reporting & Analytics', desc: 'Custom dashboards for sales, margins, stock turns and supplier KPIs.' },
-      { title: 'ID Card Solutions', desc: 'Employee, student and membership card design, printing and management.' },
+      { title: 'Procurement & Import', desc: 'Issue Purchase Orders, manage Goods Receipt, pending order status, creditors management and item return with document attachment.' },
+      { title: 'Inventory Management', desc: 'Comprehensive Item/Stock Master, stock status by location, inter-transfer, FIFO/Average costing, cost management and multi-location support.' },
+      { title: 'Sales Management', desc: 'Item issue to projects, margin setting by percentage, FIFO costing, detailed and location-wise sales reports, sales returns with document attachment.' },
+      { title: 'Financial Accounting', desc: 'Full GL, AP, AR and bank reconciliation with local chart of accounts and multi-currency support.' },
+      { title: 'Electronic Shelf Labels', desc: 'Bidirectional graphic and segment label options. Instant price updates. Cross-platform management software. Supports promotions and omni-channel retail.' },
+      { title: 'Restaurant Management', desc: 'Full restaurant module integrated with the ERP — table management, orders, kitchen display and POS.' },
+      { title: 'Payroll & HR Integration', desc: 'Native integration with TimeTech HRMS and Payroll — no double entry across HR and finance.' },
+      { title: 'Van Sales & RFID', desc: 'Van sales management with mobile handheld terminals, RFID integration and real-time stock updates.' },
     ],
     industries: ['retail', 'logistics', 'government'],
     caseStudySlug: 'jawad-business-erp',
+    additionalSections: [
+      {
+        title: 'ERP Multi-Tier Structure',
+        intro: 'D3 ERP supports a comprehensive multi-tier organisational hierarchy for complex business structures.',
+        bullets: [
+          'Multi Companies',
+          'Multi Groups',
+          'Multi Branches',
+          'Multi Sub Branches',
+          'Multi Divisions',
+          'Multi Locations',
+        ],
+      },
+      {
+        title: 'ERP Modules',
+        bullets: [
+          'Procurement Control',
+          'Import & Local Purchase',
+          'Inventory Management',
+          'Sales Management',
+          'Retail Management',
+          'Financial Accounting',
+          'Production Control',
+          'Fixed Assets',
+          'Restaurant Management',
+          'Payroll & HR Management',
+          'Van Sales / RFID integration',
+          'Time & Attendance integration',
+        ],
+      },
+      {
+        title: 'Key Benefits',
+        bullets: [
+          'Economical pricing',
+          'Comprehensive warranty',
+          '100% customisation',
+          'Integration with 3rd party hardware and software',
+          'Training and support included',
+          'Free updates',
+        ],
+      },
+      {
+        title: 'Electronic Shelf Labels',
+        intro: 'Optimise pricing and guarantee price integrity across all shelves with D3\'s Electronic Shelf Label solution.',
+        bullets: [
+          'Bidirectional, graphic and segment label options',
+          'Optimises pricing and guarantees price integrity',
+          'Scalable deployment: cloud or local',
+          'Cross-platform management software (PC, tablet, PDA)',
+          'Visual interface with flexible editing modules',
+          'Supports promotions, product availability and omni-channel retail',
+        ],
+      },
+    ],
   },
 };
 
@@ -205,6 +558,25 @@ export default async function SolutionPage({ params }: Props) {
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <Button href="/contact" variant="primary"><ArrowIcon />Request a Demo</Button>
                 <Button href="/contact" variant="ghost">Talk to us</Button>
+                {detail.brochurePath && (
+                  <a
+                    href={detail.brochurePath}
+                    download
+                    style={{
+                      display: 'inline-flex', alignItems: 'center', gap: 8,
+                      padding: '10px 20px', borderRadius: 100,
+                      border: '1px solid var(--border)',
+                      background: 'var(--bg-surface)',
+                      fontSize: 13, fontWeight: 600, color: 'var(--body)',
+                      textDecoration: 'none', transition: 'border-color 0.2s, color 0.2s',
+                    }}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download Brochure
+                  </a>
+                )}
               </div>
             </div>
 
@@ -286,6 +658,63 @@ export default async function SolutionPage({ params }: Props) {
           @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr !important; } }
         `}</style>
       </section>
+
+      {/* ── YOUTUBE EMBED ── */}
+      {detail.youtubeUrl && (
+        <section style={{ padding: '72px 0', background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
+            <RevealOnScroll>
+              <SectionEyebrow>See it in action</SectionEyebrow>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 32 }}>
+                Watch {sol.title} in action
+              </h2>
+            </RevealOnScroll>
+            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 16, border: '1px solid var(--border)' }}>
+              <iframe
+                src={detail.youtubeUrl}
+                title={`${sol.title} demonstration`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── ADDITIONAL SECTIONS ── */}
+      {detail.additionalSections && detail.additionalSections.length > 0 && (
+        <section style={{ padding: '80px 0', background: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
+            <RevealOnScroll>
+              <SectionEyebrow>Detailed modules</SectionEyebrow>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: -0.8, color: 'var(--heading)', marginBottom: 48 }}>
+                Full module breakdown
+              </h2>
+            </RevealOnScroll>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 24 }}>
+              {detail.additionalSections.map((sec, i) => (
+                <RevealOnScroll key={sec.title} delay={i * 40}>
+                  <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 16, padding: '28px 24px', height: '100%' }}>
+                    <h3 style={{ fontSize: 15, fontWeight: 800, color: 'var(--heading)', marginBottom: 10 }}>{sec.title}</h3>
+                    {sec.intro && <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, marginBottom: 14 }}>{sec.intro}</p>}
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                      {sec.bullets.map((bullet) => (
+                        <li key={bullet} style={{ display: 'flex', gap: 8, fontSize: 13, color: 'var(--body)', lineHeight: 1.5 }}>
+                          <span style={{ color: 'var(--cta)', flexShrink: 0, marginTop: 2 }}>
+                            <CheckIcon />
+                          </span>
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </RevealOnScroll>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── INDUSTRIES ── */}
       {relatedIndustries.length > 0 && (

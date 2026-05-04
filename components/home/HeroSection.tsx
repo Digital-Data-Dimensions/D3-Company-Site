@@ -12,23 +12,37 @@ function ArrowIcon() {
   );
 }
 
-/* ── COUNTER ── */
-function useCounter(target: number, duration = 1600) {
+/* ── COUNTER with IntersectionObserver ── */
+function useCounter(target: number, duration = 2000) {
   const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
+
   useEffect(() => {
-    if (started.current) return;
-    started.current = true;
-    let startTime: number;
-    const step = (ts: number) => {
-      if (!startTime) startTime = ts;
-      const p = Math.min((ts - startTime) / duration, 1);
-      setCount(Math.floor((1 - Math.pow(1 - p, 3)) * target));
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          let startTime: number;
+          const step = (ts: number) => {
+            if (!startTime) startTime = ts;
+            const p = Math.min((ts - startTime) / duration, 1);
+            setCount(Math.floor((1 - Math.pow(1 - p, 3)) * target));
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, [target, duration]);
-  return count;
+
+  return { count, ref };
 }
 
 /* ── SLIDES — only text changes ── */
@@ -82,8 +96,9 @@ export function HeroSection() {
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, [current, next]);
 
-  const c15  = useCounter(15);
-  const c500 = useCounter(500);
+  const { count: c15, ref: ref15 } = useCounter(15);
+  const { count: c500, ref: ref500 } = useCounter(500);
+  const { count: c10, ref: ref10 } = useCounter(10);
   const slide = SLIDES[current];
 
   return (
@@ -124,17 +139,17 @@ export function HeroSection() {
         {/* Stats strip */}
         <div className="hs-stats">
           <div className="hs-stat">
-            <span className="hs-stat-n">{c15}+</span>
+            <span className="hs-stat-n" ref={ref15}>{c15}+</span>
             <span className="hs-stat-l">{t('yearsActive')}</span>
           </div>
           <div className="hs-stat-sep" aria-hidden="true" />
           <div className="hs-stat">
-            <span className="hs-stat-n">{c500}+</span>
+            <span className="hs-stat-n" ref={ref500}>{c500}+</span>
             <span className="hs-stat-l">{t('clients')}</span>
           </div>
           <div className="hs-stat-sep" aria-hidden="true" />
           <div className="hs-stat">
-            <span className="hs-stat-n">6+</span>
+            <span className="hs-stat-n" ref={ref10}>{c10}+</span>
             <span className="hs-stat-l">{t('countries')}</span>
           </div>
         </div>

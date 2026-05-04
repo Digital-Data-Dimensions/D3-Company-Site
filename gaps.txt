@@ -1,0 +1,690 @@
+COMPLETE GAP LIST — D3 REBUILD (d3-self.vercel.app) vs ORIGINAL (dthree.co)
+Generated from full page-by-page audit of both sites.
+Paste into Cursor and implement each item.
+
+=============================================================
+GAP 1 — BROKEN PAGE: /en/solutions/hr-payroll-software returns 404
+=============================================================
+The page /en/solutions/hr-payroll-software does not exist but is linked from:
+- The mega menu under "HR & Payroll > Standard"
+- The footer Solutions list as "HRMS & Payroll"
+- The home page solutions card grid
+
+ACTION: Create the page /en/solutions/hr-payroll-software with the following content sourced from the original dthree.co/HRPayroll.aspx:
+
+Page title: "HR & Payroll Software — Standard & Enterprise"
+Subtitle: "TimeTech professional HRMS & Payroll for Gulf Region — multi-company, multi-currency, bi-lingual, flexible and cost effective."
+Brochure download button: Link to /brochure/TA_HR_PAYROLL_V1.11.pdf
+
+MODULES TO INCLUDE (each as a named section with bullet points):
+
+Module 1 — Personnel Module:
+- Comprehensive Employee Master
+- Management of Employee Dependents records
+- Employee contact details
+- Document expiry reminders and control: Residence Permit, CPR, Passport, contract, insurance
+- Control for issues as per Bahrain Labor law
+- Attachments related to employees
+- Reminder reports for expiring documents
+- Absences and leaves control
+- Management of items issued to employees
+- Management of memos
+- Employee qualification details
+- Reports including Bahrainisation, nationality-wise, service period, Male/Female ratio
+
+Module 2 — Leave Management Module:
+- Define leave templates and leave structure using formulas per employee
+- Assign eligible leave types per employee
+- Option: calendar days or working days, leave carry forward
+- Employee leave requests via self-service portal with escalation to reporting manager
+- Leave settlement by HR
+- View available leave balance at any time
+- Leave ledger and leave history
+- Leave settlement and final settlement
+- Option to include salary with settlements
+- Option to en-cash leave
+- Email notifications at each stage
+
+Module 3 — Payroll Module:
+- Monthly payroll generation
+- Multiple payrolls in a month
+- Define salary structure using formulas and fixed amounts per employee
+- Allowances and Deductions master creation
+- Salary transfer formats to Bank (WPS)
+- GOSI calculations
+- Easy payroll generation or modification
+- Import allowances/deductions from Excel template
+- Direct integration with Time Attendance
+- Summary and department-wise payslip
+- Payroll comparison
+- Individual or group payslip printing
+- Recurring deductions and loan ledger
+- Payroll approval workflow
+- Advance deduction booking
+- Employee costing and journal voucher creation
+
+Module 4 — Employee Self-Service (Enterprise):
+- Login with employee ID, choose own password
+- Apply for leave online with full approval cycle
+- View available leave balance and taken leave
+- Leave ledger
+- Overtime request
+- Excuse request (late entry, early exit, break hours)
+- Missing swipe entry request
+- Future excuse request
+- Time in Lieu request
+- Circulars and certificates (English)
+- General requests with HR approval
+- Informative dashboard
+- HR template uploads to individual employees
+- Own payslip access
+
+Module 5 — Email Notifications (Enterprise):
+- Absent, late entry, early exit, missing swipe alerts to employee email
+- Summary notifications to department head and HR
+- Previous day attendance email to department head and HR
+- Emails for leave/excuse/overtime requests and approvals
+- Weekly or monthly scheduled email reports
+- Approved payslip emailed to employee
+
+Module 6 — Appraisal Module:
+- Category configuration
+- Dashboard
+- Evaluation form builder
+- Approve/request workflows
+- Self-evaluation by employee
+- Supervisor evaluation
+- Remarks against KPIs
+- Grade reports
+
+Module 7 — Planning & Recruitment Module:
+- Manpower planning
+- Department-wise job position setting
+- Position management
+- Comprehensive job profile creation
+- Employee request by department head or HR
+- Assigning Hiring Manager and Interview Board
+- Setting evaluation criteria
+- Separate web application integrated with company website for job vacancy posting
+
+Module 8 — Training Module:
+- Training master
+- Training requisition and approval
+- Assigning training to employees
+- Training management
+- Auto alerts
+- Various reports
+
+Tags to display: Multi-Company · GOSI Ready · WPS Export · Self-Service · Mobile App · Appraisal
+
+
+=============================================================
+GAP 2 — BROKEN PAGE: Time Attendance Enterprise has no dedicated page
+=============================================================
+The mega menu links "Enterprise" under Time Attendance to /en/solutions/timetech-application which is the generic TimeTech platform page. A dedicated enterprise page is needed.
+
+ACTION: Create page /en/solutions/time-attendance-enterprise with the following content sourced from dthree.co/Time-Attendance-Enterprise.aspx:
+
+Page title: "Time Attendance Enterprise"
+Subtitle: "No.1 TimeTech — Recognised and appreciated by GCC Labour. Multi-site, multi-company enterprise attendance for unlimited locations."
+Brochure download: Link to /brochure/TA_HR_PAYROLL_V1.11.pdf
+
+All features from the Standard page PLUS these Enterprise-only additions:
+
+Section — ProjectWise Manhour:
+- Project Master creation
+- Assigning projects to employees
+- Marking project start time and end time per project
+- Assigning break hours to succeeding project
+- Project wise manhour summary sheet
+- Employee wise project summary
+- Employee wise project details
+
+Section — Employee Self Service (Enterprise):
+- Employee can login with employee ID and view attendance reports
+- Choose own password
+- View exception records
+- Submit leave requests and view status
+- View upcoming holidays
+- Notice board access
+
+Section — Overtime:
+- Overtime approval and rejection workflow
+- Overtime amount calculation
+
+Section — TimeTech Mobile App (iOS/Android):
+- Geo-fencing locations
+- Allocating geo-fenced locations per employee
+- Clock In/Clock Out via selfie photo from mobile
+- Clock In/Clock Out via QR code scanning with photo capture
+- View attendance logs
+- Leave request, balance and details
+- Overtime request and details
+- Excuse request (late entry, early exit, break hours) and details
+- Missing swipe entry request
+- Future excuse request and details
+- Time in Lieu request
+
+Tags to display: Multi-Site · Mobile App · Geo-Fencing · Project Manhours · Self-Service
+
+
+=============================================================
+GAP 3 — BROKEN PAGE: Visitor Management has no dedicated page
+=============================================================
+The mega menu links Visitor Management to /en/solutions/timetech-application. A dedicated page is needed.
+
+ACTION: Create page /en/solutions/visitor-management with the following content sourced from dthree.co/TimeTechVMS.aspx:
+
+Page title: "TimeTech Visitor Management System"
+Subtitle: "Professional and advanced online visitor management system — reception kiosk, pre-registration, access cards and full audit trail."
+Brochure download: Link to /brochure/TA_HR_PAYROLL_V1.11.pdf
+
+Features:
+- Visitor appointment form (pre-registration)
+- Issuing of access cards for visitors
+- Sending access cards to specific controlled doors
+- Closing of visitor appointment on departure
+- Automatic removal of access from assigned doors
+- Various audit and visitor reports
+
+Tags to display: Access Card Integration · Pre-Registration · Audit Trail
+
+
+=============================================================
+GAP 4 — BROKEN PAGE: Consultancy has no dedicated page
+=============================================================
+The footer lists "Consultancy" but links it to /en/contact. A dedicated page is needed.
+
+ACTION: Create page /en/solutions/consultancy with the following content sourced from dthree.co/Consultancy.aspx:
+
+Page title: "IT Consultancy"
+Subtitle: "D3 has highly experienced business and information systems consultants who work with your business strategies and plan your ICT systems to maximise return on investment."
+
+Section — Outsourced Engineers (available roles):
+- System Administrator
+- Database Administrator
+- System Analyst
+- Software Engineers
+- Network Infrastructure Engineers (CISCO certified)
+- Hardware Technicians
+- Help Desk
+
+Brief intro paragraph: D3 provides outsourced IT staffing and consultancy for short-term projects, system implementations and ongoing managed service engagements across Bahrain and the GCC.
+
+Add this page to the Solutions mega menu under "Other Solutions" as "Consultancy — IT staffing and ICT planning"
+Update footer Consultancy link from /en/contact to /en/solutions/consultancy
+
+
+=============================================================
+GAP 5 — PARTNERS PAGE: All partner logos and names are fabricated
+=============================================================
+Current rebuild partners (Microsoft, HikVision, ZKTeco, Cisco, Samsung, AWS) do not appear on the original site and are invented.
+
+ACTION: Replace the entire partners page content at /en/partners with the following real partners from dthree.co/partners.aspx:
+
+Real partners:
+1. ACT Qatar
+2. TimeTech
+3. Synel
+4. iM (iMachines)
+5. Nord
+6. DataLogic
+7. Etisalcom
+8. Remedi
+
+For each partner, display:
+- Partner name
+- Logo image (source from dthree.co/assets/img/Partners/ directory — filenames: actQatar.jpg, timetech2.jpg, synel2.jpg, im2.JPG, nord2.JPG, dataLogic2.jpg, etisalcom2.jpg, remedi.png)
+- No made-up descriptions or tier badges
+
+Remove entirely:
+- The "Become a Partner" section with invented tier types (Referral Partners, Technology Integrators, Reseller Partners)
+- All fabricated partner descriptions
+
+
+=============================================================
+GAP 6 — CLIENTS PAGE: Incomplete and contains inaccurate clients
+=============================================================
+Current rebuild shows only ~24 clients. Original has 80+ clients across three categories. Several clients in the rebuild (Mouwasat Medical Services, Khaleeji Commercial Bank) do not appear in the original.
+
+ACTION: Replace /en/clients with the following complete and accurate client list from dthree.co/Clients.aspx, organised into three tabs/sections:
+
+--- GOVERNMENT CLIENTS ---
+Bahrain Bourse
+Bahrain Chamber of Commerce and Industry (BCCI)
+Bahrain Institute for Political Development (BIPD)
+BIX – Bahrain Internet Exchange
+Civil Service Bureau (CSB)
+Central Bank of Bahrain (CBB)
+Isa Cultural Centre
+Labour Market Regulatory Authority (LMRA)
+Ministry of Cabinet Affairs & Prime Minister Office
+Ministry of Labour
+NSSA - National Space Science Agency
+Ministry of Interior – Customs Affairs
+Ministry of Islamic Affairs
+Northern Area Municipality
+Real Estate Regulatory Authority (RERA)
+Royal Humanitarian Foundation (RHF)
+Survey & Land Registration Bureau (SLRB)
+University of Bahrain
+Urban Planning Development Authority
+
+--- PRIVATE CLIENTS ---
+Ahmed Zayani & Sons
+Ahmed Mansoor Al Ali Co
+AJM Kooheji Group B.S.C
+Al Iman School
+Al Hilal Hospital
+Al Salam Bank
+Al Zayani Investment
+Al Zain Jewellery
+American Express (AMEX)
+Ansari Engineering Services S.P.C
+Arab Open University
+Arab Architects
+Arabian Printing & Publishing House
+Arabtec Construction L.L.C (Bahrain Airport)
+AVM Labs
+Bahrain Medical Center (BMC)
+Bahrain Ship Repairing & Engineering Company B.S.C (BASREC)
+Balexco
+Banz Trading & Contracting W.L.L.
+BIIECO
+Bin Faquee
+Body Works
+CHAPO (BRF)
+City School
+CTS Middle East Bahrain W.L.L.
+Dahlman Middle East
+DAN Medical Center
+Dar Al Khaleej (GDN)
+Eagle Hills (Marassi)
+Etisalcom
+General Poultry Company (GPC)
+Ghousoon Spa & Saloon
+GTS - Global Lift Services Bahrain
+Gulf Assist
+Gulf Closures
+Gulf House Engineering
+Harmony Music Gate
+Ibn Al-Nafees Hospital Co. BSC
+iMachines
+International Motor Trading Agency W.L.L
+Invita Claims Management Company B.S.C
+Jah Consultancy
+Jalal Ionics WLL - Aqua Cool
+Jas Group W.L.L.
+Katana Torii Japanese Cuisine
+Keypoint
+Kims Health Hospital
+Kingdom University
+Lanterns Restaurants Group
+Linnas Medical Center
+Maersk Kanoo Bahrain W.L.L
+Maskati Commercials & Services
+Mohamed Salahuddin Consulting Engineering Bureau (MSCEB)
+Mueller Middle East
+Nass Corporation
+National Finance Exchange (NAFEX)
+Novo Delizie And Mercato
+Panorama Contracting
+Racing Force Group
+Reckitt Benckiser Bahrain W.L.L
+Saudi Company for Environment
+Sika Gulf
+Talal Abu-Ghazaleh Global (BRF - Tag)
+The National Concrete Company W.L.L (N.C.C)
+Wave Infra Solution
+West Point
+Yaquby Stores
+Yateem Air Conditioning
+Yokogawa
+Zayani Otis Elevator Company
+
+--- GCC CLIENTS ---
+Doha Club
+KIA Motors - Qatar
+NetLink - Dubai
+Schuyler Security Technologies
+United Supplies - Dubai
+Workers Village - Abu Dhabi
+KIMS Health Hospital Group
+
+Remove these fabricated clients currently in the rebuild: Mouwasat Medical Services, Khaleeji Commercial Bank, and any other client not in the above lists.
+
+Retain the stats (500+ clients, 15+ years, 10+ countries, 99.9% retention) at the top — these are consistent with the original.
+
+
+=============================================================
+GAP 7 — PROJECTS PAGE: Only 4 clients shown, missing ~56 project photos and 5 categories
+=============================================================
+Current rebuild has projects for only 4 clients (Al Hilal Hospital, Habib Bank, Ibn Al Nafees, Arab Open University) and only the Queue Management category is populated.
+
+ACTION: Expand /en/projects to include the following categories and source photos from dthree.co/assets/img/Project/:
+
+CATEGORY 1 — HRMS & Time Attendance (source path: /Project/TimeAttendanceProjects/)
+Photo files: IBNH1.jpg, IBNH2.jpg, IBNH3.jpg, TimeAttendanceProjects1.jpg through TimeAttendanceProjects12.jpg (15 photos total)
+
+CATEGORY 2 — Queue System (source path: /Project/QueueSystem/)
+Photo files: QueueSystem1.jpg through QueueSystem11.jpg (11 photos total)
+
+CATEGORY 3 — Digital Signage (source path: /Project/DigitalSignageProjects/)
+Photo files: DigitalSignageProjects1.jpg through DigitalSignageProjects7.jpeg (7 photos total)
+
+CATEGORY 4 — RFID Projects (source path: /Project/RFIDProjects/)
+Photo files: RFIDProjects1.jpg through RFIDProjects8.jpg (8 photos total)
+
+CATEGORY 5 — CCTV (source path: /Project/CCTV/)
+Photo files: CCTV1.jpg, CCTV2.jpg, CCTV4.jpg through CCTV15.jpg (14 photos total)
+
+CATEGORY 6 — Other Projects (source path: /Project/OtherProjects/)
+Photo files: OtherProjects1.jpg, OtherProjects2.jpg, OtherProjects3.jpg
+
+The filter UI already exists — populate it with all 6 categories and wire up filter buttons: All / HRMS & Time Attendance / Queue System / Digital Signage / RFID / CCTV / Other
+
+
+=============================================================
+GAP 8 — NEWS PAGE: Missing entirely — certificates and appreciation letters not present
+=============================================================
+The original dthree.co/News.aspx is a document downloads page (not a blog). The rebuild maps /en/blog as "News" in the footer but the blog is empty and the original documents are missing.
+
+ACTION: Create page /en/news (separate from /en/blog) with two sections:
+
+Section 1 — Accreditation Certificates:
+- HRMS Accredite Certificate — Download button linking to /assets/certificate/Accredite_certificate_HRMS.pdf
+- Queue Management System Accredite Certificate — Download button linking to /assets/certificate/Accredite_certificate_QMS.pdf
+
+Section 2 — Appreciation Letters:
+- LMRA (Labour Market Regulatory Authority) — Download button linking to /assets/AppreciationLetter/LMRA.pdf
+- SLRB (Survey & Land Registration Bureau) — Download button linking to /assets/AppreciationLetter/SLRB.pdf
+
+Add "News & Credentials" link in the Company section of the mega menu and in the footer, pointing to /en/news.
+The /en/blog URL can remain for future blog content but should not be labelled "News" in navigation — rename to "Blog" or "Insights".
+
+
+=============================================================
+GAP 9 — ABOUT PAGE: Fabricated team names and invented timeline
+=============================================================
+The team section lists: Faris Al-Hassan, Sara Mahmood, Khalid Al-Rashidi, Nadia Yousef — none of these are real D3 staff.
+The timeline lists invented milestone dates.
+
+ACTION OPTION A (if real team info is available): Replace with real names, titles and photos.
+ACTION OPTION B (if real team info is not available): Remove the "Our Team" section entirely from /en/about. Replace with a "Why work with us" or "Our expertise" section using factual claims only.
+
+For the timeline, either verify dates against real D3 history or simplify to: "Founded 2010 in Bahrain · 15+ years serving the GCC · 500+ enterprise clients · Operations in Middle-East and Europe."
+
+The Mission / Vision / Values section in the About page is good but should match the original wording more closely:
+- Mission: "To help customers achieve their business objectives by providing innovative and best-in-class IT solutions and services. To be the No.1 solution provider with the best after-sales support."
+- Vision: "To be recognised as a top company for providing IT solutions."
+- Values: "Leading change, integrity, respect for the individual, excellence, learning and sharing."
+
+
+=============================================================
+GAP 10 — HOME PAGE: Stat counters broken (showing "0+")
+=============================================================
+The animated countUp counters on the home page hero section show "0+" — the animation is not triggering.
+
+ACTION: Fix the countUp/IntersectionObserver logic so that when the stats section scrolls into view, the counters animate from 0 to their target values:
+- Years Active: target 15
+- Clients: target 500
+- Countries: target 10 (not 6 — fix the inconsistency between hero "6+" and clients page "10+")
+
+Use IntersectionObserver to trigger animation on scroll-into-view. Use a duration of ~2 seconds with easeOut.
+
+
+=============================================================
+GAP 11 — SITEWIDE: Missing floating WhatsApp button
+=============================================================
+The original site has a persistent floating WhatsApp CTA button visible on all pages.
+
+ACTION: Add a fixed-position floating WhatsApp button to the global layout (visible on all pages, all screen sizes).
+
+Specs:
+- Position: fixed, bottom-right corner (bottom: 24px, right: 24px)
+- Icon: WhatsApp logo (green)
+- Link: https://wa.me/97313333445
+- Tooltip on hover: "Chat with us on WhatsApp"
+- z-index: above all other page content
+- On mobile: smaller size, same position
+
+
+=============================================================
+GAP 12 — DIGITAL SIGNAGE PAGE: Missing product sub-sections
+=============================================================
+The rebuild's /en/solutions/digital-signage covers LED and vertical displays but is missing three entire product categories from the original dthree.co/DigitalDisplaySolution.aspx.
+
+ACTION: Add these three sections to /en/solutions/digital-signage:
+
+Section — Virtual Interactive eBook:
+- Developed by D3 — convex projection screen, desk representation system
+- Authentic book form factor design with transparent acrylic body
+- Rear projection (no hand shadow, higher picture quality than front projection)
+- Supports all content formats: text, images, SWF, video
+- Use cases: Museum, Exhibition, Events, Showrooms, Education
+- Brochure download: /brochure/Ebook.pdf
+
+Section — IP Power Controller:
+- Fully customised controller board design and fabrication
+- Remote power management via web-based GUI (no physical site access required)
+- Manages AC or DC voltage
+- High or low ampere configurations
+- Power controller types: Web Power Switch, Ethernet Power Controller, Web-based DIN Relay, Industrial Power Switch
+- Applicable fields: Industrial machines, Remote sites, Data Centres, Building power management
+
+Update the Vertical Display section to include:
+- Available from 42" in multiple sizes
+- Vertical stand with vertical or horizontal display orientation
+- Full HD and 4K options
+- Aspect ratio 16:9 or 4:3
+- Long life high brightness LED screen
+- Metal frame + toughened glass
+- Black, silver or customised colour
+- Designed for 24/7 operation
+- Built-in Windows or Android OS
+- Built-in Wi-Fi, Ethernet module and speakers
+- Remote control included
+- Touch screen optional
+- Stand-alone or centralised management application optional
+- Brochure download: /brochure/VerticalSignnage.pdf
+
+LED Display section — add:
+- Pitch sizes from 4mm to 20mm
+- Suitable for indoor and outdoor (fully weatherproof outdoor units)
+- Uses First Selection LEDs (top 10%) with 5 nanometre wavelength tolerance for colour uniformity
+- HDV pixel technology for increased image quality
+- Customised software developed to client requirements
+- Display types: Ticker Single-Line Series, Multi-Line Series
+- Brochure download: /brochure/LED_24.pdf
+
+
+=============================================================
+GAP 13 — RFID PAGE: Missing document tracking and warehouse WMS sections
+=============================================================
+The rebuild's /en/solutions/rfid-asset-tracking is missing two complete product sections from dthree.co/RFID.aspx.
+
+ACTION: Add these sections to /en/solutions/rfid-asset-tracking:
+
+Section — RFID Document Tracking System:
+- User-friendly system to track document flow within organisations
+- Reduces employee time for document management and tracking
+- Each document assigned a unique RFID label for tracking
+- Passive RFID tracking: tags with no internal power, use electromagnetic signals from reader
+- Applicable for: access control, document tracking, file management
+
+Section — RFID/Barcode Warehouse Management System (WMS):
+- Goods Receiving: based on Purchase Order / Goods Receiving Note
+- Tagging Items: every inventory item RFID-tagged, then binned/put-away
+- Picking: based on Sales Order / Pick List — rack labels and items scanned via RFID, updated to back office in real time
+- Dispatch/Shipping: vehicle loading, delivery confirmation
+- Stock Take / Cycle Count: periodical inventory count matched against physical stock and system stock
+- Hardware supported: Barcode Scanners, Mobile Computers (handheld terminals), Barcode Printers
+- Brochure download: /brochure/RFID_24.pdf
+
+Also add YouTube embed or link: https://youtu.be/VCvD62vv1mQ (from original RFID page)
+
+
+=============================================================
+GAP 14 — IP CCTV & ACCESS CONTROL: Missing sub-page separation
+=============================================================
+The rebuild combines IP CCTV and Access Control into a single page /en/solutions/access-control-system. The original has two separate pages.
+
+ACTION OPTION A: Create separate pages /en/solutions/ip-cctv and /en/solutions/access-control with their respective content.
+ACTION OPTION B (simpler): Keep as one combined page but add a clear tabbed or sectioned layout distinguishing IP CCTV from Access Control.
+
+IP CCTV section content (from dthree.co/IPCCTV.aspx):
+- D3 is a system integrator, not just a CCTV seller
+- Local or remote monitoring via networked surveillance
+- Suitable for indoor and outdoor, business and home environments
+- Camera types supported: Indoor/outdoor, Dome/box/PTZ, Wide angle, 360-degree fixed, Weather proof (IP68), Network video recorder, Web-based and server software, Varifocal and optical lenses, Day and night with IR
+
+Access Control section content (from dthree.co/AccessControlSystems.aspx):
+- Biometric access control uses unique physical features as keys
+- Controller types: Proximity Card or NFC, Fingerprint, Face Recognition, Stand-Alone, Centralised
+- No forgotten passwords or lost keys
+- Scalable from single door to enterprise-wide centralized management
+
+
+=============================================================
+GAP 15 — ERP PAGE: Missing module detail and sub-sections
+=============================================================
+The rebuild's /en/solutions/erp-retail-management is light on content. Original dthree.co/ERP.aspx has specific module breakdowns.
+
+ACTION: Expand /en/solutions/erp-retail-management to include:
+
+ERP structure section — Multi-tier support:
+- Multi Companies
+- Multi Groups
+- Multi Branches
+- Multi Sub Branches
+- Multi Divisions
+- Multi Locations
+
+ERP modules list:
+- Procurement Control
+- Import & Local Purchase
+- Inventory Management
+- Sales Management
+- Retail Management
+- Financial Accounting
+- Production Control
+- Fixed Assets
+- Restaurant Management
+- Payroll & HR Management
+- Van Sales / RFID integration
+- Time & Attendance integration
+
+Benefits section:
+- Economical pricing
+- Comprehensive warranty
+- 100% customisation
+- Integration with 3rd party hardware and software
+- Training and support included
+- Free updates
+
+Inventory Management sub-section (from dthree.co/InventoryManagement.aspx):
+
+Procurement:
+- Issue Purchase Orders
+- Goods Receipt Management
+- Pending Order Status and Control
+- Summary and Purchase History Management
+- Creditors Management (Trade & Others)
+- Item Return with document attachment
+
+Sales:
+- Item issue to projects
+- Margin setting by percentage for item sales
+- Sales of inventory
+- FIFO costing method
+- Detailed and summarised sales reports
+- Location-wise and project-wise sales reports
+- Sales returns with document attachment
+
+Inventory:
+- Comprehensive Item/Stock Master
+- Stock Status Report (quantity and valuation)
+- Stock Control per store/outlet and consolidated
+- Inter-transfer of goods between locations
+- Multiple stock locations management
+- Cost management: purchase prices, landed cost, selling prices
+- FIFO/Average costing method
+
+Electronic Shelf Labels sub-section (from dthree.co/ElectronicShelfLabels.aspx):
+- Bidirectional, graphic and segment label options
+- Optimises pricing and guarantees price integrity
+- Scalable deployment: cloud or local
+- Cross-platform management software (PC, tablet, PDA)
+- Visual interface with flexible editing modules
+- Supports promotions, product availability and omni-channel retail
+
+
+=============================================================
+GAP 16 — QMS PAGE: Missing YouTube video embed
+=============================================================
+The original dthree.co/QmsComplete.aspx has a YouTube video demonstrating the queue system in action.
+
+ACTION: Add a YouTube embed or prominent video link button to /en/solutions/queue-management-system.
+Video URL: https://youtu.be/RnzjXYywChE
+Label it: "Watch TimeTech QMS in action"
+
+
+=============================================================
+GAP 17 — CONTACT PAGE: Missing fax number and Europe office
+=============================================================
+The contact page at /en/contact is missing:
+- The fax number: +973 13333446
+- The Europe office details
+
+ACTION: Add to the contact page alongside the existing Bahrain office details:
+
+Fax (Bahrain): +973 13333446
+
+Europe Office:
+Address: Benalmádena, Málaga, España
+Phone: +34 695 581 613
+Email: hello@dthree.co
+
+Also update the footer to include both office locations.
+
+
+=============================================================
+GAP 18 — FOOTER: Missing Careers and Sitemap links
+=============================================================
+The original footer has links to Careers and Sitemap pages. These are missing from the rebuild footer.
+
+ACTION: Add to footer:
+- Careers link → /en/careers (create a basic page or placeholder)
+- Privacy Policy link → /en/privacy-policy (create a basic page or placeholder)
+- Sitemap link → /en/sitemap (create a basic page or placeholder)
+
+Original Careers page was at dthree.co/careers.aspx.
+
+
+=============================================================
+GAP 19 — BROCHURE DOWNLOADS: Not available anywhere in rebuild
+=============================================================
+The original site has downloadable PDF brochures on multiple solution pages. These are completely absent from the rebuild.
+
+ACTION: Add PDF download buttons to the following pages using the original file paths:
+
+1. /en/solutions/time-attendance-system — button: "Download Brochure" → /brochure/TA_HR_PAYROLL_V1.11.pdf
+2. /en/solutions/time-attendance-enterprise — button: "Download Brochure" → /brochure/TA_HR_PAYROLL_V1.11.pdf
+3. /en/solutions/hr-payroll-software — button: "Download Brochure" → /brochure/TA_HR_PAYROLL_V1.11.pdf
+4. /en/solutions/visitor-management — button: "Download Brochure" → /brochure/TA_HR_PAYROLL_V1.11.pdf
+5. /en/solutions/queue-management-system — button: "Download Brochure" → /brochure/QMS_24.pdf
+6. /en/solutions/digital-signage (Vertical Displays section) — button: "Download Vertical Display Brochure" → /brochure/VerticalSignnage.pdf
+7. /en/solutions/digital-signage (LED section) — button: "Download LED Brochure" → /brochure/LED_24.pdf
+8. /en/solutions/digital-signage (eBook section) — button: "Download eBook Brochure" → /brochure/Ebook.pdf
+9. /en/solutions/rfid-asset-tracking — button: "Download Brochure" → /brochure/RFID_24.pdf
+
+Brochure files need to be copied from dthree.co/brochure/ to the rebuild's public/brochure/ directory.
+
+
+=============================================================
+GAP 20 — HOME HERO STATS: Country count inconsistency
+=============================================================
+The home page hero shows "6+ Countries" but the /en/clients page says "10+ Countries" and the about page says "10+ Countries served."
+
+ACTION: Standardise to "10+" across all stat instances on all pages. 
+Affected locations: home page hero section, clients page stats bar, about page stats bar.

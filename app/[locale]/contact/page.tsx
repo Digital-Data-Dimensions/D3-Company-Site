@@ -40,11 +40,17 @@ const ZapIcon = () => (
 );
 
 export default function ContactPage() {
-  const contacts = [
+  const bahrain = [
     { icon: <MapPinIcon />, label: 'Address', value: '22, Bldg 1033, Road 3925, Umm Al Hassam 339, Bahrain' },
     { icon: <PhoneIcon />, label: 'Phone', value: '+973 1333 3445', href: 'tel:+97313333445' },
+    { icon: <PhoneIcon />, label: 'Fax', value: '+973 1333 3446', href: 'tel:+97313333446' },
     { icon: <MailIcon />, label: 'Email', value: 'info@dthree.co', href: 'mailto:info@dthree.co' },
     { icon: <WhatsAppIcon />, label: 'WhatsApp', value: '+973 1333 3445', href: 'https://wa.me/97313333445' },
+  ];
+  const europe = [
+    { icon: <MapPinIcon />, label: 'Address', value: 'Benalmádena, Málaga, España' },
+    { icon: <PhoneIcon />, label: 'Phone', value: '+34 695 581 613', href: 'tel:+34695581613' },
+    { icon: <MailIcon />, label: 'Email', value: 'hello@dthree.co', href: 'mailto:hello@dthree.co' },
   ];
 
   return (
@@ -76,11 +82,34 @@ export default function ContactPage() {
 
             {/* Contact info */}
             <div>
+              <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 20, padding: '32px 28px', marginBottom: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font)', fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 20 }}>Bahrain Office</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                  {bahrain.map((c) => (
+                    <div key={c.label + c.value} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                      <span style={{
+                        width: 36, height: 36, borderRadius: '50%',
+                        background: 'var(--bg-highlight)', border: '1px solid var(--border)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        color: 'var(--heading)', flexShrink: 0,
+                      }}>{c.icon}</span>
+                      <div>
+                        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
+                        {c.href ? (
+                          <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500, textDecoration: 'none' }}>{c.value}</a>
+                        ) : (
+                          <div style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500 }}>{c.value}</div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 20, padding: '32px 28px', marginBottom: 20 }}>
-                <h3 style={{ fontFamily: 'var(--font)', fontSize: 18, fontWeight: 700, color: 'var(--heading)', marginBottom: 24 }}>Get in touch</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                  {contacts.map((c) => (
-                    <div key={c.label} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                <h3 style={{ fontFamily: 'var(--font)', fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 20 }}>Europe Office</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                  {europe.map((c) => (
+                    <div key={c.label + c.value} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                       <span style={{
                         width: 36, height: 36, borderRadius: '50%',
                         background: 'var(--bg-highlight)', border: '1px solid var(--border)',

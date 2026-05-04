@@ -53,26 +53,31 @@ export function Footer() {
 
   const solutions = [
     { label: 'Time Attendance', href: '/solutions/time-attendance-system' },
-    { label: 'HRMS & Payroll', href: '/solutions/timetech-application' },
+    { label: 'HRMS & Payroll', href: '/solutions/hr-payroll-software' },
     { label: 'Queue Management', href: '/solutions/queue-management-system' },
     { label: 'Digital Signage', href: '/solutions/digital-signage' },
     { label: 'RFID Tracking', href: '/solutions/rfid-asset-tracking' },
     { label: 'Access Control', href: '/solutions/access-control-system' },
     { label: 'ERP', href: '/solutions/erp-retail-management' },
+    { label: 'Consultancy', href: '/solutions/consultancy' },
   ];
 
   const company = [
     { label: t('about'), href: '/about' },
     { label: t('ourClients'), href: '/clients' },
     { label: t('partners'), href: '/partners' },
-    { label: t('news'), href: '/blog' },
-    { label: t('consultancy'), href: '/contact' },
+    { label: 'News & Credentials', href: '/news' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Sitemap', href: '/sitemap' },
   ];
 
   const contactItems = [
     { icon: <MapPinIcon />, value: 'Umm Al Hassam, Bahrain' },
     { icon: <PhoneIcon />, value: '+973 1333 3445', href: 'tel:+97313333445' },
     { icon: <MailIcon />, value: 'info@dthree.co', href: 'mailto:info@dthree.co' },
+    { icon: <MapPinIcon />, value: 'Benalmádena, Málaga, España' },
+    { icon: <PhoneIcon />, value: '+34 695 581 613', href: 'tel:+34695581613' },
   ];
 
   return (
