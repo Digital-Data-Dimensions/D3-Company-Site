@@ -24,8 +24,8 @@ export function CTASection() {
             <div style={{ position: 'absolute', bottom: -100, left: '30%', width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,107,43,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
             <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Get started today</div>
-              <div style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, letterSpacing: -1, lineHeight: 1.12, color: '#fff', marginBottom: 14 }}>
+              <div style={{ fontSize: 11, fontWeight: 400, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Get started today</div>
+              <div style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 600, letterSpacing: -1, lineHeight: 1.12, color: '#fff', marginBottom: 14 }}>
                 Ready to <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>transform</em><br />your operations?
               </div>
               <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', fontWeight: 300, maxWidth: 400, lineHeight: 1.7 }}>

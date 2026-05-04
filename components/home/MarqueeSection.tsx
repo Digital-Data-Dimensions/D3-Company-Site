@@ -23,7 +23,7 @@ export function MarqueeSection() {
         {[...items, ...items].map((item, i) => (
           <span key={i} style={{
             display: 'flex', alignItems: 'center', gap: 14,
-            fontSize: 11, fontWeight: 700, letterSpacing: '0.12em',
+            fontSize: 11, fontWeight: 400, letterSpacing: '0.12em',
             textTransform: 'uppercase', color: 'var(--muted)', whiteSpace: 'nowrap',
           }}>
             {item}

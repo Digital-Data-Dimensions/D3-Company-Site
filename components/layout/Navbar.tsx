@@ -51,7 +51,7 @@ const TIMETECH_ITEMS = [
 ];
 
 const OPERATIONS = [
-  { slug: 'queue-management-system', label: 'Queue Management', desc: 'WhatsApp virtual queuing & kiosk' },
+  { slug: 'queue-management-system', label: 'Queue Management', desc: 'Wired and wireless kiosk-based queuing system' },
   { slug: 'rfid-asset-tracking', label: 'RFID & Asset Tracking', desc: 'Real-time asset visibility' },
   { slug: 'access-control-system', label: 'Access Control & CCTV', desc: 'IP cameras & biometric doors' },
   { slug: 'digital-signage', label: 'Digital Signage', desc: 'LED & managed display networks' },

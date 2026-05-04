@@ -46,8 +46,8 @@ export const SOLUTIONS = [
     slug: 'queue-management-system',
     num: '05',
     title: 'Queue Management System',
-    desc: 'Wired and wireless kiosk-based queuing with WhatsApp virtual queue, audio announcements, live analytics and multi-service category management for ministries and enterprises.',
-    tags: ['Kiosk', 'WhatsApp Queue', 'Wireless', 'Analytics'],
+    desc: 'Wired and wireless kiosk-based queue management with audio announcements, multi-service categories, live analytics and supervisor reporting for ministries and enterprises.',
+    tags: ['Kiosk', 'Wired & Wireless', 'Analytics'],
     icon: 'users',
   },
   {

@@ -35,7 +35,7 @@ export function SolutionsSection() {
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
               <SectionEyebrow center>What We Offer</SectionEyebrow>
             </div>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 16 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 600, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 16 }}>
               Enterprise solutions for<br />every operational need
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75, maxWidth: 520, margin: '0 auto' }}>

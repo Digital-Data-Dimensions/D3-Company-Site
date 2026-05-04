@@ -22,7 +22,7 @@ export function CaseStudiesSection() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 56, flexWrap: 'wrap', gap: 20 }}>
             <div>
               <SectionEyebrow>Case Studies</SectionEyebrow>
-              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 0 }}>
+              <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700 , letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 0 }}>
                 Real results for real <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>clients</em>
               </h2>
             </div>

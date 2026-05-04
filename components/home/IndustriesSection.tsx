@@ -20,7 +20,7 @@ export function IndustriesSection() {
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
               <SectionEyebrow center>Industries</SectionEyebrow>
             </div>
-            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 700, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 18 }}>
+            <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 600, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 18 }}>
               Built for your <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>industry</em>
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 300, lineHeight: 1.75, maxWidth: 500, margin: '0 auto' }}>
@@ -46,10 +46,10 @@ export function IndustriesSection() {
                 }}
                 className="ind-card"
               >
-                <div style={{ width: 52, height: 52, borderRadius: 14, background: 'var(--bg-highlight)', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', color: 'var(--nav)' }}>
+                <div style={{ width: 52, height: 52, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', color: 'var(--nav)' }}>
                   {INDUSTRY_ICONS[ind.icon]}
                 </div>
-                <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--heading)', marginBottom: 8 }}>{ind.title}</div>
+                <div style={{ fontSize: 16, fontWeight: 500, color: 'var(--heading)', marginBottom: 8 }}>{ind.title}</div>
                 <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.6 }}>{ind.desc}</div>
               </a>
             </RevealOnScroll>

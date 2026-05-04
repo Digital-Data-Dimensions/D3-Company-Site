@@ -334,12 +334,11 @@ const SOLUTION_DETAILS: Record<string, {
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'queue-management-system': {
-    seoKeyword: 'queue management system Bahrain GCC kiosk WhatsApp',
-    tagline: 'Wired, wireless and cloud-based queuing for ministries, banks, hospitals and enterprises, with WhatsApp virtual queuing, audio announcements and live analytics.',
-    highlights: ['15" all-in-one KIOSK', 'WhatsApp virtual queue', 'Wired or wireless', 'Audio announcements', 'Multi-lingual support', 'Real-time analytics'],
+    seoKeyword: 'queue management system Bahrain GCC kiosk wired wireless',
+    tagline: 'Wired and wireless kiosk-based queuing for ministries, banks, hospitals and enterprises, with audio announcements, live analytics and supervisor reporting.',
+    highlights: ['15" all-in-one KIOSK', 'Wired or wireless', 'Audio announcements', 'Multi-lingual support', 'Real-time analytics', 'Supervisor reporting'],
     features: [
       { title: '15" Touchscreen Kiosk', desc: 'All-in-one kiosk with built-in server, 80mm thermal printer and audio system, reducing single-point failure.' },
-      { title: 'WhatsApp Virtual Queue', desc: 'Customers join and monitor queues via WhatsApp, eliminating physical waiting completely.' },
       { title: 'Wired & Wireless Options', desc: 'Ethernet cabling or fully wireless, both options available based on site requirements.' },
       { title: 'Multi-Service Categories', desc: 'Handles up to 10+ service categories with VIP and priority routing built in.' },
       { title: 'Counter LED Displays', desc: '8-digit bright LED counter displays, 35.4cm wide, showing ticket and counter numbers.' },
