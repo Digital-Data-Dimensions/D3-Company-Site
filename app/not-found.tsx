@@ -139,7 +139,7 @@ export default function NotFound() {
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   padding: '10px 12px', borderRadius: 8, textDecoration: 'none',
-                  fontSize: 14, fontWeight: 500, color: 'var(--body)',
+                  fontSize: 14, fontWeight: 400, color: 'var(--body)',
                   transition: 'background 0.15s, color 0.15s',
                 }}
                 className="quick-link"

@@ -50,7 +50,7 @@ export default function BlogListPage() {
                   <h2 style={{ fontFamily: 'var(--font)', fontSize: 20, fontWeight: 400, color: 'var(--heading)', letterSpacing: -0.3, lineHeight: 1.3, marginBottom: 14 }}>{post.title}</h2>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, marginBottom: 24 }}>{post.excerpt}</p>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 500 }}>
+                    <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 400 }}>
                       {new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </span>
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--muted)' }}>

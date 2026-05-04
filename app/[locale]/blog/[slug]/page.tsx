@@ -78,7 +78,7 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Hero */}
       <section className="page-hero" style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
-          <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--muted)', textDecoration: 'none', fontWeight: 500, marginBottom: 24 }}>← Back to Blog</Link>
+          <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--muted)', textDecoration: 'none', fontWeight: 400, marginBottom: 24 }}>← Back to Blog</Link>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
             {post.tags.map((tag) => (
               <span key={tag} style={{ fontSize: 11, fontWeight: 400, padding: '4px 10px', borderRadius: 100, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, letterSpacing: -1.2, lineHeight: 1.1, color: 'var(--heading)', marginBottom: 20, maxWidth: 800 }}>
             {post.title}
           </h1>
-          <div style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 500 }}>
+          <div style={{ fontSize: 13, color: 'var(--muted)', fontWeight: 400 }}>
             {new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} · D3 Team
           </div>
         </div>

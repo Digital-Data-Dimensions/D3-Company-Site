@@ -49,7 +49,7 @@ export function IndustriesSection() {
                 <div style={{ width: 52, height: 52, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', color: 'var(--nav)' }}>
                   {INDUSTRY_ICONS[ind.icon]}
                 </div>
-                <div style={{ fontSize: 16, fontWeight: 500, color: 'var(--heading)', marginBottom: 8 }}>{ind.title}</div>
+                <div style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 8 }}>{ind.title}</div>
                 <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.6 }}>{ind.desc}</div>
               </a>
             </RevealOnScroll>

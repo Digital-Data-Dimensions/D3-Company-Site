@@ -87,11 +87,11 @@ export default async function CaseStudyPage({ params }: Props) {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                   <div>
                     <div style={{ fontSize: 11, color: 'var(--muted)', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 4 }}>Client</div>
-                    <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--heading)' }}>{cs.clientName}</div>
+                    <div style={{ fontSize: 14, fontWeight: 400, color: 'var(--heading)' }}>{cs.clientName}</div>
                   </div>
                   <div>
                     <div style={{ fontSize: 11, color: 'var(--muted)', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 4 }}>Sector</div>
-                    <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--heading)' }}>{cs.sector ?? cs.clientType}</div>
+                    <div style={{ fontSize: 14, fontWeight: 400, color: 'var(--heading)' }}>{cs.sector ?? cs.clientType}</div>
                   </div>
                 </div>
                 <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
@@ -122,7 +122,7 @@ export default async function CaseStudyPage({ params }: Props) {
                   transition: 'border-color 0.2s',
                 }}>
                   <div style={{ fontSize: 10, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>{ocs.clientType}</div>
-                  <div style={{ fontSize: 15, fontWeight: 500, color: 'var(--heading)', marginBottom: 6 }}>{ocs.clientName}</div>
+                  <div style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', marginBottom: 6 }}>{ocs.clientName}</div>
                   <div style={{ fontSize: 12, color: 'var(--muted)' }}>View project →</div>
                 </Link>
               ))}

@@ -78,7 +78,7 @@ export default function SitemapPage() {
                     <li key={link.href}>
                       <Link
                         href={link.href as Parameters<typeof Link>[0]['href']}
-                        style={{ fontSize: 14, color: 'var(--body)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.15s' }}
+                        style={{ fontSize: 14, color: 'var(--body)', textDecoration: 'none', fontWeight: 400, transition: 'color 0.15s' }}
                       >
                         {link.label}
                       </Link>

@@ -228,7 +228,7 @@ export default function AboutPage() {
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
-                  <h3 style={{ fontSize: 20, fontWeight: 500, color: 'var(--heading)', marginBottom: 12 }}>{val.title}</h3>
+                  <h3 style={{ fontSize: 20, fontWeight: 400, color: 'var(--heading)', marginBottom: 12 }}>{val.title}</h3>
                   <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400 }}>{val.desc}</p>
                 </div>
               </RevealOnScroll>
@@ -258,7 +258,7 @@ export default function AboutPage() {
                 ].map((item) => (
                   <div key={item.year} style={{ textAlign: 'center', minWidth: 120 }}>
                     <div style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, color: 'var(--cta)', letterSpacing: -1, lineHeight: 1 }}>{item.year}</div>
-                    <div style={{ fontSize: 13, color: 'var(--body)', marginTop: 6, fontWeight: 500, lineHeight: 1.4 }}>{item.label}</div>
+                    <div style={{ fontSize: 13, color: 'var(--body)', marginTop: 6, fontWeight: 400, lineHeight: 1.4 }}>{item.label}</div>
                   </div>
                 ))}
               </div>
@@ -287,7 +287,7 @@ export default function AboutPage() {
                   display: 'flex', alignItems: 'center', gap: 12,
                   background: 'var(--card)', border: '1px solid var(--border)',
                   borderRadius: 12, padding: '14px 18px',
-                  fontSize: 14, fontWeight: 500, color: 'var(--body)',
+                  fontSize: 14, fontWeight: 400, color: 'var(--body)',
                 }}>
                   <span style={{
                     width: 22, height: 22, borderRadius: '50%', flexShrink: 0,

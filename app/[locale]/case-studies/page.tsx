@@ -42,7 +42,7 @@ export default function CaseStudiesListPage() {
                       letterSpacing: '0.06em', textTransform: 'uppercase',
                     }}>{cs.clientType}</span>
                   </div>
-                  <div style={{ fontSize: 17, fontWeight: 500, color: 'var(--heading)', marginBottom: 14, lineHeight: 1.35 }}>{cs.clientName}</div>
+                  <div style={{ fontSize: 17, fontWeight: 400, color: 'var(--heading)', marginBottom: 14, lineHeight: 1.35 }}>{cs.clientName}</div>
                   <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 8 }}>What we delivered</div>
                   <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.7, fontWeight: 400 }}>{cs.solution}</div>
                 </div>

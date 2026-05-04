@@ -96,9 +96,9 @@ export default function ContactPage() {
                       <div>
                         <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
                         {c.href ? (
-                          <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500, textDecoration: 'none' }}>{c.value}</a>
+                          <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 400, textDecoration: 'none' }}>{c.value}</a>
                         ) : (
-                          <div style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500 }}>{c.value}</div>
+                          <div style={{ fontSize: 14, color: 'var(--body)', fontWeight: 400 }}>{c.value}</div>
                         )}
                       </div>
                     </div>
@@ -119,9 +119,9 @@ export default function ContactPage() {
                       <div>
                         <div style={{ fontSize: 11, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{c.label}</div>
                         {c.href ? (
-                          <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500, textDecoration: 'none' }}>{c.value}</a>
+                          <a href={c.href} style={{ fontSize: 14, color: 'var(--body)', fontWeight: 400, textDecoration: 'none' }}>{c.value}</a>
                         ) : (
-                          <div style={{ fontSize: 14, color: 'var(--body)', fontWeight: 500 }}>{c.value}</div>
+                          <div style={{ fontSize: 14, color: 'var(--body)', fontWeight: 400 }}>{c.value}</div>
                         )}
                       </div>
                     </div>

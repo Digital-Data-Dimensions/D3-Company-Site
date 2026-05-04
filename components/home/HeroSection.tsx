@@ -329,7 +329,7 @@ export function HeroSection() {
           border: 1px solid var(--border);
           color: var(--muted);
           font-size: 11px;
-          font-weight: 500;
+          font-weight: 400;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           padding: 6px 16px;
@@ -403,7 +403,7 @@ export function HeroSection() {
         }
         .hs-stat-l {
           font-size: 10px;
-          font-weight: 500;
+          font-weight: 400;
           color: var(--muted);
           text-transform: uppercase;
           letter-spacing: 0.12em;

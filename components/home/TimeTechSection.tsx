@@ -86,7 +86,7 @@ export function TimeTechSection() {
                 <div className="icon-wrap icon-wrap-md" style={{ marginBottom: 16 }}>
                   {mod.icon}
                 </div>
-                <div style={{ fontSize: 16, fontWeight: 500, color: 'var(--heading)', marginBottom: 8 }}>{mod.label}</div>
+                <div style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 8 }}>{mod.label}</div>
                 <div style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.6 }}>{mod.desc}</div>
               </div>
             </RevealOnScroll>

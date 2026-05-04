@@ -173,19 +173,6 @@ export function Navbar() {
                       {/* Col 1 — TimeTech Suite */}
                       <div style={{ padding: '20px 8px 16px', borderRight: '1px solid var(--border)' }}>
                         <div className="d3-mega-col-head">TimeTech Suite</div>
-                        {/* Featured: TimeTech Platform */}
-                        <Link
-                          href="/solutions/timetech-application"
-                          role="menuitem"
-                          onClick={() => setActiveMenu(null)}
-                          className="d3-dd-item d3-dd-featured"
-                        >
-                          <span className="d3-dd-icon-bare"><ClockSVG /></span>
-                          <span>
-                            <span className="d3-dd-label">TimeTech Platform</span>
-                            <span className="d3-dd-desc">Complete workforce management suite</span>
-                          </span>
-                        </Link>
                         {/* Grouped sub-items */}
                         {TIMETECH_ITEMS.map(group => (
                           <div key={group.group}>
@@ -263,10 +250,10 @@ export function Navbar() {
 
                     {/* Footer bar */}
                     <div style={{ borderTop: '1px solid var(--border)', padding: '10px 16px', display: 'flex', justifyContent: 'flex-end' }}>
-                      <Link href="/solutions/timetech-application" onClick={() => setActiveMenu(null)}
-                        style={{ fontSize: 12, fontWeight: 500, color: 'var(--cta)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}
+                      <Link href="/contact" onClick={() => setActiveMenu(null)}
+                        style={{ fontSize: 12, fontWeight: 400, color: 'var(--cta)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}
                       >
-                        View all solutions <ArrowSVG />
+                        Request a Demo <ArrowSVG />
                       </Link>
                     </div>
                   </div>
@@ -366,6 +353,7 @@ export function Navbar() {
                     onClick={() => setMobileOpen(false)} className="d3-mob-link"
                     style={{ paddingLeft: 20 }}
                   >
+                    <span className="d3-mob-icon" style={{ color: 'var(--muted)' }}><ChevronRightSVG /></span>
                     {item.label}
                   </Link>
                 ))}
@@ -377,6 +365,12 @@ export function Navbar() {
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
               >
+                <span className="d3-mob-icon" style={{ color: 'var(--muted)' }}>
+                  {s.slug === 'queue-management-system' && <LayersSVG />}
+                  {s.slug === 'rfid-asset-tracking' && <ShieldSVG />}
+                  {s.slug === 'access-control-system' && <MonitorSVG />}
+                  {s.slug === 'digital-signage' && <MonitorSVG />}
+                </span>
                 {s.label}
               </Link>
             ))}
@@ -386,6 +380,10 @@ export function Navbar() {
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
               >
+                <span className="d3-mob-icon" style={{ color: 'var(--muted)' }}>
+                  {s.slug === 'erp-retail-management' && <BriefcaseSVG />}
+                  {s.slug === 'consultancy' && <InfoSVG />}
+                </span>
                 {s.label}
               </Link>
             ))}
@@ -401,6 +399,7 @@ export function Navbar() {
               <Link key={ind.slug} href={`/industries/${ind.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
               >
+                <span className="d3-mob-icon" style={{ color: 'var(--muted)' }}>{ind.icon}</span>
                 {ind.label}
               </Link>
             ))}
@@ -416,6 +415,7 @@ export function Navbar() {
               <Link key={c.href} href={c.href as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
               >
+                <span className="d3-mob-icon" style={{ color: 'var(--muted)' }}>{c.icon}</span>
                 {c.label}
               </Link>
             ))}
@@ -473,7 +473,7 @@ export function Navbar() {
         .d3-nav-btn {
           display: flex; align-items: center; gap: 4px;
           background: none; border: none; cursor: pointer;
-          font-family: var(--font); font-size: 13px; font-weight: 500;
+          font-family: var(--font); font-size: 13px; font-weight: 400;
           color: var(--body); padding: 8px 12px; border-radius: 6px;
           transition: color 0.15s, background 0.15s; white-space: nowrap;
           min-height: 44px;
@@ -482,7 +482,7 @@ export function Navbar() {
         .d3-chevron { display: flex; transition: transform 0.2s; }
         .d3-chevron--open { transform: rotate(180deg); }
         .d3-nav-link {
-          font-size: 13px; font-weight: 500; color: var(--body);
+          font-size: 13px; font-weight: 400; color: var(--body);
           text-decoration: none; padding: 8px 12px; border-radius: 6px;
           transition: color 0.15s, background 0.15s; display: block;
           min-height: 44px; display: flex; align-items: center;
@@ -517,7 +517,7 @@ export function Navbar() {
         }
         .d3-dd-label {
           display: flex; align-items: center; gap: 6px;
-          font-size: 13px; font-weight: 500; color: var(--heading);
+          font-size: 13px; font-weight: 400; color: var(--heading);
           line-height: 1.3;
         }
         .d3-dd-desc {
@@ -540,7 +540,7 @@ export function Navbar() {
           background: transparent; color: var(--cta);
           padding: 9px 20px; border-radius: 100px;
           border: 1.5px solid var(--cta);
-          font-size: 13px; font-weight: 300; text-decoration: none;
+          font-size: 13px; font-weight: 400; text-decoration: none;
           letter-spacing: 0.02em; white-space: nowrap;
           transition: background 0.2s, color 0.2s, transform 0.2s;
           min-height: 40px;
@@ -641,7 +641,7 @@ export function Navbar() {
         .d3-mob-link {
           display: flex; align-items: center; gap: 10px;
           padding: 11px 14px; border-radius: 8px;
-          font-size: 14px; font-weight: 500; color: var(--body);
+          font-size: 14px; font-weight: 400; color: var(--body);
           text-decoration: none; margin-bottom: 2px;
           -webkit-tap-highlight-color: transparent;
         }
@@ -651,6 +651,11 @@ export function Navbar() {
           display: flex; align-items: center; justify-content: center;
           color: var(--muted);
         }
+        .d3-mob-icon {
+          width: 20px; height: 20px; flex-shrink: 0;
+          display: flex; align-items: center; justify-content: center;
+        }
+        .d3-mob-icon svg { width: 16px; height: 16px; }
       `}</style>
     </div>
   );

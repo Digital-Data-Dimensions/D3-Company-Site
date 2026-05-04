@@ -38,7 +38,7 @@ const styles: Record<string, React.CSSProperties> = {
   'outline-white': {
     display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
     background: 'transparent', color: 'rgba(255,255,255,0.75)', padding: '13px 28px',
-    borderRadius: 100, fontSize: 14, fontWeight: 500,
+    borderRadius: 100, fontSize: 14, fontWeight: 400,
     textDecoration: 'none', border: '1.5px solid rgba(255,255,255,0.2)',
     cursor: 'pointer', transition: 'all 0.22s cubic-bezier(0.4,0,0.2,1)', whiteSpace: 'nowrap', letterSpacing: '0.02em',
   },

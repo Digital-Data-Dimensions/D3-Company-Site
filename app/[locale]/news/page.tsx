@@ -11,10 +11,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const DownloadIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
     <polyline points="7 10 12 15 17 10"/>
     <line x1="12" y1="15" x2="12" y2="3"/>
+  </svg>
+);
+const ViewIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+    <circle cx="12" cy="12" r="3"/>
   </svg>
 );
 
@@ -106,20 +112,36 @@ export default function NewsPage() {
                     <h3 style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 8, lineHeight: 1.4 }}>{cert.title}</h3>
                     <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{cert.desc}</p>
                   </div>
-                  <a
-                    href={cert.path}
-                    download
-                    style={{
-                      display: 'inline-flex', alignItems: 'center', gap: 8,
-                      padding: '10px 18px', borderRadius: 100,
-                      background: 'var(--cta)', color: '#fff',
-                      fontSize: 13, fontWeight: 400, textDecoration: 'none',
-                      letterSpacing: '0.02em', transition: 'background 0.2s',
-                      alignSelf: 'flex-start',
-                    }}
-                  >
-                    <DownloadIcon /> Download Certificate
-                  </a>
+                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                    <a
+                      href={cert.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 7,
+                        padding: '9px 16px', borderRadius: 100,
+                        background: 'var(--cta)', color: '#fff',
+                        fontSize: 13, fontWeight: 400, textDecoration: 'none',
+                        letterSpacing: '0.02em', transition: 'opacity 0.2s',
+                      }}
+                    >
+                      <ViewIcon /> View
+                    </a>
+                    <a
+                      href={cert.path}
+                      download
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 7,
+                        padding: '9px 16px', borderRadius: 100,
+                        border: '1.5px solid var(--border)', background: 'transparent',
+                        color: 'var(--body)',
+                        fontSize: 13, fontWeight: 400, textDecoration: 'none',
+                        letterSpacing: '0.02em', transition: 'border-color 0.2s',
+                      }}
+                    >
+                      <DownloadIcon /> Download
+                    </a>
+                  </div>
                 </div>
               </RevealOnScroll>
             ))}
@@ -156,20 +178,36 @@ export default function NewsPage() {
                     <h3 style={{ fontSize: 16, fontWeight: 400, color: 'var(--heading)', marginBottom: 8, lineHeight: 1.4 }}>{letter.title}</h3>
                     <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.65 }}>{letter.desc}</p>
                   </div>
-                  <a
-                    href={letter.path}
-                    download
-                    style={{
-                      display: 'inline-flex', alignItems: 'center', gap: 8,
-                      padding: '10px 18px', borderRadius: 100,
-                      border: '1px solid var(--border)', background: 'var(--bg-surface)',
-                      fontSize: 13, fontWeight: 400, textDecoration: 'none',
-                      color: 'var(--heading)', letterSpacing: '0.02em',
-                      transition: 'border-color 0.2s', alignSelf: 'flex-start',
-                    }}
-                  >
-                    <DownloadIcon /> Download Letter
-                  </a>
+                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                    <a
+                      href={letter.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 7,
+                        padding: '9px 16px', borderRadius: 100,
+                        background: 'var(--cta)', color: '#fff',
+                        fontSize: 13, fontWeight: 400, textDecoration: 'none',
+                        letterSpacing: '0.02em', transition: 'opacity 0.2s',
+                      }}
+                    >
+                      <ViewIcon /> View
+                    </a>
+                    <a
+                      href={letter.path}
+                      download
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: 7,
+                        padding: '9px 16px', borderRadius: 100,
+                        border: '1.5px solid var(--border)', background: 'transparent',
+                        color: 'var(--body)',
+                        fontSize: 13, fontWeight: 400, textDecoration: 'none',
+                        letterSpacing: '0.02em', transition: 'border-color 0.2s',
+                      }}
+                    >
+                      <DownloadIcon /> Download
+                    </a>
+                  </div>
                 </div>
               </RevealOnScroll>
             ))}
