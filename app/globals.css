@@ -722,10 +722,11 @@ input, textarea, select {
   font-size: 16px !important;
 }
 
-/* ── MOBILE HAMBURGER ── */
+/* ── MOBILE NAV — switch to flex so logo stays left, actions stay right ── */
 @media (max-width: 1024px) {
   .d3-nav {
-    /* ensure logo left, hamburger right */
+    display: flex !important;
     justify-content: space-between;
+    align-items: center;
   }
 }
