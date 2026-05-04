@@ -1,11 +1,9 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
-
-type Theme = 'light' | 'dark';
+import { createContext, useContext, useEffect } from 'react';
 
 interface ThemeContextValue {
-  theme: Theme;
+  theme: 'light';
   toggleTheme: () => void;
 }
 
@@ -15,25 +13,14 @@ const ThemeContext = createContext<ThemeContextValue>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
-
   useEffect(() => {
-    const stored = localStorage.getItem('d3-theme') as Theme | null;
-    const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initial = stored ?? preferred;
-    setTheme(initial);
-    document.documentElement.setAttribute('data-theme', initial);
+    // Always force light mode; clear any stored preference
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('d3-theme');
   }, []);
 
-  const toggleTheme = () => {
-    const next = theme === 'light' ? 'dark' : 'light';
-    setTheme(next);
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('d3-theme', next);
-  };
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme: 'light', toggleTheme: () => {} }}>
       {children}
     </ThemeContext.Provider>
   );

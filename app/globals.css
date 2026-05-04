@@ -77,26 +77,6 @@
   --r-xl: 28px;
 }
 
-/* ── D3 DARK THEME ── */
-[data-theme="dark"] {
-  --bg: #0F1214;
-  --bg-surface: #1A1A2E;
-  --bg-highlight: #1E2A45;
-  --heading: #FFFFFF;
-  --body: #B0BDD0;
-  --muted: #7A8FA8;
-  --nav: #0F1214;
-  --cta: #FF6B2B;
-  --cta-hover: #E85D20;
-  --cta-light: rgba(255,107,43,0.12);
-  --cta-glow: rgba(255,107,43,0.2);
-  --border: #2A3550;
-  --card: #1A1A2E;
-  --card-raised: #1E2A45;
-  --shadow-sm: 0 1px 4px rgba(0,0,0,0.2);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.25);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,0.35);
-}
 
 /* ── BASE RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -111,7 +91,6 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 0.3s, color 0.3s;
 }
 
 /* ── FOCUS ACCESSIBILITY ── */
@@ -373,18 +352,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-[data-theme="dark"] .btn-ghost,
-[data-theme="dark"] .btn-secondary {
-  background: var(--bg-highlight);
-  color: var(--heading);
-  border: 1.5px solid var(--border);
-}
-
-[data-theme="dark"] .btn-ghost:hover,
-[data-theme="dark"] .btn-secondary:hover {
-  background: var(--bg-surface);
-  border-color: var(--muted);
-}
 
 .btn-outline-white {
   background: transparent;
@@ -409,11 +376,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 32px rgba(0,33,71,0.08);
 }
 
-[data-theme="dark"] .glass-card {
-  background: rgba(26,26,46,0.75);
-  border-color: rgba(255,255,255,0.07);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-}
 
 /* ── FLOATING BLUR ORBS (decorative, aria-hidden) ── */
 /* Reusable decorative gradient orbs */
@@ -497,11 +459,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--nav);
 }
 
-[data-theme="dark"] .icon-wrap {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.1);
-  color: var(--body);
-}
 
 .icon-wrap-sm { width: 36px; height: 36px; border-radius: 8px; }
 .icon-wrap-md { width: 48px; height: 48px; border-radius: 12px; }
@@ -663,9 +620,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.6;
 }
 
-[data-theme="dark"] .hero-mesh::after {
-  opacity: 0.25;
-}
 
 /* ── NAV LINK UNDERLINE ── */
 .nav-link {

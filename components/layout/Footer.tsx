@@ -22,7 +22,7 @@ const FacebookIcon = () => (
 const YouTubeIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1A1A2E"/>
+    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#EEF1F8"/>
   </svg>
 );
 const PhoneIcon = () => (
@@ -81,7 +81,7 @@ export function Footer() {
   ];
 
   return (
-    <footer style={{ background: '#606062', borderTop: '1px solid rgba(255,255,255,0.08)', padding: '64px 0 36px' }}>
+    <footer style={{ background: '#EEF1F8', borderTop: '1px solid #D8DFF0', padding: '64px 0 36px' }}>
       <div className="footer-inner">
 
         {/* Top grid */}
@@ -92,18 +92,18 @@ export function Footer() {
             <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', marginBottom: 16 }}>
               <img src="/d3logo.png" alt="D3 Digital Data Dimensions" style={{ height: 72, width: 'auto' }} />
             </Link>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.38)', lineHeight: 1.8, maxWidth: 240, fontWeight: 300, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.8, maxWidth: 240, fontWeight: 400, marginBottom: 20 }}>
               {t('tagline')}
             </p>
             {/* Contact inline */}
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {contactItems.map((item) => (
                 <li key={item.value} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: 'rgba(255,255,255,0.3)', flexShrink: 0, display: 'flex' }}>{item.icon}</span>
+                  <span style={{ color: '#6B7A8D', flexShrink: 0, display: 'flex' }}>{item.icon}</span>
                   {item.href ? (
-                    <a href={item.href} style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontWeight: 400 }}>{item.value}</a>
+                    <a href={item.href} style={{ fontSize: 13, color: '#3D3D5C', textDecoration: 'none', fontWeight: 400 }}>{item.value}</a>
                   ) : (
-                    <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', fontWeight: 400 }}>{item.value}</span>
+                    <span style={{ fontSize: 13, color: '#3D3D5C', fontWeight: 400 }}>{item.value}</span>
                   )}
                 </li>
               ))}
@@ -112,7 +112,7 @@ export function Footer() {
 
           {/* Solutions */}
           <div>
-            <h4 className="footer-heading">{t('solutions')}</h4>
+            <h4 className="footer-heading-label">{t('solutions')}</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {solutions.map((s) => (
                 <li key={s.href}>
@@ -126,7 +126,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="footer-heading">{t('company')}</h4>
+            <h4 className="footer-heading-label">{t('company')}</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {company.map((c) => (
                 <li key={c.href}>
@@ -140,8 +140,8 @@ export function Footer() {
 
           {/* CTA col */}
           <div className="footer-cta-col">
-            <h4 className="footer-heading">Get Started</h4>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.38)', lineHeight: 1.7, marginBottom: 20 }}>
+            <h4 className="footer-heading-label">Get Started</h4>
+            <p style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 20 }}>
               Ready to transform your workforce management? Talk to our team today.
             </p>
             <Link href="/contact" style={{
@@ -159,18 +159,18 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.28)' }}>
-            © {new Date().getFullYear()} <strong style={{ color: 'rgba(255,255,255,0.45)', fontWeight: 500 }}>D3: Digital Data Dimensions.</strong> All rights reserved.
+          <p style={{ fontSize: 12, color: '#6B7A8D' }}>
+            © {new Date().getFullYear()} <strong style={{ color: '#002147', fontWeight: 600 }}>D3: Digital Data Dimensions.</strong> All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
             {SOCIALS.map((soc) => (
               <a key={soc.label} href={soc.href} aria-label={soc.label} style={{
                 width: 34, height: 34,
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '1px solid #C8D0E0',
                 borderRadius: '50%',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 textDecoration: 'none',
-                color: 'rgba(255,255,255,0.4)',
+                color: '#6B7A8D',
                 transition: 'border-color 0.2s, color 0.2s',
               }}>
                 {soc.icon}
@@ -193,26 +193,26 @@ export function Footer() {
           margin-bottom: 48px;
           align-items: start;
         }
-        .footer-heading {
+        .footer-heading-label {
           font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.45);
+          color: #002147;
           margin-bottom: 18px;
           font-family: var(--font);
         }
         .footer-link {
           font-size: 13px;
-          color: rgba(255,255,255,0.38);
+          color: #3D3D5C;
           text-decoration: none;
           font-weight: 400;
           transition: color 0.2s;
           display: inline-block;
         }
-        .footer-link:hover { color: rgba(255,255,255,0.75); }
+        .footer-link:hover { color: #002147; }
         .footer-bottom {
-          border-top: 1px solid rgba(255,255,255,0.07);
+          border-top: 1px solid #C8D0E0;
           padding-top: 24px;
           display: flex;
           justify-content: space-between;

@@ -2,25 +2,6 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
-import { useLocale } from 'next-intl';
-import { ThemeToggle } from './ThemeToggle';
-
-function LanguageSwitcher() {
-  const locale = useLocale();
-  const pathname = usePathname();
-  const isAr = locale === 'ar';
-
-  return (
-    <Link
-      href={pathname}
-      locale={isAr ? 'en' : 'ar'}
-      className="lang-sw"
-      aria-label={isAr ? 'Switch to English' : 'التبديل إلى العربية'}
-    >
-      {isAr ? 'EN' : 'ع'}
-    </Link>
-  );
-}
 
 /* ── ICONS ── */
 const ClockSVG = () => <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>;
@@ -268,8 +249,6 @@ export function Navbar() {
 
         {/* Right actions */}
         <div className="d3-nav-actions">
-          <LanguageSwitcher />
-          <ThemeToggle />
           <Link href="/contact" className="d3-cta-btn">Request Demo</Link>
           <button
             className="d3-hamburger"
@@ -297,8 +276,6 @@ export function Navbar() {
             <img src="/d3logo.png" alt="D3" className="d3-logo-img d3-logo-img--sm" />
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <LanguageSwitcher />
-            <ThemeToggle />
             <button
               className="d3-mob-close"
               onClick={() => setMobileOpen(false)}
@@ -390,7 +367,8 @@ export function Navbar() {
         .d3-nav {
           position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
           height: 80px;
-          display: flex; align-items: center; justify-content: space-between;
+          display: grid; grid-template-columns: auto 1fr auto; align-items: center;
+          gap: 24px;
           padding: 0 clamp(16px, 4vw, 80px);
           background: color-mix(in srgb, var(--bg) 85%, transparent);
           backdrop-filter: blur(18px);
@@ -414,13 +392,10 @@ export function Navbar() {
           filter: none;
         }
         .d3-logo-img--sm { height: 60px; }
-        [data-theme="dark"] .d3-logo-img {
-          filter: brightness(1.1) drop-shadow(0 0 1px rgba(255,255,255,0.05));
-        }
 
         /* ── DESKTOP LINKS ── */
         .d3-nav-links {
-          display: flex; align-items: center; gap: 2px;
+          display: flex; align-items: center; justify-content: center; gap: 2px;
           list-style: none; margin: 0; padding: 0;
         }
         .d3-nav-btn {
@@ -497,18 +472,6 @@ export function Navbar() {
           background: var(--cta);
           color: #fff;
           transform: translateY(-1px);
-        }
-        .lang-sw {
-          display: flex; align-items: center; justify-content: center;
-          width: 36px; height: 36px; border-radius: 8px;
-          background: var(--bg-surface); border: 1px solid var(--border);
-          font-size: 13px; font-weight: 700; color: var(--heading);
-          text-decoration: none; transition: background 0.2s, border-color 0.2s;
-          flex-shrink: 0;
-        }
-        .lang-sw:hover {
-          background: var(--bg-highlight);
-          border-color: var(--muted);
         }
         .d3-hamburger {
           display: none;
