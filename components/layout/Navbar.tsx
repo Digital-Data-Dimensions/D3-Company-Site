@@ -410,10 +410,10 @@ export function Navbar() {
           text-decoration: none; flex-shrink: 0;
         }
         .d3-logo-img {
-          height: 60px; width: auto; display: block;
+          height: 72px; width: auto; display: block;
           filter: none;
         }
-        .d3-logo-img--sm { height: 52px; }
+        .d3-logo-img--sm { height: 60px; }
         [data-theme="dark"] .d3-logo-img {
           filter: brightness(1.1) drop-shadow(0 0 1px rgba(255,255,255,0.05));
         }
@@ -484,16 +484,18 @@ export function Navbar() {
         /* ── RIGHT ACTIONS ── */
         .d3-nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
         .d3-cta-btn {
-          background: var(--cta); color: #fff;
+          background: transparent; color: var(--cta);
           padding: 9px 20px; border-radius: 100px;
+          border: 1.5px solid var(--cta);
           font-size: 13px; font-weight: 700; text-decoration: none;
           letter-spacing: 0.02em; white-space: nowrap;
-          transition: background 0.2s, transform 0.2s;
+          transition: background 0.2s, color 0.2s, transform 0.2s;
           min-height: 40px;
           display: flex; align-items: center;
         }
         .d3-cta-btn:hover {
-          background: var(--cta-hover);
+          background: var(--cta);
+          color: #fff;
           transform: translateY(-1px);
         }
         .lang-sw {

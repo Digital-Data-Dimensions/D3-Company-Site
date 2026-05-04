@@ -1,5 +1,13 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import {
+  Clock, Users, DollarSign, BarChart2, Smartphone, Cloud, User, CalendarOff,
+  GraduationCap, UserPlus, UserCheck, List, Monitor, Wifi, Tag, FileText,
+  Package, Lock, Camera, Settings2, Bell, Building2, Shield, MessageCircle,
+  MapPin, Printer, Star, ClipboardList, Fingerprint, QrCode,
+  Zap, Eye, LayoutGrid, ShoppingCart, TrendingUp,
+  CheckCircle2, Headphones, Database, Radio, Link2,
+} from 'lucide-react';
 import { SOLUTIONS, CASE_STUDIES, INDUSTRIES } from '@/lib/data';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
@@ -18,6 +26,75 @@ const CheckIcon = () => (
     <polyline points="20 6 9 17 4 12"/>
   </svg>
 );
+
+/* Map feature title keywords → Lucide icon + accent colour */
+function getFeatureIcon(title: string): { icon: React.ReactNode; color: string; bg: string } {
+  const t = title.toLowerCase();
+  const pick = (icon: React.ReactNode, color: string, bg: string) => ({ icon, color, bg });
+
+  if (t.includes('biometric') || t.includes('fingerprint'))   return pick(<Fingerprint size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('shift') || t.includes('schedule'))          return pick(<Clock size={16}/>, '#0F766E', '#F0FDFA');
+  if (t.includes('payroll') || t.includes('salary') || t.includes('wps')) return pick(<DollarSign size={16}/>, '#16A34A', '#F0FDF4');
+  if (t.includes('mobile') || t.includes('ios') || t.includes('android')) return pick(<Smartphone size={16}/>, '#2563EB', '#EFF6FF');
+  if (t.includes('cloud') || t.includes('aws') || t.includes('server'))   return pick(<Cloud size={16}/>, '#0284C7', '#F0F9FF');
+  if (t.includes('dashboard') || t.includes('report') || t.includes('analytic')) return pick(<BarChart2 size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('leave') || t.includes('absence'))           return pick(<CalendarOff size={16}/>, '#DC2626', '#FEF2F2');
+  if (t.includes('hr') || t.includes('human resource'))       return pick(<Users size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('self-service') || t.includes('portal') || t.includes('employee')) return pick(<User size={16}/>, '#0F766E', '#F0FDFA');
+  if (t.includes('training'))                                 return pick(<GraduationCap size={16}/>, '#6D28D9', '#EDE9FE');
+  if (t.includes('recruit') || t.includes('planning'))        return pick(<UserPlus size={16}/>, '#0369A1', '#F0F9FF');
+  if (t.includes('visitor') || t.includes('appointment'))     return pick(<UserCheck size={16}/>, '#16A34A', '#F0FDF4');
+  if (t.includes('queue') || t.includes('kiosk') || t.includes('token')) return pick(<List size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('whatsapp') || t.includes('virtual'))        return pick(<MessageCircle size={16}/>, '#16A34A', '#F0FDF4');
+  if (t.includes('display') || t.includes('signage') || t.includes('lcd')) return pick(<Monitor size={16}/>, '#0369A1', '#F0F9FF');
+  if (t.includes('led'))                                      return pick(<Zap size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('rfid'))                                     return pick(<Radio size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('barcode') || t.includes('scan') || t.includes('qr'))   return pick(<QrCode size={16}/>, '#0F766E', '#F0FDFA');
+  if (t.includes('document'))                                 return pick(<FileText size={16}/>, '#DC2626', '#FEF2F2');
+  if (t.includes('warehouse') || t.includes('inventory'))     return pick(<Package size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('access') || t.includes('door') || t.includes('card'))  return pick(<Lock size={16}/>, '#0284C7', '#F0F9FF');
+  if (t.includes('camera') || t.includes('cctv') || t.includes('surveillance')) return pick(<Camera size={16}/>, '#374151', '#F9FAFB');
+  if (t.includes('face') || t.includes('recognition'))        return pick(<Eye size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('multi-company') || t.includes('multi company') || t.includes('erp')) return pick(<Building2 size={16}/>, '#0369A1', '#F0F9FF');
+  if (t.includes('integration') || t.includes('api') || t.includes('connect')) return pick(<Link2 size={16}/>, '#0F766E', '#F0FDFA');
+  if (t.includes('notification') || t.includes('email') || t.includes('alert')) return pick(<Bell size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('lmra') || t.includes('gosi') || t.includes('compliance')) return pick(<Shield size={16}/>, '#16A34A', '#F0FDF4');
+  if (t.includes('geofenc') || t.includes('location') || t.includes('gps')) return pick(<MapPin size={16}/>, '#DC2626', '#FEF2F2');
+  if (t.includes('overtime'))                                 return pick(<Clock size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('appraisal') || t.includes('performance'))   return pick(<Star size={16}/>, '#D97706', '#FFFBEB');
+  if (t.includes('print') || t.includes('printer'))           return pick(<Printer size={16}/>, '#6B7280', '#F9FAFB');
+  if (t.includes('procurement') || t.includes('purchase'))    return pick(<ShoppingCart size={16}/>, '#0369A1', '#F0F9FF');
+  if (t.includes('sales'))                                    return pick(<TrendingUp size={16}/>, '#16A34A', '#F0FDF4');
+  if (t.includes('support') || t.includes('helpdesk'))        return pick(<Headphones size={16}/>, '#0F766E', '#F0FDFA');
+  if (t.includes('database') || t.includes('system'))         return pick(<Database size={16}/>, '#6D28D9', '#EDE9FE');
+  if (t.includes('manhour') || t.includes('project'))         return pick(<ClipboardList size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('wireless') || t.includes('network'))        return pick(<Wifi size={16}/>, '#2563EB', '#EFF6FF');
+  if (t.includes('categor') || t.includes('multi'))           return pick(<LayoutGrid size={16}/>, '#0369A1', '#F0F9FF');
+  if (t.includes('audio') || t.includes('announc'))           return pick(<Bell size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('supervisor'))                               return pick(<Eye size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('customis') || t.includes('config'))         return pick(<Settings2 size={16}/>, '#0F766E', '#F0FDFA');
+  if (t.includes('active') || t.includes('passive'))          return pick(<Radio size={16}/>, '#7C3AED', '#F5F3FF');
+  if (t.includes('fixed asset'))                              return pick(<Tag size={16}/>, '#B45309', '#FFFBEB');
+  if (t.includes('power') || t.includes('ip control'))        return pick(<Zap size={16}/>, '#DC2626', '#FEF2F2');
+  return pick(<CheckCircle2 size={16}/>, '#16A34A', '#F0FDF4');
+}
+
+/* Subtle colour palette for capability chips — cycles through 8 combos */
+const CHIP_COLORS = [
+  { bg: '#EFF6FF', border: '#BFDBFE', text: '#1D4ED8' }, // blue
+  { bg: '#F0FDF4', border: '#BBF7D0', text: '#15803D' }, // green
+  { bg: '#FFF7ED', border: '#FED7AA', text: '#C2410C' }, // orange
+  { bg: '#F5F3FF', border: '#DDD6FE', text: '#6D28D9' }, // purple
+  { bg: '#F0FDFA', border: '#99F6E4', text: '#0F766E' }, // teal
+  { bg: '#FEF2F2', border: '#FECACA', text: '#B91C1C' }, // red
+  { bg: '#FFFBEB', border: '#FDE68A', text: '#B45309' }, // amber
+  { bg: '#F0F9FF', border: '#BAE6FD', text: '#0369A1' }, // sky
+];
+function chipColor(text: string) {
+  let hash = 0;
+  for (let i = 0; i < text.length; i++) hash = (hash * 31 + text.charCodeAt(i)) & 0xffff;
+  return CHIP_COLORS[hash % CHIP_COLORS.length];
+}
 
 const SOLUTION_DETAILS: Record<string, {
   seoKeyword: string;
@@ -631,16 +708,19 @@ export default async function SolutionPage({ params }: Props) {
                 }}>
                   <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 12 }}>Key capabilities</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                    {detail.highlights.map((h) => (
+                    {detail.highlights.map((h) => {
+                      const c = chipColor(h);
+                      return (
                       <span key={h} style={{
-                        display: 'inline-flex', alignItems: 'center', gap: 6,
-                        fontSize: 12, fontWeight: 500, color: 'var(--body)',
-                        background: 'var(--bg)', border: '1px solid var(--border)',
+                        display: 'inline-flex', alignItems: 'center', gap: 5,
+                        fontSize: 12, fontWeight: 600, color: c.text,
+                        background: c.bg, border: `1px solid ${c.border}`,
                         borderRadius: 100, padding: '4px 12px',
                       }}>
                         <CheckIcon /> {h}
                       </span>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -650,29 +730,34 @@ export default async function SolutionPage({ params }: Props) {
                 borderRadius: 20, padding: '32px', alignSelf: 'start',
               }}>
                 <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 20 }}>Key capabilities</div>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {detail.highlights.map((h) => (
-                    <li key={h} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, fontWeight: 500, color: 'var(--body)' }}>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {detail.highlights.map((h) => {
+                    const c = chipColor(h);
+                    return (
+                    <li key={h} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                       <span style={{
-                        width: 22, height: 22, borderRadius: '50%',
-                        background: 'var(--bg-highlight)', border: '1px solid var(--border)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        color: 'var(--heading)', flexShrink: 0,
+                        display: 'inline-flex', alignItems: 'center', gap: 5,
+                        fontSize: 13, fontWeight: 600, color: c.text,
+                        background: c.bg, border: `1px solid ${c.border}`,
+                        borderRadius: 100, padding: '5px 14px', flexShrink: 0,
                       }}>
-                        <CheckIcon />
+                        <CheckIcon /> {h}
                       </span>
-                      {h}
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 24, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
-                  {sol.tags.map((tag) => (
+                  {sol.tags.map((tag) => {
+                    const c = chipColor(tag);
+                    return (
                     <span key={tag} style={{
                       fontSize: 11, fontWeight: 600, padding: '4px 12px', borderRadius: 100,
-                      background: 'var(--bg)', border: '1px solid var(--border)',
-                      color: 'var(--muted)', letterSpacing: '0.02em',
+                      background: c.bg, border: `1px solid ${c.border}`,
+                      color: c.text, letterSpacing: '0.02em',
                     }}>{tag}</span>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -690,7 +775,9 @@ export default async function SolutionPage({ params }: Props) {
             </h2>
           </RevealOnScroll>
           <div className="features-grid">
-            {detail.features.map((f, i) => (
+            {detail.features.map((f, i) => {
+              const { icon, color, bg } = getFeatureIcon(f.title);
+              return (
               <RevealOnScroll key={f.title} delay={i * 40}>
                 <div style={{
                   background: 'var(--card)', border: '1px solid var(--border)',
@@ -698,18 +785,19 @@ export default async function SolutionPage({ params }: Props) {
                   height: '100%',
                 }}>
                   <div style={{
-                    width: 32, height: 32, borderRadius: 8,
-                    background: 'var(--bg-highlight)', border: '1px solid var(--border)',
+                    width: 36, height: 36, borderRadius: 10,
+                    background: bg, border: `1px solid ${color}22`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    marginBottom: 14, color: 'var(--heading)',
+                    marginBottom: 14, color,
                   }}>
-                    <CheckIcon />
+                    {icon}
                   </div>
                   <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--heading)', marginBottom: 8 }}>{f.title}</div>
                   <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65 }}>{f.desc}</div>
                 </div>
               </RevealOnScroll>
-            ))}
+              );
+            })}
           </div>
         </div>
         <style>{`
