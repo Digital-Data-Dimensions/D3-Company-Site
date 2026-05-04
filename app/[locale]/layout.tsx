@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { FloatingActions } from '@/components/layout/FloatingActions';
+import { PageTransition } from '@/components/layout/PageTransition';
 import { GTMScript } from '@/components/layout/GTMScript';
 import { LocaleHtmlAttributes } from '@/components/layout/LocaleHtmlAttributes';
 import type { Metadata } from 'next';
@@ -87,7 +88,7 @@ export default async function LocaleLayout({
           <Navbar />
         </div>
         <main id="main-content" style={{ paddingTop: 84 }}>
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
         <FloatingActions />
