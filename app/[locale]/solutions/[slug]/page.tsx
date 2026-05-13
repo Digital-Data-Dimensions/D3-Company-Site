@@ -9,6 +9,7 @@ import {
   CheckCircle2, Headphones, Database, Radio, Link2,
 } from 'lucide-react';
 import { SOLUTIONS, CASE_STUDIES, INDUSTRIES } from '@/lib/data';
+import { SOLUTION_VISUAL_IMAGES } from '@/lib/solution-card-images';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -587,19 +588,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-const HERO_IMAGES: Record<string, { src: string; alt: string }> = {
-  'consultancy':              { src: '/images/solutions/consultancy-hero.png', alt: 'D3 IT consultancy services' },
-  'visitor-management':       { src: '/images/solutions/visitor-hero.png',     alt: 'TimeTech visitor management system' },
-  'time-attendance-enterprise': { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech Enterprise time attendance' },
-  'time-attendance-system':   { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech time attendance system' },
-  'hr-payroll-software':      { src: '/images/solutions/hrms-hero.png',         alt: 'TimeTech HRMS payroll software' },
-  'queue-management-system':  { src: '/images/solutions/qms-hero.png',          alt: 'TimeTech queue management system kiosk' },
-  'digital-signage':          { src: '/images/solutions/signage-hero.jpg',       alt: 'D3 digital signage installation' },
-  'rfid-asset-tracking':      { src: '/images/solutions/rfid-hero.png',          alt: 'RFID asset tracking system' },
-  'access-control-system':    { src: '/images/solutions/access-hero.jpeg',       alt: 'Biometric access control system' },
-  'erp-retail-management':    { src: '/images/solutions/erp-hero.png',           alt: 'D3 ERP system' },
-  'timetech-application':     { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech Platform dashboard' },
-};
+const HERO_IMAGES = SOLUTION_VISUAL_IMAGES;
 
 export default async function SolutionPage({ params }: Props) {
   const { slug } = await params;

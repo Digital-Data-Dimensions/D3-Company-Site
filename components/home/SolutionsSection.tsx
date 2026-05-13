@@ -2,20 +2,7 @@ import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { SOLUTIONS } from '@/lib/data';
-
-const SOLUTION_IMAGES: Record<string, { src: string; alt: string }> = {
-  'timetech-application':    { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech Platform dashboard' },
-  'time-attendance-system':  { src: '/images/solutions/timeattendance-shifts.png', alt: 'Time attendance system interface' },
-  'time-attendance-enterprise': { src: '/images/solutions/timeattendance-hero.png', alt: 'TimeTech Enterprise attendance' },
-  'hr-payroll-software':     { src: '/images/solutions/hrms-hero.png', alt: 'HR & Payroll software' },
-  'visitor-management':      { src: '/images/solutions/visitor-hero.png', alt: 'Visitor management system' },
-  'queue-management-system': { src: '/images/solutions/qms-hero.png', alt: 'Queue management system kiosk' },
-  'digital-signage':         { src: '/images/solutions/signage-hero.jpg', alt: 'Digital signage display' },
-  'rfid-asset-tracking':     { src: '/images/solutions/rfid-hero.png', alt: 'RFID asset tracking system' },
-  'access-control-system':   { src: '/images/solutions/access-hero.jpeg', alt: 'IP CCTV and access control' },
-  'erp-retail-management':   { src: '/images/solutions/erp-hero.png', alt: 'ERP retail management system' },
-  'consultancy':             { src: '/images/solutions/consultancy-hero.png', alt: 'IT consultancy services' },
-};
+import { SOLUTION_VISUAL_IMAGES } from '@/lib/solution-card-images';
 
 function ArrowIcon() {
   return (
@@ -75,10 +62,10 @@ function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
     >
       {/* Product image area */}
       <div className="sol-img">
-        {SOLUTION_IMAGES[sol.slug] ? (
+        {SOLUTION_VISUAL_IMAGES[sol.slug] ? (
           <Image
-            src={SOLUTION_IMAGES[sol.slug].src}
-            alt={SOLUTION_IMAGES[sol.slug].alt}
+            src={SOLUTION_VISUAL_IMAGES[sol.slug].src}
+            alt={SOLUTION_VISUAL_IMAGES[sol.slug].alt}
             width={720}
             height={405}
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
