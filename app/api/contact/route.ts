@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { createMailTransporter } from '@/lib/mail-transport';
 
 interface ContactPayload {
   name: string;
@@ -22,17 +22,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid form data' }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error('Contact form: SMTP_USER and SMTP_PASS are not set');
+      return NextResponse.json({ error: 'Email not configured' }, { status: 503 });
+    }
 
-    const salesEmail = process.env.SALES_EMAIL || 'sales@dthree.co';
+    const transporter = createMailTransporter();
+
+    // Lead inbox: explicit SALES_EMAIL, else same mailbox as SMTP (typical IONOS single-inbox setup)
+    const salesEmail =
+      process.env.SALES_EMAIL || process.env.SMTP_USER || 'sales@dthree.co';
 
     // Email to sales team
     await transporter.sendMail({

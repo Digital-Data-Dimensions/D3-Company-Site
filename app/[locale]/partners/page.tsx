@@ -10,9 +10,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const PARTNERS = [
+const PARTNERS: { name: string; logoSrc: string; logoWidth?: number; logoHeight?: number }[] = [
   { name: 'ACT Qatar',    logoSrc: '/images/partners/act-qatar.jpg' },
-  { name: 'TimeTech',     logoSrc: '/images/partners/timetech.jpg' },
+  { name: 'TimeTech',     logoSrc: '/images/partners/timetech.png', logoWidth: 400, logoHeight: 100 },
   { name: 'Synel',        logoSrc: '/images/partners/synel.jpg' },
   { name: 'iM',           logoSrc: '/images/partners/im.jpg' },
   { name: 'Nord',         logoSrc: '/images/partners/nord.jpg' },
@@ -78,9 +78,9 @@ export default function PartnersPage() {
                       <Image
                       src={partner.logoSrc}
                       alt={`${partner.name} logo`}
-                      width={180}
-                      height={60}
-                      style={{ maxHeight: 60, width: 'auto', objectFit: 'contain' }}
+                      width={partner.logoWidth ?? 180}
+                      height={partner.logoHeight ?? 60}
+                      style={{ maxHeight: 60, width: 'auto', maxWidth: '100%', objectFit: 'contain' }}
                     />
                   </div>
                   <h3 style={{ fontSize: 15, fontWeight: 400, color: 'var(--heading)', textAlign: 'center', margin: 0 }}>{partner.name}</h3>
