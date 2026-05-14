@@ -98,11 +98,10 @@
     "eyebrow": "Industries",
     "title": "Built for your {highlight}",
     "highlight": "industry",
-    "sub": "D3 solutions are deployed across government, banking, healthcare, retail and logistics, with local compliance built in.",
+    "sub": "D3 solutions are deployed across government, healthcare, retail and logistics, with local compliance built in.",
     "items": {
       "government": { "title": "Government", "desc": "Labour law compliance, LMRA integration, Ministry-grade security." },
       "healthcare": { "title": "Healthcare", "desc": "Shift management, credential tracking, patient queue systems." },
-      "banking": { "title": "Banking & Finance", "desc": "SOX-compliant attendance, secure access, visitor screening." },
       "retail": { "title": "Retail", "desc": "ERP, electronic shelf labels, inventory and POS integration." },
       "logistics": { "title": "Logistics", "desc": "RFID asset tracking, warehouse management, fleet CCTV." }
     }
@@ -150,7 +149,7 @@
     "eyebrow": "Trusted Clients",
     "title": "500+ organisations trust {highlight}",
     "highlight": "D3",
-    "sub": "From government ministries to leading banks, retailers and hospitals across the GCC and beyond.",
+    "sub": "From government ministries to retailers, hospitals and industrial organisations across the GCC and beyond.",
     "government": "Government",
     "private": "Private Sector",
     "gcc": "GCC Clients"

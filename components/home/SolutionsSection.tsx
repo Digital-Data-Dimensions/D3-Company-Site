@@ -31,23 +31,41 @@ export function SolutionsSection() {
           </div>
         </RevealOnScroll>
 
-        <div className="sol-grid">
-          {SOLUTIONS.map((sol, i) => (
-            <RevealOnScroll key={sol.slug} delay={i * 50}>
-              <SolutionCard sol={sol} />
-            </RevealOnScroll>
-          ))}
+        <div className="sol-grid-breakout">
+          <div className="sol-grid">
+            {SOLUTIONS.map((sol, i) => (
+              <RevealOnScroll key={sol.slug} delay={i * 50}>
+                <SolutionCard sol={sol} />
+              </RevealOnScroll>
+            ))}
+          </div>
         </div>
       </div>
 
       <style>{`
+        .sol-grid-breakout {
+          width: 100%;
+        }
         .sol-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 20px;
         }
         @media (max-width: 1100px) { .sol-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px)  { .sol-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) {
+          .sol-grid-breakout {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-inline: 0;
+            box-sizing: border-box;
+          }
+          .sol-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+        }
       `}</style>
     </section>
   );

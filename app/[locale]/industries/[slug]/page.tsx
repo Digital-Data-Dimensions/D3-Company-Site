@@ -15,7 +15,6 @@ export function generateStaticParams() {
 const INDUSTRY_SOLUTIONS: Record<string, string[]> = {
   government: ['time-attendance-system', 'hr-payroll-software', 'queue-management-system', 'access-control-system'],
   healthcare: ['time-attendance-system', 'queue-management-system', 'access-control-system', 'rfid-asset-tracking'],
-  banking: ['time-attendance-system', 'hr-payroll-software', 'access-control-system', 'queue-management-system'],
   retail: ['erp-retail-management', 'digital-signage', 'rfid-asset-tracking', 'time-attendance-system'],
   logistics: ['rfid-asset-tracking', 'time-attendance-system', 'access-control-system', 'erp-retail-management'],
 };
@@ -23,7 +22,6 @@ const INDUSTRY_SOLUTIONS: Record<string, string[]> = {
 const INDUSTRY_CASE_STUDIES: Record<string, string[]> = {
   government: ['ministry-of-interior-attendance', 'bahrain-airport-cctv'],
   healthcare: ['gulf-air-queue-management'],
-  banking: ['bank-of-bahrain-kuwait-hrms'],
   retail: ['jawad-business-erp'],
   logistics: ['alba-rfid-assets'],
 };

@@ -73,7 +73,7 @@ const MVV = [
 
 const EXPERTISE = [
   'Time Attendance & HRMS solutions for GCC enterprises',
-  'Queue Management Systems for government and banks',
+  'Queue Management Systems for government and enterprise',
   'RFID asset and document tracking',
   'Digital Signage and LED display systems',
   'IP CCTV surveillance and Access Control',

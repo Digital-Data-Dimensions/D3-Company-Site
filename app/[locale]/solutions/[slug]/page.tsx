@@ -118,7 +118,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'ICT Strategic Planning', desc: 'Business and ICT consultants align your technology strategy with business objectives to maximise ROI.' },
       { title: 'System Analysis', desc: 'System Analysts to evaluate, document and improve your enterprise business processes and systems.' },
     ],
-    industries: ['government', 'banking', 'healthcare', 'retail', 'logistics'],
+    industries: ['government', 'healthcare', 'retail', 'logistics'],
     caseStudySlug: 'ministry-of-interior-attendance',
     additionalSections: [
       {
@@ -148,7 +148,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Visit Closure on Departure', desc: 'Close visitor appointments on departure with time-stamped records for compliance and audit purposes.' },
       { title: 'Audit & Visitor Reports', desc: 'Comprehensive visitor logs, scheduled visit reports and audit trails for security and compliance teams.' },
     ],
-    industries: ['government', 'banking', 'healthcare'],
+    industries: ['government', 'healthcare'],
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'time-attendance-enterprise': {
@@ -165,7 +165,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'LMRA Compliance', desc: 'Built-in reports for Bahrain Labour Market Regulatory Authority with direct integration.' },
       { title: 'Email Notifications', desc: 'Auto alerts for absences, late entry, early exit to employee and department heads with scheduled summary reports.' },
     ],
-    industries: ['government', 'healthcare', 'banking', 'logistics'],
+    industries: ['government', 'healthcare', 'logistics'],
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
     additionalSections: [
       {
@@ -216,14 +216,14 @@ const SOLUTION_DETAILS: Record<string, {
     features: [
       { title: 'Personnel Module', desc: 'Comprehensive Employee Master with document expiry reminders for Residence Permit, CPR, Passport and insurance. Manage dependents, qualifications and HR memos.' },
       { title: 'Leave Management', desc: 'Define leave templates per employee using formulas. Calendar or working day calculation, leave carry forward, online requests with escalation and leave settlement.' },
-      { title: 'Payroll Module', desc: 'Monthly and multiple payrolls per month. Define salary structures using formulas. WPS bank transfer formats, GOSI calculations, payroll comparison and approval workflow.' },
+      { title: 'Payroll Module', desc: 'Monthly and multiple payrolls per month. Define salary structures using formulas. WPS salary transfer file formats, GOSI calculations, payroll comparison and approval workflow.' },
       { title: 'Employee Self-Service', desc: 'Employees login with their ID to apply for leave, view payslips, request overtime, submit excuse requests and view leave balances online.' },
       { title: 'Email Notifications', desc: 'Absent, late entry, early exit and missing swipe alerts to employee email. Summary notifications to department heads and HR. Payslip emailed on approval.' },
       { title: 'Appraisal Module', desc: 'KPI-based performance evaluation with self-evaluation, supervisor evaluation, grade reports and approval workflows.' },
       { title: 'Recruitment Module', desc: 'Manpower planning, job profile creation, hiring manager assignment, interview board setup and integrated job vacancy web application.' },
       { title: 'Training Module', desc: 'Training master, requisition and approval, employee assignment, auto alerts and comprehensive training management reports.' },
     ],
-    industries: ['government', 'banking', 'retail', 'healthcare'],
+    industries: ['government', 'retail', 'healthcare'],
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
     additionalSections: [
       {
@@ -266,7 +266,7 @@ const SOLUTION_DETAILS: Record<string, {
           'Multiple payrolls in a month',
           'Define salary structure using formulas and fixed amounts per employee',
           'Allowances and Deductions master creation',
-          'Salary transfer formats to Bank (WPS)',
+          'WPS salary transfer file formats',
           'GOSI calculations',
           'Easy payroll generation or modification',
           'Import allowances/deductions from Excel template',
@@ -308,14 +308,14 @@ const SOLUTION_DETAILS: Record<string, {
     features: [
       { title: 'Biometric Time Attendance', desc: 'Fingerprint, face recognition and card-based terminals with real-time processing. No manual intervention needed.' },
       { title: 'Auto Shift & Work Rules', desc: 'N-number of shifts with auto picking, flexi rules, Ramadan shift support, grace periods and OT segregation.' },
-      { title: 'HRMS & Payroll', desc: 'Multi-company, multi-currency WPS payroll with GOSI, LMRA integration, leave management and bank transfer formats.' },
+      { title: 'HRMS & Payroll', desc: 'Multi-company, multi-currency WPS payroll with GOSI, LMRA integration, leave management and salary transfer file formats.' },
       { title: 'Employee Self-Service Portal', desc: 'Web and mobile portal for leave requests, payslip access, overtime requests and notice board.' },
       { title: 'Mobile App (iOS/Android)', desc: 'Geo-fenced mobile attendance, selfie punch, QR code clock-in, leave/overtime requests and real-time notifications.' },
       { title: 'Visitor Management', desc: 'Reception kiosk with appointment forms, access card issuance, door assignment and comprehensive visitor reports.' },
       { title: 'Appraisal & Recruitment', desc: 'KPI-based performance evaluation, manpower planning, job profiles and recruitment workflow management.' },
       { title: 'Multi-Company & ERP Integration', desc: 'Manage multiple legal entities, cost centres and departments across unlimited sites, with custom API and third-party system integration.' },
     ],
-    industries: ['government', 'healthcare', 'banking', 'retail', 'logistics'],
+    industries: ['government', 'healthcare', 'retail', 'logistics'],
   },
   'time-attendance-system': {
     seoKeyword: 'time attendance system Bahrain GCC biometric',
@@ -331,12 +331,12 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Email Notifications', desc: 'Auto alerts for absent, late entry, early exit and missing swipe to employee and department heads.' },
       { title: 'Daily Attendance Reports', desc: 'Daily, weekly and monthly reports: time cards, overtime, deductions and graphical analysis.' },
     ],
-    industries: ['government', 'healthcare', 'banking'],
+    industries: ['government', 'healthcare'],
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'queue-management-system': {
     seoKeyword: 'queue management system Bahrain GCC kiosk wired wireless',
-    tagline: 'Wired and wireless kiosk-based queuing for ministries, banks, hospitals and enterprises, with audio announcements, live analytics and supervisor reporting.',
+    tagline: 'Wired and wireless kiosk-based queuing for ministries, hospitals and enterprises, with audio announcements, live analytics and supervisor reporting.',
     highlights: ['15" all-in-one KIOSK', 'Wired or wireless', 'Audio announcements', 'Multi-lingual support', 'Real-time analytics', 'Supervisor reporting'],
     features: [
       { title: '15" Touchscreen Kiosk', desc: 'All-in-one kiosk with built-in server, 80mm thermal printer and audio system, reducing single-point failure.' },
@@ -347,7 +347,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Live Analytics & Reports', desc: 'Daily service reports, average wait time, processing time and satisfaction evaluation data.' },
       { title: 'Supervisor Remote Reporting', desc: 'Full reporting application accessible from KIOSK or remotely from supervisor PC.' },
     ],
-    industries: ['government', 'banking', 'healthcare'],
+    industries: ['government', 'healthcare'],
     brochurePath: '/brochure/QMS_24.pdf',
     youtubeUrl: 'https://www.youtube.com/embed/RnzjXYywChE',
   },
@@ -404,7 +404,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Controller Types', desc: 'Proximity Card or NFC, Fingerprint, Face Recognition, Stand-Alone and Centralised controller options available.' },
       { title: 'Scalable Deployment', desc: 'Scale from a single door to enterprise-wide centralised access management across multiple buildings and sites.' },
     ],
-    industries: ['government', 'banking', 'logistics'],
+    industries: ['government', 'logistics'],
     additionalSections: [
       {
         title: 'IP CCTV Surveillance',
@@ -446,7 +446,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'IP Power Controller', desc: 'Fully customised controller board. Remote power management via web-based GUI. Manages AC or DC voltage. High or low ampere configurations.' },
       { title: 'Content Management Software', desc: 'Centralised Windows-based content management software. Customised to client requirements. Schedule and publish content across all connected screens.' },
     ],
-    industries: ['retail', 'government', 'banking'],
+    industries: ['retail', 'government'],
     additionalSections: [
       {
         title: 'LED Display Systems',
@@ -512,7 +512,7 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'Procurement & Import', desc: 'Issue Purchase Orders, manage Goods Receipt, pending order status, creditors management and item return with document attachment.' },
       { title: 'Inventory Management', desc: 'Comprehensive Item/Stock Master, stock status by location, inter-transfer, FIFO/Average costing, cost management and multi-location support.' },
       { title: 'Sales Management', desc: 'Item issue to projects, margin setting by percentage, FIFO costing, detailed and location-wise sales reports, sales returns with document attachment.' },
-      { title: 'Financial Accounting', desc: 'Full GL, AP, AR and bank reconciliation with local chart of accounts and multi-currency support.' },
+      { title: 'Financial Accounting', desc: 'Full general ledger, accounts payable and receivable, and cash management with local chart of accounts and multi-currency support.' },
       { title: 'Electronic Shelf Labels', desc: 'Bidirectional graphic and segment label options. Instant price updates. Cross-platform management software. Supports promotions and omni-channel retail.' },
       { title: 'Restaurant Management', desc: 'Full restaurant module integrated with the ERP: table management, orders, kitchen display and POS.' },
       { title: 'Payroll & HR Integration', desc: 'Native integration with TimeTech HRMS and Payroll, with no double entry across HR and finance.' },

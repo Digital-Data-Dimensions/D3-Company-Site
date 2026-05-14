@@ -5,7 +5,7 @@ export type ProjectImage = {
   /** What solution this project belongs to (used for filtering) */
   solution?: 'Queue Management' | 'HRMS & Time Attendance' | 'RFID' | 'CCTV & Access' | 'Digital Signage' | 'Other';
   /** Industry / sector (used for filtering) */
-  industry?: 'Hospital' | 'Bank' | 'Government' | 'Retail' | 'Education' | 'Other';
+  industry?: 'Hospital' | 'Government' | 'Retail' | 'Education' | 'Other';
   /** Place files under `public/images/` (or a subfolder) and reference e.g. `/images/hilal-hidd.jpeg` */
   src?: string;
   alt: string;
@@ -75,15 +75,6 @@ export const PROJECT_IMAGES: ProjectImage[] = [
     industry: 'Hospital',
     src: '/images/hilal-manama-2.jpeg',
     alt: 'Additional project installation at Al Hilal Hospital (Manama)',
-  },
-  {
-    id: 'habib-bank-manama',
-    client: 'Habib Bank Limited',
-    location: 'Manama',
-    solution: 'Queue Management',
-    industry: 'Bank',
-    src: '/images/habib-bank-manama.jpeg',
-    alt: 'Project installation at Habib Bank Limited (Manama)',
   },
   {
     id: 'ibn-al-nafees-manama',

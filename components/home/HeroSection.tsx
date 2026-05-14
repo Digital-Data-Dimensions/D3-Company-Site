@@ -170,7 +170,7 @@ const SLIDES = [
   {
     tag: 'Queue Management',
     headline: 'Wired and Wireless Queue Systems for Every Enterprise',
-    sub: 'Touchscreen kiosk dispensers, LED counter displays, audio announcements and live analytics, deployed across ministries, banks and hospitals in the GCC.',
+    sub: 'Touchscreen kiosk dispensers, LED counter displays, audio announcements and live analytics, deployed across ministries, hospitals and enterprises in the GCC.',
     link: { label: 'Queue Solutions', href: '/solutions/queue-management-system' },
   },
   {

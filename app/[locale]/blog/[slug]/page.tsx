@@ -47,7 +47,7 @@ const BLOG_FULL_CONTENT: Record<string, string[]> = {
     'WPS Compliance: The Wage Protection System (WPS) requires employers to submit salary transfer files in a specific format. Your HR software should generate these files automatically, eliminating the risk of non-compliance penalties.',
     'Arabic Language Support: For GCC businesses, full Arabic-language interfaces are essential — not just for Arabic-speaking employees, but for government audit submissions and official documents.',
     'GOSI Calculation: The General Organisation for Social Insurance (GOSI) deductions must be calculated automatically based on employee nationality and salary structure. Errors in GOSI calculations are a common source of compliance penalties.',
-    'Cloud vs On-Premise: Many government and banking clients in Bahrain require on-premise deployment for data sovereignty reasons. Ensure your chosen vendor supports this deployment model.',
+    'Cloud vs On-Premise: Many government and enterprise clients in Bahrain require on-premise deployment for data sovereignty reasons. Ensure your chosen vendor supports this deployment model.',
     'D3\'s TimeTech HR module was built specifically for the GCC market, addressing all of these requirements from day one. It includes pre-built integrations with Bahraini government portals and supports Arabic-English bilingual operation throughout.',
   ],
 };

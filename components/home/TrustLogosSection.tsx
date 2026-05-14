@@ -18,10 +18,6 @@ const LOGOS: {
   { name: 'Batelco',                abbr: 'BTC',   sector: 'Telecom',  logo: '/images/logos/batelco.svg',       logoType: 'svg' },
   { name: 'Nass Corporation',       abbr: 'NSS',   sector: 'Industry', logo: '/images/logos/nass.png',          logoType: 'png' },
   { name: 'Jawad Business Group',   abbr: 'JBG',   sector: 'Retail',   logo: '/images/logos/jawad.png',         logoType: 'png' },
-  { name: 'GFH Financial Group',    abbr: 'GFH',   sector: 'Finance',  logo: '/images/logos/gfh.png',           logoType: 'png' },
-  { name: 'Bank of Bahrain & Kuwait', abbr: 'BBK', sector: 'Banking',  logo: '/images/logos/bbk.svg',           logoType: 'svg' },
-  { name: 'National Bank of Bahrain', abbr: 'NBB', sector: 'Banking',  logo: '/images/logos/nbb.svg',           logoType: 'svg' },
-  { name: 'Ithmaar Bank',           abbr: 'ITH',   sector: 'Banking' },
   { name: 'Ibn Al Nafees Hospital', abbr: 'IAN',   sector: 'Health',   logo: '/images/logos/ibn-al-nafees.png', logoType: 'png' },
   { name: 'Al Moayyed Group',       abbr: 'AMG',   sector: 'Industry', logo: '/images/logos/almoayyed.png',     logoType: 'png' },
   { name: 'BAPCO',                  abbr: 'BAPCO', sector: 'Energy',   logo: '/images/logos/bapco.png',         logoType: 'png' },
@@ -29,9 +25,7 @@ const LOGOS: {
 
 const SECTOR_COLORS: Record<string, { bg: string; text: string }> = {
   Gov:      { bg: 'rgba(0,33,71,0.09)',   text: '#002147' },
-  Banking:  { bg: 'rgba(0,53,128,0.09)',  text: '#003580' },
   Industry: { bg: 'rgba(30,42,69,0.09)',  text: '#1E2A45' },
-  Finance:  { bg: 'rgba(0,53,128,0.08)',  text: '#003580' },
   Aviation: { bg: 'rgba(0,33,71,0.09)',   text: '#002147' },
   Telecom:  { bg: 'rgba(30,42,69,0.09)',  text: '#1E2A45' },
   Retail:   { bg: 'rgba(0,33,71,0.08)',   text: '#002147' },

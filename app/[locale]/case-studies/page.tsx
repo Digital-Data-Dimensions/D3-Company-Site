@@ -20,7 +20,7 @@ export default function CaseStudiesListPage() {
             Client Projects
           </h1>
           <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 600 }}>
-            A selection of real deployments delivered by D3 across government, banking, education and the private sector in Bahrain and the GCC.
+            A selection of real deployments delivered by D3 across government, education and the private sector in Bahrain and the GCC.
           </p>
         </div>
       </section>

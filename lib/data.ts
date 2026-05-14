@@ -126,26 +126,6 @@ export const INDUSTRIES = [
     ],
   },
   {
-    slug: 'banking',
-    title: 'Banking & Finance',
-    desc: 'Audit-compliant attendance records, secure biometric access, visitor screening and payroll reporting for the financial sector.',
-    icon: 'credit-card',
-    challenges: [
-      {
-        title: 'Regulatory Compliance',
-        desc: 'Central Bank of Bahrain and internal audit reporting requirements met with full attendance and payroll data integrity.',
-      },
-      {
-        title: 'Visitor & Branch Security',
-        desc: 'Comprehensive visitor management and biometric door access across all branch locations.',
-      },
-      {
-        title: 'Payroll Accuracy',
-        desc: 'Zero-error payroll with direct WPS integration, GOSI calculations and multi-currency support.',
-      },
-    ],
-  },
-  {
     slug: 'retail',
     title: 'Retail',
     desc: 'ERP, electronic shelf labels, real-time inventory control, workforce management and van sales for multi-location retailers.',
@@ -191,13 +171,6 @@ export const INDUSTRIES = [
 // These are the only verified project descriptions D3 publishes publicly.
 // Do NOT add fabricated outcomes or made-up metrics.
 export const CASE_STUDIES = [
-  {
-    slug: 'central-bank-of-bahrain',
-    clientName: 'Central Bank of Bahrain (CBB)',
-    clientType: 'Government',
-    sector: 'Banking & Finance',
-    solution: 'Time Attendance module integration with HRMS Oracle DB, including customisation as per CBB rules.',
-  },
   {
     slug: 'survey-land-registration-bureau',
     clientName: 'Survey & Land Registration Bureau',
@@ -263,7 +236,6 @@ export const CLIENTS = {
     'Bahrain Institute for Political Development (BIPD)',
     'BIX – Bahrain Internet Exchange',
     'Civil Service Bureau (CSB)',
-    'Central Bank of Bahrain (CBB)',
     'Isa Cultural Centre',
     'Labour Market Regulatory Authority (LMRA)',
     'Ministry of Cabinet Affairs & Prime Minister Office',
@@ -284,10 +256,8 @@ export const CLIENTS = {
     'AJM Kooheji Group B.S.C',
     'Al Iman School',
     'Al Hilal Hospital',
-    'Al Salam Bank',
     'Al Zayani Investment',
     'Al Zain Jewellery',
-    'American Express (AMEX)',
     'Ansari Engineering Services S.P.C',
     'Arab Open University',
     'Arab Architects',
@@ -334,7 +304,6 @@ export const CLIENTS = {
     'Mohamed Salahuddin Consulting Engineering Bureau (MSCEB)',
     'Mueller Middle East',
     'Nass Corporation',
-    'National Finance Exchange (NAFEX)',
     'Novo Delizie And Mercato',
     'Panorama Contracting',
     'Racing Force Group',

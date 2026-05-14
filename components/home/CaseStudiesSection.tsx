@@ -5,7 +5,6 @@ import { CASE_STUDIES } from '@/lib/data';
 
 const TYPE_COLORS: Record<string, string> = {
   Government: '#003580',
-  Banking: '#1E3A5F',
   Aviation: '#1A3A4A',
   Private: '#2D4A22',
   Healthcare: '#4A1A2A',

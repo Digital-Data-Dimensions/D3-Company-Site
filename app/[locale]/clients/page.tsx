@@ -6,7 +6,7 @@ import { CTASection } from '@/components/home/CTASection';
 export async function generateMetadata() {
   return {
     title: 'Our Clients | D3',
-    description: '500+ clients across the GCC trust D3, from government ministries and leading banks to retail chains, hospitals and industrial organisations.',
+    description: '500+ clients across the GCC trust D3, from government ministries and leading enterprises to retail chains, hospitals and industrial organisations.',
   };
 }
 
@@ -28,7 +28,7 @@ const GCCIcon = () => (
 
 const CATEGORIES = [
   { key: 'government', label: 'Government', icon: <GovIcon />, desc: 'Ministries, government authorities and public sector organisations trusting D3 for their critical IT infrastructure.' },
-  { key: 'private', label: 'Private Sector', icon: <PrivateIcon />, desc: 'Leading private enterprises across banking, telecoms, manufacturing and services.' },
+  { key: 'private', label: 'Private Sector', icon: <PrivateIcon />, desc: 'Leading private enterprises across telecoms, manufacturing, retail and services.' },
   { key: 'gcc', label: 'GCC Clients', icon: <GCCIcon />, desc: 'Regional clients across Bahrain, Saudi Arabia, UAE, Kuwait, Qatar and Oman.' },
 ] as const;
 
@@ -43,7 +43,7 @@ export default function ClientsPage() {
             500+ organisations trust <em style={{ fontStyle: 'normal', color: 'var(--cta)' }}>D3</em>
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 600 }}>
-            From government ministries to leading banks, retailers and hospitals across the GCC and beyond. Building long-term partnerships since 2010.
+            From government ministries to retailers, hospitals and industrial organisations across the GCC and beyond. Building long-term partnerships since 2010.
           </p>
         </div>
       </section>
