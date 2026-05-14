@@ -6,6 +6,9 @@ function cardImage(filename: string): string {
   return `/images/cards/${encodeURIComponent(filename)}`;
 }
 
+/** Intrinsic pixel size of JPEGs under `public/images/cards/` (all current assets match). */
+export const SOLUTION_CARD_IMAGE_PIXEL_SIZE = { width: 4259, height: 3606 } as const;
+
 /** Homepage solution grid + solution detail hero imagery */
 export const SOLUTION_VISUAL_IMAGES: Record<string, { src: string; alt: string }> = {
   'time-attendance-system': {

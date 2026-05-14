@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { SOLUTIONS } from '@/lib/data';
-import { SOLUTION_VISUAL_IMAGES } from '@/lib/solution-card-images';
+import { SOLUTION_VISUAL_IMAGES, SOLUTION_CARD_IMAGE_PIXEL_SIZE } from '@/lib/solution-card-images';
 
 function ArrowIcon() {
   return (
@@ -66,12 +66,18 @@ function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
           <Image
             src={SOLUTION_VISUAL_IMAGES[sol.slug].src}
             alt={SOLUTION_VISUAL_IMAGES[sol.slug].alt}
-            width={720}
-            height={405}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            width={SOLUTION_CARD_IMAGE_PIXEL_SIZE.width}
+            height={SOLUTION_CARD_IMAGE_PIXEL_SIZE.height}
+            sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+            className="sol-img-el"
           />
         ) : (
-          <div style={{ width: '100%', height: '100%', background: 'var(--bg-highlight)' }} />
+          <div
+            className="sol-img-placeholder"
+            style={{
+              aspectRatio: `${SOLUTION_CARD_IMAGE_PIXEL_SIZE.width} / ${SOLUTION_CARD_IMAGE_PIXEL_SIZE.height}`,
+            }}
+          />
         )}
       </div>
 
@@ -109,10 +115,18 @@ function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
         }
         .sol-img {
           width: 100%;
-          height: 190px;
-          overflow: hidden;
-          background: var(--bg-highlight);
           flex-shrink: 0;
+          line-height: 0;
+          background: var(--card);
+        }
+        .sol-img-el {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .sol-img-placeholder {
+          width: 100%;
+          background: var(--bg-highlight);
         }
         .sol-body {
           padding: 24px 26px 26px;
