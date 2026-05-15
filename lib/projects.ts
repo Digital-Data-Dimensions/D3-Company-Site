@@ -158,20 +158,12 @@ export const PROJECT_IMAGES: ProjectImage[] = [
     src: '/images/projects/digital-signage/DigitalSignageProjects3.jpg', alt: 'Digital Signage Installation 3',
   },
   {
-    id: 'ds-4', client: 'Digital Signage Project', solution: 'Digital Signage', industry: 'Other',
-    src: '/images/projects/digital-signage/DigitalSignageProjects4.jpg', alt: 'Digital Signage Installation 4',
-  },
-  {
-    id: 'ds-5', client: 'Digital Signage Project', solution: 'Digital Signage', industry: 'Other',
-    src: '/images/projects/digital-signage/DigitalSignageProjects5.jpg', alt: 'Digital Signage Installation 5',
-  },
-  {
     id: 'ds-6', client: 'Digital Signage Project', solution: 'Digital Signage', industry: 'Other',
-    src: '/images/projects/digital-signage/DigitalSignageProjects6.jpg', alt: 'Digital Signage Installation 6',
+    src: '/images/projects/digital-signage/DigitalSignageProjects6.jpeg', alt: 'Digital Signage Installation',
   },
   {
     id: 'ds-7', client: 'Digital Signage Project', solution: 'Digital Signage', industry: 'Other',
-    src: '/images/projects/digital-signage/DigitalSignageProjects7.jpeg', alt: 'Digital Signage Installation 7',
+    src: '/images/projects/digital-signage/DigitalSignageProjects7.jpeg', alt: 'Digital Signage Installation',
   },
 
   /* ── RFID ── */
