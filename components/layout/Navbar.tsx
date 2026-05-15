@@ -31,14 +31,14 @@ const TIMETECH_ITEMS = [
     group: 'Time Attendance',
     items: [
       { slug: 'time-attendance-system', label: 'Standard', desc: 'Cloud biometric attendance for SMEs' },
-      { slug: 'timetech-application', label: 'Enterprise', desc: 'Multi-site, multi-company, auto-shift' },
+      { slug: 'time-attendance-enterprise', label: 'Enterprise', desc: 'Multi-site, multi-company, auto-shift' },
     ],
   },
   {
     group: 'HR & Payroll',
     items: [
       { slug: 'hr-payroll-software', label: 'Standard', desc: 'Core payroll, leave & WPS export' },
-      { slug: 'timetech-application', label: 'Enterprise', desc: 'Full HRMS, appraisal & recruitment' },
+      { slug: 'hr-payroll-software', label: 'Enterprise', desc: 'Full HRMS, appraisal & recruitment' },
     ],
   },
   {

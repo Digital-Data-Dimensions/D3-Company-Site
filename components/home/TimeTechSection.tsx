@@ -98,11 +98,11 @@ export function TimeTechSection() {
           <div className="timetech-split">
             <div className="timetech-cta-col">
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-                <Button href="/solutions/timetech-application" variant="primary">
+                <Button href="/solutions/time-attendance-enterprise" variant="primary">
                   <ArrowIcon />
                   Request TimeTech Demo
                 </Button>
-                <Button href="/solutions/timetech-application" variant="ghost">
+                <Button href="/solutions/time-attendance-enterprise" variant="ghost">
                   View all features
                 </Button>
               </div>

@@ -18,8 +18,14 @@ import { Link } from '@/i18n/navigation';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+/** Slugs with full page content but not listed on the homepage solutions grid */
+const EXTRA_SOLUTION_SLUGS = ['timetech-application'] as const;
+
 export function generateStaticParams() {
-  return SOLUTIONS.map((s) => ({ slug: s.slug }));
+  return [
+    ...SOLUTIONS.map((s) => ({ slug: s.slug })),
+    ...EXTRA_SOLUTION_SLUGS.map((slug) => ({ slug })),
+  ];
 }
 
 const CheckIcon = () => (
@@ -153,21 +159,34 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'time-attendance-enterprise': {
     seoKeyword: 'time attendance enterprise Bahrain GCC multi-site biometric mobile app',
-    tagline: 'No.1 TimeTech. Recognised and appreciated by GCC Labour. Multi-site, multi-company enterprise attendance for unlimited locations.',
-    highlights: ['Multi-Site & Multi-Company', 'Geo-Fenced Mobile App', 'ProjectWise Manhours', 'Employee Self-Service', 'Overtime Workflow', 'iOS & Android'],
+    tagline: 'No.1 TimeTech — recognised and appreciated by GCC Labour. Save time on one click and boost company productivity with enterprise attendance and HRMS for unlimited locations.',
+    highlights: ['Multi-Site & Multi-Company', 'Auto Shift Picking', 'ProjectWise Manhours', 'Employee Self-Service', 'Geo-Fenced Mobile App', 'LMRA Reports'],
     features: [
-      { title: 'Multi-Modal Biometric', desc: 'Fingerprint, facial recognition, smart card and PIN on all terminal types.' },
-      { title: 'Auto Shift Picking', desc: 'N-number of shifts with auto picking, Ramadan shift, mother feeding shift and over-day shift support.' },
-      { title: 'ProjectWise Manhour Tracking', desc: 'Assign projects per employee, mark project start/end times and generate project-wise manhour summary reports.' },
-      { title: 'Employee Self-Service Portal', desc: 'Employees view attendance, exception records, leave balance, upcoming holidays and notice board via web portal.' },
-      { title: 'Mobile App (iOS & Android)', desc: 'Geo-fenced locations, selfie clock-in, QR code attendance, leave requests, overtime requests and excuse submissions from mobile.' },
-      { title: 'Overtime Approval Workflow', desc: 'Multi-step overtime approval and rejection workflow with automated amount calculation.' },
-      { title: 'LMRA Compliance', desc: 'Built-in reports for Bahrain Labour Market Regulatory Authority with direct integration.' },
-      { title: 'Email Notifications', desc: 'Auto alerts for absences, late entry, early exit to employee and department heads with scheduled summary reports.' },
+      { title: 'Personnel & Security', desc: 'Employee master and user profiles, department creation, department access rights and program-level user restrictions.' },
+      { title: 'Work Rules & Shifts', desc: 'User-friendly work rules, automatic shift picking, N-number of shifts, first/last swipe, overtime segregation, grace periods and flexi rules.' },
+      { title: 'Duty Roster & Leave Posting', desc: 'Pre-schedule shifts for a period, CSV duty roster upload, annual leave pre/post posting and easy cancellation of set reasons.' },
+      { title: 'Daily Work Sheet', desc: 'Processed attendance per work rule, manual edits with full log history, HR and employee remarks, and scanned document attachments.' },
+      { title: 'Online & Real-Time Processing', desc: 'Live ON/OFF duty, late entry and early exit reference; automatic terminal download and processing with no manual interruption before reports.' },
+      { title: 'TimeTech Special Reports', desc: 'Daily, weekly and monthly attendance, time cards, OT reports, exception reports, graphical analysis and edited attendance log details.' },
+      { title: 'Email Notifications', desc: 'Absent, late entry, early exit and missing swipe alerts to employees; summary notifications to department heads and HR.' },
+      { title: 'Excuse Requests', desc: 'Employees submit explanations for missing hours; requests escalate to managers for approval or rejection.' },
     ],
     industries: ['government', 'healthcare', 'logistics'],
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
     additionalSections: [
+      {
+        title: 'Shift & Work Rule (100% reliable)',
+        bullets: [
+          'Creating N number of shifts with parameters per shift',
+          'Taking first swipe and last swipe option',
+          'Auto picking shift — no manual rostering',
+          'Overtime segregation based on time and days',
+          'Grace periods and minimum OT',
+          'Handling over-day shift, flexi rules and break hours',
+          'Ramadan, mother feeding and period-based special shifts',
+          'Auto reset to base work rule when special period ends',
+        ],
+      },
       {
         title: 'ProjectWise Manhour Tracking',
         bullets: [
@@ -181,21 +200,26 @@ const SOLUTION_DETAILS: Record<string, {
         ],
       },
       {
-        title: 'Employee Self-Service (Enterprise)',
+        title: 'Employee Self-Service',
         bullets: [
-          'Employee can login with employee ID and view attendance reports',
-          'Choose own password',
-          'View exception records',
+          'Login with employee ID; choose own password',
+          'View attendance reports and exception records',
           'Submit leave requests and view status',
-          'View upcoming holidays',
-          'Notice board access',
+          'View upcoming holidays and notice board',
+        ],
+      },
+      {
+        title: 'Overtime',
+        bullets: [
+          'Overtime (OT) approval and rejection workflow',
+          'Overtime amount calculation',
         ],
       },
       {
         title: 'TimeTech Mobile App (iOS/Android)',
+        intro: 'TimeTech mobile attendance app with location accuracy.',
         bullets: [
-          'Geo-fencing locations',
-          'Allocating geo-fenced locations per employee',
+          'Geo-fencing locations and allocating locations per employee',
           'Clock In/Clock Out via selfie photo from mobile',
           'Clock In/Clock Out via QR code scanning with photo capture',
           'View attendance logs',
@@ -580,10 +604,11 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const sol = SOLUTIONS.find((s) => s.slug === slug);
   const detail = SOLUTION_DETAILS[slug];
-  if (!sol) return { title: 'Solution Not Found' };
+  if (!sol && !detail) return { title: 'Solution Not Found' };
+  const title = sol?.title ?? detail?.tagline?.slice(0, 60) ?? 'Solution';
   return {
-    title: `${sol.title} | D3: Digital Data Dimensions`,
-    description: sol.desc,
+    title: `${title} | D3: Digital Data Dimensions`,
+    description: sol?.desc ?? detail?.tagline,
     keywords: detail?.seoKeyword,
   };
 }
@@ -592,10 +617,19 @@ const HERO_IMAGES = SOLUTION_VISUAL_IMAGES;
 
 export default async function SolutionPage({ params }: Props) {
   const { slug } = await params;
-  const sol = SOLUTIONS.find((s) => s.slug === slug);
+  const catalogSol = SOLUTIONS.find((s) => s.slug === slug);
   const detail = SOLUTION_DETAILS[slug];
 
-  if (!sol || !detail) notFound();
+  if (!detail) notFound();
+
+  const sol = catalogSol ?? {
+    slug,
+    num: '',
+    title: slug === 'timetech-application' ? 'TimeTech Application' : 'Solution',
+    desc: detail.tagline,
+    tags: detail.highlights.slice(0, 3),
+    icon: 'clock' as const,
+  };
 
   const heroImg = HERO_IMAGES[slug];
   const relatedCaseStudy = CASE_STUDIES.find((cs) => cs.slug === detail.caseStudySlug);

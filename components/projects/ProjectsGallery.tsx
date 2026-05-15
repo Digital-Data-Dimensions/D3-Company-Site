@@ -26,6 +26,54 @@ function groupByClient(items: ProjectImage[]) {
   return Array.from(map.entries()).map(([client, images]) => ({ client, images }));
 }
 
+function groupSummary(images: ProjectImage[]) {
+  if (images.length === 1 && images[0].branches?.length) {
+    const n = images[0].branches.length;
+    return `${n} branch${n === 1 ? '' : 'es'}`;
+  }
+  return `${images.length} photo${images.length === 1 ? '' : 's'}`;
+}
+
+function ProjectCard({ project }: { project: ProjectImage }) {
+  const title = formatTitle(project);
+  const singleWithBranches = !!project.branches?.length;
+
+  return (
+    <div className={`pg-card${singleWithBranches ? ' pg-card--featured' : ''}`}>
+      <div className="pg-media">
+        {project.src ? (
+          <Image
+            src={project.src}
+            alt={project.alt}
+            width={1600}
+            height={1200}
+            sizes={
+              singleWithBranches
+                ? '(max-width: 720px) 100vw, min(640px, 50vw)'
+                : '(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw'
+            }
+            className="pg-img"
+          />
+        ) : (
+          <div className="pg-placeholder">{title}</div>
+        )}
+      </div>
+      {project.branches && project.branches.length > 0 && (
+        <div className="pg-branches" aria-label={`${project.client} branches`}>
+          <div className="pg-branches-label">Branches</div>
+          <ul className="pg-branches-list">
+            {project.branches.map((branch) => (
+              <li key={branch} className="pg-branch-chip">
+                {branch}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function ProjectsGallery() {
   const solutions = useMemo(() => {
     const list = PROJECT_IMAGES.map((p) => p.solution).filter(Boolean) as Solution[];
@@ -49,14 +97,12 @@ export function ProjectsGallery() {
 
   const groups = useMemo(() => groupByClient(visible), [visible]);
 
-  // default: show a small set per client to reduce clutter
   const DEFAULT_VISIBLE_PER_CLIENT = 6;
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const isExpanded = (client: string) => !!expanded[client];
   const toggleClient = (client: string) => setExpanded((s) => ({ ...s, [client]: !s[client] }));
 
   useEffect(() => {
-    // Reset expanded sections when filters change
     setExpanded({});
   }, [activeIndustry, activeSolution]);
 
@@ -111,7 +157,7 @@ export function ProjectsGallery() {
               <div className="pg-group-head">
                 <div>
                   <div className="pg-group-title">{client}</div>
-                  <div className="pg-group-sub">{images.length} photo{images.length === 1 ? '' : 's'}</div>
+                  <div className="pg-group-sub">{groupSummary(images)}</div>
                 </div>
                 {images.length > DEFAULT_VISIBLE_PER_CLIENT && (
                   <button type="button" className="pg-group-toggle" onClick={() => toggleClient(client)}>
@@ -120,30 +166,13 @@ export function ProjectsGallery() {
                 )}
               </div>
 
-              <div className="pg-grid" aria-label={`${client} projects`}>
-                {shown.map((p) => {
-                  const title = formatTitle(p);
-                  return (
-                    <div
-                      key={p.id}
-                      className="pg-card"
-                    >
-                      <div className="pg-media">
-                        {p.src ? (
-                          <Image
-                            src={p.src}
-                            alt={p.alt}
-                            fill
-                            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            style={{ objectFit: 'cover' }}
-                          />
-                        ) : (
-                          <div className="pg-placeholder">{title}</div>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
+              <div
+                className={`pg-grid${shown.length === 1 && shown[0].branches?.length ? ' pg-grid--single' : ''}`}
+                aria-label={`${client} projects`}
+              >
+                {shown.map((p) => (
+                  <ProjectCard key={p.id} project={p} />
+                ))}
               </div>
 
               {!expandedOn && remaining > 0 && (
@@ -188,9 +217,7 @@ export function ProjectsGallery() {
         }
 
         .pg-groups{ display: flex; flex-direction: column; gap: 26px; }
-        .pg-group{
-          padding-top: 4px;
-        }
+        .pg-group{ padding-top: 4px; }
         .pg-group-head{
           display:flex;
           align-items:flex-end;
@@ -237,21 +264,25 @@ export function ProjectsGallery() {
 
         .pg-grid{
           display:grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 12px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
         }
-        @media (max-width: 1100px) { .pg-grid{ grid-template-columns: repeat(3, 1fr) !important; } }
-        @media (max-width: 720px)  { .pg-grid{ grid-template-columns: repeat(2, 1fr) !important; } }
-        @media (max-width: 420px)  { .pg-grid{ grid-template-columns: 1fr !important; } }
+        .pg-grid--single {
+          grid-template-columns: minmax(0, 640px);
+        }
+        @media (max-width: 1100px) { .pg-grid{ grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 720px)  {
+          .pg-grid{ grid-template-columns: 1fr !important; }
+          .pg-grid--single { grid-template-columns: 1fr !important; }
+        }
 
         .pg-card{
-          text-align:left;
+          display: flex;
+          flex-direction: column;
           background: var(--card);
           border: 1px solid var(--border);
           border-radius: 12px;
-          overflow:hidden;
-          padding:0;
-          cursor: default;
+          overflow: hidden;
           transition: transform .25s, box-shadow .25s, border-color .25s;
         }
         .pg-card:hover{
@@ -260,23 +291,57 @@ export function ProjectsGallery() {
           border-color: color-mix(in srgb, var(--muted) 30%, var(--border));
         }
         .pg-media{
-          position:relative;
-          aspect-ratio: 4 / 3;
-          width:100%;
-          background: var(--bg-highlight);
+          width: 100%;
+          line-height: 0;
+          background: var(--card);
+        }
+        .pg-img {
+          width: 100%;
+          height: auto;
+          display: block;
         }
         .pg-placeholder{
-          position:absolute; inset:0;
-          display:flex; align-items:center; justify-content:center;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          min-height: 120px;
           color: var(--muted);
           font-size: 12px;
           font-weight: 400;
           padding: 14px;
           text-align:center;
+          background: var(--bg-highlight);
         }
-
+        .pg-branches {
+          padding: 16px 18px 18px;
+          border-top: 1px solid var(--border);
+        }
+        .pg-branches-label {
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--muted);
+          margin-bottom: 10px;
+        }
+        .pg-branches-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .pg-branch-chip {
+          font-size: 12px;
+          font-weight: 400;
+          color: var(--heading);
+          background: var(--bg-surface);
+          border: 1px solid var(--border);
+          border-radius: 999px;
+          padding: 6px 12px;
+        }
       `}</style>
     </>
   );
 }
-

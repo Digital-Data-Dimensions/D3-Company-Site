@@ -21,7 +21,7 @@ const SITEMAP = [
   {
     section: 'Solutions',
     links: [
-      { label: 'TimeTech Platform', href: '/solutions/timetech-application' },
+      { label: 'Time Attendance — Enterprise', href: '/solutions/time-attendance-enterprise' },
       { label: 'Time Attendance — Standard', href: '/solutions/time-attendance-system' },
       { label: 'Time Attendance — Enterprise', href: '/solutions/time-attendance-enterprise' },
       { label: 'HR & Payroll Software', href: '/solutions/hr-payroll-software' },

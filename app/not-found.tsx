@@ -18,7 +18,7 @@ function ArrowIcon() {
 }
 
 const QUICK_LINKS = [
-  { label: 'TimeTech Platform', href: '/en/solutions/timetech-application' },
+  { label: 'Time Attendance — Enterprise', href: '/en/solutions/time-attendance-enterprise' },
   { label: 'Queue Management', href: '/en/solutions/queue-management-system' },
   { label: 'Request a Demo', href: '/en/contact' },
   { label: 'Case Studies', href: '/en/case-studies' },

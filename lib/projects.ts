@@ -9,72 +9,20 @@ export type ProjectImage = {
   /** Place files under `public/images/` (or a subfolder) and reference e.g. `/images/hilal-hidd.jpeg` */
   src?: string;
   alt: string;
+  /** Site locations served (shown as labels when there is a single hero image for the client) */
+  branches?: string[];
 };
 
 export const PROJECT_IMAGES: ProjectImage[] = [
   /* ── QUEUE MANAGEMENT ── */
   {
-    id: 'al-hilal-hidd',
+    id: 'al-hilal-hospital',
     client: 'Al Hilal Hospital',
-    location: 'Hidd',
     solution: 'Queue Management',
     industry: 'Hospital',
     src: '/images/hilal-hidd.jpeg',
-    alt: 'Project installation at Al Hilal Hospital (Hidd)',
-  },
-  {
-    id: 'al-hilal-sitra',
-    client: 'Al Hilal Hospital',
-    location: 'Sitra',
-    solution: 'Queue Management',
-    industry: 'Hospital',
-    src: '/images/hilal-sitra.jpeg',
-    alt: 'Project installation at Al Hilal Hospital (Sitra)',
-  },
-  {
-    id: 'al-hilal-manama',
-    client: 'Al Hilal Hospital',
-    location: 'Manama',
-    solution: 'Queue Management',
-    industry: 'Hospital',
-    src: '/images/hilal-manama.jpeg',
-    alt: 'Project installation at Al Hilal Hospital (Manama)',
-  },
-  {
-    id: 'al-hilal-hamad-town',
-    client: 'Al Hilal Hospital',
-    location: 'Hamad Town',
-    solution: 'Queue Management',
-    industry: 'Hospital',
-    src: '/images/hilal-hamadtown.jpeg',
-    alt: 'Project installation at Al Hilal Hospital (Hamad Town)',
-  },
-  {
-    id: 'al-hilal-adliya',
-    client: 'Al Hilal Hospital',
-    location: 'Adliya',
-    solution: 'Queue Management',
-    industry: 'Hospital',
-    src: '/images/hilal-adliya.jpeg',
-    alt: 'Project installation at Al Hilal Hospital (Adliya)',
-  },
-  {
-    id: 'al-hilal-adliya-2',
-    client: 'Al Hilal Hospital',
-    location: 'Adliya',
-    solution: 'Queue Management',
-    industry: 'Hospital',
-    src: '/images/hilal-adliya-2.jpeg',
-    alt: 'Additional project installation at Al Hilal Hospital (Adliya)',
-  },
-  {
-    id: 'al-hilal-manama-2',
-    client: 'Al Hilal Hospital',
-    location: 'Manama',
-    solution: 'Queue Management',
-    industry: 'Hospital',
-    src: '/images/hilal-manama-2.jpeg',
-    alt: 'Additional project installation at Al Hilal Hospital (Manama)',
+    alt: 'Queue management installation at Al Hilal Hospital',
+    branches: ['Hidd', 'Sitra', 'Manama', 'Hamad Town', 'Adliya'],
   },
   {
     id: 'ibn-al-nafees-manama',
