@@ -35,7 +35,7 @@ const TIMETECH_ITEMS = [
     ],
   },
   {
-    group: 'HR & Payroll',
+    group: 'HRMS',
     items: [
       { slug: 'hr-payroll-software', label: 'Standard', desc: 'Core payroll, leave & WPS export' },
       { slug: 'hr-payroll-software', label: 'Enterprise', desc: 'Full HRMS, appraisal & recruitment' },
@@ -345,10 +345,10 @@ export function Navbar() {
             {/* TimeTech grouped */}
             {TIMETECH_ITEMS.map(group => (
               <div key={group.group}>
-                <div style={{ fontSize: 10, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '8px 14px 2px' }}>{group.group}</div>
+                <div className="d3-mob-group-label">{group.group}</div>
                 {group.items.map(item => (
                   <Link key={`${group.group}-${item.label}`} href={`/solutions/${item.slug}` as Parameters<typeof Link>[0]['href']}
-                    onClick={() => setMobileOpen(false)} className="d3-mob-link"
+                    onClick={() => setMobileOpen(false)} className="d3-mob-link d3-mob-link--sub"
                     style={{ paddingLeft: 20 }}
                   >
                     <span className="d3-mob-icon" style={{ color: 'var(--muted)' }}><ChevronRightSVG /></span>
@@ -358,7 +358,7 @@ export function Navbar() {
               </div>
             ))}
             <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
-            <div style={{ fontSize: 10, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Infrastructure</div>
+            <div className="d3-mob-group-label">Infrastructure</div>
             {OPERATIONS.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
@@ -373,7 +373,7 @@ export function Navbar() {
               </Link>
             ))}
             <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
-            <div style={{ fontSize: 10, fontWeight: 400, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 14px 2px' }}>Business</div>
+            <div className="d3-mob-group-label">Business</div>
             {BUSINESS.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
@@ -612,7 +612,7 @@ export function Navbar() {
         .d3-mob-plain-link {
           display: flex; align-items: center;
           padding: 14px 14px; border-radius: 10px;
-          font-size: 15px; font-weight: 300; color: var(--body);
+          font-size: 15px; font-weight: 600; color: var(--heading);
           text-decoration: none;
           border-top: 1px solid var(--border); margin-top: 4px;
         }
@@ -622,7 +622,7 @@ export function Navbar() {
         .d3-mob-acc-btn {
           width: 100%; display: flex; align-items: center; justify-content: space-between;
           padding: 14px 14px; background: none; border: none; cursor: pointer;
-          font-family: var(--font); font-size: 15px; font-weight: 300;
+          font-family: var(--font); font-size: 15px; font-weight: 600;
           color: var(--heading); border-radius: 10px; min-height: 52px;
           -webkit-tap-highlight-color: transparent;
         }
@@ -636,12 +636,22 @@ export function Navbar() {
           padding-left: 8px;
         }
         .d3-mob-acc-body--open { max-height: 600px; }
+        .d3-mob-group-label {
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--heading);
+          letter-spacing: -0.2px;
+          padding: 10px 14px 4px;
+        }
         .d3-mob-link {
           display: flex; align-items: center; gap: 10px;
           padding: 11px 14px; border-radius: 8px;
-          font-size: 14px; font-weight: 400; color: var(--body);
+          font-size: 14px; font-weight: 500; color: var(--heading);
           text-decoration: none; margin-bottom: 2px;
           -webkit-tap-highlight-color: transparent;
+        }
+        .d3-mob-link--sub {
+          font-weight: 500;
         }
         .d3-mob-link:active { background: var(--bg-surface); }
         .d3-mob-link-icon {

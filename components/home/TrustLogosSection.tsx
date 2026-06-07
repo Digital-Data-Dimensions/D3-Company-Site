@@ -1,39 +1,17 @@
 'use client';
 
 import Image from 'next/image';
-
-const LOGOS: {
-  name: string;
-  abbr: string;
-  sector: string;
-  logo?: string;
-  logoType?: 'svg' | 'png';
-}[] = [
-  { name: 'Ministry of Interior',   abbr: 'MOI',   sector: 'Gov',      logo: '/images/logos/moi.png',           logoType: 'png' },
-  { name: 'Ministry of Works',      abbr: 'MOW',   sector: 'Gov' },
-  { name: 'Bahrain Airport Co.',    abbr: 'BAC',   sector: 'Aviation', logo: '/images/logos/bac.svg',           logoType: 'svg' },
-  { name: 'Ministry of Health',     abbr: 'MOH',   sector: 'Gov',      logo: '/images/logos/moh.png',           logoType: 'png' },
-  { name: 'ALBA',                   abbr: 'ALBA',  sector: 'Industry', logo: '/images/logos/alba.svg',          logoType: 'svg' },
-  { name: 'Gulf Air',               abbr: 'GFA',   sector: 'Aviation', logo: '/images/logos/gulf-air.png',      logoType: 'png' },
-  { name: 'Batelco',                abbr: 'BTC',   sector: 'Telecom',  logo: '/images/logos/batelco.svg',       logoType: 'svg' },
-  { name: 'Nass Corporation',       abbr: 'NSS',   sector: 'Industry', logo: '/images/logos/nass.png',          logoType: 'png' },
-  { name: 'Jawad Business Group',   abbr: 'JBG',   sector: 'Retail',   logo: '/images/logos/jawad.png',         logoType: 'png' },
-  { name: 'Ibn Al Nafees Hospital', abbr: 'IAN',   sector: 'Health',   logo: '/images/logos/ibn-al-nafees.png', logoType: 'png' },
-  { name: 'Al Moayyed Group',       abbr: 'AMG',   sector: 'Industry', logo: '/images/logos/almoayyed.png',     logoType: 'png' },
-  { name: 'BAPCO',                  abbr: 'BAPCO', sector: 'Energy',   logo: '/images/logos/bapco.png',         logoType: 'png' },
-];
+import { TRUST_LOGOS } from '@/lib/data';
 
 const SECTOR_COLORS: Record<string, { bg: string; text: string }> = {
   Gov:      { bg: 'rgba(0,33,71,0.09)',   text: '#002147' },
   Industry: { bg: 'rgba(30,42,69,0.09)',  text: '#1E2A45' },
-  Aviation: { bg: 'rgba(0,33,71,0.09)',   text: '#002147' },
-  Telecom:  { bg: 'rgba(30,42,69,0.09)',  text: '#1E2A45' },
-  Retail:   { bg: 'rgba(0,33,71,0.08)',   text: '#002147' },
   Health:   { bg: 'rgba(0,53,128,0.08)',  text: '#003580' },
-  Energy:   { bg: 'rgba(14,40,80,0.09)',  text: '#0e2850' },
+  Retail:   { bg: 'rgba(0,33,71,0.08)',   text: '#002147' },
+  GCC:      { bg: 'rgba(14,40,80,0.09)',  text: '#0e2850' },
 };
 
-function LogoCard({ logo }: { logo: (typeof LOGOS)[0] }) {
+function LogoCard({ logo }: { logo: (typeof TRUST_LOGOS)[0] }) {
   const col = SECTOR_COLORS[logo.sector] || SECTOR_COLORS.Gov;
   return (
     <div className="tl-card">
@@ -58,7 +36,7 @@ function LogoCard({ logo }: { logo: (typeof LOGOS)[0] }) {
   );
 }
 
-const TRACK = [...LOGOS, ...LOGOS];
+const TRACK = [...TRUST_LOGOS, ...TRUST_LOGOS];
 
 export function TrustLogosSection() {
   return (
@@ -70,7 +48,7 @@ export function TrustLogosSection() {
       <div className="tl-slider" aria-label="Client logos">
         <div className="tl-track" aria-hidden="true">
           {TRACK.map((logo, i) => (
-            <LogoCard key={`${logo.abbr}-${i}`} logo={logo} />
+            <LogoCard key={`${logo.abbr}-${logo.name}-${i}`} logo={logo} />
           ))}
         </div>
       </div>
@@ -103,7 +81,7 @@ export function TrustLogosSection() {
           display: flex;
           gap: 12px;
           width: max-content;
-          animation: tl-scroll 40s linear infinite;
+          animation: tl-scroll 50s linear infinite;
         }
         .tl-slider:hover .tl-track { animation-play-state: paused; }
         @keyframes tl-scroll {
@@ -119,8 +97,8 @@ export function TrustLogosSection() {
           border-radius: 14px;
           padding: 14px 18px;
           flex-shrink: 0;
-          min-width: 190px;
-          max-width: 220px;
+          min-width: 200px;
+          max-width: 260px;
           transition: border-color 0.2s, box-shadow 0.2s;
           cursor: default;
         }
@@ -145,21 +123,24 @@ export function TrustLogosSection() {
           align-items: center;
           justify-content: center;
           font-size: 9px;
-          font-weight: 400;
+          font-weight: 500;
           letter-spacing: 0.03em;
           text-align: center;
           flex-shrink: 0;
           line-height: 1.1;
+          padding: 0 4px;
         }
         .tl-name {
           font-size: 12px;
           font-weight: 400;
           color: var(--heading);
-          line-height: 1.3;
-          white-space: nowrap;
+          line-height: 1.35;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
           overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 120px;
+          flex: 1;
+          min-width: 0;
         }
         @media (prefers-reduced-motion: reduce) {
           .tl-track { animation: none; }

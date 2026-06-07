@@ -163,7 +163,7 @@ const SLIDES = [
   },
   {
     tag: 'Workforce Management',
-    headline: 'Biometric Attendance, HR & Payroll: All in One',
+    headline: 'Biometric Attendance & HRMS: All in One',
     sub: 'TimeTech handles time attendance, HRMS, payroll, visitor management and mobile self-service for enterprises with full LMRA and WPS compliance.',
     link: { label: 'View Attendance', href: '/solutions/time-attendance-system' },
   },

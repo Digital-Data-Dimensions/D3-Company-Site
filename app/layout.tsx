@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     'D3', 'D3 Bahrain', 'Dthree', 'Digital Data Dimensions', 'D3 Digital Data Dimensions',
     'TimeTech', 'Time Attendance System Bahrain', 'HRMS Software GCC', 'Biometric Attendance',
     'Queue Management System', 'RFID Asset Tracking', 'Digital Signage', 'ERP Bahrain',
-    'HR Payroll Software Bahrain', 'Access Control System',
+    'HRMS Bahrain', 'Access Control System',
     'Workforce Management GCC', 'LMRA Compliance', 'WPS Payroll', 'Time Attendance Gulf',
     'IT Solutions Bahrain', 'Enterprise Software GCC', 'Attendance System Bahrain',
   ],

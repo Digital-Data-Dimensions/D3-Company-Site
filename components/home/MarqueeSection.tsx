@@ -1,6 +1,6 @@
 export function MarqueeSection() {
   const items = [
-    'Time Attendance', 'HRMS & Payroll', 'Queue Management', 'Digital Signage',
+    'Time Attendance', 'HRMS', 'Queue Management', 'Digital Signage',
     'RFID Tracking', 'IP CCTV', 'Access Control', 'ERP Solutions',
     'Visitor Management', 'Inventory Management', 'Electronic Shelf Labels', 'Consultancy',
   ];

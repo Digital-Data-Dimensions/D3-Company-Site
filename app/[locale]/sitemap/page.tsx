@@ -24,7 +24,7 @@ const SITEMAP = [
       { label: 'Time Attendance — Enterprise', href: '/solutions/time-attendance-enterprise' },
       { label: 'Time Attendance — Standard', href: '/solutions/time-attendance-system' },
       { label: 'Time Attendance — Enterprise', href: '/solutions/time-attendance-enterprise' },
-      { label: 'HR & Payroll Software', href: '/solutions/hr-payroll-software' },
+      { label: 'HRMS', href: '/solutions/hr-payroll-software' },
       { label: 'Visitor Management System', href: '/solutions/visitor-management' },
       { label: 'Queue Management System', href: '/solutions/queue-management-system' },
       { label: 'Digital Signage & Displays', href: '/solutions/digital-signage' },

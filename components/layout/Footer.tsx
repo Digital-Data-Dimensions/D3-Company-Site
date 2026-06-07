@@ -53,7 +53,7 @@ export function Footer() {
 
   const solutions = [
     { label: 'Time Attendance', href: '/solutions/time-attendance-system' },
-    { label: 'HRMS & Payroll', href: '/solutions/hr-payroll-software' },
+    { label: 'HRMS', href: '/solutions/hr-payroll-software' },
     { label: 'Queue Management', href: '/solutions/queue-management-system' },
     { label: 'Digital Signage', href: '/solutions/digital-signage' },
     { label: 'RFID Tracking', href: '/solutions/rfid-asset-tracking' },

@@ -144,7 +144,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'visitor-management': {
     seoKeyword: 'visitor management system Bahrain GCC reception kiosk access card',
-    tagline: 'Professional and advanced online visitor management system: reception kiosk, pre-registration, access cards and full audit trail.',
+    tagline: 'TimeTech professional and advanced online visitor management system: reception kiosk, pre-registration, access cards and full audit trail.',
     highlights: ['Visitor Pre-Registration', 'Access Card Issuance', 'Door Assignment', 'Audit Reports', 'Automatic Access Removal', 'Appointment Tracking'],
     features: [
       { title: 'Visitor Appointment Form', desc: 'Pre-register visitors online with appointment details: name, host, purpose and expected visit time, before arrival.' },
@@ -327,12 +327,12 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'timetech-application': {
     seoKeyword: 'TimeTech time attendance HRMS Bahrain GCC',
-    tagline: 'A complete cloud workforce platform: attendance, HR, payroll, visitor management and mobile self-service, purpose-built for GCC enterprises.',
+    tagline: 'TimeTech: a complete cloud workforce platform with attendance, HRMS, visitor management and mobile self-service, purpose-built for GCC enterprises.',
     highlights: ['LMRA & WPS Compliant', 'Multi-company & multi-site', 'iOS & Android mobile app', 'Arabic & English interface', 'Auto shift picking', 'Geo-fenced mobile attendance'],
     features: [
       { title: 'Biometric Time Attendance', desc: 'Fingerprint, face recognition and card-based terminals with real-time processing. No manual intervention needed.' },
       { title: 'Auto Shift & Work Rules', desc: 'N-number of shifts with auto picking, flexi rules, Ramadan shift support, grace periods and OT segregation.' },
-      { title: 'HRMS & Payroll', desc: 'Multi-company, multi-currency WPS payroll with GOSI, LMRA integration, leave management and salary transfer file formats.' },
+      { title: 'HRMS', desc: 'Multi-company, multi-currency WPS payroll with GOSI, LMRA integration, leave management and salary transfer file formats.' },
       { title: 'Employee Self-Service Portal', desc: 'Web and mobile portal for leave requests, payslip access, overtime requests and notice board.' },
       { title: 'Mobile App (iOS/Android)', desc: 'Geo-fenced mobile attendance, selfie punch, QR code clock-in, leave/overtime requests and real-time notifications.' },
       { title: 'Visitor Management', desc: 'Reception kiosk with appointment forms, access card issuance, door assignment and comprehensive visitor reports.' },
@@ -343,7 +343,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'time-attendance-system': {
     seoKeyword: 'time attendance system Bahrain GCC biometric',
-    tagline: 'Cloud-based biometric attendance across unlimited locations, with real-time dashboards, auto-shift picking, overtime management and LMRA-compliant payroll export.',
+    tagline: 'TimeTech cloud-based biometric attendance across unlimited locations, with real-time dashboards, auto-shift picking, overtime management and LMRA-compliant payroll export.',
     highlights: ['Fingerprint & face recognition', 'LMRA compliant reports', 'Real-time dashboard', 'Auto shift picking', 'Email alerts for absences', 'Overtime approval workflow'],
     features: [
       { title: 'Multi-Modal Biometric', desc: 'Fingerprint, facial recognition, smart card and PIN, all supported on one integrated terminal.' },
@@ -360,7 +360,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'queue-management-system': {
     seoKeyword: 'queue management system Bahrain GCC kiosk wired wireless',
-    tagline: 'Wired and wireless kiosk-based queuing for ministries, hospitals and enterprises, with audio announcements, live analytics and supervisor reporting.',
+    tagline: 'TimeTech wired and wireless kiosk-based queuing for ministries, hospitals and enterprises, with audio announcements, live analytics and supervisor reporting.',
     highlights: ['15" all-in-one KIOSK', 'Wired or wireless', 'Audio announcements', 'Multi-lingual support', 'Real-time analytics', 'Supervisor reporting'],
     features: [
       { title: '15" Touchscreen Kiosk', desc: 'All-in-one kiosk with built-in server, 80mm thermal printer and audio system, reducing single-point failure.' },
@@ -377,7 +377,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'rfid-asset-tracking': {
     seoKeyword: 'RFID asset tracking Bahrain warehouse management document tracking',
-    tagline: 'Track assets, documents, warehouse inventory and gold ornaments across multiple buildings, departments and warehouses, using RFID tags, handheld scanners and barcode technology.',
+    tagline: 'TimeTech asset, document and warehouse tracking across multiple buildings, departments and warehouses, using RFID tags, handheld scanners and barcode technology.',
     highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Document Tracking', 'Warehouse WMS', 'Gold & Valuables Tracking'],
     features: [
       { title: 'RFID Fixed Asset Tracking', desc: 'Track asset flow across the organisation efficiently. Hierarchy: Company, Department, Building, Room. Assets do not need to be visible to the RFID system.' },
@@ -418,7 +418,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'access-control-system': {
     seoKeyword: 'access control system IP CCTV Bahrain biometric cameras surveillance',
-    tagline: 'Enterprise-grade IP surveillance and biometric access control. D3 is a system integrator delivering complete security solutions for indoor, outdoor, business and home environments.',
+    tagline: 'TimeTech enterprise-grade IP surveillance and biometric access control. D3 delivers complete security solutions for indoor, outdoor, business and home environments.',
     highlights: ['IP CCTV (Indoor & Outdoor)', 'Fingerprint & Face Recognition', 'Proximity Card / NFC', 'Centralised Management', 'No Lost Keys or Passwords', 'Scalable to Enterprise'],
     features: [
       { title: 'IP CCTV: Local & Remote Monitoring', desc: 'D3 is a system integrator, not just a CCTV seller. Local or remote monitoring via networked surveillance, suitable for indoor and outdoor, business and home environments.' },
@@ -461,7 +461,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'digital-signage': {
     seoKeyword: 'digital signage LED displays Bahrain GCC vertical signage eBook CMS',
-    tagline: 'Indoor and outdoor LED displays, vertical portrait screens, e-book readers and IP power controllers, all managed from a central CMS with scheduling and real-time content updates.',
+    tagline: 'TimeTech indoor and outdoor LED displays, vertical portrait screens, e-book readers and IP power controllers, all managed from a central CMS with scheduling and real-time content updates.',
     highlights: ['LED from 4mm to 20mm pitch', 'Vertical Displays from 42"', 'Virtual Interactive eBook', 'IP Power Controller', 'Web-based CMS', '24/7 Operation'],
     features: [
       { title: 'LED Displays', desc: 'Pitch sizes from 4mm to 20mm. Indoor and outdoor (fully weatherproof). First Selection LEDs with HDV pixel technology for colour uniformity and image quality.' },
@@ -530,7 +530,7 @@ const SOLUTION_DETAILS: Record<string, {
   },
   'erp-retail-management': {
     seoKeyword: 'ERP software Bahrain retail management inventory electronic shelf labels',
-    tagline: 'Inventory, purchasing, sales, finance and HR integrated into one unified system, with electronic shelf labels and restaurant management. Multi-company, multi-currency, multi-branch.',
+    tagline: 'TimeTech ERP with inventory, purchasing, sales, finance and HR integrated into one unified system, with electronic shelf labels and restaurant management. Multi-company, multi-currency, multi-branch.',
     highlights: ['Multi-Company & Multi-Branch', 'Real-time Inventory', 'Electronic Shelf Labels', 'Financial Accounting', 'Restaurant Management', 'Van Sales & RFID'],
     features: [
       { title: 'Procurement & Import', desc: 'Issue Purchase Orders, manage Goods Receipt, pending order status, creditors management and item return with document attachment.' },

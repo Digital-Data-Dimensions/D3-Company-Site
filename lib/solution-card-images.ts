@@ -21,7 +21,7 @@ export const SOLUTION_VISUAL_IMAGES: Record<string, { src: string; alt: string }
   },
   'hr-payroll-software': {
     src: cardImage('HR & Payroll Software.jpg'),
-    alt: 'TimeTech HRMS and payroll software',
+    alt: 'TimeTech HRMS',
   },
   'visitor-management': {
     src: cardImage('Visitor Management System.jpg'),

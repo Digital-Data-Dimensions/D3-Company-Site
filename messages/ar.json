@@ -7,7 +7,7 @@
     "standard_desc": "حضور بيومتري سحابي للشركات الصغيرة والمتوسطة",
     "enterprise": "الإصدار المؤسسي",
     "enterprise_desc": "متعدد المواقع والشركات مع اختيار ورديات تلقائي",
-    "hr_payroll": "الموارد البشرية والرواتب",
+    "hr_payroll": "HRMS",
     "hr_standard": "الإصدار الأساسي",
     "hr_standard_desc": "كشف الرواتب والإجازات وتصدير WPS",
     "hr_enterprise": "الإصدار المؤسسي",
@@ -202,7 +202,7 @@
     "copyright": "© 2026 D3 — أبعاد البيانات الرقمية. جميع الحقوق محفوظة.",
     "links": {
       "time_attendance": "الحضور والانصراف",
-      "hrms_payroll": "الموارد البشرية والرواتب",
+      "hrms_payroll": "HRMS",
       "queue_management": "إدارة الطوابير",
       "digital_signage": "اللافتات الرقمية",
       "rfid_tracking": "تتبع RFID",

@@ -85,7 +85,7 @@
     "sub": "One platform. Full lifecycle workforce management. Trusted by 500+ organisations across the GCC.",
     "modules": {
       "attendance": "Time Attendance",
-      "hr": "HR & Payroll",
+      "hr": "HRMS",
       "visitor": "Visitor Management",
       "selfService": "Self-Service Portal",
       "mobile": "Mobile App",

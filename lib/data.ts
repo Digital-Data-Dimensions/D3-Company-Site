@@ -6,7 +6,7 @@ export const SOLUTIONS = [
     slug: 'time-attendance-system',
     num: '01',
     title: 'Time Attendance: Standard',
-    desc: 'Biometric fingerprint, face recognition and card-based attendance with real-time processing, auto-shift picking, LMRA-compliant payroll export and unlimited sites.',
+    desc: 'TimeTech biometric fingerprint, face recognition and card-based attendance with real-time processing, auto-shift picking, LMRA-compliant payroll export and unlimited sites.',
     tags: ['Biometric', 'LMRA Ready', 'Auto Shift', 'Mobile App'],
     icon: 'clock',
   },
@@ -21,7 +21,7 @@ export const SOLUTIONS = [
   {
     slug: 'hr-payroll-software',
     num: '03',
-    title: 'HR & Payroll Software',
+    title: 'HRMS',
     desc: 'TimeTech professional HRMS and Payroll for the Gulf Region. Multi-company, multi-currency, bi-lingual, flexible and cost effective. Covers the complete employee lifecycle.',
     tags: ['Multi-Company', 'GOSI Ready', 'WPS Export', 'Self-Service', 'Mobile App', 'Appraisal'],
     icon: 'users',
@@ -30,7 +30,7 @@ export const SOLUTIONS = [
     slug: 'visitor-management',
     num: '04',
     title: 'Visitor Management System',
-    desc: 'Professional and advanced online visitor management: reception kiosk, pre-registration, access card issuance, door assignment and full audit trail.',
+    desc: 'TimeTech professional and advanced online visitor management: reception kiosk, pre-registration, access card issuance, door assignment and full audit trail.',
     tags: ['Access Card Integration', 'Pre-Registration', 'Audit Trail'],
     icon: 'users',
   },
@@ -38,7 +38,7 @@ export const SOLUTIONS = [
     slug: 'queue-management-system',
     num: '05',
     title: 'Queue Management System',
-    desc: 'Wired and wireless kiosk-based queue management with audio announcements, multi-service categories, counter LED displays and live analytics for ministries and enterprises.',
+    desc: 'TimeTech wired and wireless kiosk-based queue management with audio announcements, multi-service categories, counter LED displays and live analytics for ministries and enterprises.',
     tags: ['Kiosk', 'Wired & Wireless', 'Audio Announcements', 'Analytics'],
     icon: 'users',
   },
@@ -46,7 +46,7 @@ export const SOLUTIONS = [
     slug: 'digital-signage',
     num: '06',
     title: 'Digital Signage & Displays',
-    desc: 'LED, LCD and vertical signage displays from 42" with 4K support, 24/7 operation, centralized CMS, Android OS and optional touch screen for indoor and outdoor deployments.',
+    desc: 'TimeTech LED, LCD and vertical signage displays from 42" with 4K support, 24/7 operation, centralized CMS, Android OS and optional touch screen for indoor and outdoor deployments.',
     tags: ['4K LED', 'Remote CMS', '24/7 Operation', 'eBook'],
     icon: 'monitor',
   },
@@ -54,7 +54,7 @@ export const SOLUTIONS = [
     slug: 'rfid-asset-tracking',
     num: '07',
     title: 'RFID & Asset Tracking',
-    desc: 'Active and passive RFID tracking for assets, documents, warehouse inventory and gold ornaments across multiple buildings, departments and warehouses with mobile handheld terminal support.',
+    desc: 'TimeTech active and passive RFID tracking for assets, documents, warehouse inventory and gold ornaments across multiple buildings, departments and warehouses with mobile handheld terminal support.',
     tags: ['Active RFID', 'Warehouse WMS', 'Document Tracking', 'Mobile'],
     icon: 'layers',
   },
@@ -62,7 +62,7 @@ export const SOLUTIONS = [
     slug: 'access-control-system',
     num: '08',
     title: 'IP CCTV & Access Control',
-    desc: 'Enterprise-grade IP surveillance cameras, biometric access controllers and proximity card systems integrated with centralized management software for GCC security compliance.',
+    desc: 'TimeTech enterprise-grade IP surveillance cameras, biometric access controllers and proximity card systems integrated with centralized management software for GCC security compliance.',
     tags: ['IP Camera', 'Face Recognition', 'NFC / Proximity', 'Biometric'],
     icon: 'shield',
   },
@@ -70,7 +70,7 @@ export const SOLUTIONS = [
     slug: 'erp-retail-management',
     num: '09',
     title: 'ERP & Retail Management',
-    desc: 'Full ERP covering procurement, inventory, sales, financial accounting, payroll, restaurant management and electronic shelf labels. Multi-company, multi-currency, multi-branch.',
+    desc: 'TimeTech full ERP covering procurement, inventory, sales, financial accounting, payroll, restaurant management and electronic shelf labels. Multi-company, multi-currency, multi-branch.',
     tags: ['Multi-Company', 'ESL', 'Inventory', 'Van Sales'],
     icon: 'briefcase',
   },
@@ -329,6 +329,33 @@ export const CLIENTS = {
     'KIMS Health Hospital Group',
   ],
 };
+
+/** Homepage trust marquee — names must match CLIENTS; logos only where assets exist */
+export const TRUST_LOGOS: {
+  name: string;
+  abbr: string;
+  sector: 'Gov' | 'Industry' | 'Health' | 'Retail' | 'GCC';
+  logo?: string;
+  logoType?: 'svg' | 'png';
+}[] = [
+  { name: 'Ministry of Interior – Customs Affairs', abbr: 'MOI', sector: 'Gov', logo: '/images/logos/moi.png', logoType: 'png' },
+  { name: 'Labour Market Regulatory Authority (LMRA)', abbr: 'LMRA', sector: 'Gov' },
+  { name: 'Civil Service Bureau (CSB)', abbr: 'CSB', sector: 'Gov' },
+  { name: 'Bahrain Bourse', abbr: 'BHB', sector: 'Gov' },
+  { name: 'University of Bahrain', abbr: 'UoB', sector: 'Gov' },
+  { name: 'Ministry of Labour', abbr: 'MOL', sector: 'Gov' },
+  { name: 'Real Estate Regulatory Authority (RERA)', abbr: 'RERA', sector: 'Gov' },
+  { name: 'Nass Corporation', abbr: 'Nass', sector: 'Industry', logo: '/images/logos/nass.png', logoType: 'png' },
+  { name: 'Ibn Al-Nafees Hospital Co. BSC', abbr: 'IAN', sector: 'Health', logo: '/images/logos/ibn-al-nafees.png', logoType: 'png' },
+  { name: 'Arabtec Construction (Bahrain Airport)', abbr: 'BAC', sector: 'Industry', logo: '/images/logos/bac.svg', logoType: 'svg' },
+  { name: 'Al Hilal Hospital', abbr: 'AHH', sector: 'Health' },
+  { name: 'Kims Health Hospital', abbr: 'KIMS', sector: 'Health' },
+  { name: 'Reckitt Benckiser Bahrain', abbr: 'RB', sector: 'Industry' },
+  { name: 'Maersk Kanoo Bahrain', abbr: 'Maersk', sector: 'Industry' },
+  { name: 'Eagle Hills (Marassi)', abbr: 'EH', sector: 'Retail' },
+  { name: 'KIMS Health Hospital Group', abbr: 'KIMS', sector: 'GCC' },
+  { name: 'NetLink - Dubai', abbr: 'NetLink', sector: 'GCC' },
+];
 
 export const BLOG_POSTS = [
   {

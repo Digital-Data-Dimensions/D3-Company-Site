@@ -50,7 +50,7 @@ function BarChartIcon() {
 
 const MODULES = [
   { key: 'attendance', label: 'Time Attendance', icon: <ClockIcon />, desc: 'Biometric, face and card-based punch with real-time dashboards.' },
-  { key: 'hr', label: 'HR & Payroll', icon: <WalletIcon />, desc: 'Full payroll engine, leave management, appraisals and WPS compliance.' },
+  { key: 'hr', label: 'HRMS', icon: <WalletIcon />, desc: 'Full payroll engine, leave management, appraisals and WPS compliance.' },
   { key: 'visitor', label: 'Visitor Management', icon: <BadgeIcon />, desc: 'Reception kiosk, pre-registration and badge printing.' },
   { key: 'selfService', label: 'Self-Service Portal', icon: <UserIcon />, desc: 'Employee portal for leave requests, payslips and HR updates.' },
   { key: 'mobile', label: 'Mobile App', icon: <SmartphoneIcon />, desc: 'iOS & Android app for remote punch, approvals and HR on the go.' },
@@ -68,7 +68,7 @@ export function TimeTechSection() {
               Complete workforce management<br />powered by <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>TimeTech</em>
             </h2>
             <p style={{ fontSize: 16, color: 'var(--body)', fontWeight: 400, lineHeight: 1.75 }}>
-              Time attendance, HR & payroll, visitor management, mobile self-service and real-time analytics. All in one unified application built for the GCC.
+              Time attendance, HRMS, visitor management, mobile self-service and real-time analytics. All in one unified application built for the GCC.
             </p>
           </div>
         </RevealOnScroll>
