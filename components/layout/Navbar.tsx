@@ -232,17 +232,6 @@ export function Navbar() {
                             </span>
                           </Link>
                         ))}
-                        <div style={{ borderTop: '1px solid var(--border)', marginTop: 12, paddingTop: 12 }}>
-                          <div className="d3-mega-col-head">Industries</div>
-                          {INDUSTRIES.map(ind => (
-                            <Link key={ind.slug} href={`/industries/${ind.slug}` as Parameters<typeof Link>[0]['href']}
-                              role="menuitem" onClick={() => setActiveMenu(null)} className="d3-dd-item d3-dd-item--row"
-                            >
-                              <span className="d3-dd-icon-bare" style={{ color: 'var(--muted)' }}>{ind.icon}</span>
-                              <span className="d3-dd-label">{ind.label}</span>
-                            </Link>
-                          ))}
-                        </div>
                       </div>
                     </div>
 
@@ -373,7 +362,7 @@ export function Navbar() {
               </Link>
             ))}
             <div style={{ height: 1, background: 'var(--border)', margin: '8px 14px' }} />
-            <div className="d3-mob-group-label">Business</div>
+            <div className="d3-mob-group-label">Business Systems</div>
             {BUSINESS.map(s => (
               <Link key={s.slug} href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']}
                 onClick={() => setMobileOpen(false)} className="d3-mob-link"
@@ -635,7 +624,7 @@ export function Navbar() {
           transition: max-height 0.3s ease;
           padding-left: 8px;
         }
-        .d3-mob-acc-body--open { max-height: 600px; }
+        .d3-mob-acc-body--open { max-height: 2000px; }
         .d3-mob-group-label {
           font-size: 13px;
           font-weight: 600;
