@@ -330,31 +330,21 @@ export const CLIENTS = {
   ],
 };
 
-/** Homepage trust marquee — names must match CLIENTS; logos only where assets exist */
-export const TRUST_LOGOS: {
-  name: string;
-  abbr: string;
-  sector: 'Gov' | 'Industry' | 'Health' | 'Retail' | 'GCC';
-  logo?: string;
-  logoType?: 'svg' | 'png';
-}[] = [
-  { name: 'Ministry of Interior – Customs Affairs', abbr: 'MOI', sector: 'Gov', logo: '/images/logos/moi.png', logoType: 'png' },
-  { name: 'Labour Market Regulatory Authority (LMRA)', abbr: 'LMRA', sector: 'Gov' },
-  { name: 'Civil Service Bureau (CSB)', abbr: 'CSB', sector: 'Gov' },
-  { name: 'Bahrain Bourse', abbr: 'BHB', sector: 'Gov' },
-  { name: 'University of Bahrain', abbr: 'UoB', sector: 'Gov' },
-  { name: 'Ministry of Labour', abbr: 'MOL', sector: 'Gov' },
-  { name: 'Real Estate Regulatory Authority (RERA)', abbr: 'RERA', sector: 'Gov' },
-  { name: 'Nass Corporation', abbr: 'Nass', sector: 'Industry', logo: '/images/logos/nass.png', logoType: 'png' },
-  { name: 'Ibn Al-Nafees Hospital Co. BSC', abbr: 'IAN', sector: 'Health', logo: '/images/logos/ibn-al-nafees.png', logoType: 'png' },
-  { name: 'Arabtec Construction (Bahrain Airport)', abbr: 'BAC', sector: 'Industry', logo: '/images/logos/bac.svg', logoType: 'svg' },
-  { name: 'Al Hilal Hospital', abbr: 'AHH', sector: 'Health' },
-  { name: 'Kims Health Hospital', abbr: 'KIMS', sector: 'Health' },
-  { name: 'Reckitt Benckiser Bahrain', abbr: 'RB', sector: 'Industry' },
-  { name: 'Maersk Kanoo Bahrain', abbr: 'Maersk', sector: 'Industry' },
-  { name: 'Eagle Hills (Marassi)', abbr: 'EH', sector: 'Retail' },
-  { name: 'KIMS Health Hospital Group', abbr: 'KIMS', sector: 'GCC' },
-  { name: 'NetLink - Dubai', abbr: 'NetLink', sector: 'GCC' },
+/** Homepage trust marquee — logos from TimeTech partner slider (time-tech.co) */
+export const TRUST_LOGOS: { name: string; logo: string }[] = [
+  { name: 'Ibn Al-Nafees Hospital Bahrain', logo: '/images/logos/trust/ibnalnafees.png' },
+  { name: 'Royal Humanitarian Foundation', logo: '/images/logos/trust/rhf.png' },
+  { name: 'Bahrain Bourse', logo: '/images/logos/trust/bahrainbourse.png' },
+  { name: 'Survey & Land Registration Bureau (SLRB)', logo: '/images/logos/trust/slrb.png' },
+  { name: 'Sawa University', logo: '/images/logos/trust/sawa-university.png' },
+  { name: 'King Hamad University Hospital', logo: '/images/logos/trust/khuh.png' },
+  { name: 'Vanderlande', logo: '/images/logos/trust/vanderlande.png' },
+  { name: 'Anbar University', logo: '/images/logos/trust/anbar-university.png' },
+  { name: 'ASRY', logo: '/images/logos/trust/asry.png' },
+  { name: 'Al Mouwasat Hospital', logo: '/images/logos/trust/mouwasat.png' },
+  { name: 'Nass Corporation', logo: '/images/logos/trust/nass.png' },
+  { name: 'BSA', logo: '/images/logos/trust/bsa.png' },
+  { name: 'Arab Open University', logo: '/images/logos/trust/aou.png' },
 ];
 
 export const BLOG_POSTS = [

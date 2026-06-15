@@ -3,39 +3,6 @@
 import Image from 'next/image';
 import { TRUST_LOGOS } from '@/lib/data';
 
-const SECTOR_COLORS: Record<string, { bg: string; text: string }> = {
-  Gov:      { bg: 'rgba(0,33,71,0.09)',   text: '#002147' },
-  Industry: { bg: 'rgba(30,42,69,0.09)',  text: '#1E2A45' },
-  Health:   { bg: 'rgba(0,53,128,0.08)',  text: '#003580' },
-  Retail:   { bg: 'rgba(0,33,71,0.08)',   text: '#002147' },
-  GCC:      { bg: 'rgba(14,40,80,0.09)',  text: '#0e2850' },
-};
-
-function LogoCard({ logo }: { logo: (typeof TRUST_LOGOS)[0] }) {
-  const col = SECTOR_COLORS[logo.sector] || SECTOR_COLORS.Gov;
-  return (
-    <div className="tl-card">
-      {logo.logo ? (
-        <div className="tl-logo-img-wrap">
-          <Image
-            src={logo.logo}
-            alt={logo.name}
-            fill
-            style={{ objectFit: 'contain', objectPosition: 'center' }}
-            sizes="120px"
-            unoptimized
-          />
-        </div>
-      ) : (
-        <div className="tl-abbr" style={{ background: col.bg, color: col.text }}>
-          {logo.abbr}
-        </div>
-      )}
-      <div className="tl-name">{logo.name}</div>
-    </div>
-  );
-}
-
 const TRACK = [...TRUST_LOGOS, ...TRUST_LOGOS];
 
 export function TrustLogosSection() {
@@ -47,8 +14,18 @@ export function TrustLogosSection() {
 
       <div className="tl-slider" aria-label="Client logos">
         <div className="tl-track" aria-hidden="true">
-          {TRACK.map((logo, i) => (
-            <LogoCard key={`${logo.abbr}-${logo.name}-${i}`} logo={logo} />
+          {TRACK.map((client, i) => (
+            <div key={`${client.logo}-${i}`} className="tl-logo-card">
+              <Image
+                src={client.logo}
+                alt={client.name}
+                width={750}
+                height={400}
+                className="tl-logo-img"
+                sizes="180px"
+                unoptimized
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -79,68 +56,39 @@ export function TrustLogosSection() {
         }
         .tl-track {
           display: flex;
-          gap: 12px;
+          align-items: center;
+          gap: 20px;
           width: max-content;
-          animation: tl-scroll 50s linear infinite;
+          animation: tl-scroll 45s linear infinite;
         }
         .tl-slider:hover .tl-track { animation-play-state: paused; }
         @keyframes tl-scroll {
           from { transform: translateX(0); }
           to   { transform: translateX(-50%); }
         }
-        .tl-card {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          background: var(--card);
-          border: 1px solid var(--border);
-          border-radius: 14px;
-          padding: 14px 18px;
+        .tl-logo-card {
           flex-shrink: 0;
-          min-width: 200px;
-          max-width: 260px;
-          transition: border-color 0.2s, box-shadow 0.2s;
-          cursor: default;
-        }
-        .tl-card:hover {
-          border-color: var(--muted);
-          box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-        }
-        .tl-logo-img-wrap {
-          position: relative;
-          width: 56px;
-          height: 40px;
-          flex-shrink: 0;
-          border-radius: 6px;
-          overflow: hidden;
-          background: transparent;
-        }
-        .tl-abbr {
-          width: 44px;
-          height: 40px;
-          border-radius: 8px;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 9px;
-          font-weight: 500;
-          letter-spacing: 0.03em;
-          text-align: center;
-          flex-shrink: 0;
-          line-height: 1.1;
-          padding: 0 4px;
+          background: var(--card);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 16px 24px;
+          min-width: 180px;
+          height: 72px;
+          transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .tl-name {
-          font-size: 12px;
-          font-weight: 400;
-          color: var(--heading);
-          line-height: 1.35;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          flex: 1;
-          min-width: 0;
+        .tl-logo-card:hover {
+          border-color: var(--muted);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .tl-logo-img {
+          width: auto;
+          height: 80px;
+          max-width: 140px;
+          object-fit: contain;
+          object-position: center;
         }
         @media (prefers-reduced-motion: reduce) {
           .tl-track { animation: none; }

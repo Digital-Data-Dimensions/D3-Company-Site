@@ -6,53 +6,53 @@ function cardImage(filename: string): string {
   return `/images/cards/${encodeURIComponent(filename)}`;
 }
 
-/** Intrinsic pixel size of JPEGs under `public/images/cards/` (all current assets match). */
-export const SOLUTION_CARD_IMAGE_PIXEL_SIZE = { width: 4259, height: 3606 } as const;
+/** Intrinsic pixel size of PNGs under `public/images/cards/` (~1363×1154). */
+export const SOLUTION_CARD_IMAGE_PIXEL_SIZE = { width: 1363, height: 1154 } as const;
 
 /** Homepage solution grid + solution detail hero imagery */
 export const SOLUTION_VISUAL_IMAGES: Record<string, { src: string; alt: string }> = {
   'time-attendance-system': {
-    src: cardImage('Time Attendance_ standard.jpg'),
+    src: cardImage('Time Attendance_ standard.png'),
     alt: 'TimeTech time attendance system',
   },
   'time-attendance-enterprise': {
-    src: cardImage('Time Attendance_Enterprise.jpg'),
+    src: cardImage('Time Attendance_Enterprise.png'),
     alt: 'TimeTech Enterprise time attendance',
   },
   'hr-payroll-software': {
-    src: cardImage('HR & Payroll Software.jpg'),
+    src: cardImage('HR & Payroll Software.png'),
     alt: 'TimeTech HRMS',
   },
   'visitor-management': {
-    src: cardImage('Visitor Management System.jpg'),
+    src: cardImage('Visitor Management System.png'),
     alt: 'TimeTech visitor management system',
   },
   'queue-management-system': {
-    src: cardImage('Queue Management System.jpg'),
+    src: cardImage('Queue Management System.png'),
     alt: 'TimeTech queue management system',
   },
   'digital-signage': {
-    src: cardImage('digital signage and display.jpg'),
+    src: cardImage('digital signage and display.png'),
     alt: 'D3 digital signage and displays',
   },
   'rfid-asset-tracking': {
-    src: cardImage('RFID & Asset Tracking.jpg'),
+    src: cardImage('RFID & Asset Tracking.png'),
     alt: 'RFID asset tracking system',
   },
   'access-control-system': {
-    src: cardImage('IP CCTV & Access Control.jpg'),
+    src: cardImage('IP CCTV & Access Control.png'),
     alt: 'IP CCTV and biometric access control',
   },
   'erp-retail-management': {
-    src: cardImage('ERP & Retail Management.jpg'),
+    src: cardImage('ERP & Retail Management.png'),
     alt: 'D3 ERP and retail management',
   },
   'consultancy': {
-    src: cardImage('IT Consultancy.jpg'),
+    src: cardImage('IT Consultancy.png'),
     alt: 'D3 IT consultancy services',
   },
   'timetech-application': {
-    src: cardImage('Time Attendance_Enterprise.jpg'),
+    src: cardImage('Time Attendance_Enterprise.png'),
     alt: 'TimeTech platform',
   },
 };
