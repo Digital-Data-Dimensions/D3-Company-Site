@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { SOLUTIONS, INDUSTRIES, CASE_STUDIES, BLOG_POSTS } from '@/lib/data';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://d3.com.bh';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.co';
 const LOCALES = ['en'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
