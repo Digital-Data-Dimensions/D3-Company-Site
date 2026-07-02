@@ -14,11 +14,6 @@ const TwitterIcon = () => (
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
   </svg>
 );
-const FacebookIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-  </svg>
-);
 const InstagramIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -50,8 +45,8 @@ const MapPinIcon = () => (
 
 const SOCIALS = [
   { label: 'LinkedIn', icon: <LinkedInIcon />, href: 'https://bh.linkedin.com/posts/dthree-itsolution_program-techinnovation-advertisement-activity-6839109775821742080-WzmZ' },
-  { label: 'Facebook', icon: <FacebookIcon />, href: '#' },
   { label: 'Instagram', icon: <InstagramIcon />, href: 'https://www.instagram.com/d3_itsolution/' },
+  { label: 'YouTube', icon: <YouTubeIcon />, href: 'https://youtube.com/@d3digitaldatadimensions84?si=Nw8eJ6PjMN0NkiSJ' },
 ];
 
 export function Footer() {
