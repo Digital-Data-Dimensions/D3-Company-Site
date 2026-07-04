@@ -213,13 +213,12 @@ export function Footer() {
         }
         .footer-link:hover { color: #002147; }
         .footer-bottom {
-          border-top: 1px solid #C8D0E0;
-          padding-top: 24px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 16px;
+         border-top: 1px solid #C8D0E0;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
         }
 
         /* Tablet */
