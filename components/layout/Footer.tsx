@@ -3,6 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
+const FacebookIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+  </svg>
+);
 const LinkedInIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
@@ -44,6 +49,7 @@ const MapPinIcon = () => (
 );
 
 const SOCIALS = [
+  { label: 'Facebook', icon: <FacebookIcon />, href: 'https://www.facebook.com/digitaldatadimensions/' },
   { label: 'LinkedIn', icon: <LinkedInIcon />, href: 'https://bh.linkedin.com/posts/dthree-itsolution_program-techinnovation-advertisement-activity-6839109775821742080-WzmZ' },
   { label: 'Instagram', icon: <InstagramIcon />, href: 'https://www.instagram.com/d3_itsolution/' },
   { label: 'YouTube', icon: <YouTubeIcon />, href: 'https://youtube.com/@d3digitaldatadimensions84?si=Nw8eJ6PjMN0NkiSJ' },
