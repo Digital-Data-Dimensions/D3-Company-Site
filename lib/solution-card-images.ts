@@ -13,46 +13,46 @@ export const SOLUTION_CARD_IMAGE_PIXEL_SIZE = { width: 1363, height: 1154 } as c
 export const SOLUTION_VISUAL_IMAGES: Record<string, { src: string; alt: string }> = {
   'time-attendance-system': {
     src: cardImage('Time Attendance_ standard.png'),
-    alt: 'TimeTech time attendance system',
+    alt: 'biometric time attendance system Bahrain',
   },
   'time-attendance-enterprise': {
     src: cardImage('Time Attendance_Enterprise.png'),
-    alt: 'TimeTech Enterprise time attendance',
+    alt: 'enterprise time attendance multi-site GCC',
   },
   'hr-payroll-software': {
     src: cardImage('HR & Payroll Software.png'),
-    alt: 'TimeTech HRMS',
+    alt: 'HRMS payroll software Bahrain',
   },
   'visitor-management': {
     src: cardImage('Visitor Management System.png'),
-    alt: 'TimeTech visitor management system',
+    alt: 'visitor management system Bahrain reception kiosk',
   },
   'queue-management-system': {
     src: cardImage('Queue Management System.png'),
-    alt: 'TimeTech queue management system',
+    alt: 'queue management system Bahrain government hospital',
   },
   'digital-signage': {
     src: cardImage('digital signage and display.png'),
-    alt: 'D3 digital signage and displays',
+    alt: 'digital signage Bahrain LED displays',
   },
   'rfid-asset-tracking': {
     src: cardImage('RFID & Asset Tracking.png'),
-    alt: 'RFID asset tracking system',
+    alt: 'RFID asset tracking Bahrain warehouse',
   },
   'access-control-system': {
     src: cardImage('IP CCTV & Access Control.png'),
-    alt: 'IP CCTV and biometric access control',
+    alt: 'access control IP CCTV Bahrain biometric doors',
   },
   'erp-retail-management': {
     src: cardImage('ERP & Retail Management.png'),
-    alt: 'D3 ERP and retail management',
+    alt: 'ERP retail management software Bahrain',
   },
   'consultancy': {
     src: cardImage('IT Consultancy.png'),
-    alt: 'D3 IT consultancy services',
+    alt: 'IT consultancy managed services Bahrain',
   },
   'timetech-application': {
     src: cardImage('Time Attendance_Enterprise.png'),
-    alt: 'TimeTech platform',
+    alt: 'TimeTech workforce management platform Bahrain',
   },
 };

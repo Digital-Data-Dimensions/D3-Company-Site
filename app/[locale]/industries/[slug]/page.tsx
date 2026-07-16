@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { INDUSTRIES, SOLUTIONS, CASE_STUDIES } from '@/lib/data';
+import { INDUSTRY_SEO, SITE_URL } from '@/lib/solution-seo';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -27,12 +28,16 @@ const INDUSTRY_CASE_STUDIES: Record<string, string[]> = {
 };
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const ind = INDUSTRIES.find((i) => i.slug === slug);
+  const seo = INDUSTRY_SEO[slug];
   if (!ind) return { title: 'Industry Not Found' };
   return {
-    title: `${ind.title} IT Solutions Bahrain | D3`,
-    description: `D3 provides enterprise IT solutions for the ${ind.title} sector — ${ind.desc}`,
+    title: { absolute: seo?.seoTitle ?? `${ind.title} IT Solutions Bahrain | D3` },
+    description: seo?.seoDescription ?? `D3 provides enterprise IT solutions for the ${ind.title} sector — ${ind.desc}`,
+    alternates: {
+      canonical: `${SITE_URL}/${locale}/industries/${slug}`,
+    },
   };
 }
 
@@ -41,6 +46,7 @@ export default async function IndustryPage({ params }: Props) {
   const ind = INDUSTRIES.find((i) => i.slug === slug);
   if (!ind) notFound();
 
+  const seo = INDUSTRY_SEO[slug];
   const relatedSolSlugs = INDUSTRY_SOLUTIONS[slug] || [];
   const relatedSolutions = relatedSolSlugs.map((s) => SOLUTIONS.find((sol) => sol.slug === s)).filter(Boolean) as typeof SOLUTIONS;
 
@@ -56,7 +62,9 @@ export default async function IndustryPage({ params }: Props) {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Industry</SectionEyebrow>
           <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 24, maxWidth: 700 }}>
-            Enterprise IT Solutions for <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>{ind.title}</em>
+            {seo?.pageH1 ?? (
+              <>Enterprise IT Solutions for <em style={{ fontStyle: 'normal', color: 'var(--heading)' }}>{ind.title}</em></>
+            )}
           </h1>
           <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.75, fontWeight: 400, maxWidth: 600, marginBottom: 40 }}>
             {ind.desc} — D3 has been delivering purpose-built solutions for the {ind.title.toLowerCase()} sector across the GCC since 2010.

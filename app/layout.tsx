@@ -22,13 +22,13 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://d3.com.bh';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.co';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'D3 Digital Data Dimensions — TimeTech Attendance, HRMS & IT Solutions | Bahrain & GCC',
-    template: '%s | D3 Digital Data Dimensions',
+    default: 'Enterprise IT Solutions Bahrain & GCC | Time Attendance, HRMS, RFID | D3',
+    template: '%s | D3 Bahrain',
   },
   description:
     'D3 Digital Data Dimensions (Dthree) is Bahrain\'s leading IT solutions company, delivering TimeTech time attendance systems, HRMS payroll software, queue management, RFID asset tracking, digital signage and ERP to 500+ enterprises across the GCC since 2010.',

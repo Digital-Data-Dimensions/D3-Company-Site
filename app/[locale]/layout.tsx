@@ -13,7 +13,7 @@ import type { Metadata } from 'next';
 
 type Locale = 'en' | 'ar';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://d3.com.bh';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.co';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -27,15 +27,15 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const title =
-    'D3 Digital Data Dimensions (Dthree) — TimeTech IT Solutions for GCC Enterprises | Bahrain Since 2010';
+    'Enterprise IT Solutions Bahrain & GCC | Time Attendance, HRMS, RFID | D3';
   const description =
-    'D3 Digital Data Dimensions (Dthree) delivers TimeTech time attendance, HRMS payroll, queue management, RFID asset tracking, digital signage and ERP for 500+ enterprises across Bahrain and the GCC since 2010.';
+    'D3 delivers time attendance, HRMS payroll, queue management, RFID tracking and digital signage for 500+ organisations across Bahrain and the GCC. Built in Bahrain since 2010.';
 
   return {
     metadataBase: new URL(BASE_URL),
     title: {
       default: title,
-      template: '%s | D3 Digital Data Dimensions',
+      template: '%s | D3 Bahrain',
     },
     description,
     openGraph: {

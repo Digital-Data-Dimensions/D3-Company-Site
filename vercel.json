@@ -22,6 +22,6 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_BASE_URL": "https://dthree.co"
+    "NEXT_PUBLIC_BASE_URL": "https://www.dthree.co"
   }
 }

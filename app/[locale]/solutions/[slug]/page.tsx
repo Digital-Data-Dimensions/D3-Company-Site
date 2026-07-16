@@ -8,8 +8,9 @@ import {
   Zap, Eye, LayoutGrid, ShoppingCart, TrendingUp,
   CheckCircle2, Headphones, Database, Radio, Link2,
 } from 'lucide-react';
-import { SOLUTIONS, CASE_STUDIES, INDUSTRIES } from '@/lib/data';
+import { SOLUTIONS, CASE_STUDIES, INDUSTRIES, BLOG_POSTS } from '@/lib/data';
 import { SOLUTION_VISUAL_IMAGES } from '@/lib/solution-card-images';
+import { SOLUTION_SEO, SITE_URL } from '@/lib/solution-seo';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -601,15 +602,19 @@ const SOLUTION_DETAILS: Record<string, {
 };
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const sol = SOLUTIONS.find((s) => s.slug === slug);
   const detail = SOLUTION_DETAILS[slug];
+  const seo = SOLUTION_SEO[slug];
   if (!sol && !detail) return { title: 'Solution Not Found' };
-  const title = sol?.title ?? detail?.tagline?.slice(0, 60) ?? 'Solution';
+  const fallbackTitle = sol?.title ?? detail?.tagline?.slice(0, 60) ?? 'Solution';
   return {
-    title: `${title} | D3: Digital Data Dimensions`,
-    description: sol?.desc ?? detail?.tagline,
+    title: { absolute: seo?.seoTitle ?? `${fallbackTitle} | D3 Bahrain` },
+    description: seo?.seoDescription ?? sol?.desc ?? detail?.tagline,
     keywords: detail?.seoKeyword,
+    alternates: {
+      canonical: `${SITE_URL}/${locale}/solutions/${slug}`,
+    },
   };
 }
 
@@ -631,10 +636,17 @@ export default async function SolutionPage({ params }: Props) {
     icon: 'clock' as const,
   };
 
+  const seo = SOLUTION_SEO[slug];
   const heroImg = HERO_IMAGES[slug];
   const relatedCaseStudy = CASE_STUDIES.find((cs) => cs.slug === detail.caseStudySlug);
   const relatedIndustries = INDUSTRIES.filter((ind) => detail.industries.includes(ind.slug));
   const relatedSolutions = SOLUTIONS.filter((s) => s.slug !== slug).slice(0, 3);
+  const relatedBlogs = (seo?.relatedBlogSlugs || [])
+    .map((s) => BLOG_POSTS.find((p) => p.slug === s))
+    .filter(Boolean) as typeof BLOG_POSTS;
+  const relatedSeoSolutions = (seo?.relatedSolutionSlugs || [])
+    .map((s) => SOLUTIONS.find((solItem) => solItem.slug === s))
+    .filter(Boolean) as typeof SOLUTIONS;
 
   return (
     <>
@@ -646,7 +658,7 @@ export default async function SolutionPage({ params }: Props) {
             <div>
               <SectionEyebrow>Solution</SectionEyebrow>
               <h1 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 400, letterSpacing: -1.5, lineHeight: 1.08, color: 'var(--heading)', marginBottom: 20 }}>
-                {sol.title}
+                {seo?.pageH1 ?? sol.title}
               </h1>
               <p style={{ fontSize: 17, color: 'var(--body)', lineHeight: 1.8, fontWeight: 400, marginBottom: 36 }}>
                 {detail.tagline}
@@ -767,6 +779,43 @@ export default async function SolutionPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── SEO KEYWORD SECTIONS ── */}
+      {seo?.seoSections && seo.seoSections.length > 0 && (
+        <section style={{ padding: '72px 0', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
+            {seo.seoSections.map((sec) => (
+              <div key={sec.h2} style={{ marginBottom: 40 }}>
+                <h2 style={{ fontFamily: 'var(--font)', fontSize: 'clamp(22px, 2.5vw, 30px)', fontWeight: 400, letterSpacing: -0.6, lineHeight: 1.2, color: 'var(--heading)', marginBottom: 12 }}>
+                  {sec.h2}
+                </h2>
+                <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, margin: 0 }}>{sec.body}</p>
+              </div>
+            ))}
+            {(relatedBlogs.length > 0 || relatedSeoSolutions.length > 0) && (
+              <div style={{ marginTop: 8, paddingTop: 28, borderTop: '1px solid var(--border)' }}>
+                <div style={{ fontSize: 12, fontWeight: 400, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: 14 }}>Related reading</div>
+                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {relatedSeoSolutions.map((s) => (
+                    <li key={s.slug}>
+                      <Link href={`/solutions/${s.slug}` as Parameters<typeof Link>[0]['href']} style={{ fontSize: 15, color: 'var(--cta)', textDecoration: 'underline', textUnderlineOffset: 2 }}>
+                        {SOLUTION_SEO[s.slug]?.pageH1 ?? s.title}
+                      </Link>
+                    </li>
+                  ))}
+                  {relatedBlogs.map((post) => (
+                    <li key={post.slug}>
+                      <Link href={`/blog/${post.slug}` as Parameters<typeof Link>[0]['href']} style={{ fontSize: 15, color: 'var(--cta)', textDecoration: 'underline', textUnderlineOffset: 2 }}>
+                        {post.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* ── FEATURES GRID ── */}
       <section style={{ padding: '80px 0', background: 'var(--bg-surface)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>
@@ -789,7 +838,7 @@ export default async function SolutionPage({ params }: Props) {
                   <div style={{ color, marginBottom: 12, display: 'flex' }}>
                     {icon}
                   </div>
-                  <div style={{ fontSize: 14, fontWeight: 400, color: 'var(--heading)', marginBottom: 6 }}>{f.title}</div>
+                  <h3 style={{ fontSize: 14, fontWeight: 400, color: 'var(--heading)', marginBottom: 6, marginTop: 0 }}>{f.title}</h3>
                   <div style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.65, fontWeight: 400 }}>{f.desc}</div>
                 </div>
               </RevealOnScroll>
