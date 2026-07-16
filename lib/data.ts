@@ -349,6 +349,46 @@ export const TRUST_LOGOS: { name: string; logo: string }[] = [
 
 export const BLOG_POSTS = [
   {
+    slug: 'biometric-attendance-system-bahrain',
+    title: 'Biometric Attendance System in Bahrain: The Complete Buying Guide',
+    seoTitle: 'Biometric Attendance System in Bahrain | Fingerprint & Face Recognition | D3',
+    excerpt: 'Compare biometric attendance systems in Bahrain — fingerprint, face recognition and card-based. See how D3\'s TimeTech-powered platform cuts payroll errors and stays LMRA-compliant.',
+    tags: ['Time Attendance System Bahrain', 'Biometric Attendance', 'Face Recognition Attendance', 'Fingerprint Attendance'],
+    publishedAt: '2026-07-01',
+  },
+  {
+    slug: 'hrms-payroll-software-bahrain-guide',
+    title: 'HRMS & Payroll Software in Bahrain: What to Look for Before You Buy',
+    seoTitle: 'HRMS & Payroll Software Bahrain | Multi-Company Cloud HR Platform | D3',
+    excerpt: 'How to choose HRMS and payroll software in Bahrain — WPS export, GOSI integration, multi-company support. A practical buying guide for GCC HR teams.',
+    tags: ['HRMS Bahrain', 'Payroll Software Bahrain', 'WPS Payroll', 'GOSI Payroll', 'Employee Self Service'],
+    publishedAt: '2026-07-05',
+  },
+  {
+    slug: 'lmra-compliance-wps-payroll-bahrain',
+    title: 'LMRA Compliance and WPS Payroll in Bahrain: What Employers Need to Know',
+    seoTitle: 'LMRA Compliance & WPS Payroll in Bahrain: Employer Guide | D3',
+    excerpt: 'What LMRA compliance and WPS payroll actually require from Bahrain employers, and how the right HR software keeps you compliant automatically.',
+    tags: ['LMRA Compliance', 'WPS Payroll', 'GOSI Payroll', 'Bahrain', 'GCC'],
+    publishedAt: '2026-07-08',
+  },
+  {
+    slug: 'queue-management-system-bahrain',
+    title: 'Queue Management Systems for Government and Healthcare in Bahrain',
+    seoTitle: 'Queue Management System Bahrain | Government & Healthcare Kiosks | D3',
+    excerpt: 'How queue management systems reduce wait times for ministries, hospitals, and enterprise service counters in Bahrain — kiosks, displays, and live analytics.',
+    tags: ['Queue Management System Bahrain', 'Hospital Queue Management', 'Government IT Solutions'],
+    publishedAt: '2026-07-10',
+  },
+  {
+    slug: 'rfid-asset-tracking-warehouse-management-bahrain',
+    title: 'RFID Asset Tracking and Warehouse Management: A Guide for GCC Enterprises',
+    seoTitle: 'RFID Asset Tracking & Warehouse Management Bahrain | D3',
+    excerpt: 'How RFID asset tracking and warehouse management systems improve inventory accuracy for GCC enterprises — active vs passive tags, use cases, and what to check before buying.',
+    tags: ['RFID Asset Tracking Bahrain', 'Warehouse Management System', 'Asset Tracking System', 'RFID'],
+    publishedAt: '2026-07-12',
+  },
+  {
     slug: 'top-5-benefits-biometric-attendance',
     title: 'Top 5 Benefits of Biometric Attendance Systems for GCC Enterprises',
     excerpt: 'Biometric attendance eliminates buddy-punching, reduces payroll errors and ensures full LMRA compliance. Here\'s why GCC enterprises are upgrading from legacy systems.',

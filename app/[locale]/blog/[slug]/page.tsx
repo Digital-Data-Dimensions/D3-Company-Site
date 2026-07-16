@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { BLOG_POSTS, SOLUTIONS } from '@/lib/data';
-import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
+import { BLOG_ARTICLES } from '@/lib/blog-articles';
+import { BlogArticleBody } from '@/components/blog/BlogArticleBody';
 import { ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
@@ -12,12 +13,18 @@ export function generateStaticParams() {
 }
 
 const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
-  'top-5-benefits-biometric-attendance': ['time-attendance-system', 'timetech-application'],
+  'biometric-attendance-system-bahrain': ['time-attendance-system', 'time-attendance-enterprise', 'hr-payroll-software'],
+  'hrms-payroll-software-bahrain-guide': ['hr-payroll-software', 'time-attendance-system'],
+  'lmra-compliance-wps-payroll-bahrain': ['hr-payroll-software', 'time-attendance-system'],
+  'queue-management-system-bahrain': ['queue-management-system'],
+  'rfid-asset-tracking-warehouse-management-bahrain': ['rfid-asset-tracking', 'erp-retail-management'],
+  'top-5-benefits-biometric-attendance': ['time-attendance-system'],
   'queue-management-government-sector': ['queue-management-system'],
   'rfid-asset-tracking-manufacturing': ['rfid-asset-tracking'],
-  'choosing-hr-software-bahrain': ['hr-payroll-software', 'timetech-application'],
+  'choosing-hr-software-bahrain': ['hr-payroll-software'],
 };
 
+/** Legacy plain-paragraph articles (kept for older posts) */
 const BLOG_FULL_CONTENT: Record<string, string[]> = {
   'top-5-benefits-biometric-attendance': [
     'Biometric attendance systems have become the gold standard for workforce management across the GCC. Unlike traditional punch cards or PIN-based systems, biometric solutions use unique physical characteristics — fingerprints, facial features or iris patterns — to verify identity. This eliminates buddy punching entirely.',
@@ -57,7 +64,7 @@ export async function generateMetadata({ params }: Props) {
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: 'Post Not Found' };
   return {
-    title: `${post.title} | D3 Blog`,
+    title: ('seoTitle' in post && post.seoTitle) ? post.seoTitle : `${post.title} | D3 Blog`,
     description: post.excerpt,
     keywords: post.tags.join(', '),
   };
@@ -70,17 +77,17 @@ export default async function BlogPostPage({ params }: Props) {
 
   const relatedSolSlugs = BLOG_RELATED_SOLUTIONS[slug] || [];
   const relatedSolutions = relatedSolSlugs.map((s) => SOLUTIONS.find((sol) => sol.slug === s)).filter(Boolean) as typeof SOLUTIONS;
-  const content = BLOG_FULL_CONTENT[slug] || [post.excerpt];
-  const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug);
+  const richBlocks = BLOG_ARTICLES[slug];
+  const legacyParas = BLOG_FULL_CONTENT[slug] || (!richBlocks ? [post.excerpt] : null);
+  const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 6);
 
   return (
     <>
-      {/* Hero */}
       <section className="page-hero" style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--muted)', textDecoration: 'none', fontWeight: 400, marginBottom: 24 }}>← Back to Blog</Link>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
-            {post.tags.map((tag) => (
+            {post.tags.slice(0, 4).map((tag) => (
               <span key={tag} style={{ fontSize: 11, fontWeight: 400, padding: '4px 10px', borderRadius: 100, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
             ))}
           </div>
@@ -93,15 +100,20 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Content */}
       <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 80, alignItems: 'start' }} className="blog-detail-grid">
             <article>
-              <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.8, fontWeight: 400, marginBottom: 32, fontStyle: 'italic' }}>{post.excerpt}</p>
-              {content.map((para, i) => (
-                <p key={i} style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.85, marginBottom: 24, fontWeight: 400 }}>{para}</p>
-              ))}
+              {richBlocks ? (
+                <BlogArticleBody blocks={richBlocks} />
+              ) : (
+                <>
+                  <p style={{ fontSize: 18, color: 'var(--body)', lineHeight: 1.8, fontWeight: 400, marginBottom: 32, fontStyle: 'italic' }}>{post.excerpt}</p>
+                  {legacyParas?.map((para, i) => (
+                    <p key={i} style={{ fontSize: 15, color: 'var(--body)', lineHeight: 1.85, marginBottom: 24, fontWeight: 400 }}>{para}</p>
+                  ))}
+                </>
+              )}
 
               {relatedSolutions.length > 0 && (
                 <div style={{ marginTop: 48, padding: '28px', background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 16 }}>
@@ -122,7 +134,6 @@ export default async function BlogPostPage({ params }: Props) {
               )}
             </article>
 
-            {/* Sidebar */}
             <aside>
               <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 16, padding: '24px', marginBottom: 20 }}>
                 <div style={{ fontSize: 13, fontWeight: 400, color: 'var(--heading)', marginBottom: 16 }}>More Articles</div>
