@@ -68,6 +68,11 @@ export const metadata: Metadata = {
     canonical: BASE_URL,
     languages: { 'en-BH': `${BASE_URL}/en` },
   },
+  icons: {
+    icon: [{ url: '/images/logos/favicon.png', type: 'image/png' }],
+    shortcut: '/images/logos/favicon.png',
+    apple: '/images/logos/favicon.png',
+  },
 };
 
 // JSON-LD Structured Data for the organisation
