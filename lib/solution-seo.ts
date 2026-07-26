@@ -14,11 +14,11 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'Time Attendance System in Bahrain',
     seoTitle: 'Time Attendance System Bahrain | Biometric & Fingerprint | D3',
     seoDescription:
-      'Cloud biometric time attendance system for Bahrain SMEs — fingerprint, face recognition and card-based, with LMRA-ready payroll export. Request a demo.',
+      'Cloud biometric time attendance system for Bahrain SMEs — fingerprint, face recognition and card-based attendance management software with LMRA-ready payroll export.',
     seoSections: [
       {
         h2: 'Biometric Attendance Options',
-        body: 'Fingerprint, face recognition and card-based terminals verify every punch in under a second — eliminating buddy punching and feeding accurate hours into payroll.',
+        body: 'Fingerprint attendance, face recognition and card-based terminals verify every punch in under a second — eliminating buddy punching and feeding accurate hours into payroll.',
       },
       {
         h2: 'LMRA-Compliant Payroll Export',
@@ -36,15 +36,15 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'Enterprise Time Attendance for Multi-Site Organisations',
     seoTitle: 'Enterprise Time Attendance System | Multi-Site GCC | D3',
     seoDescription:
-      'Multi-site, multi-company time attendance for large GCC enterprises. Geo-fenced mobile app, project manhour tracking and full employee self-service.',
+      'Enterprise time attendance for multi-site GCC organisations — workforce management software with geo-fenced mobile attendance, project manhour tracking and employee self-service.',
     seoSections: [
       {
         h2: 'Multi-Company & Multi-Site Support',
-        body: 'Run unlimited locations and legal entities from one platform — with centralised reporting and site-level control for large GCC organisations.',
+        body: 'Run unlimited locations and legal entities from one multi-site attendance platform — with centralised reporting and site-level control for large GCC organisations.',
       },
       {
         h2: 'Geo-Fenced Mobile Attendance',
-        body: 'Field staff and site engineers clock in via the TimeTech mobile app only when they are inside an approved geo-fence, with selfie or QR capture.',
+        body: 'Field staff clock in via mobile attendance only when inside an approved geo-fence, with selfie or QR capture — no manual site verification.',
       },
       {
         h2: 'Employee Self-Service Portal',
@@ -57,7 +57,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'HRMS & Payroll Software for Bahrain and the GCC',
     seoTitle: 'HRMS & Payroll Software Bahrain | WPS & GOSI Ready | D3',
     seoDescription:
-      'Cloud HRMS and payroll software for Bahrain and the GCC — multi-company, bilingual, WPS and GOSI compliant. Covers the full employee lifecycle.',
+      'Cloud HRMS and payroll software for Bahrain — WPS payroll, GOSI payroll, employee self-service and HR software Bahrain teams trust. Multi-company, bilingual, full lifecycle.',
     seoSections: [
       {
         h2: 'WPS Payroll Export',
@@ -76,13 +76,24 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'Staff check payslips, submit leave requests and view attendance online — cutting the volume of routine queries to HR.',
       },
     ],
-    relatedBlogSlugs: ['hrms-payroll-software-bahrain-guide', 'lmra-compliance-wps-payroll-bahrain'],
+    relatedBlogSlugs: [
+      'hrms-payroll-software-bahrain-guide',
+      'lmra-compliance-wps-payroll-bahrain',
+      'gosi-contribution-calculation-bahrain',
+      'indemnity-calculation-bahrain',
+      'average-salary-bahrain',
+      'bahrain-labour-law-resignation-notice',
+      'salary-slip-format-bahrain',
+      'employment-contract-bahrain',
+      'offer-letter-sample-bahrain',
+      'overtime-calculation-bahrain',
+    ],
   },
   'visitor-management': {
     pageH1: 'Visitor Management System for Bahrain Offices',
     seoTitle: 'Visitor Management System Bahrain | Reception Kiosk | D3',
     seoDescription:
-      'Digital visitor management for Bahrain offices and government buildings — reception kiosk, pre-registration, access card issuance and full audit trail.',
+      'Digital visitor management for Bahrain offices — reception kiosk, pre-registration, access card integration and full audit trail for government and enterprise buildings.',
     seoSections: [
       {
         h2: 'Reception Kiosk & Pre-Registration',
@@ -90,7 +101,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
       },
       {
         h2: 'Access Card Issuance',
-        body: 'Issue physical or virtual access cards on arrival, with door permissions limited to authorised areas only.',
+        body: 'Issue physical or virtual access cards on arrival with access card integration to door controllers — permissions limited to authorised areas only.',
       },
       {
         h2: 'Full Audit Trail',
@@ -102,7 +113,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'Queue Management System for Bahrain',
     seoTitle: 'Queue Management System Bahrain | Government & Hospital | D3',
     seoDescription:
-      'Wired and wireless queue management kiosks for ministries, hospitals and enterprise service counters in Bahrain. Live analytics, LED displays, audio calling.',
+      'Wired and wireless queue management kiosks for ministries, hospitals and enterprise counters in Bahrain — ministry software solutions with live analytics and LED displays.',
     seoSections: [
       {
         h2: 'Kiosk-Based Ticketing',
@@ -110,7 +121,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
       },
       {
         h2: 'Government & Healthcare Queue Management',
-        body: 'Multi-service categories for ministries and department routing for hospitals cut wait times and improve counter allocation with real usage data.',
+        body: 'Multi-service categories for ministries and hospital queue management routing cut wait times and improve counter allocation with real usage data.',
       },
       {
         h2: 'Live Wait-Time Analytics',
@@ -123,7 +134,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'RFID Asset Tracking & Warehouse Management',
     seoTitle: 'RFID Asset Tracking Bahrain | Warehouse & Asset Management | D3',
     seoDescription:
-      'Active and passive RFID asset tracking for Bahrain warehouses, government and enterprise. Document tracking, inventory visibility, mobile handheld audits.',
+      'Active and passive RFID asset tracking for Bahrain — warehouse management system, asset tracking system and document tracking with mobile handheld audits.',
     seoSections: [
       {
         h2: 'Active vs Passive RFID',
@@ -144,15 +155,15 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'Access Control & IP CCTV for Bahrain Enterprises',
     seoTitle: 'Access Control & IP CCTV Bahrain | Biometric Doors | D3',
     seoDescription:
-      'Enterprise IP CCTV and biometric access control for Bahrain — proximity cards, face recognition doors, centralised security management.',
+      'Access control system Bahrain — IP CCTV Bahrain, biometric access control and NFC proximity card doors with centralised security management.',
     seoSections: [
       {
         h2: 'Biometric Door Access',
-        body: 'Fingerprint, face recognition and NFC/proximity card controllers secure doors without shared keys or passwords.',
+        body: 'Fingerprint, face recognition and NFC proximity card controllers secure doors without shared keys or passwords.',
       },
       {
-        h2: 'IP Camera Surveillance',
-        body: 'Indoor and outdoor IP cameras with local or remote monitoring for business and government facilities across Bahrain.',
+        h2: 'IP CCTV Bahrain Surveillance',
+        body: 'Indoor and outdoor IP CCTV cameras with local or remote monitoring for business and government facilities across Bahrain.',
       },
       {
         h2: 'Centralised Security Management',
@@ -164,7 +175,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'Digital Signage & LED Displays for Bahrain',
     seoTitle: 'Digital Signage Bahrain | LED Displays & Video Walls | D3',
     seoDescription:
-      '4K LED and LCD digital signage for Bahrain retail, government and corporate spaces. Centralised CMS, 24/7 operation, indoor and outdoor deployment.',
+      'Digital signage Bahrain — LED display solutions, LED video walls and vertical signage with centralised CMS for retail, government and corporate spaces.',
     seoSections: [
       {
         h2: '4K LED Displays',
@@ -176,7 +187,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
       },
       {
         h2: 'Indoor & Outdoor Signage',
-        body: 'Vertical portrait screens, video walls and weatherproof outdoor LEDs with optional touch and 24/7 operation.',
+        body: 'Vertical signage portrait screens, LED video walls and weatherproof outdoor LEDs with optional touch and 24/7 operation.',
       },
     ],
   },
@@ -184,7 +195,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'ERP & Retail Management Software',
     seoTitle: 'ERP & Retail Management Software Bahrain | D3',
     seoDescription:
-      'Full ERP for Bahrain retail and enterprise — procurement, inventory, POS, electronic shelf labels and multi-branch financial accounting.',
+      'ERP software Bahrain for retail and enterprise — retail management software, inventory management software, POS and electronic shelf labels.',
     seoSections: [
       {
         h2: 'Retail Inventory & POS',
@@ -204,15 +215,15 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
     pageH1: 'IT Consultancy & Managed Services for Bahrain',
     seoTitle: 'IT Consultancy & Managed Services Bahrain | D3',
     seoDescription:
-      'Outsourced IT staffing, consultancy and managed services for Bahrain enterprises — system implementation, ICT planning and ongoing support.',
+      'IT consultancy Bahrain — managed IT services Bahrain, outsourced staffing, ICT planning and digital transformation Bahrain for enterprises.',
     seoSections: [
       {
         h2: 'Outsourced IT Staffing',
-        body: 'Vetted system administrators, DBAs, network engineers and help desk staff for short-term projects or ongoing managed engagements.',
+        body: 'Vetted system administrators, DBAs, network engineers and help desk staff for short-term projects or ongoing managed IT services engagements.',
       },
       {
-        h2: 'ICT Planning & Implementation',
-        body: 'Business and ICT consultants align technology strategy with your objectives — from system analysis to CISCO-certified infrastructure delivery.',
+        h2: 'ICT Planning & Digital Transformation',
+        body: 'Business and ICT consultants align digital transformation Bahrain objectives with your technology roadmap — from system analysis to CISCO-certified infrastructure delivery.',
       },
     ],
   },
@@ -226,26 +237,30 @@ export const INDUSTRY_SEO: Record<
     pageH1: 'IT Solutions for Government in Bahrain',
     seoTitle: 'Government IT Solutions Bahrain | Ministry Software | D3',
     seoDescription:
-      'Technology solutions for Bahrain government entities — queue management, HRMS, access control and RFID tracking built for public sector requirements.',
+      'Government IT solutions for Bahrain — ministry software solutions, Civil Service Bureau compliance, queue management, HRMS and access control for public sector.',
   },
   healthcare: {
     pageH1: 'IT Solutions for Healthcare in Bahrain',
     seoTitle: 'Healthcare IT Solutions Bahrain | Hospital Queue & Attendance | D3',
     seoDescription:
-      'Queue management, biometric attendance and RFID equipment tracking for Bahrain hospitals and healthcare providers.',
+      'Healthcare IT solutions for Bahrain hospitals — hospital queue management, biometric attendance healthcare and RFID equipment tracking.',
   },
   retail: {
     pageH1: 'Retail Technology Solutions for Bahrain',
     seoTitle: 'Retail Technology Solutions Bahrain | ERP & Digital Signage | D3',
     seoDescription:
-      'ERP, inventory management and digital signage for Bahrain retail businesses — POS, electronic shelf labels and multi-branch reporting.',
+      'Retail technology solutions for Bahrain — retail ERP, inventory management software, digital signage and electronic shelf labels.',
   },
   logistics: {
     pageH1: 'Logistics Technology Solutions for Bahrain',
     seoTitle: 'Logistics Technology Solutions Bahrain | RFID Warehouse | D3',
     seoDescription:
-      'RFID warehouse tracking and workforce management for Bahrain logistics operations — real-time inventory visibility and multi-site attendance.',
+      'Logistics technology solutions for Bahrain — warehouse RFID tracking, workforce management and multi-site attendance for depots and warehouses.',
   },
 };
 
 export const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.co';
+
+export function pageCanonical(locale: string, path: string) {
+  return `${SITE_URL}/${locale}${path}`;
+}

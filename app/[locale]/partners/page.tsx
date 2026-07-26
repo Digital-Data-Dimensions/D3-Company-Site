@@ -2,11 +2,16 @@ import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { CTASection } from '@/components/home/CTASection';
 import type { Metadata } from 'next';
+import { pageCanonical } from '@/lib/solution-seo';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   return {
     title: 'Technology Partners | D3',
     description: "D3's technology partners — strategic alliances with leading global IT companies.",
+    alternates: {
+      canonical: pageCanonical(locale, '/partners'),
+    },
   };
 }
 

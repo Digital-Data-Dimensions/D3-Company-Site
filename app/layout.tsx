@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   description:
     'D3 Digital Data Dimensions (Dthree) is Bahrain\'s leading IT solutions company, delivering TimeTech time attendance systems, HRMS payroll software, queue management, RFID asset tracking, digital signage and ERP to 500+ enterprises across the GCC since 2010.',
   keywords: [
-    'D3', 'D3 Bahrain', 'Dthree', 'Digital Data Dimensions', 'D3 Digital Data Dimensions',
-    'TimeTech', 'Time Attendance System Bahrain', 'HRMS Software GCC', 'Biometric Attendance',
-    'Queue Management System', 'RFID Asset Tracking', 'Digital Signage', 'ERP Bahrain',
-    'HRMS Bahrain', 'Access Control System',
-    'Workforce Management GCC', 'LMRA Compliance', 'WPS Payroll', 'Time Attendance Gulf',
-    'IT Solutions Bahrain', 'Enterprise Software GCC', 'Attendance System Bahrain',
+    'D3',
+    'D3 Bahrain',
+    'TimeTech',
+    'Time Attendance System Bahrain',
+    'HRMS Bahrain',
+    'Enterprise IT Solutions Bahrain',
   ],
   authors: [{ name: 'D3 Digital Data Dimensions', url: BASE_URL }],
   creator: 'D3 Digital Data Dimensions',

@@ -442,4 +442,379 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
       text: 'Want visibility into where your assets and inventory actually are? [Request a demo](/contact) of D3\'s RFID and warehouse management solution.',
     },
   ],
+  'gosi-contribution-calculation-bahrain': [
+    {
+      type: 'p',
+      text: 'Every Bahrain employer processing payroll must handle **GOSI** (General Organisation for Social Insurance) contributions correctly — miscalculating employer and employee shares is one of the most common compliance errors HR teams face, and it compounds every pay cycle.',
+    },
+    {
+      type: 'p',
+      text: 'This guide explains how GOSI contribution calculation works in Bahrain, what salary components count toward contributions, and how the right payroll software removes manual calculation risk.',
+    },
+    { type: 'h2', text: 'What GOSI Covers in Bahrain' },
+    {
+      type: 'p',
+      text: 'GOSI is Bahrain\'s mandatory social insurance scheme. Employers deduct the employee share from gross salary and remit both employer and employee contributions to GOSI on schedule. The calculation base typically includes basic salary and certain allowances — but not every payment type counts the same way.',
+    },
+    {
+      type: 'p',
+      text: 'Rates and caps are set by GOSI and can differ by nationality and employment category. HR teams must apply the correct rate to the correct salary base each month, including when employees join mid-cycle, receive back-pay, or change contract type.',
+    },
+    { type: 'h2', text: 'Employer vs Employee Contribution Split' },
+    {
+      type: 'p',
+      text: 'In practice, payroll teams need to track:',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Insurable salary base** — which earnings count toward GOSI for each employee category',
+        '**Employee deduction** — withheld from net pay and shown on the payslip',
+        '**Employer contribution** — added on top of gross cost and reported separately in GOSI filings',
+        '**Monthly remittance totals** — consolidated figures for GOSI submission deadlines',
+      ],
+    },
+    { type: 'h2', text: 'Common GOSI Calculation Mistakes' },
+    {
+      type: 'p',
+      text: 'Manual spreadsheets cause recurring errors: applying last month\'s rate after a policy change, omitting allowances that should be insurable, or failing to pro-rate contributions for partial months. Each error creates a reconciliation gap that shows up at year-end audits or when employees dispute payslips.',
+    },
+    {
+      type: 'p',
+      text: 'Multi-company groups face an additional layer — each legal entity may have different employee populations and reporting obligations, but finance expects consolidated visibility across the group.',
+    },
+    { type: 'h2', text: 'How HRMS Automates GOSI' },
+    {
+      type: 'p',
+      text: 'Purpose-built **GOSI Bahrain** payroll software applies contribution rules inside the payroll engine — calculating employee and employer shares from the same salary structure used for WPS export and payslip generation. When an employee\'s contract changes, the system recalculates from the effective date without rebuilding spreadsheets.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Does GOSI apply to all employees in Bahrain?',
+          a: 'Most private-sector employees are covered, but rates and categories vary. Your HRMS should support nationality-based rules and contract types as configured for your organisation.',
+        },
+        {
+          q: 'Are allowances included in GOSI calculations?',
+          a: 'It depends on the allowance type and GOSI rules in effect. Payroll software should let you mark which earnings are insurable so calculations stay consistent.',
+        },
+        {
+          q: 'Can GOSI be calculated alongside WPS payroll?',
+          a: 'Yes — integrated HRMS platforms calculate GOSI deductions and generate WPS salary files from the same processed payroll run, avoiding duplicate data entry.',
+        },
+        {
+          q: 'What happens if GOSI is calculated incorrectly?',
+          a: 'Under- or over-deductions create employee disputes and remittance mismatches. Automated payroll reduces this risk by applying the same rules every cycle.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Stop rebuilding GOSI calculations in spreadsheets every month. [D3\'s HRMS solution](/solutions/hr-payroll-software) calculates GOSI contributions, generates compliant payslips, and exports WPS-ready payroll files from a single Bahrain-built platform.',
+    },
+  ],
+  'indemnity-calculation-bahrain': [
+    {
+      type: 'p',
+      text: '**Indemnity calculation in Bahrain** — end-of-service benefits owed when an employment relationship ends — is one of the largest single liabilities on most company balance sheets. Getting the accrual wrong month after month means a painful surprise at termination.',
+    },
+    {
+      type: 'p',
+      text: 'This guide walks through how indemnity accrues, what affects the final payout, and why HR teams rely on payroll systems to track balances in real time.',
+    },
+    { type: 'h2', text: 'How End-of-Service Benefits Accrue' },
+    {
+      type: 'p',
+      text: 'Indemnity (gratuity) in Bahrain is typically calculated based on length of service and the employee\'s qualifying salary. The formula differs depending on whether termination is by employer or employee, and whether the departure is with or without cause under Bahrain labour law.',
+    },
+    {
+      type: 'p',
+      text: 'HR teams must maintain a running accrual for every employee — not just calculate the figure when someone resigns. Finance needs monthly liability reports; employees increasingly expect transparency on their accrued balance.',
+    },
+    { type: 'h2', text: 'What Affects the Indemnity Payout' },
+    {
+      type: 'ul',
+      items: [
+        '**Years of service** — including how partial years are treated',
+        '**Basic salary base** — which components count toward the indemnity formula',
+        '**Termination type** — resignation, employer termination, or contract expiry',
+        '**Unpaid leave and absences** — whether these reduce qualifying service time',
+        '**Final settlement timing** — coordination with leave encashment and notice pay',
+      ],
+    },
+    { type: 'h2', text: 'Manual vs Automated Indemnity Tracking' },
+    {
+      type: 'p',
+      text: 'Spreadsheet-based **indemnity calculator Bahrain** models break down when headcount grows, employees transfer between entities, or salary structures change mid-year. A single data entry error on join date propagates through every future accrual.',
+    },
+    {
+      type: 'p',
+      text: 'Integrated HRMS maintains indemnity accruals as part of the employee record — updating automatically when salary changes, and producing a final settlement worksheet at termination that includes indemnity, leave balance, and outstanding deductions.',
+    },
+    { type: 'h2', text: 'LMRA and Final Settlement' },
+    {
+      type: 'p',
+      text: 'Final settlement often coincides with **LMRA** work permit cancellation and visa processes. HR teams need a single source of truth for the employee\'s last payslip, indemnity figure, and clearance documentation — generated from the same payroll system that processed their monthly salary.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Is indemnity the same as gratuity?',
+          a: 'In Bahrain employment practice, indemnity and end-of-service gratuity refer to the same broad concept — compensation owed at termination based on service length and applicable law.',
+        },
+        {
+          q: 'Should indemnity accruals appear on monthly reports?',
+          a: 'Yes. Finance teams typically require monthly indemnity liability reports for accurate provisioning — automated HRMS generates these without manual recalculation.',
+        },
+        {
+          q: 'Does indemnity calculation change for expatriate vs Bahraini staff?',
+          a: 'Rules can differ by nationality and contract type. Your payroll system should apply the correct formula per employee category.',
+        },
+        {
+          q: 'Can indemnity be paid before termination?',
+          a: 'Indemnity is generally payable at end of service. Some employers show accrued balances on employee self-service portals for transparency without early payout.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Track indemnity accruals automatically and generate accurate final settlements. [D3\'s HRMS solution](/solutions/hr-payroll-software) handles end-of-service calculations alongside WPS payroll, GOSI, and LMRA-ready reporting.',
+    },
+  ],
+  'average-salary-bahrain': [
+    {
+      type: 'p',
+      text: 'Employers benchmarking compensation or setting up payroll for new hires often search for the **average salary in Bahrain** — but published averages only tell part of the story. What matters for compliance is how **basic salary Bahrain** structures are defined in the employment contract and processed through payroll.',
+    },
+    { type: 'h2', text: 'Understanding Salary Structure in Bahrain' },
+    {
+      type: 'p',
+      text: 'Bahrain employment contracts typically separate basic salary from allowances (housing, transport, etc.). Basic salary is the foundation for GOSI contributions, indemnity accrual, and overtime calculations — so defining it correctly at hire is critical.',
+    },
+    {
+      type: 'p',
+      text: 'Industry and role type drive wide variation in **Bahrain salary** levels. Finance, oil & gas, healthcare, and government-adjacent roles sit at different points on the spectrum — averages are useful for recruitment conversations, not for payroll configuration.',
+    },
+    { type: 'h2', text: 'What Counts Toward Compliance Calculations' },
+    {
+      type: 'ul',
+      items: [
+        '**GOSI insurable salary** — basic plus qualifying allowances',
+        '**Indemnity base** — typically basic salary over years of service',
+        '**Overtime rate** — calculated from basic salary per labour law',
+        '**WPS transfer amount** — net pay after all deductions',
+      ],
+    },
+    { type: 'h2', text: 'Why Payroll Software Matters for Salary Management' },
+    {
+      type: 'p',
+      text: 'Once an employee is hired, the contract salary structure lives in HRMS — feeding payslips, GOSI deductions, and WPS files every month. Changing basic salary mid-contract requires updating the system once, not recalculating every downstream formula manually.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Is basic salary the same as gross salary?', a: 'No. Gross includes allowances; basic is the contractual base used for many statutory calculations.' },
+        { q: 'Do allowances affect GOSI?', a: 'Some do, depending on type. Payroll software should mark insurable vs non-insurable components.' },
+        { q: 'How often should salary benchmarks be reviewed?', a: 'Annually or at contract renewal — but payroll records must reflect actual contracted amounts, not market averages.' },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Configure salary structures once and let payroll handle the rest. [D3\'s HRMS solution](/solutions/hr-payroll-software) manages basic salary, allowances, GOSI, and WPS from a single employee record.',
+    },
+  ],
+  'bahrain-labour-law-resignation-notice': [
+    {
+      type: 'p',
+      text: 'When an employee resigns or an employer terminates a contract, **Bahrain labour law resignation** rules govern the **notice period Bahrain** employers and employees must observe. Getting notice wrong affects final settlement, visa cancellation, and replacement hiring timelines.',
+    },
+    { type: 'h2', text: 'Notice Period Rules' },
+    {
+      type: 'p',
+      text: 'Notice periods depend on contract type, length of service, and whether termination is initiated by employer or employee. Fixed-term contracts may have different rules than indefinite contracts. HR must document the termination date, notice served, and last working day in the employee file.',
+    },
+    { type: 'h2', text: 'Employment Termination Types' },
+    {
+      type: 'ul',
+      items: [
+        '**Employee resignation** — voluntary departure with required notice',
+        '**Employer termination** — with or without cause, affecting indemnity entitlement',
+        '**Contract expiry** — non-renewal of fixed-term agreements',
+        '**Mutual agreement** — documented settlement between both parties',
+      ],
+    },
+    { type: 'h2', text: 'HR Process at Termination' },
+    {
+      type: 'p',
+      text: 'Termination triggers a chain: notice tracking, leave encashment, final payroll, indemnity payout, GOSI clearance, and LMRA work permit cancellation. HRMS should generate a final settlement worksheet and archive the employment record — not scatter data across emails and spreadsheets.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Can notice period be waived by mutual agreement?', a: 'Often yes, if documented. HR should record the agreed last working day in the system.' },
+        { q: 'Does resignation affect indemnity?', a: 'Termination type affects indemnity calculation. HRMS applies the correct formula based on departure reason.' },
+        { q: 'What documents are needed at termination?', a: 'Typically final settlement, experience certificate, and LMRA clearance — generated from HR records.' },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Manage notice periods and final settlements in one system. [D3\'s HRMS solution](/solutions/hr-payroll-software) tracks employment termination workflows alongside payroll and LMRA reporting.',
+    },
+  ],
+  'salary-slip-format-bahrain': [
+    {
+      type: 'p',
+      text: 'Every employee expects a clear **salary slip format Bahrain** employers can produce consistently each month. A compliant **payslip Bahrain** shows earnings, deductions, and net pay — and serves as the employee\'s primary record for GOSI and salary disputes.',
+    },
+    { type: 'h2', text: 'Essential Payslip Fields' },
+    {
+      type: 'ul',
+      items: [
+        'Employee name, ID, and department',
+        'Pay period and payment date',
+        'Basic salary and itemised allowances',
+        'GOSI employee deduction and other statutory withholdings',
+        'Overtime, bonuses, or adjustments for the period',
+        'Net pay and payment method (WPS bank transfer)',
+      ],
+    },
+    { type: 'h2', text: 'Why Format Consistency Matters' },
+    {
+      type: 'p',
+      text: 'Inconsistent payslip formats confuse employees and slow audits. When every payslip follows the same template — generated from payroll, not manually edited — HR spends less time answering "what is this deduction?" queries.',
+    },
+    {
+      type: 'p',
+      text: 'Employee self-service portals let staff download historical payslips without contacting HR — reducing routine workload while improving transparency.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Are digital payslips acceptable in Bahrain?', a: 'Yes. Most employers deliver payslips via HRMS self-service or email PDF.' },
+        { q: 'Should GOSI appear separately on the payslip?', a: 'Yes — employee GOSI deduction should be itemised alongside other deductions.' },
+        { q: 'Can payslips be generated in Arabic?', a: 'Bilingual HRMS supports Arabic and English payslips for local requirements.' },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Generate compliant payslips automatically every cycle. [D3\'s HRMS solution](/solutions/hr-payroll-software) produces itemised salary slips with GOSI, WPS, and allowance breakdowns built in.',
+    },
+  ],
+  'employment-contract-bahrain': [
+    {
+      type: 'p',
+      text: 'An **employment contract Bahrain** employers issue must align with LMRA registration requirements and Bahrain labour law. The **LMRA contract** data registered with authorities should match what HR holds in the employee record and what payroll processes each month.',
+    },
+    { type: 'h2', text: 'Key Contract Clauses' },
+    {
+      type: 'ul',
+      items: [
+        'Job title, department, and work location',
+        'Contract type — fixed-term or indefinite',
+        'Basic salary, allowances, and payment frequency',
+        'Probation period and notice terms',
+        'Working hours, leave entitlement, and overtime rules',
+        'GOSI and social insurance obligations',
+      ],
+    },
+    { type: 'h2', text: 'Employment Contract Template Best Practice' },
+    {
+      type: 'p',
+      text: 'Use a standard **employment contract template** approved by your legal team, then capture the structured data in HRMS — salary components, join date, contract end date, and visa details. When contract terms change, update the system so payroll and LMRA records stay aligned.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Must contract salary match LMRA registration?', a: 'Yes. Discrepancies between contract, LMRA, and payslip create compliance risk.' },
+        { q: 'Can contracts be bilingual?', a: 'Arabic-English contracts are standard for many Bahrain employers.' },
+        { q: 'What happens at contract renewal?', a: 'HRMS should support renewal dates and salary revisions without creating duplicate employee records.' },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Link contracts to payroll from day one. [D3\'s HRMS solution](/solutions/hr-payroll-software) stores contract salary structures and feeds them directly into monthly payroll and LMRA reporting.',
+    },
+  ],
+  'offer-letter-sample-bahrain': [
+    {
+      type: 'p',
+      text: 'Before the formal employment contract, most Bahrain hires receive an **offer letter sample Bahrain** HR teams use as the first written record of terms. A clear **offer letter sample** reduces negotiation confusion and speeds up onboarding.',
+    },
+    { type: 'h2', text: 'What to Include in an Offer Letter' },
+    {
+      type: 'ul',
+      items: [
+        'Position title and reporting line',
+        'Proposed start date and work location',
+        'Basic salary and allowance breakdown',
+        'Probation period and benefits summary',
+        'Contingencies — visa sponsorship, medical clearance, reference checks',
+        'Acceptance deadline and signature block',
+      ],
+    },
+    { type: 'h2', text: 'From Offer Letter to HRMS Onboarding' },
+    {
+      type: 'p',
+      text: 'The best **HR templates Bahrain** teams use flow seamlessly: accepted offer letter terms become the employee record in HRMS, which then generates the contract, payroll setup, and LMRA registration data. Re-keying salary figures from PDF to spreadsheet is where errors start.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Is an offer letter legally binding?', a: 'It depends on wording. Most are conditional until contract signing — HR should use approved templates.' },
+        { q: 'Should the offer match the final contract exactly?', a: 'Salary and role terms should align. Material changes at contract stage require a revised offer or explanation.' },
+        { q: 'Can offer letters be generated from HRMS?', a: 'Advanced HRMS platforms store template fields and populate them from approved salary bands.' },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Turn accepted offers into compliant payroll without re-entry. [D3\'s HRMS solution](/solutions/hr-payroll-software) supports the full hire-to-payroll workflow for Bahrain employers.',
+    },
+  ],
+  'overtime-calculation-bahrain': [
+    {
+      type: 'p',
+      text: '**Overtime calculation in Bahrain** follows labour law rules that tie overtime pay to basic salary and approved working hours. Manual calculation from attendance sheets is slow and error-prone — especially across shifts, Ramadan schedules, and multi-site teams.',
+    },
+    { type: 'h2', text: 'How Overtime Pay Bahrain Works' },
+    {
+      type: 'p',
+      text: 'Overtime rates apply when employees work beyond standard hours defined in their contract and shift roster. **Labour law overtime** rules specify multipliers for regular overtime, rest-day work, and public holidays. HR must verify approved overtime before payroll — not pay unapproved hours.',
+    },
+    { type: 'h2', text: 'Attendance-to-Payroll Integration' },
+    {
+      type: 'p',
+      text: 'When time attendance feeds directly into HRMS, approved overtime hours flow into payroll automatically — calculated from basic salary per the configured formula. Managers approve overtime in the attendance system; payroll picks it up without manual re-entry.',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Shift-aware overtime** — regular vs Ramadan vs holiday rates',
+        '**Manager approval workflow** — no unapproved OT in payroll',
+        '**Basic salary-linked rates** — consistent with labour law',
+        '**Payslip itemisation** — overtime shown separately for transparency',
+      ],
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Does overtime use basic or gross salary?', a: 'Typically basic salary forms the overtime rate base under Bahrain labour law.' },
+        { q: 'How does Ramadan affect overtime?', a: 'Working hours and shift patterns often change in Ramadan — attendance systems should support Ramadan shift rules.' },
+        { q: 'Can overtime be calculated without attendance software?', a: 'Yes, but manual processes are slower and more error-prone at scale. Integration is strongly recommended.' },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Connect attendance approval to payroll automatically. [D3\'s HRMS solution](/solutions/hr-payroll-software) integrates with TimeTech time attendance so overtime calculation Bahrain rules apply every pay cycle without spreadsheet work.',
+    },
+  ],
 };

@@ -5,6 +5,7 @@ import { BlogArticleBody } from '@/components/blog/BlogArticleBody';
 import { ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
+import { pageCanonical } from '@/lib/solution-seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -18,6 +19,14 @@ const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
   'lmra-compliance-wps-payroll-bahrain': ['hr-payroll-software', 'time-attendance-system'],
   'queue-management-system-bahrain': ['queue-management-system'],
   'rfid-asset-tracking-warehouse-management-bahrain': ['rfid-asset-tracking', 'erp-retail-management'],
+  'gosi-contribution-calculation-bahrain': ['hr-payroll-software'],
+  'indemnity-calculation-bahrain': ['hr-payroll-software'],
+  'average-salary-bahrain': ['hr-payroll-software'],
+  'bahrain-labour-law-resignation-notice': ['hr-payroll-software'],
+  'salary-slip-format-bahrain': ['hr-payroll-software'],
+  'employment-contract-bahrain': ['hr-payroll-software'],
+  'offer-letter-sample-bahrain': ['hr-payroll-software'],
+  'overtime-calculation-bahrain': ['hr-payroll-software'],
   'top-5-benefits-biometric-attendance': ['time-attendance-system'],
   'queue-management-government-sector': ['queue-management-system'],
   'rfid-asset-tracking-manufacturing': ['rfid-asset-tracking'],
@@ -60,13 +69,16 @@ const BLOG_FULL_CONTENT: Record<string, string[]> = {
 };
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: 'Post Not Found' };
   return {
     title: ('seoTitle' in post && post.seoTitle) ? post.seoTitle : `${post.title} | D3 Blog`,
     description: post.excerpt,
     keywords: post.tags.join(', '),
+    alternates: {
+      canonical: pageCanonical(locale, `/blog/${slug}`),
+    },
   };
 }
 

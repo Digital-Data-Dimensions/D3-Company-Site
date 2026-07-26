@@ -4,6 +4,7 @@ import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
+import { pageCanonical } from '@/lib/solution-seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -12,12 +13,15 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const cs = CASE_STUDIES.find((c) => c.slug === slug);
   if (!cs) return { title: 'Project Not Found' };
   return {
     title: `${cs.clientName} | D3 Client Projects`,
     description: `D3 delivered: ${cs.solution.slice(0, 120)}`,
+    alternates: {
+      canonical: pageCanonical(locale, `/case-studies/${slug}`),
+    },
   };
 }
 

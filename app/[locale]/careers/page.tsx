@@ -2,11 +2,16 @@ import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { CTASection } from '@/components/home/CTASection';
 import type { Metadata } from 'next';
+import { pageCanonical } from '@/lib/solution-seo';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   return {
     title: 'Careers | D3 Digital Data Dimensions',
     description: 'Join the D3 team — IT solutions provider serving GCC enterprises since 2010. View open positions and career opportunities in Bahrain and the GCC.',
+    alternates: {
+      canonical: pageCanonical(locale, '/careers'),
+    },
   };
 }
 

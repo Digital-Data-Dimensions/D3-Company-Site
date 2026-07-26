@@ -1,10 +1,15 @@
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { LeadForm } from '@/components/forms/LeadForm';
+import { pageCanonical } from '@/lib/solution-seo';
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: 'Contact Us | D3',
     description: 'Get in touch with D3 to request a demo, ask about our solutions or get a proposal. We\'ll respond within 24 hours.',
+    alternates: {
+      canonical: pageCanonical(locale, '/contact'),
+    },
   };
 }
 

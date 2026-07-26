@@ -2,11 +2,16 @@ import { CASE_STUDIES } from '@/lib/data';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { CTASection } from '@/components/home/CTASection';
+import { pageCanonical } from '@/lib/solution-seo';
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return {
     title: 'Client Projects | D3',
     description: 'Real projects delivered by D3 for government ministries, enterprises and institutions across Bahrain and the GCC.',
+    alternates: {
+      canonical: pageCanonical(locale, '/case-studies'),
+    },
   };
 }
 

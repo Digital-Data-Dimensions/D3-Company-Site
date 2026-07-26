@@ -1,10 +1,15 @@
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import type { Metadata } from 'next';
+import { pageCanonical } from '@/lib/solution-seo';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   return {
     title: 'Privacy Policy | D3 Digital Data Dimensions',
     description: 'D3 Privacy Policy — how we collect, use and protect your personal information.',
+    alternates: {
+      canonical: pageCanonical(locale, '/privacy-policy'),
+    },
   };
 }
 

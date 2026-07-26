@@ -2,12 +2,17 @@ import type { Metadata } from 'next';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { CTASection } from '@/components/home/CTASection';
 import { ProjectsGallery } from '@/components/projects/ProjectsGallery';
+import { pageCanonical } from '@/lib/solution-seo';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   return {
     title: 'Projects | D3 Digital Data Dimensions',
     description:
       'View D3 project installations across Bahrain and the GCC — queue management systems, time attendance deployments, digital signage, and enterprise IT solutions.',
+    alternates: {
+      canonical: pageCanonical(locale, '/projects'),
+    },
   };
 }
 

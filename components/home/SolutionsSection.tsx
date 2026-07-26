@@ -3,6 +3,7 @@ import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { SOLUTIONS } from '@/lib/data';
 import { SOLUTION_VISUAL_IMAGES, SOLUTION_CARD_IMAGE_PIXEL_SIZE } from '@/lib/solution-card-images';
+import { Link } from '@/i18n/navigation';
 
 function ArrowIcon() {
   return (
@@ -73,8 +74,8 @@ export function SolutionsSection() {
 
 function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
   return (
-    <a
-      href={`/solutions/${sol.slug}`}
+    <Link
+      href={`/solutions/${sol.slug}` as Parameters<typeof Link>[0]['href']}
       className="sol-card"
       style={{ textDecoration: 'none' }}
     >
@@ -203,6 +204,6 @@ function SolutionCard({ sol }: { sol: (typeof SOLUTIONS)[0] }) {
         }
         .sol-card:hover .sol-link { color: var(--heading); }
       `}</style>
-    </a>
+    </Link>
   );
 }

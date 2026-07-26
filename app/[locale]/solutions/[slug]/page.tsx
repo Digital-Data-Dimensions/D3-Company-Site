@@ -112,7 +112,7 @@ const SOLUTION_DETAILS: Record<string, {
   additionalSections?: { title: string; intro?: string; bullets: string[] }[];
 }> = {
   'consultancy': {
-    seoKeyword: 'IT consultancy Bahrain GCC outsourced engineers ICT planning',
+    seoKeyword: 'IT Consultancy Bahrain',
     tagline: 'D3 has highly experienced business and information systems consultants who work with your business strategies and plan your ICT systems to maximise return on investment.',
     highlights: ['System Administrators', 'Network Engineers (CISCO)', 'Database Administrators', 'Software Engineers', 'Hardware Technicians', 'Help Desk Support'],
     features: [
@@ -144,7 +144,7 @@ const SOLUTION_DETAILS: Record<string, {
     ],
   },
   'visitor-management': {
-    seoKeyword: 'visitor management system Bahrain GCC reception kiosk access card',
+    seoKeyword: 'Visitor Management System Bahrain',
     tagline: 'TimeTech professional and advanced online visitor management system: reception kiosk, pre-registration, access cards and full audit trail.',
     highlights: ['Visitor Pre-Registration', 'Access Card Issuance', 'Door Assignment', 'Audit Reports', 'Automatic Access Removal', 'Appointment Tracking'],
     features: [
@@ -159,7 +159,7 @@ const SOLUTION_DETAILS: Record<string, {
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'time-attendance-enterprise': {
-    seoKeyword: 'time attendance enterprise Bahrain GCC multi-site biometric mobile app',
+    seoKeyword: 'Enterprise Time Attendance',
     tagline: 'No.1 TimeTech — recognised and appreciated by GCC Labour. Save time on one click and boost company productivity with enterprise attendance and HRMS for unlimited locations.',
     highlights: ['Multi-Site & Multi-Company', 'Auto Shift Picking', 'ProjectWise Manhours', 'Employee Self-Service', 'Geo-Fenced Mobile App', 'LMRA Reports'],
     features: [
@@ -235,7 +235,7 @@ const SOLUTION_DETAILS: Record<string, {
     ],
   },
   'hr-payroll-software': {
-    seoKeyword: 'HR software Bahrain WPS payroll HRMS GCC GOSI',
+    seoKeyword: 'HRMS Bahrain',
     tagline: 'TimeTech professional HRMS and Payroll for the Gulf Region. Multi-company, multi-currency, bi-lingual, flexible and cost effective.',
     highlights: ['WPS-ready Payroll', 'GOSI Integration', 'Multi-Company', 'Employee Self-Service', 'Document Control', 'Mobile App'],
     features: [
@@ -343,7 +343,7 @@ const SOLUTION_DETAILS: Record<string, {
     industries: ['government', 'healthcare', 'retail', 'logistics'],
   },
   'time-attendance-system': {
-    seoKeyword: 'time attendance system Bahrain GCC biometric',
+    seoKeyword: 'Time Attendance System Bahrain',
     tagline: 'TimeTech cloud-based biometric attendance across unlimited locations, with real-time dashboards, auto-shift picking, overtime management and LMRA-compliant payroll export.',
     highlights: ['Fingerprint & face recognition', 'LMRA compliant reports', 'Real-time dashboard', 'Auto shift picking', 'Email alerts for absences', 'Overtime approval workflow'],
     features: [
@@ -360,7 +360,7 @@ const SOLUTION_DETAILS: Record<string, {
     brochurePath: '/brochure/TA_HR_PAYROLL_V1.11.pdf',
   },
   'queue-management-system': {
-    seoKeyword: 'queue management system Bahrain GCC kiosk wired wireless',
+    seoKeyword: 'Queue Management System Bahrain',
     tagline: 'TimeTech wired and wireless kiosk-based queuing for ministries, hospitals and enterprises, with audio announcements, live analytics and supervisor reporting.',
     highlights: ['15" all-in-one KIOSK', 'Wired or wireless', 'Audio announcements', 'Multi-lingual support', 'Real-time analytics', 'Supervisor reporting'],
     features: [
@@ -377,7 +377,7 @@ const SOLUTION_DETAILS: Record<string, {
     youtubeUrl: 'https://www.youtube.com/embed/RnzjXYywChE',
   },
   'rfid-asset-tracking': {
-    seoKeyword: 'RFID asset tracking Bahrain warehouse management document tracking',
+    seoKeyword: 'RFID Asset Tracking Bahrain',
     tagline: 'TimeTech asset, document and warehouse tracking across multiple buildings, departments and warehouses, using RFID tags, handheld scanners and barcode technology.',
     highlights: ['Active & passive RFID', 'Handheld mobile scanners', 'Multi-building & multi-site', 'Document Tracking', 'Warehouse WMS', 'Gold & Valuables Tracking'],
     features: [
@@ -418,7 +418,7 @@ const SOLUTION_DETAILS: Record<string, {
     ],
   },
   'access-control-system': {
-    seoKeyword: 'access control system IP CCTV Bahrain biometric cameras surveillance',
+    seoKeyword: 'Access Control System Bahrain',
     tagline: 'TimeTech enterprise-grade IP surveillance and biometric access control. D3 delivers complete security solutions for indoor, outdoor, business and home environments.',
     highlights: ['IP CCTV (Indoor & Outdoor)', 'Fingerprint & Face Recognition', 'Proximity Card / NFC', 'Centralised Management', 'No Lost Keys or Passwords', 'Scalable to Enterprise'],
     features: [
@@ -461,7 +461,7 @@ const SOLUTION_DETAILS: Record<string, {
     ],
   },
   'digital-signage': {
-    seoKeyword: 'digital signage LED displays Bahrain GCC vertical signage eBook CMS',
+    seoKeyword: 'Digital Signage Bahrain',
     tagline: 'TimeTech indoor and outdoor LED displays, vertical portrait screens, e-book readers and IP power controllers, all managed from a central CMS with scheduling and real-time content updates.',
     highlights: ['LED from 4mm to 20mm pitch', 'Vertical Displays from 42"', 'Virtual Interactive eBook', 'IP Power Controller', 'Web-based CMS', '24/7 Operation'],
     features: [
@@ -530,7 +530,7 @@ const SOLUTION_DETAILS: Record<string, {
     ],
   },
   'erp-retail-management': {
-    seoKeyword: 'ERP software Bahrain retail management inventory electronic shelf labels',
+    seoKeyword: 'ERP Software Bahrain',
     tagline: 'TimeTech ERP with inventory, purchasing, sales, finance and HR integrated into one unified system, with electronic shelf labels and restaurant management. Multi-company, multi-currency, multi-branch.',
     highlights: ['Multi-Company & Multi-Branch', 'Real-time Inventory', 'Electronic Shelf Labels', 'Financial Accounting', 'Restaurant Management', 'Van Sales & RFID'],
     features: [

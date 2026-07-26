@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.co';
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -9,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://dthree.co/sitemap.xml',
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }
