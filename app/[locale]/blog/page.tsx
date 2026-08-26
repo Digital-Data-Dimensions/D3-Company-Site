@@ -1,4 +1,4 @@
-import { BLOG_POSTS } from '@/lib/data';
+import { BLOG_POSTS, postsByNewest } from '@/lib/data';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { ArrowIcon } from '@/components/shared/Button';
@@ -18,9 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function BlogListPage() {
-  const posts = [...BLOG_POSTS].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-  );
+  const posts = postsByNewest(BLOG_POSTS);
   return (
     <>
       {/* Hero */}

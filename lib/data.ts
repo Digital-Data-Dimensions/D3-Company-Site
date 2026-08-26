@@ -485,6 +485,22 @@ export const BLOG_POSTS = [
     publishedAt: '2026-08-26',
   },
   {
+    slug: 'visitor-management-system-bahrain-guide',
+    title: 'Visitor Management System in Bahrain: Reception Kiosks, Pre-Registration and Access Cards',
+    seoTitle: 'Visitor Management System Bahrain | Reception Kiosk & Pre-Registration | D3',
+    excerpt: 'Digital visitor management for Bahrain offices and government buildings — reception kiosks, pre-registration, access card issuance and a full audit trail.',
+    tags: ['Visitor Management System Bahrain', 'Digital Transformation Bahrain', 'Government IT Solutions'],
+    publishedAt: '2026-09-02',
+  },
+  {
+    slug: 'access-control-cctv-security-bahrain',
+    title: 'Access Control and IP CCTV in Bahrain: Biometric Doors, NFC Cards and Central Monitoring',
+    seoTitle: 'Access Control & IP CCTV in Bahrain | Biometric & NFC | D3',
+    excerpt: 'How access control and IP CCTV work together for Bahrain offices and government sites — biometric doors, NFC proximity cards and centralised security management.',
+    tags: ['Access Control System Bahrain', 'IP CCTV Bahrain', 'Biometric Access Control'],
+    publishedAt: '2026-09-09',
+  },
+  {
     slug: 'top-5-benefits-biometric-attendance',
     title: 'Top 5 Benefits of Biometric Attendance Systems for GCC Enterprises',
     excerpt: 'Biometric attendance eliminates buddy-punching, reduces payroll errors and ensures full LMRA compliance. Here\'s why GCC enterprises are upgrading from legacy systems.',
@@ -513,3 +529,9 @@ export const BLOG_POSTS = [
     publishedAt: '2026-04-01',
   },
 ];
+
+export function postsByNewest<T extends { publishedAt: string }>(posts: T[]) {
+  return [...posts].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
+}

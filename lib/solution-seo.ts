@@ -109,6 +109,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'Time-stamped visitor logs, scheduled visit reports and automatic access removal on departure for security and compliance teams.',
       },
     ],
+    relatedBlogSlugs: ['visitor-management-system-bahrain-guide'],
   },
   'queue-management-system': {
     pageH1: 'Queue Management System for Bahrain',
@@ -171,6 +172,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'One management layer for cameras and access controllers — scalable from a single site to enterprise deployments.',
       },
     ],
+    relatedBlogSlugs: ['access-control-cctv-security-bahrain'],
   },
   'digital-signage': {
     pageH1: 'Digital Signage & LED Displays for Bahrain',

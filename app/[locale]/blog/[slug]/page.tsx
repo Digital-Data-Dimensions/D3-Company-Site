@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { BLOG_POSTS, SOLUTIONS } from '@/lib/data';
+import { BLOG_POSTS, SOLUTIONS, postsByNewest } from '@/lib/data';
 import { BLOG_ARTICLES } from '@/lib/blog-articles';
 import { BlogArticleBody } from '@/components/blog/BlogArticleBody';
 import { ArrowIcon } from '@/components/shared/Button';
@@ -31,6 +31,8 @@ const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
   'digital-signage-led-displays-bahrain': ['digital-signage'],
   'erp-retail-management-software-bahrain': ['erp-retail-management'],
   'it-consultancy-managed-services-bahrain': ['consultancy'],
+  'visitor-management-system-bahrain-guide': ['visitor-management'],
+  'access-control-cctv-security-bahrain': ['access-control-system'],
   'top-5-benefits-biometric-attendance': ['time-attendance-system'],
   'queue-management-government-sector': ['queue-management-system'],
   'rfid-asset-tracking-manufacturing': ['rfid-asset-tracking'],
@@ -95,10 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
   const relatedSolutions = relatedSolSlugs.map((s) => SOLUTIONS.find((sol) => sol.slug === s)).filter(Boolean) as typeof SOLUTIONS;
   const richBlocks = BLOG_ARTICLES[slug];
   const legacyParas = BLOG_FULL_CONTENT[slug] || (!richBlocks ? [post.excerpt] : null);
-  const otherPosts = BLOG_POSTS
-    .filter((p) => p.slug !== slug)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-    .slice(0, 6);
+  const otherPosts = postsByNewest(BLOG_POSTS.filter((p) => p.slug !== slug)).slice(0, 6);
 
   return (
     <>

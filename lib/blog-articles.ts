@@ -103,7 +103,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'note',
-      text: 'Looking to replace manual attendance with a biometric system built for Bahrain\'s regulatory requirements? [Request a demo](/contact) with D3\'s team.',
+      text: 'Looking to replace manual attendance with a biometric system built for Bahrain\'s regulatory requirements? [Request a demo](/contact) with D3\'s team. The same biometric terminals often sit on [access control and IP CCTV](/blog/access-control-cctv-security-bahrain) for door security as well as clock-in.',
     },
   ],
 
@@ -1055,7 +1055,120 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'p',
-      text: 'Talk to [D3\'s IT consultancy and managed services team](/solutions/consultancy) about infrastructure audits, digital transformation sequencing and ongoing support. Related reading: [LMRA compliance and WPS payroll in Bahrain](/blog/lmra-compliance-wps-payroll-bahrain).',
+      text: 'Talk to [D3\'s IT consultancy and managed services team](/solutions/consultancy) about infrastructure audits, digital transformation sequencing and ongoing support. Related reading: [LMRA compliance and WPS payroll in Bahrain](/blog/lmra-compliance-wps-payroll-bahrain) and [visitor management systems for Bahrain offices](/blog/visitor-management-system-bahrain-guide).',
+    },
+  ],
+  'visitor-management-system-bahrain-guide': [
+    {
+      type: 'p',
+      text: 'Paper visitor books and shared door codes do not scale for Bahrain offices or government buildings. A **visitor management system** captures who is on site, why they are there, and which areas they can enter — then removes access when they leave. That is a digital transformation step for reception, not a cosmetic tablet at the desk.',
+    },
+    { type: 'h2', text: 'Reception Kiosk and Pre-Registration' },
+    {
+      type: 'p',
+      text: 'Most deployments start at reception. Visitors either pre-register online (host, appointment time, purpose) or check in at a reception kiosk on arrival. The kiosk captures ID details, prints or displays a badge, and notifies the host — so reception is not copying names into a ledger while a queue builds.',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Pre-registration** — expected visitors arrive already approved, with host and visit purpose on file',
+        '**Walk-in check-in** — unplanned visitors still get a structured record instead of a handwritten line',
+        '**Host notification** — SMS or email when the guest is at reception, reducing lobby wait time',
+      ],
+    },
+    { type: 'h2', text: 'Access Card Integration' },
+    {
+      type: 'p',
+      text: 'Issuing a physical or virtual access card on arrival only helps if it talks to the door controllers. Access card integration limits permissions to authorised floors or rooms and expires automatically at departure — the same principle as employee badges, applied to guests.',
+    },
+    { type: 'h2', text: 'Audit Trail for Government and Enterprise Sites' },
+    {
+      type: 'p',
+      text: 'Security and compliance teams need time-stamped visitor logs, scheduled-visit reports, and a record of who was on site during an incident. Government IT solutions in ministries and service centres often require this trail as a standard operating control, not an optional extra.',
+    },
+    { type: 'h2', text: 'What to Check Before You Buy' },
+    {
+      type: 'ul',
+      items: [
+        'Does the kiosk work with your existing access control, or only with a closed vendor stack?',
+        'Can pre-registration be bilingual (Arabic and English) for Bahrain visitors?',
+        'Are badges and door rights removed automatically when the visit ends?',
+        'Can reports export for security reviews without a manual spreadsheet rebuild?',
+      ],
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Is a visitor management system only for large government buildings?',
+          a: 'No. Corporate offices with restricted floors, healthcare reception, and multi-tenant buildings use the same flow — kiosk check-in, host notification, and an audit log.',
+        },
+        {
+          q: 'Does visitor management replace access control?',
+          a: 'It complements it. Visitor software handles identity and visit purpose; access control and CCTV enforce doors and cameras. They work best when integrated.',
+        },
+        {
+          q: 'Can visitors pre-register before they arrive?',
+          a: 'Yes — pre-registration is one of the main time-savers at reception, especially for scheduled government and enterprise appointments.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'See [D3\'s visitor management system](/solutions/visitor-management) for reception kiosks, pre-registration and access card issuance. Related reading: [access control and IP CCTV in Bahrain](/blog/access-control-cctv-security-bahrain) and [IT consultancy and managed services](/blog/it-consultancy-managed-services-bahrain).',
+    },
+  ],
+  'access-control-cctv-security-bahrain': [
+    {
+      type: 'p',
+      text: 'Shared keys and standalone DVRs leave gaps: nobody knows who opened a door, and footage lives on a box nobody checks until after an incident. An **access control system** paired with **IP CCTV Bahrain** deployments puts biometric doors, NFC proximity cards, and cameras on one management layer for offices and government sites.',
+    },
+    { type: 'h2', text: 'Biometric Access Control at the Door' },
+    {
+      type: 'p',
+      text: 'Fingerprint, face recognition, and NFC proximity card controllers replace shared keys and PIN codes that get passed around. Biometric access control ties a door event to a person — the same identity model used for attendance, applied to physical security.',
+    },
+    { type: 'h2', text: 'IP CCTV for Indoor and Outdoor Coverage' },
+    {
+      type: 'p',
+      text: 'IP cameras stream to a local or remote NVR so security can review live views and recordings without swapping tapes. Indoor lobbies, loading bays, and outdoor perimeters need different lenses and housings, but they should still sit in the same software — not a separate analogue island.',
+    },
+    { type: 'h2', text: 'Centralised Security Management' },
+    {
+      type: 'p',
+      text: 'The value is one console for doors and cameras: who badge-in at 02:14, and which camera covers that corridor. Centralised management scales from a single site to multi-building deployments without a different login per branch.',
+    },
+    { type: 'h2', text: 'How This Pairs With Attendance and Visitors' },
+    {
+      type: 'ul',
+      items: [
+        '**Employees** — biometric or NFC credentials can clock attendance and unlock doors from the same identity record',
+        '**Visitors** — time-limited cards issued at reception should expire in the same access system',
+        '**Cameras** — recordings give context when an access event is disputed',
+      ],
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Do we need both access control and IP CCTV?',
+          a: 'Access control answers who opened a door; CCTV answers what happened in view of the camera. Most Bahrain enterprise and government sites deploy both, managed together.',
+        },
+        {
+          q: 'Are NFC proximity cards still useful if we have biometrics?',
+          a: 'Yes — gloves, dusty sites, or high-throughput turnstiles often keep NFC or card as a fallback alongside fingerprint or face recognition.',
+        },
+        {
+          q: 'Can existing cameras be reused?',
+          a: 'Sometimes, if they are already IP and compatible with the new VMS. Analogue cameras usually need conversion or replacement as part of a proper IP CCTV upgrade.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Explore [D3\'s access control and IP CCTV solutions](/solutions/access-control-system) for biometric doors, NFC cards and centralised monitoring. Related reading: [visitor management in Bahrain](/blog/visitor-management-system-bahrain-guide) and [biometric attendance systems](/blog/biometric-attendance-system-bahrain).',
     },
   ],
 };
