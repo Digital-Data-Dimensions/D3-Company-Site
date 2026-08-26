@@ -95,7 +95,10 @@ export default async function BlogPostPage({ params }: Props) {
   const relatedSolutions = relatedSolSlugs.map((s) => SOLUTIONS.find((sol) => sol.slug === s)).filter(Boolean) as typeof SOLUTIONS;
   const richBlocks = BLOG_ARTICLES[slug];
   const legacyParas = BLOG_FULL_CONTENT[slug] || (!richBlocks ? [post.excerpt] : null);
-  const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 6);
+  const otherPosts = BLOG_POSTS
+    .filter((p) => p.slug !== slug)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, 6);
 
   return (
     <>

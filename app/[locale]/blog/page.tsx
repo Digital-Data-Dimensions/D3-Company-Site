@@ -18,6 +18,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function BlogListPage() {
+  const posts = [...BLOG_POSTS].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
   return (
     <>
       {/* Hero */}
@@ -37,7 +40,7 @@ export default function BlogListPage() {
       <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 28 }} className="blog-grid">
-            {BLOG_POSTS.map((post, i) => (
+            {posts.map((post, i) => (
               <RevealOnScroll key={post.slug} delay={i % 2 * 80}>
                 <Link href={`/blog/${post.slug}` as Parameters<typeof Link>[0]['href']} style={{
                   display: 'block',
