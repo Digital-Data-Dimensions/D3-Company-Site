@@ -51,6 +51,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'Employees view attendance, submit leave and excuse requests, and track overtime approvals online — reducing routine queries to HR.',
       },
     ],
+    relatedBlogSlugs: ['enterprise-time-attendance-multi-site-bahrain'],
     relatedSolutionSlugs: ['time-attendance-system'],
   },
   'hr-payroll-software': {
@@ -190,6 +191,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'Vertical signage portrait screens, LED video walls and weatherproof outdoor LEDs with optional touch and 24/7 operation.',
       },
     ],
+    relatedBlogSlugs: ['digital-signage-led-displays-bahrain'],
   },
   'erp-retail-management': {
     pageH1: 'ERP & Retail Management Software',
@@ -210,6 +212,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'Multi-company, multi-currency financial accounting with consolidated reporting across branches.',
       },
     ],
+    relatedBlogSlugs: ['erp-retail-management-software-bahrain'],
   },
   'consultancy': {
     pageH1: 'IT Consultancy & Managed Services for Bahrain',
@@ -226,6 +229,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
         body: 'Business and ICT consultants align digital transformation Bahrain objectives with your technology roadmap — from system analysis to CISCO-certified infrastructure delivery.',
       },
     ],
+    relatedBlogSlugs: ['it-consultancy-managed-services-bahrain'],
   },
 };
 

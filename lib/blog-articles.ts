@@ -73,7 +73,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'p',
-      text: 'Larger or multi-site organisations — particularly those with project-based manhour tracking, multiple companies under one group, or a mobile workforce — need the [Enterprise Time Attendance tier](/solutions/time-attendance-enterprise), which adds geo-fencing, unlimited site support, and a full employee self-service portal.',
+      text: 'Larger or multi-site organisations — particularly those with project-based manhour tracking, multiple companies under one group, or a mobile workforce — need the [Enterprise Time Attendance tier](/solutions/time-attendance-enterprise), which adds geo-fencing, unlimited site support, and a full employee self-service portal. For a deeper look at multi-site and government-group deployments, see [multi-site enterprise time attendance in Bahrain](/blog/enterprise-time-attendance-multi-site-bahrain).',
     },
     {
       type: 'p',
@@ -158,7 +158,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'p',
-      text: 'Organisations managing multiple companies, a larger headcount, or a full recruitment-to-appraisal cycle typically need the **enterprise tier**, which layers in recruitment workflows, performance appraisal, and deeper multi-entity reporting — also available through [D3\'s HRMS solutions](/solutions/hr-payroll-software).',
+      text: 'Organisations managing multiple companies, a larger headcount, or a full recruitment-to-appraisal cycle typically need the **enterprise tier**, which layers in recruitment workflows, performance appraisal, and deeper multi-entity reporting — also available through [D3\'s HRMS solutions](/solutions/hr-payroll-software). Groups that also need attendance consolidated across branches should read [multi-site enterprise time attendance](/blog/enterprise-time-attendance-multi-site-bahrain).',
     },
     {
       type: 'p',
@@ -282,7 +282,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'note',
-      text: 'Want payroll that generates WPS files and GOSI calculations automatically? [Talk to D3](/contact) about HRMS built for Bahrain\'s compliance requirements.',
+      text: 'Want payroll that generates WPS files and GOSI calculations automatically? [Talk to D3](/contact) about HRMS built for Bahrain\'s compliance requirements. If you are sequencing attendance, payroll and security as a programme rather than a single purchase, see [IT consultancy and managed services in Bahrain](/blog/it-consultancy-managed-services-bahrain).',
     },
   ],
 
@@ -357,7 +357,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'note',
-      text: 'Reducing wait times at your service counters? [Request a demo](/contact) of D3\'s queue management system.',
+      text: 'Reducing wait times at your service counters? [Request a demo](/contact) of D3\'s queue management system. Queue displays often sit on the same network as [digital signage and LED displays](/blog/digital-signage-led-displays-bahrain) in Bahrain government and healthcare halls.',
     },
   ],
 
@@ -439,7 +439,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'note',
-      text: 'Want visibility into where your assets and inventory actually are? [Request a demo](/contact) of D3\'s RFID and warehouse management solution.',
+      text: 'Want visibility into where your assets and inventory actually are? [Request a demo](/contact) of D3\'s RFID and warehouse management solution. For store-level POS, finance and multi-branch stock, see [ERP and retail management software in Bahrain](/blog/erp-retail-management-software-bahrain).',
     },
   ],
   'gosi-contribution-calculation-bahrain': [
@@ -815,6 +815,247 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     {
       type: 'p',
       text: 'Connect attendance approval to payroll automatically. [D3\'s HRMS solution](/solutions/hr-payroll-software) integrates with TimeTech time attendance so overtime calculation Bahrain rules apply every pay cycle without spreadsheet work.',
+    },
+  ],
+  'enterprise-time-attendance-multi-site-bahrain': [
+    {
+      type: 'p',
+      text: 'Once an organisation crosses a handful of branches — or operates as a group with several CR numbers under one holding structure — single-site attendance tools stop working. **Enterprise time attendance** solves a different problem than basic attendance tracking: consolidating workforce data from multiple locations, companies, and even countries into one governance layer, without losing the local detail each site manager actually needs day to day.',
+    },
+    { type: 'h2', text: 'Why Single-Site Attendance Tools Break at Scale' },
+    {
+      type: 'p',
+      text: 'A time attendance system built for one location assumes one shift pattern, one holiday calendar, and one reporting line. The moment a Bahrain-based group adds a second branch — let alone a Saudi or UAE entity under the same umbrella — that assumption collapses. HR ends up manually reconciling exports from disconnected systems every payroll cycle, which is exactly where hours get miscounted and GOSI/WPS errors creep in.',
+    },
+    { type: 'h2', text: 'What "Enterprise-Grade" Actually Means Here' },
+    {
+      type: 'p',
+      text: 'Three capabilities separate enterprise time attendance from a single-branch product:',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Multi-company, multi-currency architecture** — each legal entity keeps its own payroll rules and currency, but reports up into one consolidated dashboard for group-level HR and finance',
+        '**Role-based visibility** — a branch manager sees only their site\'s live attendance; a group HR director sees all sites at once, with drill-down by branch, department, or shift',
+        '**Centralized policy, local flexibility** — shift patterns, overtime rules, and holiday calendars can differ by branch while still rolling up to one WPS/GOSI-compliant payroll process at the group level',
+      ],
+    },
+    { type: 'h2', text: 'Government and Group-Structure Use Cases' },
+    {
+      type: 'p',
+      text: 'This matters most for two kinds of Bahrain organisations: government entities managing attendance across multiple ministry buildings or service centers, and private holding groups running several trading licenses under one parent company. In both cases, the failure mode is the same without a proper enterprise system — no single source of truth for headcount, hours, or compliance status across the group.',
+    },
+    { type: 'h2', text: 'Integration With Existing Systems' },
+    {
+      type: 'p',
+      text: 'Enterprise deployments rarely start from zero — most Bahrain groups already run some combination of biometric terminals, HRMS, and payroll software at individual branches. The right enterprise time attendance layer sits on top of and integrates with what\'s already there rather than forcing a full rip-and-replace, syncing branch-level attendance data upward into one consolidated view.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'How is enterprise time attendance different from a standard time attendance system?',
+          a: 'Scale and governance — a standard system handles one site\'s attendance well; an enterprise system consolidates multiple sites or companies into one reporting layer while preserving branch-level policy differences.',
+        },
+        {
+          q: 'Can it handle different shift patterns per branch?',
+          a: 'Yes — each branch or department can run its own shift and overtime rules, which still roll up into one group-level payroll and compliance report.',
+        },
+        {
+          q: 'Does it work across multiple GCC countries, not just Bahrain?',
+          a: 'Multi-currency, multi-company architecture is designed exactly for this — a Bahrain-headquartered group with Saudi or UAE branches can consolidate attendance across all of them in one dashboard.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'See how [D3\'s Enterprise Time Attendance solution](/solutions/time-attendance-enterprise) consolidates multi-site, multi-company attendance for Bahrain groups and government entities. Related reading: [biometric attendance buying guide](/blog/biometric-attendance-system-bahrain) and [HRMS payroll software in Bahrain](/blog/hrms-payroll-software-bahrain-guide).',
+    },
+  ],
+  'digital-signage-led-displays-bahrain': [
+    {
+      type: 'p',
+      text: 'A static poster or printed banner can\'t update itself when a promotion changes, a queue number advances, or a ministry needs to push an urgent announcement. **Digital signage Bahrain** deployments solve that by turning any screen — from a single lobby display to a full LED video wall — into content that updates centrally and instantly, across every location at once.',
+    },
+    { type: 'h2', text: 'Where Digital Signage Actually Pays Off in Bahrain' },
+    {
+      type: 'ul',
+      items: [
+        '**Retail** — promotional pricing, new arrivals, and branch-specific offers updated from one dashboard instead of reprinting materials per store',
+        '**Corporate lobbies and offices** — wayfinding, meeting room status, and internal announcements on a rolling loop',
+        '**Government service centers** — pairs directly with queue management to show live ticket numbers, service updates, and wait-time estimates',
+        '**Outdoor advertising and building facades** — high-brightness LED for visibility in Bahrain\'s daylight conditions, where a standard indoor screen washes out',
+      ],
+    },
+    { type: 'h2', text: 'Indoor vs Outdoor LED — What Changes' },
+    {
+      type: 'p',
+      text: 'Outdoor installations need significantly higher brightness (measured in nits) to remain visible against direct Gulf sunlight, along with weatherproofing and heat management that indoor displays don\'t require. Indoor displays can prioritize pixel density and color accuracy since viewing distance is shorter and lighting is controlled. Getting this wrong — installing an indoor-spec panel outdoors — is the single most common and expensive mistake in signage projects.',
+    },
+    { type: 'h2', text: 'Content Management Is the Real Differentiator' },
+    {
+      type: 'p',
+      text: 'The hardware is almost commoditized at this point; what separates a good digital signage deployment from a frustrating one is the content management software behind it:',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Centralized scheduling** — push content changes to one screen, one branch, or every screen in the network simultaneously',
+        '**Zone-based layouts** — split a single screen into promotional, informational, and live-data zones (e.g. queue numbers alongside brand content)',
+        '**Remote monitoring** — know immediately if a screen goes offline at a branch you\'re not physically at, rather than finding out from a customer complaint',
+      ],
+    },
+    { type: 'h2', text: 'Video Walls for High-Impact Spaces' },
+    {
+      type: 'p',
+      text: 'For lobbies, showrooms, and control rooms, a video wall — multiple LED or LCD panels tiled into one large seamless display — creates an impact a single screen can\'t. These require careful panel alignment and a dedicated video processor to split content correctly across tiles, which is where a proper installation partner matters more than the panel brand itself.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Can one content management system control screens across multiple Bahrain branches?',
+          a: 'Yes — centralized digital signage platforms are built exactly for this, pushing scheduled content to any subset of screens across a branch network from one dashboard.',
+        },
+        {
+          q: 'What\'s the difference between indoor and outdoor LED brightness requirements?',
+          a: 'Outdoor Bahrain installations typically need 4,000+ nits to stay visible in direct sunlight, versus 300-500 nits sufficient for indoor lobby or retail use.',
+        },
+        {
+          q: 'Does digital signage integrate with queue management systems?',
+          a: 'Yes — this is one of the most common pairings in Bahrain government and healthcare deployments, where the same screen shows live ticket numbers alongside informational content.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Explore [D3\'s digital signage and LED display solutions](/solutions/digital-signage) for retail, corporate and government sites in Bahrain. Related reading: [queue management systems for government and healthcare](/blog/queue-management-system-bahrain).',
+    },
+  ],
+  'erp-retail-management-software-bahrain': [
+    {
+      type: 'p',
+      text: 'Spreadsheets and disconnected point-of-sale systems work fine for a single shop. They stop working the moment a Bahrain retailer or distributor opens a second branch, adds an e-commerce channel, or needs finance and inventory data to actually agree with each other at month-end. **ERP software Bahrain** and retail management software exist to close that gap — but the two solve overlapping, not identical, problems.',
+    },
+    { type: 'h2', text: 'ERP vs Retail Management Software — What\'s the Actual Difference' },
+    {
+      type: 'p',
+      text: '**ERP (Enterprise Resource Planning)** is the broader system — finance, procurement, inventory, and HR data unified in one platform, typically the right fit for distributors, manufacturers, or multi-division companies.',
+    },
+    {
+      type: 'p',
+      text: '**Retail management software** is more storefront-focused — POS, shelf-level stock, and customer-facing operations, suited to retail chains where the priority is what\'s happening on the sales floor and in-store inventory, not full back-office finance consolidation.',
+    },
+    {
+      type: 'p',
+      text: 'Many mid-sized Bahrain retailers eventually need both, integrated — ERP for the financial and supply-chain backbone, retail software for the store-level experience.',
+    },
+    { type: 'h2', text: 'Core Capabilities to Demand From Either' },
+    {
+      type: 'ul',
+      items: [
+        '**Multi-branch inventory visibility** — real-time stock levels across every location, not a nightly batch sync',
+        '**POS integration** — sales data flowing directly into inventory and finance without manual reconciliation',
+        '**Purchase order and supplier management** — automatic reorder points tied to actual sell-through, not guesswork',
+        '**Multi-currency and multi-company support** — essential for any Bahrain business with GCC-wide operations',
+        '**Reporting that finance actually trusts** — margin, shrinkage, and turnover reports that match what\'s physically on the shelf',
+      ],
+    },
+    { type: 'h2', text: 'The Cost of Getting This Wrong' },
+    {
+      type: 'p',
+      text: 'The most common failure mode in Bahrain retail isn\'t choosing the wrong software outright — it\'s under-scoping it. A system bought to handle POS alone, then stretched to cover multi-branch inventory and finance reporting it was never designed for, creates exactly the reconciliation gaps ERP was supposed to eliminate. Scoping the system to where the business will be in two years, not just where it is today, avoids a costly mid-life replacement.',
+    },
+    { type: 'h2', text: 'Implementation Reality' },
+    {
+      type: 'p',
+      text: 'A realistic mid-sized retail ERP rollout in Bahrain runs 6-10 weeks: data migration from existing systems, POS integration testing, staff training on the new workflows, and a parallel-run period before full cutover. Rushing this — going live without a parallel run — is where inventory counts diverge from the system and trust in the new platform erodes in week one.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Do I need full ERP, or is retail management software enough?',
+          a: 'If the priority is store-floor operations and POS, retail management software alone may suffice. If finance, procurement, and multi-division reporting also need to unify, full ERP is the better long-term fit.',
+        },
+        {
+          q: 'Can ERP handle multiple retail branches across Bahrain and the GCC?',
+          a: 'Yes — multi-branch, multi-currency architecture is a standard requirement for any ERP considered for GCC-wide retail operations.',
+        },
+        {
+          q: 'How long does an ERP/retail management implementation typically take?',
+          a: 'Mid-sized rollouts in Bahrain generally take 6-10 weeks including data migration, integration testing, and a parallel-run period.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Compare [D3\'s ERP and retail management software](/solutions/erp-retail-management) for inventory, POS and multi-branch finance in Bahrain. Related reading: [RFID asset tracking and warehouse management](/blog/rfid-asset-tracking-warehouse-management-bahrain).',
+    },
+  ],
+  'it-consultancy-managed-services-bahrain': [
+    {
+      type: 'p',
+      text: 'Most Bahrain businesses don\'t need another vendor selling them software — they need someone to tell them honestly which systems they actually need, in what order, and why. That\'s the real value of **IT consultancy Bahrain**: an outside view of where technology is helping the business and where it\'s quietly costing money through inefficiency, duplicated tools, or security gaps.',
+    },
+    { type: 'h2', text: 'What IT Consultancy Actually Covers' },
+    {
+      type: 'ul',
+      items: [
+        '**Infrastructure audits** — network, hardware, and software inventory to identify what\'s outdated, redundant, or under-secured',
+        '**Digital transformation roadmaps** — sequencing which systems (attendance, ERP, security, etc.) to implement first based on actual business impact, not vendor sales pressure',
+        '**Vendor evaluation** — independent comparison of competing software or hardware options before a purchase decision, rather than relying on each vendor\'s own pitch',
+        '**Cybersecurity assessment** — identifying exposure points before they become incidents, particularly relevant as more physical systems (CCTV, access control) move onto the network',
+      ],
+    },
+    { type: 'h2', text: 'Managed IT Services — The Ongoing Layer' },
+    {
+      type: 'p',
+      text: 'Consultancy is typically a project; **managed IT services Bahrain** is the ongoing relationship that keeps systems running after the project ends:',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Proactive monitoring** — catching a failing server or a device going offline before it becomes a business-disrupting outage',
+        '**Help desk and support SLAs** — defined response times rather than an open-ended "we\'ll get to it"',
+        '**Patch and firmware management** — security updates applied on a schedule, not reactively after a vulnerability is already public',
+        '**Backup and disaster recovery** — tested restore procedures, not just backups that have never actually been verified to work',
+      ],
+    },
+    { type: 'h2', text: 'Why "Vendor-Neutral" Matters More Than It Sounds' },
+    {
+      type: 'p',
+      text: 'A vendor selling attendance software will recommend attendance software; a vendor selling ERP will recommend ERP. Genuine IT consultancy has no product to push, which means the roadmap it produces reflects the business\'s actual priorities rather than whichever system happens to be the consultant\'s own product line. This distinction is the entire reason to pay for consultancy rather than accepting a free "assessment" from a software vendor.',
+    },
+    { type: 'h2', text: 'Digital Transformation, Without the Buzzword' },
+    {
+      type: 'p',
+      text: 'For most Bahrain SMEs and mid-sized enterprises, **digital transformation Bahrain** in practice means picking two or three systems — often attendance/HRMS, then either ERP or a security upgrade — and implementing them properly in sequence, rather than attempting everything simultaneously. A consultancy engagement\'s real job is building that sequence and the business case behind it, not producing a slide deck full of trends.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'How is IT consultancy different from just buying software directly from a vendor?',
+          a: 'A vendor recommends their own product; a consultancy has no product to sell, so its recommendation reflects what the business actually needs, even if that means recommending a smaller or different solution than expected.',
+        },
+        {
+          q: 'What\'s included in managed IT services versus a one-time consultancy project?',
+          a: 'Consultancy is typically project-based (audit, roadmap, vendor selection); managed services is the ongoing relationship — monitoring, support SLAs, patching, and backup management after systems are live.',
+        },
+        {
+          q: 'Is IT consultancy worth it for a small or mid-sized Bahrain business?',
+          a: 'For businesses about to make a significant technology investment (ERP, security overhaul, multi-branch systems), an independent assessment usually costs far less than the price of choosing the wrong system and needing to replace it within two years.',
+        },
+      ],
+    },
+    {
+      type: 'p',
+      text: 'Talk to [D3\'s IT consultancy and managed services team](/solutions/consultancy) about infrastructure audits, digital transformation sequencing and ongoing support. Related reading: [LMRA compliance and WPS payroll in Bahrain](/blog/lmra-compliance-wps-payroll-bahrain).',
     },
   ],
 };
