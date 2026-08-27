@@ -1,10 +1,8 @@
-import { BLOG_POSTS, postsByNewest } from '@/lib/data';
-import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
+import { BLOG_POSTS } from '@/lib/data';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
-import { ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
-import { Link } from '@/i18n/navigation';
 import { pageCanonical } from '@/lib/solution-seo';
+import { BlogList } from '@/components/blog/BlogList';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -18,10 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function BlogListPage() {
-  const posts = postsByNewest(BLOG_POSTS);
   return (
     <>
-      {/* Hero */}
       <section className="page-hero" style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <SectionEyebrow>Resources</SectionEyebrow>
@@ -34,42 +30,40 @@ export default function BlogListPage() {
         </div>
       </section>
 
-      {/* Posts */}
       <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 28 }} className="blog-grid">
-            {posts.map((post, i) => (
-              <RevealOnScroll key={post.slug} delay={i % 2 * 80}>
-                <Link href={`/blog/${post.slug}` as Parameters<typeof Link>[0]['href']} style={{
-                  display: 'block',
-                  background: 'var(--card)', border: '1px solid var(--border)',
-                  borderRadius: 20, padding: '32px 28px', textDecoration: 'none',
-                  transition: 'transform 0.3s, box-shadow 0.3s',
-                }}
-                  className="blog-card"
-                >
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
-                    {post.tags.map((tag) => (
-                      <span key={tag} style={{ fontSize: 11, fontWeight: 400, padding: '3px 8px', borderRadius: 4, background: 'var(--bg-surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}>{tag}</span>
-                    ))}
-                  </div>
-                  <h2 style={{ fontFamily: 'var(--font)', fontSize: 20, fontWeight: 400, color: 'var(--heading)', letterSpacing: -0.3, lineHeight: 1.3, marginBottom: 14 }}>{post.title}</h2>
-                  <p style={{ fontSize: 14, color: 'var(--body)', lineHeight: 1.7, marginBottom: 24 }}>{post.excerpt}</p>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 400 }}>
-                      {new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                    </span>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 400, color: 'var(--muted)' }}>
-                      Read more <ArrowIcon size={13} />
-                    </div>
-                  </div>
-                </Link>
-              </RevealOnScroll>
-            ))}
-          </div>
+          <BlogList posts={BLOG_POSTS} />
         </div>
         <style>{`
-          .blog-grid { grid-template-columns: repeat(2, 1fr); }
+          .blog-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 28px;
+          }
+          .blog-sort-label {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--muted);
+          }
+          .blog-sort {
+            font-family: var(--font);
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--heading);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 14px;
+            cursor: pointer;
+            min-width: 160px;
+          }
+          .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+          }
           .blog-card:hover { transform: translateY(-5px); box-shadow: 0 12px 48px rgba(0,0,0,0.08); }
           @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr !important; } }
           .section-container { padding: 0 60px; }

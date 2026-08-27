@@ -490,7 +490,7 @@ export const BLOG_POSTS = [
     seoTitle: 'Visitor Management System Bahrain | Reception Kiosk & Pre-Registration | D3',
     excerpt: 'Digital visitor management for Bahrain offices and government buildings — reception kiosks, pre-registration, access card issuance and a full audit trail.',
     tags: ['Visitor Management System Bahrain', 'Digital Transformation Bahrain', 'Government IT Solutions'],
-    publishedAt: '2026-09-02',
+    publishedAt: '2026-08-27',
   },
   {
     slug: 'access-control-cctv-security-bahrain',
@@ -498,7 +498,7 @@ export const BLOG_POSTS = [
     seoTitle: 'Access Control & IP CCTV in Bahrain | Biometric & NFC | D3',
     excerpt: 'How access control and IP CCTV work together for Bahrain offices and government sites — biometric doors, NFC proximity cards and centralised security management.',
     tags: ['Access Control System Bahrain', 'IP CCTV Bahrain', 'Biometric Access Control'],
-    publishedAt: '2026-09-09',
+    publishedAt: '2026-08-27',
   },
   {
     slug: 'top-5-benefits-biometric-attendance',
@@ -530,8 +530,18 @@ export const BLOG_POSTS = [
   },
 ];
 
-export function postsByNewest<T extends { publishedAt: string }>(posts: T[]) {
-  return [...posts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-  );
+export function postsByNewest<T extends { publishedAt: string; slug?: string }>(posts: T[]) {
+  return [...posts].sort((a, b) => {
+    const byDate = b.publishedAt.localeCompare(a.publishedAt);
+    if (byDate !== 0) return byDate;
+    return (a.slug ?? '').localeCompare(b.slug ?? '');
+  });
+}
+
+export function postsByOldest<T extends { publishedAt: string; slug?: string }>(posts: T[]) {
+  return [...posts].sort((a, b) => {
+    const byDate = a.publishedAt.localeCompare(b.publishedAt);
+    if (byDate !== 0) return byDate;
+    return (a.slug ?? '').localeCompare(b.slug ?? '');
+  });
 }

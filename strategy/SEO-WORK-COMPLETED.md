@@ -58,8 +58,8 @@ Each funnels to a solution page via CTA + `relatedBlogSlugs`.
 
 | Date | Slug | Funnels to |
 |---|---|---|
-| 2026-09-09 | `access-control-cctv-security-bahrain` | Access Control |
-| 2026-09-02 | `visitor-management-system-bahrain-guide` | Visitor Management |
+| 2026-08-27 | `access-control-cctv-security-bahrain` | Access Control |
+| 2026-08-27 | `visitor-management-system-bahrain-guide` | Visitor Management |
 | 2026-08-26 | `it-consultancy-managed-services-bahrain` | IT Consultancy |
 | 2026-08-19 | `erp-retail-management-software-bahrain` | ERP & Retail |
 | 2026-08-12 | `digital-signage-led-displays-bahrain` | Digital Signage |
