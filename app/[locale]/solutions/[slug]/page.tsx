@@ -8,9 +8,9 @@ import {
   Zap, Eye, LayoutGrid, ShoppingCart, TrendingUp,
   CheckCircle2, Headphones, Database, Radio, Link2,
 } from 'lucide-react';
-import { SOLUTIONS, CASE_STUDIES, INDUSTRIES, BLOG_POSTS } from '@/lib/data';
+import { SOLUTIONS, INDUSTRIES, BLOG_POSTS } from '@/lib/data';
 import { SOLUTION_VISUAL_IMAGES } from '@/lib/solution-card-images';
-import { SOLUTION_SEO, SITE_URL } from '@/lib/solution-seo';
+import { SOLUTION_SEO, SITE_URL, pageOpenGraph } from '@/lib/solution-seo';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -105,7 +105,6 @@ const SOLUTION_DETAILS: Record<string, {
   features: { title: string; desc: string }[];
   highlights: string[];
   industries: string[];
-  caseStudySlug?: string;
   heroImage?: { src: string; alt: string };
   brochurePath?: string;
   youtubeUrl?: string;
@@ -126,7 +125,6 @@ const SOLUTION_DETAILS: Record<string, {
       { title: 'System Analysis', desc: 'System Analysts to evaluate, document and improve your enterprise business processes and systems.' },
     ],
     industries: ['government', 'healthcare', 'retail', 'logistics'],
-    caseStudySlug: 'ministry-of-interior-attendance',
     additionalSections: [
       {
         title: 'Outsourced IT Roles Available',
@@ -606,15 +604,18 @@ export async function generateMetadata({ params }: Props) {
   const sol = SOLUTIONS.find((s) => s.slug === slug);
   const detail = SOLUTION_DETAILS[slug];
   const seo = SOLUTION_SEO[slug];
-  if (!sol && !detail) return { title: 'Solution Not Found' };
+  if (!sol && !detail) return { title: { absolute: 'Solution Not Found | D3' } };
   const fallbackTitle = sol?.title ?? detail?.tagline?.slice(0, 60) ?? 'Solution';
+  const title = seo?.seoTitle ?? `${fallbackTitle} | D3 Bahrain`;
+  const description = seo?.seoDescription ?? sol?.desc ?? detail?.tagline ?? '';
   return {
-    title: { absolute: seo?.seoTitle ?? `${fallbackTitle} | D3 Bahrain` },
-    description: seo?.seoDescription ?? sol?.desc ?? detail?.tagline,
+    title: { absolute: title },
+    description,
     keywords: detail?.seoKeyword,
     alternates: {
       canonical: `${SITE_URL}/${locale}/solutions/${slug}`,
     },
+    openGraph: pageOpenGraph({ locale, path: `/solutions/${slug}`, title, description }),
   };
 }
 
@@ -638,7 +639,6 @@ export default async function SolutionPage({ params }: Props) {
 
   const seo = SOLUTION_SEO[slug];
   const heroImg = HERO_IMAGES[slug];
-  const relatedCaseStudy = CASE_STUDIES.find((cs) => cs.slug === detail.caseStudySlug);
   const relatedIndustries = INDUSTRIES.filter((ind) => detail.industries.includes(ind.slug));
   const relatedSolutions = SOLUTIONS.filter((s) => s.slug !== slug).slice(0, 3);
   const relatedBlogs = (seo?.relatedBlogSlugs || [])

@@ -2,16 +2,19 @@ import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { CTASection } from '@/components/home/CTASection';
 import type { Metadata } from 'next';
-import { pageCanonical } from '@/lib/solution-seo';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const title = 'News & Credentials | D3 Digital Data Dimensions';
+  const description = 'D3 accreditation certificates and appreciation letters — official recognition from government and enterprise clients across Bahrain and the GCC.';
   return {
-    title: 'News & Credentials | D3 Digital Data Dimensions',
-    description: 'D3 accreditation certificates and appreciation letters — official recognition from government and enterprise clients across Bahrain and the GCC.',
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: pageCanonical(locale, '/news'),
     },
+    openGraph: pageOpenGraph({ locale, path: '/news', title, description }),
   };
 }
 

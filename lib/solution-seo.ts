@@ -270,3 +270,33 @@ export const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.
 export function pageCanonical(locale: string, path: string) {
   return `${SITE_URL}/${locale}${path}`;
 }
+
+/**
+ * Every page needs its own Open Graph block — without this, pages fall back
+ * to the [locale] layout's OG data (the homepage's), so shares of any inner
+ * page show the homepage's title/description/image instead of its own.
+ */
+export function pageOpenGraph({
+  locale,
+  path,
+  title,
+  description,
+  image,
+}: {
+  locale: string;
+  path: string;
+  title: string;
+  description: string;
+  image?: string;
+}) {
+  const url = pageCanonical(locale, path);
+  return {
+    type: 'website' as const,
+    locale,
+    url,
+    siteName: 'D3 Digital Data Dimensions',
+    title,
+    description,
+    images: [{ url: image ?? `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: title }],
+  };
+}

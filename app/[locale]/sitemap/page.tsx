@@ -1,11 +1,19 @@
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const title = 'Sitemap | D3 Digital Data Dimensions';
+  const description = 'Complete sitemap for D3 — Digital Data Dimensions website.';
   return {
-    title: 'Sitemap | D3 Digital Data Dimensions',
-    description: 'Complete sitemap for D3 — Digital Data Dimensions website.',
+    title: { absolute: title },
+    description,
+    alternates: {
+      canonical: pageCanonical(locale, '/sitemap'),
+    },
+    openGraph: pageOpenGraph({ locale, path: '/sitemap', title, description }),
   };
 }
 

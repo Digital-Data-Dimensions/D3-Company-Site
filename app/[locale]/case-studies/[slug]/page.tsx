@@ -4,7 +4,7 @@ import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
-import { pageCanonical } from '@/lib/solution-seo';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -15,13 +15,16 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug, locale } = await params;
   const cs = CASE_STUDIES.find((c) => c.slug === slug);
-  if (!cs) return { title: 'Project Not Found' };
+  if (!cs) return { title: { absolute: 'Case Study Not Found | D3' } };
+  const title = `${cs.clientName} | D3 Client Case Studies`;
+  const description = `D3 delivered: ${cs.solution.slice(0, 120)}`;
   return {
-    title: `${cs.clientName} | D3 Client Projects`,
-    description: `D3 delivered: ${cs.solution.slice(0, 120)}`,
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: pageCanonical(locale, `/case-studies/${slug}`),
     },
+    openGraph: pageOpenGraph({ locale, path: `/case-studies/${slug}`, title, description }),
   };
 }
 

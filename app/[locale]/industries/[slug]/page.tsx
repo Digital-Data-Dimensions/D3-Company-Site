@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { INDUSTRIES, SOLUTIONS, CASE_STUDIES } from '@/lib/data';
-import { INDUSTRY_SEO, SITE_URL } from '@/lib/solution-seo';
+import { INDUSTRY_SEO, SITE_URL, pageOpenGraph } from '@/lib/solution-seo';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -20,24 +20,32 @@ const INDUSTRY_SOLUTIONS: Record<string, string[]> = {
   logistics: ['rfid-asset-tracking', 'time-attendance-system', 'access-control-system', 'erp-retail-management'],
 };
 
+/**
+ * Only "government" has real matching entries in CASE_STUDIES today — healthcare,
+ * retail and logistics have no verified client case study in lib/data.ts, so they're
+ * intentionally left without one rather than pointing at fabricated slugs.
+ */
 const INDUSTRY_CASE_STUDIES: Record<string, string[]> = {
-  government: ['ministry-of-interior-attendance', 'bahrain-airport-cctv'],
-  healthcare: ['gulf-air-queue-management'],
-  retail: ['jawad-business-erp'],
-  logistics: ['alba-rfid-assets'],
+  government: ['survey-land-registration-bureau', 'labour-market-regulatory-authority'],
+  healthcare: [],
+  retail: [],
+  logistics: [],
 };
 
 export async function generateMetadata({ params }: Props) {
   const { slug, locale } = await params;
   const ind = INDUSTRIES.find((i) => i.slug === slug);
   const seo = INDUSTRY_SEO[slug];
-  if (!ind) return { title: 'Industry Not Found' };
+  if (!ind) return { title: { absolute: 'Industry Not Found | D3' } };
+  const title = seo?.seoTitle ?? `${ind.title} IT Solutions Bahrain | D3`;
+  const description = seo?.seoDescription ?? `D3 provides enterprise IT solutions for the ${ind.title} sector — ${ind.desc}`;
   return {
-    title: { absolute: seo?.seoTitle ?? `${ind.title} IT Solutions Bahrain | D3` },
-    description: seo?.seoDescription ?? `D3 provides enterprise IT solutions for the ${ind.title} sector — ${ind.desc}`,
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: `${SITE_URL}/${locale}/industries/${slug}`,
     },
+    openGraph: pageOpenGraph({ locale, path: `/industries/${slug}`, title, description }),
   };
 }
 

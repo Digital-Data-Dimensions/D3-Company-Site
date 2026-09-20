@@ -1,16 +1,19 @@
 import { ClientsTabs } from '@/components/clients/ClientsTabs';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { CTASection } from '@/components/home/CTASection';
-import { pageCanonical } from '@/lib/solution-seo';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const title = 'Our Clients | D3';
+  const description = '500+ clients across the GCC trust D3, from government ministries and leading enterprises to retail chains, hospitals and industrial organisations.';
   return {
-    title: 'Our Clients | D3',
-    description: '500+ clients across the GCC trust D3, from government ministries and leading enterprises to retail chains, hospitals and industrial organisations.',
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: pageCanonical(locale, '/clients'),
     },
+    openGraph: pageOpenGraph({ locale, path: '/clients', title, description }),
   };
 }
 

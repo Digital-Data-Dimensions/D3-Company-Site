@@ -1,17 +1,20 @@
 import { BLOG_POSTS } from '@/lib/data';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { CTASection } from '@/components/home/CTASection';
-import { pageCanonical } from '@/lib/solution-seo';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 import { BlogList } from '@/components/blog/BlogList';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const title = 'Blog & Resources | D3';
+  const description = 'Industry insights, product updates and best practices for enterprise IT from the D3 team — Bahrain and the GCC.';
   return {
-    title: 'Blog & Resources | D3',
-    description: 'Industry insights, product updates and best practices for enterprise IT from the D3 team — Bahrain and the GCC.',
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: pageCanonical(locale, '/blog'),
     },
+    openGraph: pageOpenGraph({ locale, path: '/blog', title, description }),
   };
 }
 

@@ -5,7 +5,7 @@ import { BlogArticleBody } from '@/components/blog/BlogArticleBody';
 import { ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
-import { pageCanonical } from '@/lib/solution-seo';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -77,14 +77,17 @@ const BLOG_FULL_CONTENT: Record<string, string[]> = {
 export async function generateMetadata({ params }: Props) {
   const { slug, locale } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
-  if (!post) return { title: 'Post Not Found' };
+  if (!post) return { title: { absolute: 'Post Not Found | D3 Blog' } };
+  const title = ('seoTitle' in post && post.seoTitle) ? post.seoTitle : `${post.title} | D3 Blog`;
+  const description = post.excerpt;
   return {
-    title: ('seoTitle' in post && post.seoTitle) ? post.seoTitle : `${post.title} | D3 Blog`,
-    description: post.excerpt,
+    title: { absolute: title },
+    description,
     keywords: post.tags.join(', '),
     alternates: {
       canonical: pageCanonical(locale, `/blog/${slug}`),
     },
+    openGraph: pageOpenGraph({ locale, path: `/blog/${slug}`, title, description }),
   };
 }
 

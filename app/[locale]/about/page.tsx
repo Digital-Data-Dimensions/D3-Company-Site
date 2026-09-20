@@ -2,17 +2,20 @@ import Image from 'next/image';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
-import { pageCanonical } from '@/lib/solution-seo';
+import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const title = 'About D3 | Digital Data Dimensions';
+  const description =
+    'Learn about D3 (Digital Data Dimensions), Bahrain-based enterprise IT solutions provider serving the GCC since 2010.';
   return {
-    title: 'About D3 | Digital Data Dimensions',
-    description:
-      'Learn about D3 (Digital Data Dimensions), Bahrain-based enterprise IT solutions provider serving the GCC since 2010.',
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: pageCanonical(locale, '/about'),
     },
+    openGraph: pageOpenGraph({ locale, path: '/about', title, description }),
   };
 }
 
