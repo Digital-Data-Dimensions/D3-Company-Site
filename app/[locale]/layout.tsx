@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import { FloatingActions } from '@/components/layout/FloatingActions';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { GTMScript } from '@/components/layout/GTMScript';
+import { GAScript } from '@/components/layout/GAScript';
 import { LocaleHtmlAttributes } from '@/components/layout/LocaleHtmlAttributes';
 import type { Metadata } from 'next';
 
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <LocaleHtmlAttributes />
+      <GAScript />
       <GTMScript gtmId={gtmId} />
       <ThemeProvider>
         <div suppressHydrationWarning>
