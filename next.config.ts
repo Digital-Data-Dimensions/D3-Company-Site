@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
       { source: '/CCTV', destination: '/en/solutions/access-control-system', permanent: true },
       { source: '/eBook', destination: '/en/blog', permanent: true },
       { source: '/IPCCTV.aspx', destination: '/en/solutions/access-control-system', permanent: true },
+      { source: '/blog/salary-slip-format-bahrain', destination: '/en/blog/salary-slip-format-bahrain', permanent: true },
     ];
   },
 };

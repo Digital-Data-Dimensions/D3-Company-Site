@@ -37,6 +37,11 @@ const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
   'queue-management-government-sector': ['queue-management-system'],
   'rfid-asset-tracking-manufacturing': ['rfid-asset-tracking'],
   'choosing-hr-software-bahrain': ['hr-payroll-software'],
+  'saudi-labor-law-complete-guide': ['hr-payroll-software', 'timetech-application'],
+  'article-81-saudi-labor-law': ['hr-payroll-software'],
+  'article-80-saudi-labor-law': ['hr-payroll-software', 'time-attendance-system'],
+  'qatar-labor-law-guide': ['hr-payroll-software', 'time-attendance-system'],
+  'bahrain-gratuity-calculation-guide': ['hr-payroll-software'],
 };
 
 /** Legacy plain-paragraph articles (kept for older posts) */

@@ -88,6 +88,9 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
       'employment-contract-bahrain',
       'offer-letter-sample-bahrain',
       'overtime-calculation-bahrain',
+      'saudi-labor-law-complete-guide',
+      'qatar-labor-law-guide',
+      'bahrain-gratuity-calculation-guide',
     ],
   },
   'visitor-management': {

@@ -631,40 +631,89 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
   'bahrain-labour-law-resignation-notice': [
     {
       type: 'p',
-      text: 'When an employee resigns or an employer terminates a contract, **Bahrain labour law resignation** rules govern the **notice period Bahrain** employers and employees must observe. Getting notice wrong affects final settlement, visa cancellation, and replacement hiring timelines.',
+      text: "Bahrain's Labour Law for the Private Sector (Law No. 36 of 2012, as amended) governs employment contracts, resignation, termination, and salary obligations for both Bahraini nationals and the large expatriate workforce. Here's what employees and employers both need to know.",
     },
-    { type: 'h2', text: 'Notice Period Rules' },
     {
       type: 'p',
-      text: 'Notice periods depend on contract type, length of service, and whether termination is initiated by employer or employee. Fixed-term contracts may have different rules than indefinite contracts. HR must document the termination date, notice served, and last working day in the employee file.',
+      text: "This is general legal information, not legal advice. Confirm your specific situation with a licensed labor lawyer or Bahrain's Labour Market Regulatory Authority (LMRA).",
     },
-    { type: 'h2', text: 'Employment Termination Types' },
+    { type: 'h2', text: 'Resignation notice period' },
+    {
+      type: 'p',
+      text: "An employee resigning in Bahrain must generally give **30 days' written notice** to their employer. The employee is expected to continue fulfilling their normal job duties throughout the notice period unless the employer agrees otherwise.",
+    },
+    { type: 'h2', text: 'Resignation rules for expatriate employees specifically' },
+    {
+      type: 'p',
+      text: 'Expatriate employees face additional practical considerations beyond the standard notice requirement:',
+    },
     {
       type: 'ul',
       items: [
-        '**Employee resignation** — voluntary departure with required notice',
-        '**Employer termination** — with or without cause, affecting indemnity entitlement',
-        '**Contract expiry** — non-renewal of fixed-term agreements',
-        '**Mutual agreement** — documented settlement between both parties',
+        '**Work permit and residence status** are tied to the current employer — resignation triggers a process for transferring or canceling sponsorship through the LMRA, which should be initiated promptly to avoid a gap in legal residence status',
+        '**End-of-service gratuity eligibility** for expatriates follows the standard labour law formula rather than the GOSI pension system that applies to Bahraini nationals',
+        '**Final settlement** — outstanding salary, unused leave, and gratuity — should be settled at or shortly after the employee\'s last working day, not delayed indefinitely',
+        'Employers commonly require the resignation letter to explicitly state the last working day and reference the 30-day notice period, to avoid ambiguity during the visa-cancellation process',
       ],
     },
-    { type: 'h2', text: 'HR Process at Termination' },
+    { type: 'h2', text: 'Salary and wage rules' },
     {
       type: 'p',
-      text: 'Termination triggers a chain: notice tracking, leave encashment, final payroll, indemnity payout, GOSI clearance, and LMRA work permit cancellation. HRMS should generate a final settlement worksheet and archive the employment record — not scatter data across emails and spreadsheets.',
+      text: 'Bahrain Labour Law sets baseline requirements around how and when wages must be paid:',
+    },
+    {
+      type: 'ul',
+      items: [
+        'Wages must be paid at regular, agreed intervals — typically monthly',
+        "Salary certificates and payslips should reflect the employee's actual basic wage plus any fixed allowances",
+        'Overtime is compensated at a premium rate above the standard hourly wage, with specific rules on how overtime hours are calculated — see [our separate overtime calculation guide](/blog/overtime-calculation-bahrain)',
+        'Annual leave, sick leave, and other statutory leave entitlements accrue based on length of service and must be reflected in final settlement calculations if unused at termination',
+      ],
+    },
+    { type: 'h2', text: 'End-of-service gratuity: what changed in 2024' },
+    {
+      type: 'p',
+      text: 'This is the area most existing online guides get outdated on. **Since March 1, 2024, Bahrain moved from an employer-paid lump-sum gratuity to a contribution-based system administered by the Social Insurance Organisation (SIO).**',
+    },
+    {
+      type: 'ul',
+      items: [
+        'Employers now make **monthly contributions** to the SIO on behalf of non-Bahraini employees, rather than paying a lump sum directly at termination',
+        'The contribution rate is **4.2%** for an employee\'s first three years of service, rising to **8.4%** thereafter',
+        'For voluntary resignation, entitlement is still prorated by length of service: less than 2 years — none; 2–5 years — one-third; 5–10 years — two-thirds; over 10 years — full entitlement',
+        '**Bahraini nationals** are covered through the standard GOSI pension system rather than this SIO gratuity mechanism',
+      ],
+    },
+    {
+      type: 'p',
+      text: "This distinction matters most for HR teams running payroll for a mixed Bahraini/expatriate workforce — the calculation logic genuinely differs by nationality, not just by tenure. [HR software that handles WPS payroll and GOSI/SIO calculations](/solutions/hr-payroll-software) separately gets this right by design rather than by manual tracking.",
+    },
+    { type: 'h2', text: 'Termination protections' },
+    {
+      type: 'p',
+      text: 'Bahrain Labour Law protects employees against unjustified dismissal — employers must have a legitimate, documented reason for termination. An employee who believes they were dismissed unfairly can seek reinstatement or compensation through the appropriate legal channels. Certain serious-misconduct grounds (referenced under Article 107) allow termination without the standard compensation obligations, similar in spirit to Article 80 of Saudi Labor Law.',
     },
     { type: 'h2', text: 'Frequently Asked Questions' },
     {
       type: 'faq',
       items: [
-        { q: 'Can notice period be waived by mutual agreement?', a: 'Often yes, if documented. HR should record the agreed last working day in the system.' },
-        { q: 'Does resignation affect indemnity?', a: 'Termination type affects indemnity calculation. HRMS applies the correct formula based on departure reason.' },
-        { q: 'What documents are needed at termination?', a: 'Typically final settlement, experience certificate, and LMRA clearance — generated from HR records.' },
+        {
+          q: 'How much notice do I need to give to resign in Bahrain?',
+          a: "30 days' written notice is the standard requirement, and you're generally expected to continue working through that period unless your employer agrees to release you earlier.",
+        },
+        {
+          q: "Has Bahrain's end-of-service gratuity system changed recently?",
+          a: 'Yes — since March 1, 2024, non-Bahraini employees\' gratuity is funded through monthly employer contributions to the Social Insurance Organisation (SIO) rather than a lump sum paid directly by the employer at termination. The prorated entitlement schedule by length of service still applies.',
+        },
+        {
+          q: 'Do Bahraini nationals get the same gratuity as expatriates?',
+          a: "No — Bahraini nationals' end-of-service benefits are handled through the GOSI pension system, which operates differently from the SIO-administered gratuity mechanism that applies to non-Bahraini employees.",
+        },
       ],
     },
     {
-      type: 'p',
-      text: 'Manage notice periods and final settlements in one system. [D3\'s HRMS solution](/solutions/hr-payroll-software) tracks employment termination workflows alongside payroll and LMRA reporting.',
+      type: 'note',
+      text: "Running payroll for a mixed Bahraini and expatriate workforce? [D3's HRMS solution](/solutions/hr-payroll-software) tracks GOSI and SIO contributions separately and keeps final settlement calculations compliant with current LMRA requirements.",
     },
   ],
   'salary-slip-format-bahrain': [
@@ -704,7 +753,7 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     },
     {
       type: 'p',
-      text: 'Generate compliant payslips automatically every cycle. [D3\'s HRMS solution](/solutions/hr-payroll-software) produces itemised salary slips with GOSI, WPS, and allowance breakdowns built in.',
+      text: 'Generate compliant payslips automatically every cycle. [D3\'s HRMS solution](/solutions/hr-payroll-software) produces itemised salary slips with GOSI, WPS, and allowance breakdowns built in. For the resignation and notice-period rules that determine an employee\'s final payslip, see our [Bahrain Labour Law guide](/blog/bahrain-labour-law-resignation-notice).',
     },
   ],
   'employment-contract-bahrain': [
@@ -1169,6 +1218,419 @@ export const BLOG_ARTICLES: Record<string, BlogBlock[]> = {
     {
       type: 'p',
       text: 'Explore [D3\'s access control and IP CCTV solutions](/solutions/access-control-system) for biometric doors, NFC cards and centralised monitoring. Related reading: [visitor management in Bahrain](/blog/visitor-management-system-bahrain-guide) and [biometric attendance systems](/blog/biometric-attendance-system-bahrain).',
+    },
+  ],
+
+  'saudi-labor-law-complete-guide': [
+    {
+      type: 'p',
+      text: 'Saudi Labor Law (Royal Decree No. M/51), administered by the Ministry of Human Resources and Social Development (MHRSD), sets out exactly how and when an employment contract can end, and what an employee is owed when it does. This guide walks through the core provisions — contract termination grounds, employer- and employee-initiated termination, and how end-of-service benefits are calculated — in plain language.',
+    },
+    {
+      type: 'p',
+      text: 'This article explains the general framework of Saudi Labor Law for informational purposes. It is not legal advice. Labor law is subject to amendment, and individual circumstances vary — always confirm your specific situation with HR, a licensed labor lawyer, or the Ministry of Human Resources and Social Development (MHRSD) / Qiwa platform.',
+    },
+    { type: 'h2', text: 'How an employment contract can end (Articles 74–77)' },
+    {
+      type: 'p',
+      text: 'Under Saudi Labor Law, an employment contract ends in one of several ways:',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Mutual agreement** between employer and employee',
+        '**Expiration of the contract term**, unless renewed',
+        '**Retirement** of the employee, unless otherwise agreed',
+        '**Force majeure** or closure of the business',
+      ],
+    },
+    {
+      type: 'p',
+      text: "If the employer terminates the contract without a valid reason, the employee is entitled to end-of-service benefits **plus** compensation equal to two months' wages or the remaining contract period, whichever is shorter.",
+    },
+    {
+      type: 'p',
+      text: 'If the employee resigns voluntarily after completing at least two years of service, they receive a reduced end-of-service benefit: 2–5 years of service — one-third of the full benefit; 5–10 years of service — two-thirds of the full benefit; over 10 years of service — the full benefit.',
+    },
+    {
+      type: 'p',
+      text: 'Resigning before completing two years of service generally results in no end-of-service benefit at all, except in specific protected circumstances.',
+    },
+    { type: 'h2', text: 'When an employer can terminate without notice (Article 80)' },
+    {
+      type: 'p',
+      text: 'Article 80 allows an employer to end a contract without notice, indemnity, or end-of-service benefit, but only on specific, provable grounds — assault, serious breach of duty after written warning, dishonest conduct, deliberately causing material loss, obtaining employment through forgery, or unauthorized absence (15 consecutive or 30 intermittent days within a year). Each ground must be supported by documentation, and the employee must get a chance to respond before termination is finalized. → For the full breakdown, see our dedicated guide: [Article 80 Saudi Labor Law Explained](/blog/article-80-saudi-labor-law).',
+    },
+    { type: 'h2', text: 'When an employee can resign without notice and keep full rights (Article 81)' },
+    {
+      type: 'p',
+      text: 'Article 81 is the mirror provision — it protects employees who need to leave immediately due to serious employer misconduct, without losing their end-of-service entitlements. Valid grounds include unpaid or delayed wages, misrepresented job conditions, being assigned fundamentally different work without consent, physical assault or abusive treatment, or being pressured into unlawful acts. → For the full breakdown, see our dedicated guide: [Article 81 Saudi Labor Law Explained](/blog/article-81-saudi-labor-law).',
+    },
+    { type: 'h2', text: 'How end-of-service benefits are calculated (Article 84)' },
+    {
+      type: 'p',
+      text: 'The calculation formula is the same regardless of which article ends the contract — only *eligibility* changes based on the termination circumstances above:',
+    },
+    {
+      type: 'ul',
+      items: [
+        "**First 5 years of service:** half a month's wage for each year",
+        '**Each year after the first 5:** a full month\'s wage per year',
+        'Any partial year worked is paid proportionally',
+        "Calculated on the employee's **last drawn wage**, including regular allowances and commissions — these cannot be contractually excluded (Article 82)",
+      ],
+    },
+    {
+      type: 'p',
+      text: "**Worked example:** An employee earning SAR 10,000/month who completes 8 years of service would be entitled to: 5 years × half a month (SAR 5,000) = SAR 25,000, plus 3 years × full month (SAR 10,000) = SAR 30,000. **Total: SAR 55,000.**",
+    },
+    {
+      type: 'p',
+      text: 'Under force majeure termination (Article 87), the employee receives the full benefit regardless of length of service.',
+    },
+    { type: 'h2', text: 'Related topics worth knowing' },
+    {
+      type: 'p',
+      text: '**Article 53** covers additional procedural aspects of contract discipline and warnings that often precede an Article 80 termination — always check whether proper warning procedure was followed before a termination is finalized.',
+    },
+    {
+      type: 'p',
+      text: '**Saudi Labor Law vacation pay** — annual leave and its payout on termination is calculated separately from end-of-service benefits and should not be confused with it; unused leave is typically paid out in addition to, not instead of, the gratuity above.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'What is Article 74 in Saudi Labor Law?',
+          a: 'Article 74 is one of the group of articles (74 through 77) that define the general circumstances under which an employment contract can end — mutual agreement, contract expiry, retirement, or force majeure — setting the framework that Articles 80 and 81 then build on for termination-with-cause scenarios.',
+        },
+        {
+          q: 'Can I get end-of-service benefits if I resign before two years?',
+          a: 'Generally no — Saudi Labor Law requires at least two years of service before a voluntary resignation qualifies for any end-of-service benefit, with limited exceptions such as specific protected circumstances recognized under the law.',
+        },
+        {
+          q: 'Is vacation pay included in my end-of-service benefit?',
+          a: 'No — accrued but unused annual leave is typically settled as a separate payment alongside, not folded into, the end-of-service gratuity calculation.',
+        },
+      ],
+    },
+    {
+      type: 'note',
+      text: "This calculation is exactly what [D3's HRMS platform automates](/solutions/hr-payroll-software) for GCC employers — no manual tracking of tiered rates by service length. See also [TimeTech](/solutions/timetech-application) for the underlying attendance and HR platform.",
+    },
+  ],
+
+  'article-81-saudi-labor-law': [
+    {
+      type: 'p',
+      text: 'Article 81 of the Saudi Labor Law gives employees the right to end their employment immediately — without serving the usual notice period — while still keeping their full end-of-service entitlements, if the employer has seriously breached its obligations. It exists specifically to stop employers using notice-period requirements to trap employees in unsafe or unfair working conditions.',
+    },
+    {
+      type: 'p',
+      text: 'This is general legal information, not legal advice. Confirm your specific situation with a licensed labor lawyer or the Ministry of Human Resources and Social Development (MHRSD).',
+    },
+    { type: 'h2', text: 'What Article 81 actually covers' },
+    {
+      type: 'p',
+      text: 'An employee can resign without notice and retain full rights (including end-of-service benefits) if any of the following apply:',
+    },
+    {
+      type: 'ul',
+      items: [
+        "**The employer breaches essential contractual or statutory duties** — most commonly, failing to pay wages on time (delays over 30 days are a recognized trigger) or denying legally entitled leave",
+        '**The employer misrepresented job conditions** at the time the contract was signed',
+        '**The employee is assigned fundamentally different work** than what was agreed, without their consent',
+        '**Physical assault or abuse** — against the employee, or their family — by the employer, a manager, or their representative',
+        '**Cruel, unjust, or humiliating treatment**, including discrimination based on nationality, religion, or race, or unfair reduction of salary/benefits',
+        '**Unsafe working conditions** that the employer fails to correct',
+        '**Being pressured or encouraged to perform unlawful acts**',
+      ],
+    },
+    { type: 'h2', text: 'Why this article matters in practice' },
+    {
+      type: 'p',
+      text: 'Without Article 81, an employee facing genuine mistreatment would technically still be bound by the standard notice period (60 days for monthly-paid employees, 30 days otherwise) — meaning they could be legally required to keep working through the very conditions the law is supposed to protect them from. Article 81 breaks that requirement specifically for serious-breach situations.',
+    },
+    {
+      type: 'p',
+      text: 'Critically, using Article 81 correctly means the employee is treated **as if the employer terminated unfairly** — they keep their end-of-service benefit in full (calculated per Article 84 — see [our complete Saudi Labor Law guide](/blog/saudi-labor-law-complete-guide)), without the reduction that normally applies to a standard voluntary resignation under two years of service.',
+    },
+    { type: 'h2', text: 'How to use Article 81 correctly' },
+    {
+      type: 'ul',
+      items: [
+        '**Document everything** — unpaid wage dates, written communications, witness statements, medical reports if relevant to assault/abuse claims',
+        '**State the specific ground** being relied on when submitting resignation — a vague resignation letter weakens the claim',
+        '**File promptly** — delays in raising the issue can weaken the case that the situation was genuinely intolerable',
+        '**Escalate through MHRSD or the labor courts** if the employer disputes the claim or withholds the end-of-service payment',
+      ],
+    },
+    { type: 'h2', text: 'What happens if the employer disputes it' },
+    {
+      type: 'p',
+      text: 'If an employer argues the resignation should be treated as an ordinary voluntary resignation (with the reduced benefit schedule), the burden falls on the employee to substantiate the Article 81 grounds with evidence. This is where documentation matters — a resignation letter that clearly states the ground and references supporting evidence gives HR and, if necessary, a labor court something concrete to evaluate.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Can I resign without notice if my employer is late paying my salary?',
+          a: 'Yes — persistently delayed or unpaid wages is one of the specifically recognized grounds under Article 81, and using it correctly preserves your full end-of-service entitlement rather than triggering the reduced voluntary-resignation schedule.',
+        },
+        {
+          q: 'Do I lose my end-of-service benefit if I use Article 81?',
+          a: 'No — this is the entire point of the article. An employee who correctly invokes Article 81 is treated as though the employer ended the contract unfairly, meaning the full end-of-service benefit applies rather than the reduced amounts that apply to an ordinary resignation under two years of service.',
+        },
+        {
+          q: "What's the difference between Article 80 and Article 81?",
+          a: 'Article 80 lets the *employer* end a contract without notice or benefits when the *employee* has seriously breached their duties. Article 81 is the reverse — it lets the *employee* end the contract without notice while *keeping* full benefits when the *employer* has seriously breached its obligations.',
+        },
+      ],
+    },
+    {
+      type: 'note',
+      text: 'Delayed wages triggering an Article 81 claim is exactly the kind of compliance failure [HR software that tracks wage payment compliance](/solutions/hr-payroll-software) prevents. See also: [Article 80 Saudi Labor Law](/blog/article-80-saudi-labor-law) for the employer-side equivalent.',
+    },
+  ],
+
+  'article-80-saudi-labor-law': [
+    {
+      type: 'p',
+      text: "Article 80 of the Saudi Labor Law allows an employer to end an employee's contract immediately — without notice, indemnity, or end-of-service benefit — but only under a specific, limited set of circumstances, and only with documented proof. Getting this wrong is one of the most common causes of wrongful-termination disputes in Saudi Arabia, on both sides.",
+    },
+    {
+      type: 'p',
+      text: 'This is general legal information, not legal advice. Confirm your specific situation with a licensed labor lawyer or the Ministry of Human Resources and Social Development (MHRSD).',
+    },
+    { type: 'h2', text: 'The grounds Article 80 actually allows' },
+    {
+      type: 'p',
+      text: 'An employer may terminate without notice or indemnity only if the employee:',
+    },
+    {
+      type: 'ul',
+      items: [
+        '**Assaults the employer or a supervisor** during work',
+        '**Repeatedly fails to perform duties** or follow legitimate instructions — particularly safety instructions — after a documented written warning',
+        '**Engages in dishonest conduct** or actions that undermine workplace integrity',
+        '**Deliberately causes material loss** to the employer — and the incident is reported to the relevant authorities within 24 hours',
+        '**Obtained the job through forgery** of qualifications or documents',
+        '**Is unlawfully absent** — 15 consecutive days, or 30 intermittent days within a single year, without valid reason',
+      ],
+    },
+    { type: 'h2', text: 'The procedural requirements employers must follow' },
+    {
+      type: 'p',
+      text: 'This is where many terminations fail even when the underlying conduct genuinely occurred:',
+    },
+    {
+      type: 'ul',
+      items: [
+        "**Evidence is mandatory.** Warnings, attendance logs, witness statements, or investigation reports — verbal accusations alone don't meet the standard.",
+        '**The employee must be given a chance to respond** to the allegations before the termination is finalized.',
+        "**Article 80 cannot apply retroactively** to behavior the employer previously knew about and tolerated without action. If an employer let repeated lateness slide for months, it generally can't suddenly invoke Article 80 over the same pattern of conduct.",
+        '**The 24-hour reporting requirement** for deliberate material harm is strict — missing this window can undermine that specific ground even if the harm itself is provable.',
+      ],
+    },
+    { type: 'h2', text: "What happens if a termination doesn't meet the standard" },
+    {
+      type: 'p',
+      text: 'If an employer invokes Article 80 without meeting these conditions, the termination may be treated as unfair. The employee can seek reinstatement, or compensation — typically wages for two months or the remaining contract term, whichever is shorter — plus the end-of-service benefit that would have applied to an ordinary termination. This is why documentation matters as much for employers as it does for employees relying on [Article 81](/blog/article-81-saudi-labor-law) (the employee-side equivalent).',
+    },
+    { type: 'h2', text: 'A practical checklist before invoking Article 80' },
+    {
+      type: 'ul',
+      items: [
+        'Is there a written record of prior warnings, where required?',
+        'Has the employee been given a genuine opportunity to respond?',
+        'Is the specific ground clearly documented with evidence?',
+        'For material-harm cases, was the 24-hour reporting deadline met?',
+        'Is this a new instance of misconduct, not a previously tolerated pattern? Accurate [attendance and warning-documentation records](/solutions/time-attendance-system) are exactly what substantiates an absenteeism-based Article 80 claim.',
+      ],
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Can an employer fire someone for being late once under Article 80?',
+          a: 'Generally no — the absenteeism ground requires 15 consecutive or 30 intermittent unauthorized absence days within a year, and other grounds (like failure to follow instructions) require a documented written warning first. A single instance of lateness, on its own, doesn\'t meet the standard.',
+        },
+        {
+          q: 'What can I do if I think I was wrongly terminated under Article 80?',
+          a: 'You can file a grievance with the Ministry of Human Resources and Social Development (MHRSD) or pursue the matter through the labor courts, seeking reinstatement or compensation if the termination didn\'t meet Article 80\'s documented requirements.',
+        },
+        {
+          q: 'Does Article 80 apply during the probation period?',
+          a: 'Contracts can generally be ended by either party during probation with different, typically simpler, notice requirements than Article 80\'s cause-based framework — check the specific probation terms in the employment contract.',
+        },
+      ],
+    },
+    {
+      type: 'note',
+      text: "See our [complete Saudi Labor Law guide](/blog/saudi-labor-law-complete-guide) for the full termination framework, or [Article 81](/blog/article-81-saudi-labor-law) for the employee-side equivalent.",
+    },
+  ],
+
+  'qatar-labor-law-guide': [
+    {
+      type: 'p',
+      text: "Qatar's Labour Law (Law No. 14 of 2004, as amended) governs private-sector employment, and recent amendments have changed several of the rules employers and employees rely on most — notice periods, probation, and dispute mechanisms. Here's the current framework in plain language.",
+    },
+    {
+      type: 'p',
+      text: "This is general legal information, not legal advice. Confirm your specific situation with a licensed labor lawyer or Qatar's Ministry of Labour.",
+    },
+    { type: 'h2', text: 'Recent amendments worth knowing' },
+    {
+      type: 'ul',
+      items: [
+        "**Notice period restructuring during probation** — employers can no longer terminate a probationary employee with just three days' notice; a minimum one-month notice is now required",
+        "**Employee-initiated probation termination** now has clearer conditions: one month's notice if moving to a new employer within Qatar (with recruitment-cost compensation to the original employer, capped at two months' basic wage), or two months' notice if leaving the country",
+        '**Standard (post-probation) notice periods** were restructured by length of service, replacing the previous five-year threshold with a two-year threshold',
+        '**Joint Committee requirements** now apply only to employers with 100+ workers, up from the previous 30-worker threshold — reducing compliance burden for smaller businesses',
+        '**Increased oversight of overseas recruitment**, tightening regulation of how workers are hired from abroad',
+        'A worker who **unlawfully incites a strike** that disrupts operations may now be dismissed without notice or gratuity — a new, narrowly-scoped ground added alongside revised strike provisions',
+      ],
+    },
+    { type: 'h2', text: 'Notice period requirements' },
+    {
+      type: 'p',
+      text: 'For contracts of indefinite duration, the statutory minimum notice period depends on length of service: less than 2 years — 1 month; 2 years or more — 2 months. This applies in both directions — whether the employer or the employee is ending the contract.',
+    },
+    {
+      type: 'p',
+      text: "Notice must be given in writing, and during the notice period the employee generally keeps their full salary and benefits. If either party fails to honor the required notice, they're liable for compensation equal to the employee's basic wage for the unserved portion — and a foreign worker who leaves without honoring notice risks a labor ban.",
+    },
+    { type: 'h2', text: 'How end-of-service gratuity is calculated' },
+    {
+      type: 'p',
+      text: "Qatar's calculation method is simpler and more uniform than some neighboring countries':",
+    },
+    {
+      type: 'ul',
+      items: [
+        "**Minimum rate:** three weeks' basic wage for each year of service (some sources cite 21 days, which is the same figure)",
+        '**Eligibility:** at least one year of continuous service, regardless of whether the employee resigned or was terminated (unless dismissed for specific cause)',
+        "**No distinction** between resignation and dismissal gratuity amounts — unlike Saudi Arabia's tiered resignation schedule",
+        'Calculated on **basic wage only** — allowances are typically excluded',
+        'Employers may agree to a **higher** rate contractually, but never lower than the statutory minimum',
+        'Prorated for any partial year of service',
+      ],
+    },
+    {
+      type: 'p',
+      text: '**Worked example:** An employee with a basic wage of QAR 6,000/month and 6 years of service would be entitled to approximately 6 × 3 weeks\' wage ≈ QAR 25,200 in end-of-service gratuity (exact figures depend on the precise wage calculation method used). Getting this right for every employee is exactly what [payroll software that keeps notice-period and gratuity calculations compliant](/solutions/hr-payroll-software) is built for.',
+    },
+    { type: 'h2', text: 'Grounds for termination' },
+    {
+      type: 'p',
+      text: 'Employment in Qatar can end through mutual agreement, a valid reason (misconduct, redundancy, or poor performance), expiry of a fixed-term contract, or the new strike-incitement ground noted above. Dismissal must generally be justified and follow due process, including proper notice and settlement of all wages and benefits before departure.',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'How much notice do I need to give to resign in Qatar?',
+          a: 'It depends on your length of service: one month if you have less than two years with the company, two months if you have two years or more — the same schedule applies whether you or your employer is ending the contract.',
+        },
+        {
+          q: 'Do I get end-of-service gratuity if I resign in Qatar?',
+          a: "Yes — Qatar doesn't distinguish between resignation and dismissal for gratuity purposes the way some neighboring countries do. As long as you've completed at least one year of continuous service and weren't dismissed for specific cause, you're entitled to the standard gratuity calculation.",
+        },
+        {
+          q: 'What changed in the recent Qatar labor law amendments?',
+          a: 'Key changes include longer mandatory probation notice periods, restructured post-probation notice periods based on a two-year (rather than five-year) service threshold, a higher Joint Committee employer-size threshold, tighter overseas recruitment oversight, and a new ground for dismissal without gratuity related to inciting unlawful strikes.',
+        },
+      ],
+    },
+    {
+      type: 'note',
+      text: 'Expanding into Qatar? [D3\'s HRMS platform](/solutions/hr-payroll-software) handles multi-country payroll and compliance from one system.',
+    },
+  ],
+
+  'bahrain-gratuity-calculation-guide': [
+    {
+      type: 'p',
+      text: 'End-of-service gratuity in Bahrain changed fundamentally on March 1, 2024 — moving from an employer-paid lump sum to a contribution-based system run through the Social Insurance Organisation (SIO). Most calculators and guides still online describe the old system. Here\'s how it actually works now.',
+    },
+    {
+      type: 'p',
+      text: 'This is general legal information, not legal advice, and not a substitute for an official SIO or LMRA calculation. Confirm your specific entitlement with your employer\'s HR department or the Social Insurance Organisation directly.',
+    },
+    { type: 'h2', text: 'Who is eligible' },
+    {
+      type: 'ul',
+      items: [
+        '**Non-Bahraini (expatriate) employees** not enrolled in the GOSI pension system are eligible for gratuity under the labour law formula described below',
+        '**Bahraini nationals** are covered through the GOSI pension system instead — their end-of-service benefits work differently and aren\'t calculated using this method',
+        'Eligibility generally requires **at least one full year of continuous service**',
+        'Applies whether the contract ends through completion, resignation, or termination — except in specific cases where the law allows termination without benefit',
+      ],
+    },
+    { type: 'h2', text: 'How the 2024 SIO system works' },
+    {
+      type: 'p',
+      text: 'Instead of the employer setting aside or paying a lump sum directly at the end of employment, employers now make **ongoing monthly contributions** to the Social Insurance Organisation on behalf of each non-Bahraini employee: **4.2%** for the first 3 years of service, rising to **8.4%** from year 4 onward. The SIO, not the individual employer, becomes responsible for paying out the accumulated gratuity when the employment relationship ends — a meaningful shift in who bears the liability and how it\'s funded.',
+    },
+    { type: 'h2', text: 'The underlying calculation (basic amount)' },
+    {
+      type: 'p',
+      text: 'Before the 2024 change in *who* pays, the *formula* for how much is owed remains based on this structure:',
+    },
+    {
+      type: 'ul',
+      items: [
+        "**First 3 years of service:** 15 days' wage for each year",
+        "**Each year after the first 3:** one month's wage for each year",
+        "Calculated using the employee's **last drawn basic wage**, plus any regular social allowance",
+        'Any partial final year is calculated proportionally',
+      ],
+    },
+    {
+      type: 'p',
+      text: '**Worked example:** An employee with a basic wage of BHD 500/month who completes 7 years of service: 3 years × 15 days\' wage (≈ BHD 250 each) = BHD 750, plus 4 years × 1 month\'s wage (BHD 500 each) = BHD 2,000. **Total: BHD 2,750.**',
+    },
+    { type: 'h2', text: 'How resignation affects the amount' },
+    {
+      type: 'p',
+      text: 'If the employee resigns voluntarily (rather than being terminated or completing a fixed contract), the amount above is **prorated by length of service**: less than 2 years — none; 2–5 years — one-third; 5–10 years — two-thirds; over 10 years — full amount. Termination by the employer, contract expiry, or resignation after 10+ years all result in the **full** calculated amount — the proration only applies to voluntary resignation under 10 years.',
+    },
+    { type: 'h2', text: "Circumstances that don't reduce the benefit" },
+    {
+      type: 'p',
+      text: 'Even short-service resignation can still qualify for the full amount in specific protected situations, including termination due to the death of the employee (paid to family/estate), incapacity for work or illness exceeding the allowed sick leave or annual leave, and certain protected personal circumstances recognized under the law.',
+    },
+    { type: 'h2', text: 'What this means for HR teams' },
+    {
+      type: 'p',
+      text: 'Running payroll for a mixed Bahraini/expatriate workforce now requires tracking **two entirely different systems** — GOSI for nationals, SIO contributions for expatriates — rather than one uniform gratuity calculation. Getting this wrong isn\'t just a compliance risk; it directly affects what an employee actually receives at departure. [Payroll software that tracks GOSI and SIO contributions separately](/solutions/hr-payroll-software) removes that manual-tracking risk. For the wider resignation and notice-period rules this fits into, see our [complete Bahrain Labour Law guide](/blog/bahrain-labour-law-resignation-notice).',
+    },
+    { type: 'h2', text: 'Frequently Asked Questions' },
+    {
+      type: 'faq',
+      items: [
+        {
+          q: 'Do I still get a lump-sum gratuity payment in Bahrain?',
+          a: 'For non-Bahraini employees, the gratuity itself is still paid out at the end of employment, but it\'s now funded through the employer\'s ongoing SIO contributions (since March 2024) rather than a lump sum the employer sets aside and pays directly at that moment.',
+        },
+        {
+          q: "How is gratuity calculated if I haven't completed a full year of my current service period?",
+          a: 'Any partial final year of service is calculated proportionally based on the months actually worked, using the same daily/monthly wage rate that applies to full years.',
+        },
+        {
+          q: 'Do Bahraini nationals use this same gratuity calculation?',
+          a: "No — Bahraini nationals' end-of-service benefits are handled through the GOSI pension system, which is structured differently from the SIO contribution mechanism described here for expatriate employees.",
+        },
+      ],
+    },
+    {
+      type: 'note',
+      text: "This is a strong candidate for a future interactive gratuity calculator built directly into the site — flagged for a later build pass, not part of this content update. In the meantime, [request a demo](/contact) to see how D3's HRMS handles this calculation automatically for a mixed Bahraini/expatriate workforce.",
     },
   ],
 };
