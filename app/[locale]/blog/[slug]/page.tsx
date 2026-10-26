@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { BLOG_POSTS, SOLUTIONS, postsByNewest } from '@/lib/data';
 import { BLOG_ARTICLES } from '@/lib/blog-articles';
 import { BlogArticleBody } from '@/components/blog/BlogArticleBody';
+import { Markdown } from '@/components/blog/Markdown';
+import { getBlogArticle } from '@/lib/blog-content';
 import { ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
@@ -37,6 +39,11 @@ const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
   'queue-management-government-sector': ['queue-management-system'],
   'rfid-asset-tracking-manufacturing': ['rfid-asset-tracking'],
   'choosing-hr-software-bahrain': ['hr-payroll-software'],
+  'visitor-management-system-gcc': ['visitor-management', 'access-control-system'],
+  'queue-management-system-gcc': ['queue-management-system', 'digital-signage'],
+  'hr-software-gcc-buyers-guide': ['hr-payroll-software', 'time-attendance-system'],
+  'biometric-attendance-system-guide': ['time-attendance-system', 'time-attendance-enterprise'],
+  'fingerprint-attendance-system': ['time-attendance-system', 'time-attendance-enterprise'],
   'saudi-labor-law-complete-guide': ['hr-payroll-software', 'timetech-application'],
   'article-81-saudi-labor-law': ['hr-payroll-software'],
   'article-80-saudi-labor-law': ['hr-payroll-software', 'time-attendance-system'],
@@ -84,7 +91,7 @@ export async function generateMetadata({ params }: Props) {
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: { absolute: 'Post Not Found | D3 Blog' } };
   const title = ('seoTitle' in post && post.seoTitle) ? post.seoTitle : `${post.title} | D3 Blog`;
-  const description = post.excerpt;
+  const description = getBlogArticle(slug)?.meta.meta_description || post.excerpt;
   return {
     title: { absolute: title },
     description,
@@ -103,6 +110,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const relatedSolSlugs = BLOG_RELATED_SOLUTIONS[slug] || [];
   const relatedSolutions = relatedSolSlugs.map((s) => SOLUTIONS.find((sol) => sol.slug === s)).filter(Boolean) as typeof SOLUTIONS;
+  const article = getBlogArticle(slug);
   const richBlocks = BLOG_ARTICLES[slug];
   const legacyParas = BLOG_FULL_CONTENT[slug] || (!richBlocks ? [post.excerpt] : null);
   const otherPosts = postsByNewest(BLOG_POSTS.filter((p) => p.slug !== slug)).slice(0, 6);
@@ -130,7 +138,9 @@ export default async function BlogPostPage({ params }: Props) {
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 80, alignItems: 'start' }} className="blog-detail-grid">
             <article>
-              {richBlocks ? (
+              {article ? (
+                <Markdown source={article.body} />
+              ) : richBlocks ? (
                 <BlogArticleBody blocks={richBlocks} />
               ) : (
                 <>
