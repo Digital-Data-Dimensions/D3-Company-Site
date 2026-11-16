@@ -1,7 +1,7 @@
 import { ClientsTabs } from '@/components/clients/ClientsTabs';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { CTASection } from '@/components/home/CTASection';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -10,9 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: pageCanonical(locale, '/clients'),
-    },
+    alternates: pageAlternates(locale, '/clients'),
     openGraph: pageOpenGraph({ locale, path: '/clients', title, description }),
   };
 }

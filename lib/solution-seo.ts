@@ -12,7 +12,7 @@ export type SolutionSeo = {
 export const SOLUTION_SEO: Record<string, SolutionSeo> = {
   'time-attendance-system': {
     pageH1: 'Time Attendance System in Bahrain',
-    seoTitle: 'Time Attendance System Bahrain | Biometric & Fingerprint | D3',
+    seoTitle: 'Time Attendance System in Bahrain | D3',
     seoDescription:
       'Cloud biometric time attendance system for Bahrain SMEs — fingerprint, face recognition and card-based attendance management software with LMRA-ready payroll export.',
     seoSections: [
@@ -137,7 +137,7 @@ export const SOLUTION_SEO: Record<string, SolutionSeo> = {
   },
   'rfid-asset-tracking': {
     pageH1: 'RFID Asset Tracking & Warehouse Management',
-    seoTitle: 'RFID Asset Tracking Bahrain | Warehouse & Asset Management | D3',
+    seoTitle: 'RFID Asset Tracking in Bahrain | D3',
     seoDescription:
       'Active and passive RFID asset tracking for Bahrain — warehouse management system, asset tracking system and document tracking with mobile handheld audits.',
     seoSections: [
@@ -250,13 +250,13 @@ export const INDUSTRY_SEO: Record<
   },
   healthcare: {
     pageH1: 'IT Solutions for Healthcare in Bahrain',
-    seoTitle: 'Healthcare IT Solutions Bahrain | Hospital Queue & Attendance | D3',
+    seoTitle: 'Healthcare IT Solutions in Bahrain | D3',
     seoDescription:
       'Healthcare IT solutions for Bahrain hospitals — hospital queue management, biometric attendance healthcare and RFID equipment tracking.',
   },
   retail: {
     pageH1: 'Retail Technology Solutions for Bahrain',
-    seoTitle: 'Retail Technology Solutions Bahrain | ERP & Digital Signage | D3',
+    seoTitle: 'Retail Technology Solutions in Bahrain | D3',
     seoDescription:
       'Retail technology solutions for Bahrain — retail ERP, inventory management software, digital signage and electronic shelf labels.',
   },
@@ -272,6 +272,26 @@ export const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.dthree.
 
 export function pageCanonical(locale: string, path: string) {
   return `${SITE_URL}/${locale}${path}`;
+}
+
+/**
+ * Canonical + hreflang for a page. One system for the whole site (in <head>;
+ * next-intl's Link-header alternates are switched off in i18n/routing.ts).
+ * /ar is not translated yet and is noindexed, so it is not advertised as ar-BH.
+ * When real Arabic pages ship, add `'ar-BH': `${SITE_URL}/ar${path}`` here and
+ * drop the noindex in app/[locale]/layout.tsx.
+ */
+export function pageAlternates(locale: string, path: string) {
+  const alternates: { canonical: string; languages?: Record<string, string> } = {
+    canonical: pageCanonical(locale, path),
+  };
+  if (locale === 'en') {
+    alternates.languages = {
+      'en-BH': `${SITE_URL}/en${path}`,
+      'x-default': `${SITE_URL}/en${path}`,
+    };
+  }
+  return alternates;
 }
 
 /**
@@ -295,7 +315,7 @@ export function pageOpenGraph({
   const url = pageCanonical(locale, path);
   return {
     type: 'website' as const,
-    locale,
+    locale: locale === 'ar' ? 'ar_BH' : 'en_BH',
     url,
     siteName: 'D3 Digital Data Dimensions',
     title,

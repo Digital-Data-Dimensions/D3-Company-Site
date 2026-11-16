@@ -351,7 +351,7 @@ export const BLOG_POSTS = [
   {
     slug: 'biometric-attendance-system-bahrain',
     title: 'Biometric Attendance System in Bahrain: The Complete Buying Guide',
-    seoTitle: 'Biometric Attendance System in Bahrain | Fingerprint & Face Recognition | D3',
+    seoTitle: 'Biometric Attendance System in Bahrain | D3',
     excerpt: 'Compare biometric attendance systems in Bahrain — fingerprint, face recognition and card-based. See how D3\'s TimeTech-powered platform cuts payroll errors and stays LMRA-compliant.',
     tags: ['Time Attendance System Bahrain', 'Biometric Attendance', 'Face Recognition Attendance', 'Fingerprint Attendance'],
     publishedAt: '2026-07-01',
@@ -359,7 +359,7 @@ export const BLOG_POSTS = [
   {
     slug: 'hrms-payroll-software-bahrain-guide',
     title: 'HRMS & Payroll Software in Bahrain: What to Look for Before You Buy',
-    seoTitle: 'HRMS & Payroll Software Bahrain | Multi-Company Cloud HR Platform | D3',
+    seoTitle: 'HRMS & Payroll Software in Bahrain | D3',
     excerpt: 'How to choose HRMS and payroll software in Bahrain — WPS export, GOSI integration, multi-company support. A practical buying guide for GCC HR teams.',
     tags: ['HRMS Bahrain', 'Payroll Software Bahrain', 'WPS Payroll', 'GOSI Payroll'],
     publishedAt: '2026-07-05',
@@ -367,7 +367,7 @@ export const BLOG_POSTS = [
   {
     slug: 'lmra-compliance-wps-payroll-bahrain',
     title: 'LMRA Compliance and WPS Payroll in Bahrain: What Employers Need to Know',
-    seoTitle: 'LMRA Compliance & WPS Payroll in Bahrain: Employer Guide | D3',
+    seoTitle: 'LMRA Compliance & WPS Payroll in Bahrain | D3',
     excerpt: 'What LMRA compliance and WPS payroll actually require from Bahrain employers, and how the right HR software keeps you compliant automatically.',
     tags: ['LMRA Compliance', 'WPS Payroll', 'GOSI Payroll', 'Civil Service Bureau'],
     publishedAt: '2026-07-08',
@@ -375,7 +375,7 @@ export const BLOG_POSTS = [
   {
     slug: 'queue-management-system-bahrain',
     title: 'Queue Management Systems for Government and Healthcare in Bahrain',
-    seoTitle: 'Queue Management System Bahrain | Government & Healthcare Kiosks | D3',
+    seoTitle: 'Queue Management System in Bahrain | D3',
     excerpt: 'How queue management systems reduce wait times for ministries, hospitals, and enterprise service counters in Bahrain — kiosks, displays, and live analytics.',
     tags: ['Queue Management System Bahrain', 'Hospital Queue Management', 'Ministry Software Solutions'],
     publishedAt: '2026-07-10',
@@ -391,7 +391,7 @@ export const BLOG_POSTS = [
   {
     slug: 'gosi-contribution-calculation-bahrain',
     title: 'GOSI Contribution Calculation in Bahrain: A Practical Employer Guide',
-    seoTitle: 'GOSI Contribution Calculation Bahrain | Social Insurance Guide | D3',
+    seoTitle: 'GOSI Contribution Calculation in Bahrain | D3',
     excerpt: 'How GOSI contributions work in Bahrain — employer and employee rates, salary caps, and how payroll software automates social insurance calculations every pay cycle.',
     tags: ['GOSI', 'GOSI Bahrain', 'Social Insurance Bahrain'],
     publishedAt: '2026-07-15',
@@ -399,7 +399,7 @@ export const BLOG_POSTS = [
   {
     slug: 'indemnity-calculation-bahrain',
     title: 'Indemnity Calculation in Bahrain: How End-of-Service Benefits Work',
-    seoTitle: 'Indemnity Calculation Bahrain | End of Service Benefits Guide | D3',
+    seoTitle: 'End of Service Indemnity Calculation in Bahrain | D3',
     excerpt: 'A practical guide to indemnity calculation in Bahrain — how end-of-service benefits accrue, what affects the payout, and how HRMS software tracks balances automatically.',
     tags: ['Indemnity Calculator Bahrain', 'End of Service Benefits', 'LMRA'],
     publishedAt: '2026-07-18',
@@ -407,7 +407,7 @@ export const BLOG_POSTS = [
   {
     slug: 'average-salary-bahrain',
     title: 'Average Salary in Bahrain: What Employers Should Know in 2026',
-    seoTitle: 'Average Salary in Bahrain | Basic Salary & Payroll Guide | D3',
+    seoTitle: 'Average Salary in Bahrain: Payroll Guide | D3',
     excerpt: 'Understanding average salary benchmarks in Bahrain — how basic salary is structured, what counts toward GOSI and indemnity, and how payroll systems keep records accurate.',
     tags: ['Bahrain Salary', 'Basic Salary Bahrain'],
     publishedAt: '2026-07-20',
@@ -415,7 +415,7 @@ export const BLOG_POSTS = [
   {
     slug: 'bahrain-labour-law-resignation-notice',
     title: 'Bahrain Labour Law: Resignation, Notice & Salary Rules Explained',
-    seoTitle: 'Bahrain Labour Law: Resignation, Notice & Salary Rules Explained | D3',
+    seoTitle: 'Bahrain Labour Law: Resignation & Notice Rules | D3',
     excerpt: 'A complete guide to Bahrain Labour Law for employees and employers — resignation notice periods, expatriate rules, and salary requirements.',
     tags: ['Bahrain Labour Law', 'Notice Period Bahrain', 'GCC Compliance'],
     publishedAt: '2026-09-05',
@@ -447,7 +447,7 @@ export const BLOG_POSTS = [
   {
     slug: 'overtime-calculation-bahrain',
     title: 'Overtime Calculation in Bahrain: Rates, Rules and Payroll Integration',
-    seoTitle: 'Overtime Calculation Bahrain | Labour Law Overtime Guide | D3',
+    seoTitle: 'Overtime Calculation in Bahrain | D3',
     excerpt: 'How overtime pay is calculated under Bahrain labour law — standard rates, Ramadan rules, and how attendance-linked HRMS applies overtime automatically to payroll.',
     tags: ['Overtime Pay Bahrain', 'Labour Law Overtime'],
     publishedAt: '2026-07-30',
@@ -455,7 +455,7 @@ export const BLOG_POSTS = [
   {
     slug: 'enterprise-time-attendance-multi-site-bahrain',
     title: 'Multi-Site Time Attendance for Enterprise & Government Groups in Bahrain',
-    seoTitle: 'Multi-Site Time Attendance for Enterprise & Government Groups Bahrain | D3',
+    seoTitle: 'Multi-Site Time Attendance in Bahrain | D3',
     excerpt: 'Managing attendance across multiple Bahrain branches or government sites? See how enterprise time attendance consolidates multi-site, multi-company workforce data into one dashboard.',
     tags: ['Enterprise Time Attendance', 'Multi-Company HRMS', 'GCC Time Attendance', 'Multi-Site Workforce Management'],
     publishedAt: '2026-08-05',
@@ -463,7 +463,7 @@ export const BLOG_POSTS = [
   {
     slug: 'digital-signage-led-displays-bahrain',
     title: 'Digital Signage & LED Displays in Bahrain: Corporate, Retail & Government Use Cases',
-    seoTitle: 'Digital Signage & LED Displays in Bahrain | Corporate, Retail & Government | D3',
+    seoTitle: 'Digital Signage & LED Displays in Bahrain | D3',
     excerpt: 'Digital signage and LED display solutions for Bahrain retail, corporate lobbies and government buildings — content management, video walls and indoor/outdoor displays.',
     tags: ['Digital Signage Bahrain', 'LED Display Solutions', 'Video Wall Bahrain', 'Indoor Outdoor Signage'],
     publishedAt: '2026-08-12',
@@ -471,7 +471,7 @@ export const BLOG_POSTS = [
   {
     slug: 'erp-retail-management-software-bahrain',
     title: 'ERP & Retail Management Software in Bahrain: Choosing the Right System',
-    seoTitle: 'ERP & Retail Management Software in Bahrain | Inventory & Multi-Branch | D3',
+    seoTitle: 'ERP & Retail Management Software Bahrain | D3',
     excerpt: 'Choosing ERP or retail management software in Bahrain? Compare inventory control, multi-branch stock visibility and POS integration before you buy.',
     tags: ['ERP Software Bahrain', 'Retail Management Software', 'Inventory Management Software'],
     publishedAt: '2026-08-19',
@@ -487,7 +487,7 @@ export const BLOG_POSTS = [
   {
     slug: 'visitor-management-system-bahrain-guide',
     title: 'Visitor Management System in Bahrain: Reception Kiosks, Pre-Registration and Access Cards',
-    seoTitle: 'Visitor Management System Bahrain | Reception Kiosk & Pre-Registration | D3',
+    seoTitle: 'Visitor Management System in Bahrain | D3',
     excerpt: 'Digital visitor management for Bahrain offices and government buildings — reception kiosks, pre-registration, access card issuance and a full audit trail.',
     tags: ['Visitor Management System Bahrain', 'Digital Transformation Bahrain', 'Government IT Solutions'],
     publishedAt: '2026-08-27',
@@ -499,13 +499,6 @@ export const BLOG_POSTS = [
     excerpt: 'How access control and IP CCTV work together for Bahrain offices and government sites — biometric doors, NFC proximity cards and centralised security management.',
     tags: ['Access Control System Bahrain', 'IP CCTV Bahrain', 'Biometric Access Control'],
     publishedAt: '2026-08-27',
-  },
-  {
-    slug: 'top-5-benefits-biometric-attendance',
-    title: 'Top 5 Benefits of Biometric Attendance Systems for GCC Enterprises',
-    excerpt: 'Biometric attendance eliminates buddy-punching, reduces payroll errors and ensures full LMRA compliance. Here\'s why GCC enterprises are upgrading from legacy systems.',
-    tags: ['GCC Enterprise Attendance', 'Buddy Punching Prevention', 'Payroll Accuracy'],
-    publishedAt: '2026-02-15',
   },
   {
     slug: 'queue-management-government-sector',
@@ -535,6 +528,7 @@ export const BLOG_POSTS = [
     excerpt: 'A complete guide to Saudi Labor Law on contract termination, resignation, and end-of-service benefits — covering Articles 74–84 in plain language.',
     tags: ['Saudi Labor Law', 'End of Service Benefits', 'GCC Compliance'],
     publishedAt: '2026-09-01',
+    noindex: true,
   },
   {
     slug: 'article-81-saudi-labor-law',
@@ -543,6 +537,7 @@ export const BLOG_POSTS = [
     excerpt: "Article 81 of Saudi Labor Law lets employees resign without notice and keep full end-of-service rights in specific cases. Here's when it applies.",
     tags: ['Saudi Labor Law', 'Article 81', 'Employee Rights'],
     publishedAt: '2026-09-02',
+    noindex: true,
   },
   {
     slug: 'article-80-saudi-labor-law',
@@ -551,6 +546,7 @@ export const BLOG_POSTS = [
     excerpt: 'Article 80 of Saudi Labor Law lets employers end a contract without notice or end-of-service pay — but only on specific, documented grounds. Here\'s what qualifies.',
     tags: ['Saudi Labor Law', 'Article 80', 'Termination'],
     publishedAt: '2026-09-03',
+    noindex: true,
   },
   {
     slug: 'qatar-labor-law-guide',
@@ -559,51 +555,22 @@ export const BLOG_POSTS = [
     excerpt: 'A guide to Qatar Labor Law — recent amendments, notice period rules by length of service, and how end-of-service gratuity is calculated.',
     tags: ['Qatar Labor Law', 'End of Service Gratuity', 'GCC Compliance'],
     publishedAt: '2026-09-04',
+    noindex: true,
   },
   {
     slug: 'bahrain-gratuity-calculation-guide',
     title: 'How to Calculate End-of-Service Gratuity in Bahrain (2026 Rules)',
-    seoTitle: 'How to Calculate End-of-Service Gratuity in Bahrain (2026 Rules) | D3',
+    seoTitle: 'End-of-Service Gratuity in Bahrain (2026) | D3',
     excerpt: "How Bahrain's end-of-service gratuity works under the 2024 SIO contribution system, with a worked example and eligibility rules by nationality.",
     tags: ['Bahrain Gratuity', 'End of Service', 'SIO'],
     publishedAt: '2026-09-06',
   },
-  {
-    slug: 'visitor-management-system-gcc',
-    title: 'Visitor Management System: A Buyer\'s Guide for GCC Businesses',
-    excerpt: 'What a visitor management system does, which features matter in the GCC, and a checklist for choosing one. Written for Bahrain and Gulf businesses.',
-    tags: ['Visitor Management', 'Buyer\'s Guide', 'GCC'],
-    publishedAt: '2026-10-03',
-  },
-  {
-    slug: 'queue-management-system-gcc',
-    title: 'Queue Management System: How to Choose One in the GCC',
-    excerpt: 'What a queue management system is, the types available, key features and how to choose one for banks, clinics, government offices and retail in the GCC.',
-    tags: ['Queue Management', 'Buyer\'s Guide', 'GCC'],
-    publishedAt: '2026-10-09',
-  },
-  {
-    slug: 'hr-software-gcc-buyers-guide',
-    title: 'HR Software for GCC Companies: What to Look For in 2026',
-    excerpt: 'A buyer\'s guide to HR software for Bahrain and GCC companies: payroll, WPS, attendance, Arabic support and how to compare vendors.',
-    tags: ['HRMS', 'Payroll', 'GCC'],
-    publishedAt: '2026-10-14',
-  },
-  {
-    slug: 'biometric-attendance-system-guide',
-    title: 'Biometric Attendance System: How It Works and How to Choose One',
-    excerpt: 'How a biometric attendance system works, fingerprint vs face recognition, what to compare and how to connect it to payroll. A guide for GCC employers.',
-    tags: ['Time Attendance', 'Biometric', 'GCC'],
-    publishedAt: '2026-10-19',
-  },
-  {
-    slug: 'fingerprint-attendance-system',
-    title: 'Fingerprint Attendance System: Strengths, Limits and Setup',
-    excerpt: 'How fingerprint attendance systems work, where they fail, how to set one up and when to choose face recognition instead. A practical guide for GCC employers.',
-    tags: ['Time Attendance', 'Fingerprint', 'GCC'],
-    publishedAt: '2026-10-23',
-  },
 ];
+
+/** Posts kept reachable by URL but excluded from search (off the Bahrain-only strategy). */
+export function isIndexablePost(p: { noindex?: boolean }) {
+  return !p.noindex;
+}
 
 export function postsByNewest<T extends { publishedAt: string; slug?: string }>(posts: T[]) {
   return [...posts].sort((a, b) => {

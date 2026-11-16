@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { CTASection } from '@/components/home/CTASection';
 import { ProjectsGallery } from '@/components/projects/ProjectsGallery';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
 import { Link } from '@/i18n/navigation';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -13,9 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: pageCanonical(locale, '/projects'),
-    },
+    alternates: pageAlternates(locale, '/projects'),
     openGraph: pageOpenGraph({ locale, path: '/projects', title, description }),
   };
 }

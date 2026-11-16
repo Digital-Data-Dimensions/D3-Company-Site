@@ -1,7 +1,7 @@
-import { BLOG_POSTS } from '@/lib/data';
+import { BLOG_POSTS, isIndexablePost } from '@/lib/data';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { CTASection } from '@/components/home/CTASection';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
 import { BlogList } from '@/components/blog/BlogList';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -11,9 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: pageCanonical(locale, '/blog'),
-    },
+    alternates: pageAlternates(locale, '/blog'),
     openGraph: pageOpenGraph({ locale, path: '/blog', title, description }),
   };
 }
@@ -35,7 +33,7 @@ export default function BlogListPage() {
 
       <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
-          <BlogList posts={BLOG_POSTS} />
+          <BlogList posts={BLOG_POSTS.filter(isIndexablePost)} />
         </div>
         <style>{`
           .blog-toolbar {

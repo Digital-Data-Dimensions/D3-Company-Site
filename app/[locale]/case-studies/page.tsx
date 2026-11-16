@@ -2,7 +2,7 @@ import { CASE_STUDIES } from '@/lib/data';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { CTASection } from '@/components/home/CTASection';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
 import { Link } from '@/i18n/navigation';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -12,9 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: pageCanonical(locale, '/case-studies'),
-    },
+    alternates: pageAlternates(locale, '/case-studies'),
     openGraph: pageOpenGraph({ locale, path: '/case-studies', title, description }),
   };
 }

@@ -27,13 +27,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  const title =
-    'Enterprise IT Solutions Bahrain & GCC | Time Attendance, HRMS, RFID | D3';
+  const title = 'IT Solutions in Bahrain | Attendance, HRMS, RFID | D3';
   const description =
-    'D3 delivers time attendance, HRMS payroll, queue management, RFID tracking and digital signage for 500+ organisations across Bahrain and the GCC. Built in Bahrain since 2010.';
+    'D3 delivers time attendance, HRMS payroll, queue management, RFID tracking and digital signage in Bahrain. Trusted by 500+ organisations. Built in Bahrain since 2010.';
 
   return {
     metadataBase: new URL(BASE_URL),
+    // /ar is not translated yet; keep it out of the index until real Arabic pages ship
+    ...(locale === 'ar' ? { robots: { index: false, follow: true } } : {}),
     title: {
       default: title,
       template: '%s | D3 Bahrain',
@@ -41,7 +42,7 @@ export async function generateMetadata({
     description,
     openGraph: {
       type: 'website',
-      locale: 'en_BH',
+      locale: locale === 'ar' ? 'ar_BH' : 'en_BH',
       url: `${BASE_URL}/${locale}`,
       siteName: 'D3 Digital Data Dimensions',
       title,
@@ -55,11 +56,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
-      languages: {
-        'en-BH': `${BASE_URL}/en`,
-        'ar-BH': `${BASE_URL}/ar`,
-        'x-default': `${BASE_URL}/en`,
-      },
+      ...(locale === 'en' ? { languages: { 'en-BH': `${BASE_URL}/en`, 'x-default': `${BASE_URL}/en` } } : {}),
     },
   };
 }

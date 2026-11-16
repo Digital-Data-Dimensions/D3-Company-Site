@@ -8,9 +8,11 @@ import {
   Zap, Eye, LayoutGrid, ShoppingCart, TrendingUp,
   CheckCircle2, Headphones, Database, Radio, Link2,
 } from 'lucide-react';
-import { SOLUTIONS, INDUSTRIES, BLOG_POSTS } from '@/lib/data';
+import { SOLUTIONS, INDUSTRIES, BLOG_POSTS, isIndexablePost } from '@/lib/data';
 import { SOLUTION_VISUAL_IMAGES } from '@/lib/solution-card-images';
-import { SOLUTION_SEO, SITE_URL, pageOpenGraph } from '@/lib/solution-seo';
+import { SOLUTION_SEO, pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { breadcrumbList, serviceSchema } from '@/lib/schema';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -612,9 +614,7 @@ export async function generateMetadata({ params }: Props) {
     title: { absolute: title },
     description,
     keywords: detail?.seoKeyword,
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/solutions/${slug}`,
-    },
+    alternates: pageAlternates(locale, `/solutions/${slug}`),
     openGraph: pageOpenGraph({ locale, path: `/solutions/${slug}`, title, description }),
   };
 }
@@ -643,13 +643,19 @@ export default async function SolutionPage({ params }: Props) {
   const relatedSolutions = SOLUTIONS.filter((s) => s.slug !== slug).slice(0, 3);
   const relatedBlogs = (seo?.relatedBlogSlugs || [])
     .map((s) => BLOG_POSTS.find((p) => p.slug === s))
-    .filter(Boolean) as typeof BLOG_POSTS;
+    .filter((p): p is (typeof BLOG_POSTS)[number] => Boolean(p) && isIndexablePost(p!));
   const relatedSeoSolutions = (seo?.relatedSolutionSlugs || [])
     .map((s) => SOLUTIONS.find((solItem) => solItem.slug === s))
     .filter(Boolean) as typeof SOLUTIONS;
 
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema({ slug, name: seo?.pageH1 ?? sol.title, description: seo?.seoDescription ?? sol.desc }),
+          breadcrumbList([{ name: 'Home', path: '/en' }, { name: sol.title, path: `/en/solutions/${slug}` }]),
+        ]}
+      />
       {/* ── HERO — 2-column ── */}
       <section className="page-hero" style={{ padding: '80px 0 60px', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(20px, 5vw, 80px)' }}>

@@ -13,7 +13,7 @@
     "eyebrow": "Bahrain · Middle-East · Europe",
     "headline": "Your IT partner for {highlight} intelligence.",
     "highlight": "real-time",
-    "sub": "D3 delivers enterprise time attendance, HRMS, queue management and digital signage, built for the GCC region since 2010.",
+    "sub": "D3 delivers enterprise time attendance, HRMS, queue management and digital signage, built in Bahrain since 2010.",
     "exploreSolutions": "Explore Solutions",
     "ourStory": "Our Story",
     "yearsActive": "Years Active",
@@ -82,7 +82,7 @@
     "eyebrow": "Flagship Product",
     "title": "Meet {highlight}: D3's Workforce Intelligence Platform",
     "highlight": "TimeTech",
-    "sub": "One platform. Full lifecycle workforce management. Trusted by 500+ organisations across the GCC.",
+    "sub": "One platform. Full lifecycle workforce management. Trusted by 500+ organisations.",
     "modules": {
       "attendance": "Time Attendance",
       "hr": "HRMS",
@@ -112,7 +112,7 @@
     "highlight": "difference",
     "sub": "We don't just deliver technology. We deliver outcomes. Here's what separates us from every other IT vendor in the region.",
     "items": {
-      "gcc": { "num": "01", "title": "GCC-first Design", "text": "Built for the Gulf, with Arabic support, local labour law compliance and GCC regulatory standards built in from day one." },
+      "gcc": { "num": "01", "title": "Bahrain-first Design", "text": "Built in Bahrain, with Arabic support, local labour law compliance and LMRA, WPS and GOSI standards built in from day one." },
       "custom": { "num": "02", "title": "100% Customisable", "text": "Fully configurable platforms that integrate with any third-party ERP or existing system. No vendor lock-in, ever." },
       "cloud": { "num": "03", "title": "Cloud & On-Premise", "text": "Cloud (AWS), on-server or hybrid. D3 solutions flex to your infrastructure and security requirements without compromise." },
       "support": { "num": "04", "title": "Full-Lifecycle Support", "text": "From consultancy and implementation to ongoing support: one relationship, one contact, complete peace of mind." }
@@ -122,7 +122,7 @@
     "eyebrow": "Case Studies",
     "title": "Real results for real {highlight}",
     "highlight": "clients",
-    "sub": "See how D3 has transformed operations across the GCC.",
+    "sub": "See how D3 has transformed operations for organisations across Bahrain.",
     "readMore": "Read case study",
     "viewAll": "View all case studies"
   },
@@ -149,7 +149,7 @@
     "eyebrow": "Trusted Clients",
     "title": "500+ organisations trust {highlight}",
     "highlight": "D3",
-    "sub": "From government ministries to retailers, hospitals and industrial organisations across the GCC and beyond.",
+    "sub": "From government ministries to retailers, hospitals and industrial organisations across Bahrain.",
     "government": "Government",
     "private": "Private Sector",
     "gcc": "GCC Clients"

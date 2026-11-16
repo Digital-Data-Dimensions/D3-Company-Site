@@ -1,13 +1,15 @@
 import { notFound } from 'next/navigation';
-import { BLOG_POSTS, SOLUTIONS, postsByNewest } from '@/lib/data';
+import { BLOG_POSTS, SOLUTIONS, postsByNewest, isIndexablePost } from '@/lib/data';
 import { BLOG_ARTICLES } from '@/lib/blog-articles';
 import { BlogArticleBody } from '@/components/blog/BlogArticleBody';
 import { Markdown } from '@/components/blog/Markdown';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { blogPosting, breadcrumbList } from '@/lib/schema';
 import { getBlogArticle } from '@/lib/blog-content';
 import { ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -35,15 +37,9 @@ const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
   'it-consultancy-managed-services-bahrain': ['consultancy'],
   'visitor-management-system-bahrain-guide': ['visitor-management'],
   'access-control-cctv-security-bahrain': ['access-control-system'],
-  'top-5-benefits-biometric-attendance': ['time-attendance-system'],
   'queue-management-government-sector': ['queue-management-system'],
   'rfid-asset-tracking-manufacturing': ['rfid-asset-tracking'],
   'choosing-hr-software-bahrain': ['hr-payroll-software'],
-  'visitor-management-system-gcc': ['visitor-management', 'access-control-system'],
-  'queue-management-system-gcc': ['queue-management-system', 'digital-signage'],
-  'hr-software-gcc-buyers-guide': ['hr-payroll-software', 'time-attendance-system'],
-  'biometric-attendance-system-guide': ['time-attendance-system', 'time-attendance-enterprise'],
-  'fingerprint-attendance-system': ['time-attendance-system', 'time-attendance-enterprise'],
   'saudi-labor-law-complete-guide': ['hr-payroll-software', 'timetech-application'],
   'article-81-saudi-labor-law': ['hr-payroll-software'],
   'article-80-saudi-labor-law': ['hr-payroll-software', 'time-attendance-system'],
@@ -53,14 +49,6 @@ const BLOG_RELATED_SOLUTIONS: Record<string, string[]> = {
 
 /** Legacy plain-paragraph articles (kept for older posts) */
 const BLOG_FULL_CONTENT: Record<string, string[]> = {
-  'top-5-benefits-biometric-attendance': [
-    'Biometric attendance systems have become the gold standard for workforce management across the GCC. Unlike traditional punch cards or PIN-based systems, biometric solutions use unique physical characteristics — fingerprints, facial features or iris patterns — to verify identity. This eliminates buddy punching entirely.',
-    '1. Elimination of Time Theft: Studies show that traditional attendance methods allow up to 8% of payroll to be lost to time theft. With biometric verification, every clock-in is authentic, saving organisations significant payroll costs.',
-    '2. LMRA Compliance: Bahrain\'s Labour Market Regulatory Authority (LMRA) requires accurate employee records. Biometric systems provide tamper-proof timestamps that satisfy audit requirements.',
-    '3. Real-Time Visibility: Managers see live attendance across all locations on a single dashboard — no more waiting for end-of-day reports or manually consolidating data from multiple sites.',
-    '4. Payroll Accuracy: Automated integration between attendance data and payroll eliminates manual entry errors. Many D3 clients report reducing payroll processing time by 60-70% after implementation.',
-    '5. Employee Accountability: When employees know that their attendance is accurately tracked, punctuality improves. D3 clients typically see a 15-20% reduction in late arrivals within the first month of deployment.',
-  ],
   'queue-management-government-sector': [
     'Queue management has become a strategic priority for Bahrain\'s government sector. Long wait times at ministries and service centres damage citizen satisfaction and create a negative perception of public services.',
     'The rise of smart queue systems — particularly those integrating with WhatsApp — has fundamentally changed how government organisations approach service delivery. Citizens can now join virtual queues from their mobile phones before leaving home.',
@@ -96,9 +84,8 @@ export async function generateMetadata({ params }: Props) {
     title: { absolute: title },
     description,
     keywords: post.tags.join(', '),
-    alternates: {
-      canonical: pageCanonical(locale, `/blog/${slug}`),
-    },
+    ...(isIndexablePost(post) ? {} : { robots: { index: false, follow: true } }),
+    alternates: pageAlternates(locale, `/blog/${slug}`),
     openGraph: pageOpenGraph({ locale, path: `/blog/${slug}`, title, description }),
   };
 }
@@ -113,10 +100,16 @@ export default async function BlogPostPage({ params }: Props) {
   const article = getBlogArticle(slug);
   const richBlocks = BLOG_ARTICLES[slug];
   const legacyParas = BLOG_FULL_CONTENT[slug] || (!richBlocks ? [post.excerpt] : null);
-  const otherPosts = postsByNewest(BLOG_POSTS.filter((p) => p.slug !== slug)).slice(0, 6);
+  const otherPosts = postsByNewest(BLOG_POSTS.filter((p) => p.slug !== slug && isIndexablePost(p))).slice(0, 6);
 
   return (
     <>
+      <JsonLd
+        data={[
+          blogPosting({ slug, title: post.title, description: article?.meta.meta_description || post.excerpt, publishedAt: post.publishedAt }),
+          breadcrumbList([{ name: 'Home', path: '/en' }, { name: 'Blog', path: '/en/blog' }, { name: post.title, path: `/en/blog/${slug}` }]),
+        ]}
+      />
       <section className="page-hero" style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">
           <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--muted)', textDecoration: 'none', fontWeight: 400, marginBottom: 24 }}>← Back to Blog</Link>

@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { INDUSTRIES, SOLUTIONS, CASE_STUDIES } from '@/lib/data';
-import { INDUSTRY_SEO, SITE_URL, pageOpenGraph } from '@/lib/solution-seo';
+import { INDUSTRY_SEO, pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { breadcrumbList } from '@/lib/schema';
 import { RevealOnScroll } from '@/components/shared/RevealOnScroll';
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
@@ -42,9 +44,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/industries/${slug}`,
-    },
+    alternates: pageAlternates(locale, `/industries/${slug}`),
     openGraph: pageOpenGraph({ locale, path: `/industries/${slug}`, title, description }),
   };
 }
@@ -65,6 +65,7 @@ export default async function IndustryPage({ params }: Props) {
 
   return (
     <>
+      <JsonLd data={breadcrumbList([{ name: 'Home', path: '/en' }, { name: ind.title, path: `/en/industries/${slug}` }])} />
       {/* Hero */}
       <section className="page-hero" style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }} className="section-container">

@@ -4,7 +4,9 @@ import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Button, ArrowIcon } from '@/components/shared/Button';
 import { CTASection } from '@/components/home/CTASection';
 import { Link } from '@/i18n/navigation';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { breadcrumbList } from '@/lib/schema';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -21,9 +23,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: pageCanonical(locale, `/case-studies/${slug}`),
-    },
+    alternates: pageAlternates(locale, `/case-studies/${slug}`),
     openGraph: pageOpenGraph({ locale, path: `/case-studies/${slug}`, title, description }),
   };
 }
@@ -37,6 +37,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <>
+      <JsonLd data={breadcrumbList([{ name: 'Home', path: '/en' }, { name: 'Client Projects', path: '/en/case-studies' }, { name: cs.clientName, path: `/en/case-studies/${slug}` }])} />
       {/* Hero */}
       <section className="page-hero" style={{ padding: '80px 0', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px)' }}>

@@ -1,7 +1,7 @@
 import { SectionEyebrow } from '@/components/shared/SectionEyebrow';
 import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
-import { pageCanonical, pageOpenGraph } from '@/lib/solution-seo';
+import { pageAlternates, pageOpenGraph } from '@/lib/solution-seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -10,9 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { absolute: title },
     description,
-    alternates: {
-      canonical: pageCanonical(locale, '/sitemap'),
-    },
+    alternates: pageAlternates(locale, '/sitemap'),
     openGraph: pageOpenGraph({ locale, path: '/sitemap', title, description }),
   };
 }

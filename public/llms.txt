@@ -1,0 +1,28 @@
+# D3 (Digital Data Dimensions), Bahrain
+
+> D3 is a Bahrain-based IT solutions company, operating since 2010. It supplies and supports TimeTech time attendance, HRMS and payroll software, visitor and queue management, RFID asset tracking, digital signage, IP CCTV and access control, and ERP for organisations in Bahrain.
+
+Address: 22, Building 1033, Road 3925, Umm Al Hassam, Manama, Bahrain. Phone: +973 1333 3445.
+Language: English (Arabic pages are not published yet).
+
+## Solutions
+- [Time Attendance System](https://www.dthree.co/en/solutions/time-attendance-system): biometric, fingerprint and face recognition attendance for Bahrain employers
+- [Enterprise Time Attendance](https://www.dthree.co/en/solutions/time-attendance-enterprise): multi-site, geo-fenced mobile attendance
+- [HRMS and Payroll Software](https://www.dthree.co/en/solutions/hr-payroll-software): payroll with WPS export and GOSI contributions, self-service
+- [Visitor Management](https://www.dthree.co/en/solutions/visitor-management)
+- [Queue Management System](https://www.dthree.co/en/solutions/queue-management-system)
+- [Digital Signage and Displays](https://www.dthree.co/en/solutions/digital-signage)
+- [RFID and Asset Tracking](https://www.dthree.co/en/solutions/rfid-asset-tracking)
+- [IP CCTV and Access Control](https://www.dthree.co/en/solutions/access-control-system)
+- [ERP and Retail Management](https://www.dthree.co/en/solutions/erp-retail-management)
+- [IT Consultancy](https://www.dthree.co/en/solutions/consultancy)
+
+## Guides (Bahrain)
+- [Blog and guides](https://www.dthree.co/en/blog): payroll, WPS, GOSI, end-of-service, overtime and labour-law guides for Bahrain employers
+- [Salary slip format in Bahrain](https://www.dthree.co/en/blog/salary-slip-format-bahrain)
+- [Biometric attendance system in Bahrain](https://www.dthree.co/en/blog/biometric-attendance-system-bahrain)
+
+## About and contact
+- [About D3](https://www.dthree.co/en/about)
+- [Client case studies](https://www.dthree.co/en/case-studies)
+- [Contact and demo requests](https://www.dthree.co/en/contact)
