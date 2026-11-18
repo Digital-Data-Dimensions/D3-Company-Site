@@ -193,20 +193,26 @@ export default function AboutPage() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={100}>
-              <div style={{
-                borderRadius: 24, background: 'var(--bg-surface)', border: '1px solid var(--border)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                padding: 'clamp(48px, 8vw, 96px)',
+              <figure style={{
+                position: 'relative', margin: 0, borderRadius: 24, overflow: 'hidden',
+                border: '1px solid var(--border)', background: 'var(--bg-surface)',
                 aspectRatio: '4/3',
               }}>
                 <Image
-                  src="/d3logo.png"
-                  alt="D3 Digital Data Dimensions"
-                  width={320}
-                  height={200}
-                  style={{ width: '80%', maxWidth: 320, height: 'auto', objectFit: 'contain' }}
+                  src="/images/about/d3-15-years-celebration.jpg"
+                  alt="The D3 team celebrating 15 years with a cake"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
-              </div>
+                <figcaption style={{
+                  position: 'absolute', left: 16, bottom: 16,
+                  background: 'rgba(255,255,255,0.92)', color: '#1A1A2E',
+                  fontSize: 13, fontWeight: 500, padding: '8px 14px', borderRadius: 100,
+                }}>
+                  Celebrating 15 years of D3
+                </figcaption>
+              </figure>
             </RevealOnScroll>
           </div>
         </div>
