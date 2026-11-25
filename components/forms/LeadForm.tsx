@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Script from 'next/script';
 import { Button, ArrowIcon } from '@/components/shared/Button';
 
 interface LeadFormProps {
@@ -11,6 +12,16 @@ interface LeadFormProps {
 export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
   const [state, setState] = useState({ name: '', company: '', email: '', phone: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [honey, setHoney] = useState('');
+  const [startedAt] = useState(() => Date.now());
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  useEffect(() => {
+    if (!turnstileSiteKey) return;
+    (window as unknown as { __d3TurnstileCb?: (t: string) => void }).__d3TurnstileCb = setTurnstileToken;
+  }, [turnstileSiteKey]);
 
   const labelStyle: React.CSSProperties = {
     fontSize: 12, fontWeight: 400, letterSpacing: '0.04em',
@@ -36,7 +47,7 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(state),
+        body: JSON.stringify({ ...state, website: honey, startedAt, turnstileToken }),
       });
       if (res.ok) {
         setStatus('success');
@@ -47,6 +58,9 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
         }
       } else {
         setStatus('error');
+        // Turnstile tokens are single-use: get a fresh one for the retry
+        setTurnstileToken('');
+        (window as unknown as { turnstile?: { reset: () => void } }).turnstile?.reset();
       }
     } catch {
       setStatus('error');
@@ -90,8 +104,22 @@ export function LeadForm({ dark = false, onSuccess }: LeadFormProps) {
         <textarea style={{ ...inputStyle, minHeight: 100, resize: 'vertical' }} placeholder="Tell us about your project..." value={state.message} onChange={(e) => setState({ ...state, message: e.target.value })} />
       </div>
 
-      {/* Honeypot */}
-      <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+      {/* Honeypot: off-screen (not display:none, which some bots skip); sent to the server and checked there */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+        <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" value={honey} onChange={(e) => setHoney(e.target.value)} /></label>
+      </div>
+
+      {turnstileSiteKey && (
+        <>
+          <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" />
+          <div
+            ref={turnstileRef}
+            className="cf-turnstile"
+            data-sitekey={turnstileSiteKey}
+            data-callback="__d3TurnstileCb"
+          />
+        </>
+      )}
 
       {status === 'error' && (
         <div style={{ fontSize: 13, color: '#ef4444', padding: '10px 14px', background: 'rgba(239,68,68,0.1)', borderRadius: 8 }}>

@@ -19,6 +19,8 @@ async function main() {
     email: 'partner@time-tech.co',
     phone: '—',
     message: 'Automated test via npm run test:contact',
+    website: '', // honeypot must stay empty
+    startedAt: Date.now() - 10_000, // server rejects submissions faster than 3s
   };
 
   const res = await fetch(`${base}/api/contact`, {
